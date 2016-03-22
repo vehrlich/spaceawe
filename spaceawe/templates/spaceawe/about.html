@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail smartpages i18n %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+{% endblock %}
+
+{% block extra_js %}
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script>
+var map = L.map('partnermap').setView([25, 0], 2);
+L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
+    continuousWorld: false,
+    noWrap: true,
+    attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+// create custom icon
+var nodeIcon = L.icon({
+    iconUrl: '{% static "img/map-dot-node.svg" %}',
+    iconSize: [16, 16],
+    popupAnchor: [0,-15]
+    });
+var partnerIcon = L.icon({
+    iconUrl: '{% static "img/map-dot-partner.svg" %}',
+    iconSize: [16, 16],
+    popupAnchor: [0,-15]
+    });
+var dualIcon = L.icon({
+    iconUrl: '{% static "img/map-dot-dual.svg" %}',
+    iconSize: [16, 16],
+    popupAnchor: [0,-15]
+    });
+
+// specify popup options 
+var customOptions = {
+    'minWidth': '200',
+    'maxWidth': '500',
+    'className' : 'custom'
+}
+
+{% for partner in partners %}
+{% spaceless %}
+L.marker([{{ partner.institution.location.latitude }}, {{ partner.institution.location.longitude }}], {icon: nodeIcon}).bindPopup('<div class="partnermap-popup">
+    <a href="{{ partner.institution.url }}">
+    {% thumbnail partner.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as thumb %}
+        <div class="institution-logo">
+            <div class="logo"><img src="{{ thumb.url }}"></div>
+            <!-- <div class="more-link">{% trans "see more" %}</div> -->
+        </div>
+    {% endthumbnail %}
+        <div class="institution-details">
+            <div class="location">{{ partner.institution.location }}</div>
+            <div class="name">{{ partner.institution.title }}</div>
+        </div>
+    </a>
+    <div class="contact-details">
+        <hr/>
+        <div class="label">Contact:</div>
+        <a href="mailto:{{ partner.email }}">
+            <div class="name">{{ partner.name }}</div>
+            <div class="email">{{ partner.email }}</div>
+        </a>
+    </div>
+</div>', customOptions).addTo(map);
+{% endspaceless %}
+{% endfor %}
+
+</script>
+{% endblock %}
+
+{% block extra_body_class %}section-news{% endblock %}
+
+{% block slogan %}
+<div class="slogan subtitle">{{ SECTIONS.about.title }}</div>
+<div class="slogan">{{ SECTIONS.about.subtitle }}</div>
+{% endblock %}
+
+{% block resize_header_js %}
+        // resize top bar on scroll
+        $(document).on('scroll', function() {
+            if($(document).scrollTop()>100){
+                $('#header').addClass('small');
+            } else {
+                $('#header').removeClass('small');
+            }
+        });
+{% endblock %}
+
+{% block content %}
+    <div id="cover">
+        <div class="feature-container">
+            <div class="fake-padding"></div>
+                <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({% static 'img/cover/06.jpg' %}) ;">
+                    <div class="title-container"><div class="title-subcontainer">
+                        <div class="smartembed">{% smartembed 'about-010-intro' %}</div>
+                    </div></div>
+                </div>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#sections"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-page pure-g">
+
+        <div class="title-container pure-u-1">
+            <div class="smartembed">{% smartembed 'about-020-what' %}</div>
+        </div>
+        <div class="page-about-goals pure-u-1-4">
+            <div class="smartembed">{% smartembed 'about-021-01' %}</div>
+        </div>
+        <div class="page-about-goals pure-u-1-4">
+            <div class="smartembed">{% smartembed 'about-022-02' %}</div>
+        </div>
+        <div class="page-about-goals pure-u-1-4">
+            <div class="smartembed">{% smartembed 'about-023-03' %}</div>
+        </div>
+        <div class="page-about-goals pure-u-1-4">
+            <div class="smartembed">{% smartembed 'about-024-04' %}</div>
+        </div>
+        <div class="content pure-u-1" style="padding-top: 20px;">
+            <div class="smartembed">{% smartembed 'about-029-what-footer' %}</div>
+        </div>
+    </div>
+
+
+    <div class="content-page pure-g">
+        <div class="page-about-what pure-u-1">
+            <div class="smartembed">{% smartembed 'about-030-resources' %}</div>
+        </div>
+        <div class="page-about-categories pure-u-1-4">
+            <div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
+            <div class="smartembed">{% smartembed 'about-031-space' %}</div>
+        </div>
+        <div class="page-about-categories pure-u-1-4">
+            <div class="icon"><a href="{% url 'categories' code='earth' %}"><img src="{% static 'img/icons/categories/icon_earth_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_earth_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_earth_blue.svg' %}'" /></a></div>
+            <div class="smartembed">{% smartembed 'about-032-earth' %}</div>
+        </div>
+        <div class="page-about-categories pure-u-1-4">
+            <div class="icon"><a href="{% url 'categories' code='navigation' %}"><img src="{% static 'img/icons/categories/icon_navigation_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_navigation_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_navigation_blue.svg' %}'" /></a></div>
+            <div class="smartembed">{% smartembed 'about-033-navigation' %}</div>
+        </div>
+        <div class="page-about-categories pure-u-1-4">
+            <div class="icon"><a href="{% url 'categories' code='heritage' %}"><img src="{% static 'img/icons/categories/icon_heritage_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_heritage_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_heritage_blue.svg' %}'" /></a></div>
+            <div class="smartembed">{% smartembed 'about-034-heritage' %}</div>
+        </div>
+
+        <div class="pure-u-1">
+            <div class="smartembed">{% smartembed 'about-039-resources-footer' %}</div>
+        </div>
+
+    </div>
+
+    <div class="content-page pure-g">
+        <div class="page-about-contact pure-u-1">
+            <div class="smartembed">{% smartembed 'about-040-where' %}</div>
+            <div class="content">
+                <div id="partnermap"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-page pure-g">
+        <div class="page-about-contact pure-u-1">
+            <div class="title">{% trans "Contact us" %}</div>
+            <div class="content"><a hreh="mailto:euspaceawe@eun.org">euspaceawe@eun.org</div>
+        </div>
+    </div>
+
+    <div class="content-page pure-g">
+        <div class="page-about-team pure-u-1">
+            <div class="title">{% trans "The Space Awareness team" %}</div>
+
+            <div class="subtitle">{% trans "Space Awareness is developed by" %}</div>
+            <div class="content">Leiden University, European Schoolnet, Max Planck Gesellschaft - Haus der Astronomie, University College London, Ellinogermaniki Agogi, the Open University, Ecsite, Nuclio, the IAU Office of Astronomy for Development and Ciência Viva.</div>
+
+            <div class="subtitle">{% trans "Space Awareness is developed in collaboration with" %}</div>
+            <div class="content">Galileo Teacher training, ESA, Scientix, Al Akhawayn University</div>
+
+        </div>
+    </div>
+
+    <div class="content-page pure-g">
+        <div class="page-about-imagecredits pure-u-1">
+            <div class="smartembed">{% smartembed 'about-090-imagecredits' %}</div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

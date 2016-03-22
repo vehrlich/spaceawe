@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail i18n markdown relativise_img_src %}
+
+{% block extra_body_class %}section-news single{% endblock %}
+
+{% block extra_header_class %}small{% endblock %}
+
+{% block extra_head %}
+<meta property="og:title" content="{{ object.title }}" />
+<meta property="og:description" content="{{ object.teaser }}" />
+{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
+<meta property="og:image" content="{{ SITE_URL }}{{ im.url }}" />
+{% endthumbnail %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="content-card">
+        <div class="fake-padding"></div>
+
+        <div class="title-container">
+            <div class="title">{{ object.title }}</div>
+            <div class="date">{{ object.teaser }}</div>
+        </div>
+    {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+        <div class="image-container" style="background-image: url({{ im.url }})"></div>
+    {% endthumbnail %}
+        <div class="content-container">
+            <div class="content-main-column">
+
+                <div class="section-content">{{ object.story|safe }}</div>
+
+            </div>
+
+            <div class="content-right-column">
+                {% if object.event_organiser %}<div>
+                    <div class="caption">{% trans "organiser" %}</div>
+                    <div class="value"><a target="_blank" href="{{ object.event_organiser.url }}">{{ object.event_organiser.name }}</a></div>
+                </div>{% endif %}
+                {% if object.event_language %}<div>
+                    <div class="caption">{% trans "language" %}</div>
+                    <div class="value">{{ object.event_language }}</div>
+                </div>{% endif %}
+                {% if object.event_download_url %}<div>
+                    <div class="caption">{% trans "download" %}</div>
+                    <div class="value">
+                        <a href="{{ object.event_download_url }}"><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
+                    </div>
+                </div>{% endif %}
+                {% if object.event_website_url %}<div>
+                    <div class="caption">{% trans "website" %}</div>
+                    <div class="value"><a href="{{ object.event_website_url }}">{{ object.event_website_url }}</a></div>
+                </div>{% endif %}
+                <div>
+                    <img id="facebook" class="button" data-url="{{ SITE_URL }}{% url 'news:detail' slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_facebook_b.svg' %}" />
+                    <img id="twitter" class="button" data-url="{{ SITE_URL }}{% url 'news:detail' slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_twitter_b.svg' %}" />
+                </div>
+
+                {% if object.event_organiser %}<div>
+    {% thumbnail object.event_organiser.logo THUMBNAIL_ALIASES.scoop_source crop="center" as im %}
+                    <a target="_blank" href="{{ object.event_organiser.url }}"><img src="{{ im.url }}" alt="{{ object.event_organiser.name }}"/></a><br/>
+    {% endthumbnail %}
+                </div>{% endif %}
+
+            </div>
+        </div>
+        
+    </div>
+
+{% endblock %}

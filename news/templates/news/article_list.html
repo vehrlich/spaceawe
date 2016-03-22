@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail smartpages i18n %}
+
+{% block extra_body_class %}section-news{% endblock %}
+
+{% block slogan %}
+<div class="slogan subtitle">{{ SECTIONS.news.title }}</div>
+<div class="slogan">{{ SECTIONS.news.subtitle }}</div>
+{% endblock %}
+
+{% block resize_header_js %}
+        // resize top bar on scroll
+        $(document).on('scroll', function() {
+            if($(document).scrollTop()>100){
+                $('#header').addClass('small');
+            } else {
+                $('#header').removeClass('small');
+            }
+        });
+{% endblock %}
+
+{% block content %}
+    <div id="cover" class="">
+        <div class="feature-container">
+            <div class="fake-padding"></div>
+            <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="5000">
+                <nav class="cycle-pager"></nav>
+
+    {% for object in object_list|slice:":4" %}
+        {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+                <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }}) ;">
+                    <a href="{% url 'news:detail' slug=object.slug %}">
+                        <div class="title-container"><div class="title-subcontainer">
+                            <div class="title">{{ object.title }}</div>
+                            <div class="subtitle">{{ object.teaser }}</div>
+                        </div></div>
+                    </a>
+                </div>
+        {% endthumbnail %}
+    {% endfor %}
+
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+            </div>
+        </div>
+    </div>
+    <div id="list" class="thumbnailed-list news page2 snap pure-g">
+
+    {% include page_template with item_count=9 %}
+
+    </div>
+
+{% endblock %}

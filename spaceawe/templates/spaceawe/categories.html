@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail smartpages i18n %}
+{% load getattribute %}
+
+{% block extra_body_class %}section-categories{% endblock %}
+
+{% block slogan %}
+<div class="slogan subtitle">
+    {{ CATEGORIES|getattribute:spaceawe_category|getattribute:'title' }}
+</div>
+<div class="slogan">
+    {{ CATEGORIES|getattribute:spaceawe_category|getattribute:'subtitle' }}
+</div>
+
+
+{% endblock %}
+
+{% block resize_header_js %}
+        // resize top bar on scroll
+        $(document).on('scroll', function() {
+            if($(document).scrollTop()>100){
+                $('#header').addClass('small');
+            } else {
+                $('#header').removeClass('small');
+            }
+        });
+{% endblock %}
+
+{% block content %}
+    <div id="cover" class="">
+        <div class="feature-container" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({% static 'img/cover/'|add:spaceawe_category|add:'.jpg' %}); background-size: auto, cover;">
+            <div class="fake-padding"></div>
+            <div>
+                <img height="200" src="{% static 'img/icons/categories/icon_'|add:spaceawe_category|add:'_white.svg' %}">
+                <div class="feature">
+                    <div class="title-container"><div class="title-subcontainer">
+                        <div class="title">
+    {{ CATEGORIES|getattribute:spaceawe_category|getattribute:'teaser' }}
+                            <div class="subtitle">
+    {% smartembed 'category-'|add:spaceawe_category|add:'-intro' %}
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#sections"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="pure-g">
+        <div class="title-container pure-u-1" aria-haspopup="true">
+            <div class="title">{% trans 'Related content' %}</div>    
+        </div>
+    </div>
+
+    {% with object_list=scoops %}{% if object_list %}
+    <div class="thumbnailed-list scoops pure-g">
+        <div class="pure-u-1 list-header">
+            <div class="title">{{ SECTIONS.scoops.title }}</div>
+        </div>
+        {% include 'spacescoops/article_list_page_in_category.html' %}
+    </div>
+    {% endif %}{% endwith %}
+
+    {% with object_list=games %}{% if object_list %}
+    <div class="thumbnailed-list games pure-g">
+        <div class="pure-u-1 list-header">
+            <div class="title">{{ SECTIONS.games.title }}</div>
+        </div>
+        {% include 'games/game_list_page_in_category.html' %}
+    </div>
+    {% endif %}{% endwith %}
+
+    {% with object_list=activities %}{% if object_list %}
+    <div class="thumbnailed-list activities pure-g">  
+        <div class="pure-u-1 list-header">
+            <div class="title">{{ SECTIONS.activities.title }}</div>
+        </div>
+        {% include 'activities/activity_list_page_in_category.html' %}
+    </div>
+    {% endif %}{% endwith %}
+
+
+    <div id="categories" class="pure-g">
+    {% include 'spaceawe/categories_bigicons.html' %}
+    </div>
+
+{% endblock %}

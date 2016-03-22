@@ -1,0 +1,18 @@
+$header-height-normal: 280px;
+$header-height-small: 90px;
+
+.fake-padding { height: $header-height-normal; }
+
+#header {
+  height: $header-height-normal;
+  &.small {
+    height: $header-height-small;
+    .logo {
+      // margin-top: 20px;
+    }
+  }
+}
+
+#sections .section {
+  height: 665px;
+}

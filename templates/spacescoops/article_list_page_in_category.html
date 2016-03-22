@@ -1,0 +1,10 @@
+{% load el_pagination_tags %}
+
+{% lazy_paginate 3 object_list.all using 'scoops_page' as page_object_list %}
+
+{% for object in page_object_list %}
+    
+    {% include 'spacescoops/article_list_item.html' %}
+
+{% endfor %}
+<!-- {% show_more %} -->

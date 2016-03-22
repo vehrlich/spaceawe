@@ -1,0 +1,8 @@
+{% load i18n %}
+{% if querystring %}
+    <div class="endless_container pure-u-1 list-footer">
+        <a class="endless_more{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{{ path }}{{ querystring }}"
+            rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
+        <div class="endless_loading load-more-button" style="display: none;">{{ loading|safe }}</div>
+    </div>
+{% endif %}

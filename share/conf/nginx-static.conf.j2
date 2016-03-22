@@ -1,0 +1,28 @@
+server {
+    listen       80;
+    server_name  {{ item.server_alias }};
+    return       301 $scheme://{{ item.cannonical_name }}$request_uri;
+}
+
+server {
+    listen      80;
+    server_name {{ item.server_name }};
+    charset     utf-8;
+
+    # gzip compression configuration
+    gzip on;
+    gzip_min_length  1100;
+    #gzip_buffers  4 32k;
+    gzip_types    text/plain application/x-javascript text/xml text/css application/x-font-woff image/svg+xml;
+    gzip_vary on;
+
+    # Deny illegal Host headers
+    # if ($host !~* ^({{ item.server_name }})$ ) {
+    #     return 444;  # 404  close connection without response
+    # }
+
+    root /home/web/www/{{ item.cannonical_name }};
+
+    location / {
+    }
+}

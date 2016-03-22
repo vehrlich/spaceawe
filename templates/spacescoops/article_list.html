@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail smartpages i18n %}
+
+{% block extra_body_class %}section-scoops{% endblock %}
+
+{% block slogan %}
+<div class="slogan subtitle">{{ SECTIONS.scoops.title }}</div>
+<div class="slogan">{{ SECTIONS.scoops.subtitle }}</div>
+{% endblock %}
+
+{% block resize_header_js %}
+        // resize top bar on scroll
+        $(document).on('scroll', function() {
+            if($(document).scrollTop()>100){
+                $('#header').addClass('small');
+            } else {
+                $('#header').removeClass('small');
+            }
+        });
+{% endblock %}
+
+{% block content %}
+    <div id="cover" class="">
+        <div class="feature-container">
+            <div class="fake-padding"></div>
+            <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="5000">
+                <nav class="cycle-pager"></nav>
+
+    {% for object in object_list|slice:":4" %}
+        {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+                <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }});">
+                    <a href="{% url 'scoops:detail' code=object.code slug=object.slug %}">
+                        <div class="title-container"><div class="title-subcontainer">
+                            <div class="title">{{ object.title }}</div>
+                            <!-- <div class="subtitle"></div> -->
+                        </div></div>
+                    </a>
+                </div>
+        {% endthumbnail %}
+    {% endfor %}
+
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+            </div>
+        </div>
+    </div>
+    <div id="list" class="thumbnailed-list scoops page2 snap pure-g">
+
+        <div class="pure-u-1 text-content smartembed">
+            {% smartembed 'section-spacescoop-intro' %}
+        </div>
+
+        <div class="pure-u-1 list-header">
+            <div class="title">{% trans "find by category" %}</div>
+            <div class="filters">
+                <div class="filter-topic-text"><a class="selected" href="/scoops/">{% trans "all" %}</a></div>
+            </div>
+            <div class="filters">
+                <div class="filter-topic-image"><a href="/scoops/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_red.svg' %}" /></div><div>{{ CATEGORIES.space.filter_description }}</div></a></div>
+                <div class="filter-topic-image"><a href="/scoops/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_red.svg' %}" /></div><div>{{ CATEGORIES.earth.filter_description }}</div></a></div>
+                <div class="filter-topic-image"><a href="/scoops/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_red.svg' %}" /></div><div>{{ CATEGORIES.navigation.filter_description }}</div></a></div>
+            </div>
+        </div>
+
+    {% include page_template %}
+
+    </div>
+
+{% endblock %}

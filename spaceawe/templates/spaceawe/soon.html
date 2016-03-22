@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail i18n %}
+
+{% block extra_body_class %}homepage{% endblock %}
+
+
+
+{% block resize_header_js %}
+        // resize top bar on scroll
+        $(document).on('scroll', function() {
+            if($(document).scrollTop()>100){
+                $('#header').addClass('small');
+            } else {
+                $('#header').removeClass('small');
+            }
+        });
+{% endblock %}
+
+{% block content %}
+
+    <div class="pure-g">
+
+        <div class="title-container pure-u-1" aria-haspopup="true">
+        <p style="margin-top: 250px;margin-bottom: 100px;">{% trans "This section is coming soon!" %}<br/><br/>
+{% trans "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page" %}</p>
+        </div>
+
+    </div>
+
+
+{% endblock %}

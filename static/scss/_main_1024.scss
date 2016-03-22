@@ -1,0 +1,176 @@
+$header-height-normal: 215px;
+$header-height-small: 60px;
+
+.fake-padding { height: $header-height-normal; }
+
+// .sp-menu {
+//   display: none;
+// }
+#menu-main {
+  display: none;
+}
+
+#header {
+  height: $header-height-normal;
+  .menu-bar {
+    display: table;
+    position: absolute;
+    margin-top: 25px;
+    width: 100%;
+    > div {
+      display: table-cell;
+      width: 48%;
+      &.menu-bar-left {
+        text-align: right;
+        padding-right: 120px;
+      }
+      &.menu-bar-right {
+        text-align: left;
+        padding-left: 120px;
+      }
+    }
+    text-transform: uppercase;
+    font-size: 11px;
+    a {
+      // display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      margin: 2em;
+    }
+  }
+  .logo {
+    margin-top: 20px;
+    margin-bottom: 33px;
+    .logo-el {
+      height: 60px;
+      width: 146px;
+    }
+  }
+  .slogan {
+    // padding: 1em;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    &.subtitle {
+      // padding-top: 1em;
+      font-size: 40px;
+    }
+  }
+
+  &.small {
+    height: $header-height-small;
+    .logo {
+      margin-top: 8px;
+    }
+  }
+}
+
+#cover .feature-container .feature .title-container .title-subcontainer .title {
+  font-size: 30px;
+}
+
+#footer {
+  .social {
+    height: 250px;
+    .buttons {
+      padding-top: 40px;
+      img {
+        height: 40px; width: 40px;
+        padding: 12px;
+      }
+    }
+  }
+  .copyright {
+    .copyright-content {
+      .eu-flag img {
+        width: 46px;
+      }
+    }
+  }
+}
+
+body.homepage {
+  #header {
+    .logo {
+      margin-top: 35px;
+      .logo-el {
+        height: 90px;
+        width: 212px; /**/
+      }
+    }
+    &.small {
+      .logo {
+        margin-top: 8px;
+        .logo-el {
+          height: 43px;
+        }
+      }
+    }
+  }
+}
+
+body.single {
+  .fake-padding { height: $header-height-small; }
+}
+
+// .feature-container .fake-padding {
+//     min-height: 33%;
+// }
+
+#sections {
+  .section {
+    height: 460px;
+    .title {
+      font-size: 36px;      
+    }
+  }
+}
+
+#categories {
+  .category {
+    .icon {
+      position: relative;
+      height: 145px;
+      width: 145px;
+    }
+    .title {
+      font-size: 14px;
+      width: 145px;
+    }
+  }
+}
+
+.content-card {
+  .image-container {
+    height: 550px;
+  }
+  .title-container {
+    padding: 15px 40px;
+    .title {
+      font-size: 32px;
+    }
+  }
+  .content-container {
+    display: table;
+    .content-main-column {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .content-right-column {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+}
+
+.more-container-header {
+  .list-header-padding {
+    height: 130px;
+  } 
+}
+.more-container-list {
+  padding: 10px;
+  .list-item-container{
+    margin: 10px;
+  } 
+}

@@ -1,0 +1,32 @@
+## install dependencies:
+#    pip install -r requirements
+## check outdated dependencies:
+#    pip list --outdated
+
+Django==1.8.11
+pytz
+psycopg2==2.6.1  # postgreSQL 
+django-pipeline==1.6.6
+django-autoslug==1.9.3
+awesome-slugify==1.6.5
+django-parler==1.5.1
+django-ckeditor==5.0.3
+django-taggit==0.17.6
+django-taggit-autosuggest==0.2.8
+django-select-multiple-field==0.4.2
+django-el-pagination==2.1.1
+
+pillow==3.1.1
+sorl-thumbnail==12.3
+
+WeasyPrint==0.24
+
+redis==2.10.5
+
+Whoosh==2.7.2
+
+## astroedu
+bleach==1.4.2
+# django-celery==3.1.16
+mistune==0.7.2
+rtfunicode==1.0
