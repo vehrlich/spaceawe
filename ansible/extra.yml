@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   vars:
-    BASE_DIR: /home/web/unawe
+    BASE_DIR: /home/web/spaceawe
     BASE_DIR_LOCAL: /Users/rino/dev/unawe/spaceawe
     SHORT_NAME: spaceawe
   tasks:
