@@ -2,11 +2,13 @@
 from django.shortcuts import render
 from django.db.models import Q
 from django.views.generic import TemplateView
+from django.http import Http404
 
 from parler.views import ViewUrlMixin
 from parler.utils.context import switch_language
 from el_pagination.decorators import page_template
 
+from django_ext.models.spaceawe import CATEGORIES
 from spacescoops.models import Article
 from activities.models import Activity
 from games.models import Game
@@ -35,6 +37,8 @@ def about(request):
 @page_template('games/game_list_page_in_category.html', key='games_page')
 @page_template('activities/activity_list_page_in_category.html', key='activities_page')
 def categories(request, code, template='spaceawe/categories.html', extra_context=None):
+    if code not in CATEGORIES.keys():
+        raise Http404
     context = {
         'scoops': Article.add_prefetch_related(Article.objects.filter(**{code: True}).active_translations())[:3],
         'games': Game.objects.available().filter(**{code: True})[:3],
