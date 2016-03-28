@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load i18n parler_tags staticfiles smartpages %}
+{% load i18n parler_tags staticfiles smartpages pipeline %}
 
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
@@ -38,9 +38,8 @@
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="{% static 'css/pure/0.6.0/grids-responsive-min.css' %}">
         <!--<![endif]-->
-        <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,greek,cyrillic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        {% load pipeline %}{% stylesheet 'styles' %}
         {% if debug %}<style>/* fix for django debug toolbar + purecss */ [hidden="hidden"][style*="display: block;"] { display: block !important; }</style>{% endif %}
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -116,20 +115,7 @@
 
 
 
-
-<script src="{% static 'js/jquery-1.10.1.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.scrollTo.min.js' %}"></script>
-
-<script src="{% static 'js/jquery.event.special.js' %}"></script>
-<script src="{% static 'js/jquery.scrollsnap.js' %}"></script>
-
-<script src="{% static 'js/jquery.cycle2.min.js' %}"></script>
-
-<script src="{% static 'el-pagination/js/el-pagination.js' %}"></script>
-
-<script src="{% static 'js/jquery.sharrre.min.js' %}"></script>
-
+{% javascript 'scripts' %}
 {% block extra_js %}{% endblock %}
 
 <script>

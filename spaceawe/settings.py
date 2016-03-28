@@ -73,7 +73,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # 'pipeline',
+    'pipeline',
 
     'parler',
     'ckeditor',
@@ -239,8 +239,10 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.FileSystemFinder',
     # 'django.contrib.staticfiles.finders.DefaultStorageFinder',
-    # 'pipeline.finders.PipelineFinder',
+    'pipeline.finders.PipelineFinder',
 )
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 
 # Email
@@ -258,42 +260,39 @@ EMAIL_SUBJECT_PREFIX = '[space awareness] '
 # Caching
 USE_ETAGS = True  # Note: disable debug toolbar while testing!
 
-
-# # Pipeline
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-# PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
-# PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.yuglify.YuglifyCompressor'
-# PIPELINE_CSS = {
-#     'styles': {
-#         'source_filenames': (
-#             # 'css/fonts.css',
-#             # 'css/reset.css',
-#             'slick/slick.css',
-#             'slick/slick-theme.css',
-#             'css/main.css',
-#             # 'css/media_1280.css',
-#             # 'css/media_1080.css',
-#             # 'css/media_992.css',
-#             # 'css/media_768.css',
-#             # 'css/media_600.css',
-#             # 'css/media_480.css',
-#         ),
-#         'output_filename': 'css/spacescoop.min.css',
-#         'extra_context': {
-#             'media': 'screen',
-#         },
-#     },
-# }
-# PIPELINE_JS = {
-#     'scripts': {
-#         'source_filenames': [
-#             'js/jquery.js',
-#             'js/scripts.js',
-#         ],
-#         'output_filename': 'js/spacescoop.min.js',
-#     }
-# }
-
+# Pipeline
+PIPELINE = {
+    # 'PIPELINE_ENABLED': True,
+    # 'JS_COMPRESSOR': None,
+    # 'CSS_COMPRESSOR': None,
+    'STYLESHEETS': {
+        'styles': {
+            'source_filenames': [
+                'css/fonts.css',
+                'css/main.css',
+            ],
+            'output_filename': 'css/spaceawe.min.css',
+            'extra_context': {
+                'media': 'screen',
+            },
+        },
+    },
+    'JAVASCRIPT': {
+        'scripts': {
+            'source_filenames': [
+                'js/jquery-1.10.1.js',
+                'js/jquery.scrollTo.js',
+                'js/jquery.event.special.js',
+                'js/jquery.scrollsnap.js',
+                'js/jquery.cycle2.js',
+                'el-pagination/js/el-pagination.js',
+                'js/jquery.sharrre.min.js',
+                # 'js/scripts.js',
+            ],
+            'output_filename': 'js/spaceawe.min.js',
+        }
+    },
+}
 
 # Thumbnails
 # http://sorl-thumbnail.readthedocs.org/en/latest/reference/settings.html

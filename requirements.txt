@@ -6,7 +6,7 @@
 Django==1.8.11
 pytz
 psycopg2==2.6.1  # postgreSQL 
-django-pipeline==1.6.6
+django-pipeline==1.6.7
 django-autoslug==1.9.3
 awesome-slugify==1.6.5
 django-parler==1.5.1
@@ -18,15 +18,13 @@ django-el-pagination==2.1.1
 
 pillow==3.1.1
 sorl-thumbnail==12.3
-
-WeasyPrint==0.24
-
+WeasyPrint==0.26
 redis==2.10.5
-
-Whoosh==2.7.2
+celery==3.1.23
+Whoosh==2.7.3
 
 ## astroedu
 bleach==1.4.2
-# django-celery==3.1.16
+# django-celery==3.1.23
 mistune==0.7.2
 rtfunicode==1.0
