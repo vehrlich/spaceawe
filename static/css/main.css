@@ -298,8 +298,7 @@ body {
       text-transform: uppercase;
       padding-top: 5px;
       padding-left: 2em;
-      padding-right: 2em;
-      text-shadow: 0 0 8px black; }
+      padding-right: 2em; }
     .thumbnailed-list .list-item .bottom {
       position: absolute;
       bottom: 0;
@@ -313,6 +312,8 @@ body {
       .thumbnailed-list .list-item .expand img {
         height: 32px;
         width: 32px; }
+    .thumbnailed-list .list-item .color-black {
+      background-color: rgba(0, 0, 0, 0.2); }
     .thumbnailed-list .list-item .color, .thumbnailed-list .list-item .date, .thumbnailed-list .list-item .bottom {
       visibility: hidden;
       opacity: 0;
@@ -1048,6 +1049,16 @@ body.section-skills #footer .social {
     padding: 10px; }
     .more-container-list .list-item-container {
       margin: 10px; } }
+
+@media screen and (min-width: 100em) {
+  .fake-padding {
+    height: 280px; }
+  #header {
+    height: 280px; }
+    #header.small {
+      height: 90px; }
+  #sections .section {
+    height: 665px; } }
 
 @media print {
   .image-container {
