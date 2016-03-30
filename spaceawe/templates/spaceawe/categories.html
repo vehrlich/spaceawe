@@ -2,6 +2,8 @@
 {% load staticfiles thumbnail smartpages i18n %}
 {% load getattribute %}
 
+{% block site_title %}{{ CATEGORIES|getattribute:spaceawe_category|getattribute:'title' }} | Space Awareness {% endblock %}
+
 {% block extra_body_class %}section-categories{% endblock %}
 
 {% block slogan %}

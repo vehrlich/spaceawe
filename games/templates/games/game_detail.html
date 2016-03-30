@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load staticfiles thumbnail i18n %}
 
+{% block site_title %}{{ object.title }} | {% trans SECTIONS.games.title %} | Space Awareness {% endblock %}
+
 {% block extra_body_class %}section-games single{% endblock %}
 
 {% block extra_header_class %}small{% endblock %}
