@@ -19,17 +19,13 @@ from institutions.models import Person
 
 def home(request):
     return render(request, 'spaceawe/home.html', {
-        # 'featured': Article.add_prefetch_related(Article.objects.featured().active_translations())[:4],
-        # 'categories': Category.objects.all(),
         'highlights': Highlight.objects.all(),
     })
 
 
 def about(request):
     return render(request, 'spaceawe/about.html', {
-        # 'featured': Article.add_prefetch_related(Article.objects.featured().active_translations())[:4],
-        # 'categories': Category.objects.all(),
-        'partners': Person.objects.filter(Q(spaceawe_partner=True) | Q(spaceawe_node=True)),
+        'partners': Person.objects.filter(Q(spaceawe_partner=True) | Q(spaceawe_node=True)).select_related('institution'),
     })
 
 

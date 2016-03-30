@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles thumbnail smartpages i18n %}
+{% load staticfiles thumbnail smartpages i18n l10n %}
 
 {% block extra_head %}
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
@@ -41,7 +41,7 @@ var customOptions = {
 
 {% for partner in partners %}
 {% spaceless %}
-L.marker([{{ partner.institution.location.latitude }}, {{ partner.institution.location.longitude }}], {icon: nodeIcon}).bindPopup('<div class="partnermap-popup">
+L.marker([{{ partner.institution.location.latitude|unlocalize }}, {{ partner.institution.location.longitude|unlocalize }}], {icon: nodeIcon}).bindPopup('<div class="partnermap-popup">
     <a href="{{ partner.institution.url }}">
     {% thumbnail partner.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as thumb %}
         <div class="institution-logo">
@@ -69,6 +69,8 @@ L.marker([{{ partner.institution.location.latitude }}, {{ partner.institution.lo
 </script>
 {% endblock %}
 
+{% block site_title %}{% trans SECTIONS.about.title %} | Space Awareness {% endblock %}
+
 {% block extra_body_class %}section-news{% endblock %}
 
 {% block slogan %}
@@ -91,7 +93,7 @@ L.marker([{{ partner.institution.location.latitude }}, {{ partner.institution.lo
     <div id="cover">
         <div class="feature-container">
             <div class="fake-padding"></div>
-                <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({% static 'img/cover/06.jpg' %}) ;">
+                <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({% static 'img/cover/about.jpg' %}) ;">
                     <div class="title-container"><div class="title-subcontainer">
                         <div class="smartembed">{% smartembed 'about-010-intro' %}</div>
                     </div></div>
