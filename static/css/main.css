@@ -460,12 +460,18 @@ body {
     font-size: 12px; }
 
 #footer {
+  position: relative;
   margin-top: 40px; }
-  #footer .social {
+  #footer > div {
+    position: absolute;
+    width: 100%; }
+  #footer .social-background {
     height: 200px;
     background-image: url(../img/footer-bg-social.svg);
     background-position: top center;
     background-repeat: no-repeat; }
+  #footer .social {
+    height: 200px; }
     #footer .social .buttons {
       padding-top: 26px;
       text-align: center; }
@@ -474,7 +480,7 @@ body {
         width: 28px;
         padding: 6px; }
   #footer .copyright {
-    margin-top: -200px;
+    margin-top: 50px;
     min-height: 240px;
     background: url(../img/footer-bg-copyright.svg);
     background-position: top center;

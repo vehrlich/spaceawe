@@ -94,8 +94,17 @@
 {% block content %}{% endblock %}
 
 
-    <div id="footer" class="pure-g">
-        <div class="social pure-u-1">
+    <div id="footer" class="">
+        <div class="social-background">
+        </div>
+        <div class="copyright">
+            <div class="copyright-content">
+                <div class="eu-flag"><img src="{% static 'img/eu.svg' %}"></div>
+                <p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
+                <p>COPYRIGHT, CREATIVE COMMONS, LICENCES. 2015.</p>
+            </div>
+        </div>
+        <div class="social">
             <div class="buttons">
                 <a href="https://www.facebook.com/spaceawe" target="_blank"><img src="{% static 'img/icons/social/icon_sm_facebook_w.svg' %}"></a>
                 <a href="https://twitter.com/space_awe" target="_blank"><img src="{% static 'img/icons/social/icon_sm_twitter_w.svg' %}"></a>
@@ -104,119 +113,12 @@
                 <a href="mailto:euspaceawe@eun.org"><img src="{% static 'img/icons/social/icon_sm_mail_w.svg' %}"></a>
             </div>
         </div>
-        <div class="copyright pure-u-1">
-            <div class="copyright-content">
-                <div class="eu-flag"><img src="{% static 'img/eu.svg' %}"></div>
-                <p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
-                <p>COPYRIGHT, CREATIVE COMMONS, LICENCES. 2015.</p>
-            </div>
-        </div>
     </div>
 
 
 
 {% javascript 'scripts' %}
 {% block extra_js %}{% endblock %}
-
-<script>
-var small_nav_height = 60; // height of small navigation header
-
-(function($){ // create closure so we can safely use $ as alias for jQuery
-    function menu_main_click() {
-        $('#menu-main').toggleClass('sp-menu-open');
-        $('#menu-language').removeClass('sp-menu-open');
-    }
-    function menu_language_click() {
-        $('#menu-language').toggleClass('sp-menu-open');
-        $('#menu-main').removeClass('sp-menu-open');        
-    }
-    function resize_me() {
-        // if ($(window).width() < 1024) {
-            // var h = $(window).height() - $('.feature-container .fake-padding').height();
-            var h = $('#header').height();
-            $('.feature-container .fake-padding').height(h);
-            $('.feature-container .cycle-slideshow').height($(window).height() - h);
-            // if ($(window).width() >= 1024) {
-            //     $('#header .logo img').height(.40*h);
-            //     $('#header .slogan').css('font-size', 30 + 'px');
-            // }
-    }
-
-    $(document).ready(function(){
-
-        // main menu
-        $('#menu-main-button').on('click touchend', menu_main_click);
-        $('#menu-main').hover(menu_main_click);
-
-        // language menu
-        $('#menu-language-button').on('click touchend', menu_language_click);
-        $('#menu-language').hover(menu_language_click);
-
-        // snap scrolling
-        $(document).scrollsnap({
-            snaps: '.snap',
-            proximity_top: 200,
-            proximity_bottom: 0,
-            offset: -small_nav_height, 
-            duration: 500,
-            // easing: 'easeOutBack'
-        });
-
-        // page down buttons
-        $('#cover .arrow-pagedown').click(function() {
-            $(window).scrollTo({top: $('#sections').offset().top-small_nav_height, left: 0 }, 500);
-        });
-        $('#sections .arrow-pagedown').click(function() {
-            $(window).scrollTo({top: $('#subscribe').offset().top-small_nav_height, left: 0 }, 500);
-            // $(window).scrollTo('#subscribe', 500);
-        });
-
-{% block resize_header_js %}{% endblock %}
-
-        // resize main feature
-        $(window).resize(resize_me);
-        resize_me();
-
-        // social sharing
-        $('#twitter').sharrre({
-          share: {
-            twitter: false
-          },
-          enableHover: false,
-          enableTracking: true,
-          // buttons: { twitter: {via: '_JulienH'}},
-          click: function(api, options){
-            // api.simulateClick();
-            api.openPopup('twitter');
-          }
-        });
-        $('#facebook').sharrre({
-          share: {
-            facebook: false
-          },
-          enableHover: false,
-          enableTracking: true,
-          click: function(api, options){
-            // api.simulateClick();
-            api.openPopup('facebook');
-          }
-        });
-
-        // pagination
-        $.endlessPaginate();
-
-    });
-})(jQuery);
-
-// analytics
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-62171853-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
     </body>
 </html>

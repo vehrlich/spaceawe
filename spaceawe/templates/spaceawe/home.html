@@ -7,15 +7,9 @@
 <div class="slogan">{% trans "Inspiring a new generation of space explorers" %}</div>
 {% endblock %}
 
-{% block resize_header_js %}
-        // resize top bar on scroll
-        $(document).on('scroll', function() {
-            if($(document).scrollTop()>100){
-                $('#header').addClass('small');
-            } else {
-                $('#header').removeClass('small');
-            }
-        });
+{% block extra_js %}
+  {{ block.super }}
+<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}

@@ -718,12 +718,20 @@ body {
 } 
 
 #footer {
+  position: relative;
+  > div {
+    position: absolute;
+    width: 100%;
+  }
   margin-top: 40px;
-  .social {
+  .social-background {
     height: 200px;
     background-image: url(../img/footer-bg-social.svg);
     background-position: top center;
     background-repeat: no-repeat;
+  }
+  .social {
+    height: 200px;
     .buttons {
       padding-top: 26px;
       text-align: center;
@@ -734,7 +742,7 @@ body {
     }
   }
   .copyright {
-    margin-top: -200px;
+    margin-top: 50px;
     min-height: 240px;
     background: url(../img/footer-bg-copyright.svg);
     background-position: top center;

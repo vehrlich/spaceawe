@@ -287,7 +287,7 @@ PIPELINE = {
                 'js/jquery.cycle2.js',
                 'el-pagination/js/el-pagination.js',
                 'js/jquery.sharrre.min.js',
-                # 'js/scripts.js',
+                'js/scripts.js',
             ],
             'output_filename': 'js/spaceawe.min.js',
         }

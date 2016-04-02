@@ -78,15 +78,9 @@ L.marker([{{ partner.institution.location.latitude|unlocalize }}, {{ partner.ins
 <div class="slogan">{{ SECTIONS.about.subtitle }}</div>
 {% endblock %}
 
-{% block resize_header_js %}
-        // resize top bar on scroll
-        $(document).on('scroll', function() {
-            if($(document).scrollTop()>100){
-                $('#header').addClass('small');
-            } else {
-                $('#header').removeClass('small');
-            }
-        });
+{% block extra_js %}
+  {{ block.super }}
+<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
