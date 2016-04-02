@@ -672,7 +672,7 @@ body.section-news .content-card .title-container {
 body.section-news .more-container-header .list-header {
   background-image: url(../img/more-title-bg-news.svg); }
 
-body.section-news #footer .social {
+body.section-news #footer .social-background {
   background-image: url(../img/footer-bg-social-news.svg); }
 
 body.section-careers #cover .feature-container {
@@ -701,7 +701,7 @@ body.section-careers .content-card .title-container {
 body.section-careers .more-container-header .list-header {
   background-image: url(../img/more-title-bg-careers.svg); }
 
-body.section-careers #footer .social {
+body.section-careers #footer .social-background {
   background-image: url(../img/footer-bg-social-careers.svg); }
 
 body.section-scoops #cover .feature-container {
@@ -730,7 +730,7 @@ body.section-scoops .content-card .title-container {
 body.section-scoops .more-container-header .list-header {
   background-image: url(../img/more-title-bg-scoops.svg); }
 
-body.section-scoops #footer .social {
+body.section-scoops #footer .social-background {
   background-image: url(../img/footer-bg-social-scoops.svg); }
 
 body.section-games #cover .feature-container {
@@ -759,7 +759,7 @@ body.section-games .content-card .title-container {
 body.section-games .more-container-header .list-header {
   background-image: url(../img/more-title-bg-games.svg); }
 
-body.section-games #footer .social {
+body.section-games #footer .social-background {
   background-image: url(../img/footer-bg-social-games.svg); }
 
 body.section-activities #cover .feature-container {
@@ -788,7 +788,7 @@ body.section-activities .content-card .title-container {
 body.section-activities .more-container-header .list-header {
   background-image: url(../img/more-title-bg-activities.svg); }
 
-body.section-activities #footer .social {
+body.section-activities #footer .social-background {
   background-image: url(../img/footer-bg-social-activities.svg); }
 
 body.section-skills #cover .feature-container {
@@ -817,7 +817,7 @@ body.section-skills .content-card .title-container {
 body.section-skills .more-container-header .list-header {
   background-image: url(../img/more-title-bg-skills.svg); }
 
-body.section-skills #footer .social {
+body.section-skills #footer .social-background {
   background-image: url(../img/footer-bg-social-skills.svg); }
 
 .thumbnailed-list.news .list-header .title {
