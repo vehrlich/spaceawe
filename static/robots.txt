@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /search
+Disallow: /media/scoops/download
+Disallow: /media/activities/download
+Disallow: /media/games/download
