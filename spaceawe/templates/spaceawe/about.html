@@ -6,6 +6,8 @@
 {% endblock %}
 
 {% block extra_js %}
+  {{ block.super }}
+<script src="{% static 'js/scripts.topbar.js' %}"></script>
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script>
 var map = L.map('partnermap').setView([25, 0], 2);
@@ -78,10 +80,6 @@ L.marker([{{ partner.institution.location.latitude|unlocalize }}, {{ partner.ins
 <div class="slogan">{{ SECTIONS.about.subtitle }}</div>
 {% endblock %}
 
-{% block extra_js %}
-  {{ block.super }}
-<script src="{% static 'js/scripts.topbar.js' %}"></script>
-{% endblock %}
 
 {% block content %}
     <div id="cover">
