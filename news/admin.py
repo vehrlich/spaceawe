@@ -10,8 +10,8 @@ from .models import Article, Highlight
 
 @admin.register(Article)
 class ArticleAdmin(AdminImageMixin, TranslatableAdmin):
-    list_display = ('title', 'all_languages_column', 'thumb', )
-    # list_display = ('title', ), 'all_languages_column', )
+    # list_display = ('title', 'all_languages_column', 'thumb', )
+    list_display = ('title', 'all_languages_column', )
 
     fieldsets = (
         (None,
