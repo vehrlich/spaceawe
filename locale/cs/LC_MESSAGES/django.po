@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "News"
+msgstr "Novinky"
+
+msgid "Careers"
+msgstr "Profese"
+
+msgid "Discover space careers"
+msgstr "Objevte povolání spojená se zkoumáním vesmíru"
+
+msgid "Aiming for the stars? See how you can contribute to space science and exploration."
+msgstr "Míříte ke hvězdám? Podívejte se, jakým způsobem se můžete podílet na vědeckém zkoumání a poznávání vesmíru."
+
+msgid "Read"
+msgstr "Přečtěte si"
+
+msgid "Read Space Scoops"
+msgstr "Přečtěte si Sólokapry z vesmíru"
+
+msgid "News from across the Universe"
+msgstr "Zprávy z celého vesmíru"
+
+msgid "The latest discoveries about the Universe."
+msgstr "Nejnovější objevy ve vesmíru."
+
+msgid "Participate"
+msgstr "Zapojte se"
+
+msgid "Play & participate"
+msgstr "Hrajte a zapojte se"
+
+msgid "Apps and projects for space exploration"
+msgstr "Aplikace a projekty zaměřené na výzkum vesmíru"
+
+msgid "Some great apps and projects to take part in real research programmes."
+msgstr "Několik výborných aplikací a projektů, v nichž se můžete zapojit do skutečných výzkumných programů."
+
+msgid "Educate"
+msgstr "Vzdělávejte"
+
+msgid "Educate & inspire"
+msgstr "Vzdělávejte a inspirujte"
+
+msgid "Peer-reviewed educational activities"
+msgstr "VZDĚLÁVACÍ AKTIVITY OVĚŘENÉ PEDAGOGY V PRAXI"
+
+msgid "Some of the best resources for educators about space."
+msgstr "Výběr z nejlepších zdrojů materiálů zaměřených na tematiku vesmíru pro pedagogy"
+
+msgid "Develop"
+msgstr "Rozvíjejte"
+
+msgid "Develop teaching skills"
+msgstr "Rozvíjejte své pedagogické dovednosti"
+
+msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
+msgstr "Návod, jak nejlépe používat program Povědomí o vesmíru (Space Awareness) se žáky ve věku 8–18 let."
+
+msgid "Know us"
+msgstr "Seznamte se s námi"
+
+msgid "Get to know us"
+msgstr "Seznamte se s námi"
+
+msgid "Who is behind Space Awareness? Is there a contact in my country?"
+msgstr "Kdo stojí za programem Povědomí o vesmíru? Mohu se obrátit na někoho ve své zemi?"
+
+msgid "Our wonderful Universe"
+msgstr "Náš nádherný vesmír"
+
+msgid "Space sciences and exploration"
+msgstr "Věda o vesmíru a jeho zkoumání"
+
+msgid "Get inspired by the beauty and vastness of the Universe"
+msgstr "NECHTE SE INSPIROVAT KRÁSOU A ROZLEHLOSTÍ VESMÍRU"
+
+msgid "Our fragile planet"
+msgstr "Naše křehká planeta"
+
+msgid "Earth from above"
+msgstr "Planeta Země z výšky"
+
+msgid "The Earth, our unique and fragile home"
+msgstr "ZEMĚ, NÁŠ JEDINEČNÝ A KŘEHKÝ DOMOV"
+
+msgid "Navigation"
+msgstr "Navigace"
+
+msgid "Navigation through the ages"
+msgstr "Navigace v průběhu staletí"
+
+msgid "Global discovery & mobility"
+msgstr "Světové objevy a cesty"
+
+msgid "Trace the history of navigation from the first explorers to GPS"
+msgstr "SLEDUJTE DĚJINY NAVIGACE OD PRVNÍCH PRŮZKUMNÍKŮ PO GPS"
+
+msgid "Islamic heritage"
+msgstr "Islámské dědictví"
+
+msgid "The journey of ideas"
+msgstr "Cesta myšlenek"
+
+msgid "Building a bridge between the Islamic world and Europe"
+msgstr "STAVÍME MOSTY MEZI ISLÁMSKÝM SVĚTEM A EVROPOU"
+
+msgid "language"
+msgstr "Jazyk"
+
+msgid "download"
+msgstr "Ke stažení"
+
+msgid "website"
+msgstr "Webové stránky"
+
+msgid "Citizen Science"
+msgstr "Občanská věda"
+
+msgid "Fun Learning"
+msgstr "Zábavné učení"
+
+msgid "Game"
+msgstr "Hra"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Other"
+msgstr "Jiné"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Website"
+msgstr "Webové stránky"
+
+msgid "App"
+msgstr "Aplikace"
+
+msgid "Data Collection"
+msgstr "Shromažďování údajů"
+
+msgid "go to the activity"
+msgstr "Přejít na aktivitu"
+
+msgid "difficulty level"
+msgstr "Míra obtížnosti"
+
+msgid "fun level"
+msgstr "Míra zábavnosti"
+
+msgid "type"
+msgstr "Typ aktivity"
+
+msgid "languages"
+msgstr "Jazyk"
+
+msgid "platform"
+msgstr "Platforma"
+
+msgid "Brief Description"
+msgstr "Stručný popis"
+
+msgid "Goals"
+msgstr "Cíle"
+
+msgid "Learning Objectives"
+msgstr "Výukové cíle"
+
+msgid "Evaluation"
+msgstr "Hodnocení"
+
+msgid "Materials"
+msgstr "Pomůcky"
+
+msgid "Background Information"
+msgstr "Informace o tématu"
+
+msgid "Full Activity Description"
+msgstr "Podrobný popis aktivity"
+
+msgid "Curriculum"
+msgstr "Vzdělávací plán"
+
+msgid "Additional Information"
+msgstr "Další informace"
+
+msgid "Conclusion"
+msgstr "Závěr"
+
+msgid "attachments"
+msgstr "Přílohy"
+
+msgid "curriculum topic"
+msgstr "Téma podle vzdělávacího plánu"
+
+msgid "big idea of science"
+msgstr "Velká vědecká myšlenka"
+
+msgid "keywords"
+msgstr "Klíčová slova"
+
+msgid "age range"
+msgstr "Věková skupina"
+
+msgid "education level"
+msgstr "Stupeň vzdělávání"
+
+msgid "time"
+msgstr "Čas"
+
+msgid "group size"
+msgstr "Velikost skupiny"
+
+msgid "supervised for safety"
+msgstr "Dohled z důvodu bezpečnosti"
+
+msgid "cost"
+msgstr "Cena"
+
+msgid "location"
+msgstr "Místo"
+
+msgid "core skills"
+msgstr "Základní dovednosti"
+
+msgid "type of learning activity"
+msgstr "Typ vzdělávací aktivity"
+
+msgid "author"
+msgstr "Autor aktivity"
+
+msgid "link to source activity"
+msgstr "Odkaz na původní aktivitu"
+
+msgid "repositories"
+msgstr "Archivy"
+
+msgid "Contact us"
+msgstr "Kontaktujte nás"
+
+msgid "National contacts"
+msgstr "Zástupci v jednotlivých zemích"
+
+msgid "Project partners"
+msgstr "Partneři projektu"
+
+msgid "The Space Awareness team"
+msgstr "Tým programu „Povědomí o vesmíru“"
+
+msgid "Space Awareness is developed by"
+msgstr "Program „Povědomí o vesmíru“ vytvořili"
+
+msgid "Space Awareness is developed in collaboration with"
+msgstr "Program „Povědomí o vesmíru“ byl vyvinut ve spolupráci s"
+
+msgid "This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653"
+msgstr "Tvorba webových stránek byla financována z programu Evropské komise Horizont 2020, grantová smlouva č. 638653"
+
+msgid "Load more"
+msgstr "Načíst více"
+
+msgid "related resources"
+msgstr "Související zdroje"
+
+msgid "find by category"
+msgstr "VYHLEDÁVÁNÍ PODLE KATEGORIÍ"
+
+msgid "all"
+msgstr "Všechny"
+
+msgid "Inspiring a new generation of space explorers"
+msgstr "Inspirace pro nové průzkumníky vesmíru"
+
+msgid "Subscribe to our newsletter"
+msgstr "Přihlaste se k odběru našeho zpravodaje"
+
+msgid "and stay updated about new resources and events"
+msgstr "a nenechte si ujít aktuální informace o nových zdrojích a akcích."
+
+msgid "This section is coming soon!"
+msgstr "Tuto sekci zveřejníme již brzy!"
+
+msgid "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page"
+msgstr "Buďte mezi prvními, kdo se o aktualizaci dozví. Na hlavní stránce se přihlaste k odběru zpravodaje programu „Povědomí o vesmíru“."
+
+msgid "Related content"
+msgstr "Související"

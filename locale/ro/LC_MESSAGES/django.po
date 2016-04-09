@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "News"
+msgstr "Noutăţi"
+
+msgid "Careers"
+msgstr "Profesii"
+
+msgid "Discover space careers"
+msgstr "Descoperă profesii spaţiale"
+
+msgid "Aiming for the stars? See how you can contribute to space science and exploration."
+msgstr "Visezi să ajungi printre stele? Află cum poţi contribui la studiul şi explorarea spaţiului."
+
+msgid "Read"
+msgstr "Citeşte"
+
+msgid "Read Space Scoops"
+msgstr "Citeşte Space Scoops"
+
+msgid "News from across the Universe"
+msgstr "Noutăţi din cele patru colţuri ale universului"
+
+msgid "The latest discoveries about the Universe."
+msgstr "Ultimele descoperiri despre univers"
+
+msgid "Participate"
+msgstr "Participă"
+
+msgid "Play & participate"
+msgstr "Joacă-te şi participă"
+
+msgid "Apps and projects for space exploration"
+msgstr "Aplicaţii şi proiecte pentru explorarea spaţiului"
+
+msgid "Some great apps and projects to take part in real research programmes."
+msgstr "Aplicaţii şi proiecte interesante, care îţi permit să participi la programe de cercetare autentice"
+
+msgid "Educate"
+msgstr "Educă"
+
+msgid "Educate & inspire"
+msgstr "Educă şi motivează"
+
+msgid "Peer-reviewed educational activities"
+msgstr "ACTIVITĂŢI EDUCAŢIONALE RECENZATE"
+
+msgid "Some of the best resources for educators about space."
+msgstr "Unele dintre cele mai bune resurse didactice despre spaţiu"
+
+msgid "Develop"
+msgstr "Dezvoltă-te"
+
+msgid "Develop teaching skills"
+msgstr "Dobândeşte competenţe didactice"
+
+msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
+msgstr "Instrucţiuni pentru utilizarea optimă a Space Awareness cu copii de 8 - 18 ani"
+
+msgid "Know us"
+msgstr "Despre noi"
+
+msgid "Get to know us"
+msgstr "Descoperă cine suntem"
+
+msgid "Who is behind Space Awareness? Is there a contact in my country?"
+msgstr "Cine se află în spatele Space Awareness? Există un punct de contact în ţara mea?"
+
+msgid "Our wonderful Universe"
+msgstr "Universul nostru minunat"
+
+msgid "Space sciences and exploration"
+msgstr "Studiul şi explorarea spaţiului"
+
+msgid "Get inspired by the beauty and vastness of the Universe"
+msgstr "CONTEMPLĂ FRUMUSEŢEA ŞI IMENSITATEA UNIVERSULUI"
+
+msgid "Our fragile planet"
+msgstr "Planeta noastră fragilă"
+
+msgid "Earth from above"
+msgstr "Pământul văzut de sus"
+
+msgid "The Earth, our unique and fragile home"
+msgstr "PĂMÂNTUL, UNICA ŞI FRAGILA NOASTRĂ CASĂ"
+
+msgid "Navigation"
+msgstr "Navigaţia"
+
+msgid "Navigation through the ages"
+msgstr "Navigaţia de-a lungul secolelor"
+
+msgid "Global discovery & mobility"
+msgstr "Descoperiri şi mobilitate la nivel global"
+
+msgid "Trace the history of navigation from the first explorers to GPS"
+msgstr "RECONSTITUIE ISTORIA NAVIGAŢIEI DE LA PRIMII EXPLORATORI LA GPS"
+
+msgid "Islamic heritage"
+msgstr "Patrimoniul islamic"
+
+msgid "The journey of ideas"
+msgstr "Periplul ideilor"
+
+msgid "Building a bridge between the Islamic world and Europe"
+msgstr "CONSTRUIREA UNEI PUNŢI ÎNTRE LUMEA ISLAMICĂ ŞI EUROPA"
+
+msgid "language"
+msgstr "Limba"
+
+msgid "download"
+msgstr "Descărcare"
+
+msgid "website"
+msgstr "Site"
+
+msgid "Citizen Science"
+msgstr "Ştiinţă civică"
+
+msgid "Fun Learning"
+msgstr "Învăţare ludică"
+
+msgid "Game"
+msgstr "Joc"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Other"
+msgstr "Alta"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Website"
+msgstr "Site"
+
+msgid "App"
+msgstr "Aplicaţie"
+
+msgid "Data Collection"
+msgstr "Culegere de date"
+
+msgid "go to the activity"
+msgstr "Salt la activitate"
+
+msgid "difficulty level"
+msgstr "Nivel de dificultate"
+
+msgid "fun level"
+msgstr "Nivel ludic"
+
+msgid "type"
+msgstr "Tip de activitate"
+
+msgid "languages"
+msgstr "Limba"
+
+msgid "platform"
+msgstr "Platformă"
+
+msgid "Brief Description"
+msgstr "Scurtă descriere"
+
+msgid "Goals"
+msgstr "Scopuri"
+
+msgid "Learning Objectives"
+msgstr "Obiective de învăţare"
+
+msgid "Evaluation"
+msgstr "Evaluare"
+
+msgid "Materials"
+msgstr "Material"
+
+msgid "Background Information"
+msgstr "Informaţii de bază"
+
+msgid "Full Activity Description"
+msgstr "Descrierea completă a activităţii"
+
+msgid "Curriculum"
+msgstr "Curriculum"
+
+msgid "Additional Information"
+msgstr "Informaţii suplimentare"
+
+msgid "Conclusion"
+msgstr "Concluzie"
+
+msgid "attachments"
+msgstr "Anexe"
+
+msgid "curriculum topic"
+msgstr "Materie din programă"
+
+msgid "big idea of science"
+msgstr "Marea idee ştiinţifică"
+
+msgid "keywords"
+msgstr "Cuvinte-cheie"
+
+msgid "age range"
+msgstr "Grupa de vârstă"
+
+msgid "education level"
+msgstr "Nivel de studii"
+
+msgid "time"
+msgstr "Timp"
+
+msgid "group size"
+msgstr "Dimensiune grup"
+
+msgid "supervised for safety"
+msgstr "Supraveghere din motive de siguranţă"
+
+msgid "cost"
+msgstr "Costuri"
+
+msgid "location"
+msgstr "Loc"
+
+msgid "core skills"
+msgstr "Competenţe de bază"
+
+msgid "type of learning activity"
+msgstr "Tip de activitate de învăţare"
+
+msgid "author"
+msgstr "Autorul activităţii"
+
+msgid "link to source activity"
+msgstr "Pagina activităţii de origine"
+
+msgid "repositories"
+msgstr "Arhive"
+
+msgid "Contact us"
+msgstr "Contactaţi-ne"
+
+msgid "National contacts"
+msgstr "Contacte naţionale"
+
+msgid "Project partners"
+msgstr "Parteneri de proiect"
+
+msgid "The Space Awareness team"
+msgstr "Echipa Space Awareness"
+
+msgid "Space Awareness is developed by"
+msgstr "„Space Awareness” a fost conceput de"
+
+msgid "Space Awareness is developed in collaboration with"
+msgstr "„Space Awareness” a fost conceput în colaborare cu"
+
+msgid "This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653"
+msgstr "Acest site a fost conceput cu finanţare de la Comisia Europeană, în cadrul programului Orizont 2020, conform acordului de subvenţionare nr. 638653."
+
+msgid "Load more"
+msgstr "Încarcă mai multe"
+
+msgid "related resources"
+msgstr "Resurse conexe"
+
+msgid "find by category"
+msgstr "CĂUTARE DUPĂ CATEGORIE"
+
+msgid "all"
+msgstr "Toate"
+
+msgid "Inspiring a new generation of space explorers"
+msgstr "Aripi pentru o nouă generaţie de exploratori ai spaţiului"
+
+msgid "Subscribe to our newsletter"
+msgstr "Abonează-te la buletinul nostru informativ"
+
+msgid "and stay updated about new resources and events"
+msgstr "şi fii la curent cu noile evenimente şi resurse"
+
+msgid "This section is coming soon!"
+msgstr "Această secţiune va fi disponibilă în curând!"
+
+msgid "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page"
+msgstr "Abonează-te la buletinul informativ Space Awareness, de pe prima pagină, şi vei fi printre primii care va fi înştiinţat cu privire la actualizare!"
+
+msgid "Related content"
+msgstr "Conţinut conex"

@@ -1,0 +1,293 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "News"
+msgstr "Notícias"
+
+msgid "Careers"
+msgstr "Carreiras"
+
+msgid "Discover space careers"
+msgstr "Descobrir Carreiras no Espaço"
+
+msgid "Aiming for the stars? See how you can contribute to space science and exploration."
+msgstr "Com a mira nas estrelas? Saiba como pode contribuir para a ciência e a exploração do espaço."
+
+msgid "Read"
+msgstr "Ler"
+
+msgid "Read Space Scoops"
+msgstr "Ler Space Scoop"
+
+msgid "News from across the Universe"
+msgstr "Notícias de todo o Universo"
+
+msgid "The latest discoveries about the Universe."
+msgstr "As mais recentes descobertas sobre o Universo."
+
+msgid "Participate"
+msgstr "Participar"
+
+msgid "Play & participate"
+msgstr "Jogar e Participar"
+
+msgid "Apps and projects for space exploration"
+msgstr "Aplicações e projetos para a exploração do espaço"
+
+msgid "Some great apps and projects to take part in real research programmes."
+msgstr "Algumas aplicações e projetos fantásticos para participar em programas de investigação reais."
+
+msgid "Educate"
+msgstr "Educar"
+
+msgid "Educate & inspire"
+msgstr "Educar e inspirar"
+
+msgid "Peer-reviewed educational activities"
+msgstr "ATIVIDADES EDUCATIVAS REVISTAS POR ESPECIALISTAS"
+
+msgid "Some of the best resources for educators about space."
+msgstr "Alguns dos melhores recursos para educadores sobre o espaço."
+
+msgid "Develop"
+msgstr "Desenvolver"
+
+msgid "Develop teaching skills"
+msgstr "Desenvolver competências de ensino"
+
+msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
+msgstr "Orientações sobre a melhor utilização de Space Awareness com jovens dos 8 aos 18 anos de idade."
+
+msgid "Know us"
+msgstr "Quem somos"
+
+msgid "Get to know us"
+msgstr "Saiba quem somos"
+
+msgid "Who is behind Space Awareness? Is there a contact in my country?"
+msgstr "Quem é responsável pelo Space Awareness? Existe um contacto no meu país?"
+
+msgid "Our wonderful Universe"
+msgstr "O nosso maravilhoso Universo"
+
+msgid "Space sciences and exploration"
+msgstr "Ciências e exploração do espaço"
+
+msgid "Get inspired by the beauty and vastness of the Universe"
+msgstr "DEIXE-SE INSPIRAR PELA BELEZA E VASTIDÃO DO UNIVERSO"
+
+msgid "Our fragile planet"
+msgstr "O nosso frágil planeta"
+
+msgid "Earth from above"
+msgstr "A Terra vista de cima"
+
+msgid "The Earth, our unique and fragile home"
+msgstr "A TERRA, O NOSSO PLANETA ÚNICO E FRÁGIL"
+
+msgid "Navigation"
+msgstr "Navegação"
+
+msgid "Navigation through the ages"
+msgstr "Navegação através dos tempos"
+
+msgid "Global discovery & mobility"
+msgstr "Descoberta e mobilidade globais"
+
+msgid "Trace the history of navigation from the first explorers to GPS"
+msgstr "RECONSTITUA A HISTÓRIA DA NAVEGAÇÃO DESDE OS PRIMEIROS EXPLORADORES AO GPS"
+
+msgid "Islamic heritage"
+msgstr "Património islâmico"
+
+msgid "The journey of ideas"
+msgstr "A viagem das ideias"
+
+msgid "Building a bridge between the Islamic world and Europe"
+msgstr "CONSTRUIR UMA PONTE ENTRE O MUNDO ISLÂMICO E A EUROPA"
+
+msgid "language"
+msgstr "Língua"
+
+msgid "download"
+msgstr "Descarregar"
+
+msgid "website"
+msgstr "Sítio web"
+
+msgid "Citizen Science"
+msgstr "Ciência Cidadã"
+
+msgid "Fun Learning"
+msgstr "Aprendizagem lúdica"
+
+msgid "Game"
+msgstr "Jogo"
+
+msgid "Software"
+msgstr "Software"
+
+msgid "Other"
+msgstr "Outro"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Website"
+msgstr "Sítio web"
+
+msgid "App"
+msgstr "Aplicação"
+
+msgid "Data Collection"
+msgstr "Recolha de dados"
+
+msgid "go to the activity"
+msgstr "Ir para a atividade"
+
+msgid "difficulty level"
+msgstr "Nível de dificuldade"
+
+msgid "fun level"
+msgstr "Nível lúdico"
+
+msgid "type"
+msgstr "Tipo de atividade"
+
+msgid "languages"
+msgstr "Língua"
+
+msgid "platform"
+msgstr "Plataforma"
+
+msgid "Brief Description"
+msgstr "Breve descrição"
+
+msgid "Goals"
+msgstr "Objetivos"
+
+msgid "Learning Objectives"
+msgstr "Objetivos de aprendizagem"
+
+msgid "Evaluation"
+msgstr "Avaliação"
+
+msgid "Materials"
+msgstr "Material"
+
+msgid "Background Information"
+msgstr "Informações de referência"
+
+msgid "Full Activity Description"
+msgstr "Descrição da atividade completa"
+
+msgid "Curriculum"
+msgstr "Currículo"
+
+msgid "Additional Information"
+msgstr "Informações adicionais"
+
+msgid "Conclusion"
+msgstr "Conclusão"
+
+msgid "attachments"
+msgstr "Anexos"
+
+msgid "curriculum topic"
+msgstr "Tópico curricular"
+
+msgid "big idea of science"
+msgstr "Grande ideia científica"
+
+msgid "keywords"
+msgstr "Palavras-chave"
+
+msgid "age range"
+msgstr "Faixa etária"
+
+msgid "education level"
+msgstr "Nível de ensino"
+
+msgid "time"
+msgstr "Duração"
+
+msgid "group size"
+msgstr "Dimensão do grupo"
+
+msgid "supervised for safety"
+msgstr "Controlo de segurança"
+
+msgid "cost"
+msgstr "Custo"
+
+msgid "location"
+msgstr "Localização"
+
+msgid "core skills"
+msgstr "Competências básicas"
+
+msgid "type of learning activity"
+msgstr "Tipo de atividade de aprendizagem"
+
+msgid "author"
+msgstr "Autor da atividade"
+
+msgid "link to source activity"
+msgstr "Ligação à atividade de origem"
+
+msgid "repositories"
+msgstr "Repositórios"
+
+msgid "Contact us"
+msgstr "Contacte-nos"
+
+msgid "National contacts"
+msgstr "Contactos nacionais"
+
+msgid "Project partners"
+msgstr "Parceiros do projeto"
+
+msgid "The Space Awareness team"
+msgstr "A equipa do Space Awareness"
+
+msgid "Space Awareness is developed by"
+msgstr "O Space Awareness é desenvolvido por"
+
+msgid "Space Awareness is developed in collaboration with"
+msgstr "O Space Awareness é desenvolvido em colaboração com"
+
+msgid "This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653"
+msgstr "Este sítio web foi desenvolvido com financiamento do Programa Horizon 2020 da Comissão Europeia ao abrigo do Acordo de Subvenção n.º 638653"
+
+msgid "Load more"
+msgstr "Ver mais"
+
+msgid "related resources"
+msgstr "Recursos relacionados"
+
+msgid "find by category"
+msgstr "LOCALIZAR POR CATEGORIA"
+
+msgid "all"
+msgstr "Todas"
+
+msgid "Inspiring a new generation of space explorers"
+msgstr "Inspirar uma nova geração de exploradores do espaço"
+
+msgid "Subscribe to our newsletter"
+msgstr "Subscreva a nossa newsletter"
+
+msgid "and stay updated about new resources and events"
+msgstr "e mantenha-se a par de novos recursos e eventos"
+
+msgid "This section is coming soon!"
+msgstr "Esta secção estará disponível em breve!"
+
+msgid "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page"
+msgstr "Seja dos primeiros a serem notificados sobre a atualização, subscrevendo a newsletter do Space Awareness na página inicial!"
+
+msgid "Related content"
+msgstr "Conteúdo relacionado"

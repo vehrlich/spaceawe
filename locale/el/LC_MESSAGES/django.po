@@ -1,0 +1,290 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+msgid "News"
+msgstr "Νέα"
+
+msgid "Careers"
+msgstr "Επαγγέλματα"
+
+msgid "Discover space careers"
+msgstr "Ανακαλύψτε τα Επαγγέλματα του Διαστήματος"
+
+msgid "Aiming for the stars? See how you can contribute to space science and exploration."
+msgstr "Στοχεύετε στ' αστέρια; Μάθετε πώς μπορείτε να συνεισφέρετε στην επιστήμη του διαστήματος και την εξερεύνησή του."
+
+msgid "Read"
+msgstr "Διαβάστε"
+
+msgid "Read Space Scoops"
+msgstr "Διαβάστε Αποκλειστικές Ειδήσεις από το Διάστημα"
+
+msgid "News from across the Universe"
+msgstr "Νέα από ολόκληρο το Σύμπαν"
+
+msgid "The latest discoveries about the Universe."
+msgstr "Οι πιο πρόσφατες ανακαλύψεις για το Σύμπαν."
+
+msgid "Participate"
+msgstr "Πάρτε μέρος"
+
+msgid "Play & participate"
+msgstr "Παίξτε και Πάρτε Μέρος"
+
+msgid "Apps and projects for space exploration"
+msgstr "Εφαρμογές και προγράμματα για την εξερεύνηση του διαστήματος"
+
+msgid "Some great apps and projects to take part in real research programmes."
+msgstr "Ορισμένες εξαιρετικές εφαρμογές και προγράμματα για να πάρετε μέρος σε πραγματικά ερευνητικά προγράμματα."
+
+msgid "Educate"
+msgstr "Εκπαιδεύστε"
+
+msgid "Educate & inspire"
+msgstr "Εκπαιδεύστε και εμπνεύστε"
+
+msgid "Peer-reviewed educational activities"
+msgstr "ΕΛΕΓΜΕΝΕΣ ΕΚΠΑΙΔΕΥΤΙΚΕΣ ΔΡΑΣΤΗΡΙΟΤΗΤΕΣ"
+
+msgid "Some of the best resources for educators about space."
+msgstr "Ορισμένοι από τους καλύτερους πόρους σχετικά με το διάστημα για παιδαγωγούς."
+
+msgid "Develop"
+msgstr "Αναπτύξτε"
+
+msgid "Develop teaching skills"
+msgstr "Αναπτύξτε δεξιότητες διδασκαλίας"
+
+msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
+msgstr "Οδηγίες για την καλύτερη δυνατή χρήση του \"Space Awareness\" με παιδιά και εφήβους ηλικίας 8 έως 18 ετών."
+
+msgid "Know us"
+msgstr "Γνωρίστε μας"
+
+msgid "Get to know us"
+msgstr "Γνωρίστε μας"
+
+msgid "Who is behind Space Awareness? Is there a contact in my country?"
+msgstr "Ποιος βρίσκεται πίσω από το \"Space Awareness\"; Υπάρχει υπεύθυνος επικοινωνίας στη χώρα μου;"
+
+msgid "Our wonderful Universe"
+msgstr "Το υπέροχο Σύμπαν μας"
+
+msgid "Space sciences and exploration"
+msgstr "Επιστήμες του διαστήματος και εξερεύνησή του"
+
+msgid "Get inspired by the beauty and vastness of the Universe"
+msgstr "ΕΜΠΕΝΥΣΤΕΙΤΕ ΑΠΟ ΤΗΝ ΟΜΟΡΦΙΑ ΚΑΙ ΤΗΝ ΑΠΕΡΑΝΤΟΣΥΝΗ ΤΟΥ ΣΥΜΠΑΝΤΟΣ"
+
+msgid "Our fragile planet"
+msgstr "Ο εύθραυστος πλανήτης μας"
+
+msgid "Earth from above"
+msgstr "Η Γη από ψηλά"
+
+msgid "The Earth, our unique and fragile home"
+msgstr "Η ΓΗ, ΤΟ ΜΟΝΑΔΙΚΟ ΚΑΙ ΕΥΘΡΑΥΣΤΟ ΣΠΙΤΙ ΜΑΣ"
+
+msgid "Navigation through the ages"
+msgstr "Η ναυσιπλοΐα στην πάροδο των χρόνων"
+
+msgid "Global discovery & mobility"
+msgstr "Ανακάλυψη του κόσμου και κινητικότητα"
+
+msgid "Trace the history of navigation from the first explorers to GPS"
+msgstr "ΑΝΑΚΑΛΥΨΤΕ ΤΗΝ ΙΣΤΟΡΙΑ ΤΗΣ ΝΑΥΣΙΠΛΟΙΑΣ ΑΠΟ ΤΟΥΣ ΠΡΩΤΟΥΣ ΕΞΕΡΕΥΝΗΤΕΣ ΜΕΧΡΙ ΤΟ GPS"
+
+msgid "Islamic heritage"
+msgstr "Ισλαμική κληρονομιά"
+
+msgid "The journey of ideas"
+msgstr "Το ταξίδι των ιδεών"
+
+msgid "Building a bridge between the Islamic world and Europe"
+msgstr "ΟΙΚΟΔΟΜΩΝΤΑΣ ΜΙΑ ΓΕΦΥΡΑ ΜΕΤΑΞΥ ΤΟΥ ΙΣΛΑΜΙΚΟΥ ΚΟΣΜΟΥ ΚΑΙ ΤΗΣ ΕΥΡΩΠΗΣ"
+
+msgid "language"
+msgstr "Γλώσσα"
+
+msgid "download"
+msgstr "Μεταφόρτωση"
+
+msgid "website"
+msgstr "Ιστοσελίδα"
+
+msgid "Citizen Science"
+msgstr "Επιστήμη των Πολιτών"
+
+msgid "Fun Learning"
+msgstr "Διασκεδαστική Μάθηση"
+
+msgid "Game"
+msgstr "Παιχνίδια"
+
+msgid "Software"
+msgstr "Λογισμικό"
+
+msgid "Other"
+msgstr "Άλλα"
+
+msgid "Facebook"
+msgstr "Facebook"
+
+msgid "Website"
+msgstr "Ιστοσελίδα"
+
+msgid "App"
+msgstr "Εφαρμογή"
+
+msgid "Data Collection"
+msgstr "Συλλογή δεδομένων"
+
+msgid "go to the activity"
+msgstr "Μετάβαση στη δραστηριότητα"
+
+msgid "difficulty level"
+msgstr "Επίπεδο δυσκολίας"
+
+msgid "fun level"
+msgstr "Επίπεδο διασκέδασης"
+
+msgid "type"
+msgstr "Τύπος δραστηριότητας"
+
+msgid "languages"
+msgstr "Γλώσσα"
+
+msgid "platform"
+msgstr "Πλατφόρμα"
+
+msgid "Brief Description"
+msgstr "Σύντομη Περιγραφή"
+
+msgid "Goals"
+msgstr "Στόχοι"
+
+msgid "Learning Objectives"
+msgstr "Μαθησιακοί Στόχοι"
+
+msgid "Evaluation"
+msgstr "Αξιολόγηση"
+
+msgid "Materials"
+msgstr "Υλικό"
+
+msgid "Background Information"
+msgstr "Θεωρητικές πληροφορίες"
+
+msgid "Full Activity Description"
+msgstr "Πλήρης Περιγραφή της Δραστηριότητας"
+
+msgid "Curriculum"
+msgstr "Πρόγραμμα σπουδών"
+
+msgid "Additional Information"
+msgstr "Περισσότερες πληροφορίες"
+
+msgid "Conclusion"
+msgstr "Συμπεράσματα"
+
+msgid "attachments"
+msgstr "Επισυνάψεις"
+
+msgid "curriculum topic"
+msgstr "Θέμα αναλυτικού προγράμματος"
+
+msgid "big idea of science"
+msgstr "Μεγάλη Επιστημονική Ιδέα"
+
+msgid "keywords"
+msgstr "Λέξεις-κλειδιά"
+
+msgid "age range"
+msgstr "Ηλικίες"
+
+msgid "education level"
+msgstr "Εκπαιδευτική βαθμίδα"
+
+msgid "time"
+msgstr "Χρόνος"
+
+msgid "group size"
+msgstr "Μέγεθος ομάδας"
+
+msgid "supervised for safety"
+msgstr "Επιβλεπόμενο για λόγους ασφάλειας"
+
+msgid "cost"
+msgstr "Κόστος"
+
+msgid "location"
+msgstr "Μέρος"
+
+msgid "core skills"
+msgstr "Βασικές Δεξιότητες"
+
+msgid "type of learning activity"
+msgstr "Τύπος μαθησιακής δραστηριότητας"
+
+msgid "author"
+msgstr "Συγγραφέας της δραστηριότητας"
+
+msgid "link to source activity"
+msgstr "Σύνδεσμος για την πηγή της δραστηριότητας"
+
+msgid "repositories"
+msgstr "Αποθετήρια"
+
+msgid "Contact us"
+msgstr "Επικοινωνήστε μαζί μας"
+
+msgid "National contacts"
+msgstr "Εθνικά σημεία επαφής"
+
+msgid "Project partners"
+msgstr "Εταίροι του έργου"
+
+msgid "The Space Awareness team"
+msgstr "Η ομάδα του Space Awareness"
+
+msgid "Space Awareness is developed by"
+msgstr "Το Space Awareness αναπτύχθηκε από"
+
+msgid "Space Awareness is developed in collaboration with"
+msgstr "Το Space Awareness αναπτύχθηκε σε συνεργασία με"
+
+msgid "This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653"
+msgstr "Ο παρών ιστότοπος αναπτύχθηκε με χρηματοδότηση από το πρόγραμμα της Ευρωπαϊκής Επιτροπής \"Horizon 2020\" στο πλαίσιο της συμφωνίας επιχορήγησης 638653"
+
+msgid "Load more"
+msgstr "Φορτώστε περισσότερα"
+
+msgid "related resources"
+msgstr "Συναφείς πόροι"
+
+msgid "find by category"
+msgstr "ΕΥΡΕΣΗ ΑΝΑ ΚΑΤΗΓΟΡΙΑ"
+
+msgid "all"
+msgstr "Όλα"
+
+msgid "Inspiring a new generation of space explorers"
+msgstr "Εμπνέοντας την επόμενη γενιά εξερευνητών του διαστήματος"
+
+msgid "Subscribe to our newsletter"
+msgstr "Γίνετε συνδρομητής στο ενημερωτικό μας δελτίο"
+
+msgid "and stay updated about new resources and events"
+msgstr "και ενημερωθείτε για τους τελευταίους πόρους και εξελίξεις"
+
+msgid "This section is coming soon!"
+msgstr "Η ενότητα θα είναι σύντομα κοντά σας!"
+
+msgid "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page"
+msgstr "Εγγραφείτε στο ενημερωτικό δελτίο του \"Space Awareness\" στην αρχική σελίδα, ώστε να είσαστε από τους πρώτους που θα ειδοποιηθείτε για την καινούργια ενότητα!"
+
+msgid "Related content"
+msgstr "Συναφές περιεχόμενο"
