@@ -68,10 +68,10 @@
 
             </div>
             <div class="content-right-column">
-                <div>
+                <div class="download">
                     <div class="caption">{% trans "download" %}</div>
                     <div class="value">
-                        <a href="#" onclick="window.print(); return false;"><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
+                        <a href="/media/activities/download/activity-{{ object.code }}{{ object.language_code }}-{{ object.slug }}.pdf"><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
                         <!-- <a href="http://astroedu.iau.org/media/activities/download/{{ object.slug }}-astroEDU-{{ object.code }}.rtf"><img class="button" src="{% static 'img/icon_download.svg' %}"></a> -->
                     </div>
                 </div>
@@ -83,7 +83,7 @@
             {% endfor %}
                 </div>
         {% endif %}
-                <div>
+                <div class="social-sharing">
                     <img id="facebook" class="button" data-url="{{ SITE_URL }}{% url 'activities:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_facebook_b.svg' %}" />
                     <img id="twitter" class="button" data-url="{{ SITE_URL }}{% url 'activities:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_twitter_b.svg' %}" />
                 </div>

@@ -52,8 +52,10 @@
                 </div> -->
                 {% endif %}{% endif %}
 
-                <div><a href="http://www.unawe.org/static/archives/kids/pdf/unawe{{ object.code }}{% if object.language_code != 'en' %}{{ object.language_code }}{% endif %}.pdf">{% trans "download" %}<br><img class="button" src="{% static 'img/icon_download.svg' %}"></a></div>
-                <div>
+                <div class="download">
+                    <a href="/media/articles/download/spacescoop-{{ object.code }}{{ object.language_code }}-{{ object.slug }}.pdf">{% trans "download" %}<br><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
+                </div>
+                <div class="social-sharing">
                     <img id="facebook" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_facebook_b.svg' %}" />
                 <img id="twitter" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_twitter_b.svg' %}" />
                 </div>

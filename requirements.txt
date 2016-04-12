@@ -14,14 +14,14 @@ django-ckeditor==5.0.3
 django-taggit==0.17.6
 django-taggit-autosuggest==0.2.8
 django-select-multiple-field==0.4.2
-django-el-pagination==2.1.1
+django-el-pagination==2.1.2
 
-pillow==3.1.1
+pillow==3.2.0
 sorl-thumbnail==12.3
-WeasyPrint==0.26
+WeasyPrint==0.27
 redis==2.10.5
 celery==3.1.23
-Whoosh==2.7.3
+Whoosh==2.7.4
 
 ## astroedu
 bleach==1.4.2

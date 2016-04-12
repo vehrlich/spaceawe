@@ -1,0 +1,122 @@
+@page {
+    size: A4 portrait;
+    margin: 0.4cm 2.8cm 1.5cm 2.8cm; 
+}
+
+$logo-height: 3.0cm;
+$logo-width: 2.35 * $logo-height;
+
+$font-titles: Miso, sans-serif;
+
+$color-activities: #9d59e4;
+
+body {
+    font-family: Ubuntu, sans-serif;
+    line-height: 1.3;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+
+    widows: 3;
+    orphans: 3;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    img {
+        max-width: 21cm - (2 * 2.8cm);
+    }
+}
+#header {
+    page-break-after: always;
+    text-align: center;
+    .logo {
+        margin-top: 7.3cm;
+        img {
+            height: $logo-height;
+            width: $logo-width;
+        }
+    }
+    .title {
+        margin-top: 4.3cm;
+        font-family: $font-titles;
+        font-size: 32px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $color-activities;
+    }
+    .subtitle {
+        margin-top: 1em;
+        font-style: italic;
+    }
+    .teaser {
+        margin-top: 2.3cm;
+        font-size: 16px;
+    }
+    .author {
+        font-size: 18px;
+        color: $color-activities;
+    }
+    .categories {
+        margin-top: 2.0cm;
+        img {
+            height: 2.5cm;
+            width: 2.5cm;
+            margin: 0.4cm;
+        }
+    }
+}
+
+#metadata {
+    // -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    // -moz-column-count: 3; /* Firefox */
+    // column-count: 3;
+    table td {
+        width: 33%;
+        vertical-align: top;
+    }
+    .metadata-item {
+        margin-bottom: 1em;
+        .caption {
+            font-weight: bold;
+        }        
+    }
+}
+
+#story {
+    margin-top: 1.0cm;
+    .section-caption {
+        margin-top: 1em;
+        font-family: $font-titles;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: $color-activities;        
+    }
+}
+
+#footer {
+    // position: absolute;
+    bottom: 0;
+    width: 100%;
+    .sponsors {
+        img {
+            height: 40px;
+            padding-right: 20pt;
+        }        
+    }
+    .separator {
+        margin-top: 0.2cm;
+        margin-bottom: 0.2cm;
+        border: solid 0.01cm black;
+    }
+    .footer_link {
+        text-align: center;
+    }
+
+}
+
+.text {
+    line-height: 1.4;
+}
+
