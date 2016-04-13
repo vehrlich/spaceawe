@@ -196,52 +196,52 @@ msgstr "Aanvullende informatie"
 msgid "Conclusion"
 msgstr "Conclusie"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Bijlagen"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Curriculumonderwerp"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Grote idee van wetenschap"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Trefwoorden"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Leeftijdsgroep"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Onderwijsniveau"
 
-msgid "time"
+msgid "Time"
 msgstr "Tijd"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Groepsgrootte"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Toezicht voor de veiligheid"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Kosten"
 
-msgid "location"
+msgid "Location"
 msgstr "Locatie"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Kernvaardigheden"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Type leeractiviteit"
 
-msgid "author"
+msgid "Author"
 msgstr "Auteur van de activiteit"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Link naar de bronactiviteit"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Verzamelplaatsen"
 
 msgid "Contact us"
@@ -268,7 +268,7 @@ msgstr "Deze website is ontwikkeld met financiering uit het Horizon 2020-program
 msgid "Load more"
 msgstr "Meer laden"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Gerelateerde middelen"
 
 msgid "find by category"

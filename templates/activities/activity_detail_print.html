@@ -12,8 +12,7 @@
         <div id="header">
             <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
             <div class="title">{{ object.title }}</div>
-            <div class="subtitle">{% trans 'Tested by teachers' %}</div>
-            <div class="teaser">{{ object.teaser }}</div>
+            <div class="teaser"><!-- {{ object.teaser }} --></div>
             <div class="author">{{ object.authors.all.0.institution.name }}</div>
             <div class="categories">
             {% for category in object.spaceawe_categories %}
@@ -26,55 +25,55 @@
 
             <table><tr><td>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "curriculum topic" %}</div>
+                    <div class="caption">{% trans "Curriculum topic" %}</div>
                     <div class="value">{{ object.theme }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "big idea of science" %}</div>
+                    <div class="caption">{% trans "Big idea of science" %}</div>
                     <div class="value"><a href="http://www.golabz.eu/big-ideas" target="_blank">{{ object.big_idea }}</a></div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "keywords" %}</div>
+                    <div class="caption">{% trans "Keywords" %}</div>
                     <div class="value">{{ object.keywords }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "age range" %}</div>
+                    <div class="caption">{% trans "Age range" %}</div>
                     <div class="value">{{ object.age_range }}</div>
                 </div>
             </td>
             <td>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "education level" %}</div>
+                    <div class="caption">{% trans "Education level" %}</div>
                     <div class="value">{{ object.level.all| join:', ' }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "time" %}</div>
+                    <div class="caption">{% trans "Time" %}</div>
                     <div class="value">{{ object.time }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "group size" %}</div>
+                    <div class="caption">{% trans "Group size" %}</div>
                     <div class="value">{{ object.group }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "supervised for safety" %}</div>
+                    <div class="caption">{% trans "Supervised for safety" %}</div>
                     <div class="value">{{ object.supervised }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "cost" %}</div>
+                    <div class="caption">{% trans "Cost" %}</div>
                     <div class="value">{{ object.cost }}</div>
                 </div>
             </td>
             <td>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "location" %}</div>
+                    <div class="caption">{% trans "Location" %}</div>
                     <div class="value">{{ object.location }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "core skills" %}</div>
+                    <div class="caption">{% trans "Core skills" %}</div>
                     <div class="value">{{ object.skills.all| join:', ' }}</div>
                 </div>
                 <div class="metadata-item">
-                    <div class="caption">{% trans "type of learning activity" %}</div>
+                    <div class="caption">{% trans "Type of learning activity" %}</div>
                     <div class="value">{{ object.learning }}</div>
                 </div>
             </td></tr></table>

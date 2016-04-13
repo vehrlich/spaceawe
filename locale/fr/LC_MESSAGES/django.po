@@ -193,52 +193,52 @@ msgstr "Informations supplémentaires"
 msgid "Conclusion"
 msgstr "Conclusion"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Les pièces jointes"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Matière au programme"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Une grande idée de la science"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Mots clés"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Tranche d’âge"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Niveau d’études"
 
-msgid "time"
+msgid "Time"
 msgstr "Durée"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Taille du groupe"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Supervisé par rapport à la sécurité"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Dépense"
 
-msgid "location"
+msgid "Location"
 msgstr "Lieu"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Compétences de base"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Type d’activité d’apprentissage"
 
-msgid "author"
+msgid "Author"
 msgstr "Auteur de l’activité"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Lien vers l’activité d’origine"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Répertoires"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Ce site a été réalisé avec un financement de la Commission européen
 msgid "Load more"
 msgstr "En télécharger d’autres"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Ressources apparentées"
 
 msgid "find by category"

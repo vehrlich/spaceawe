@@ -193,52 +193,52 @@ msgstr "Informacje dodatkowe"
 msgid "Conclusion"
 msgstr "Zakończenie"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Załączniki"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Temat z programu nauczania"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Ważna koncepcja nauki"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Słowa kluczowe"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Wiek"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Poziom kształcenia"
 
-msgid "time"
+msgid "Time"
 msgstr "Czas trwania"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Rozmiar grupy"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Nadzór ze względów bezpieczeństwa"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Koszt"
 
-msgid "location"
+msgid "Location"
 msgstr "Lokalizacja"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Umiejętności kluczowe"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Rodzaj zajęć edukacyjnych"
 
-msgid "author"
+msgid "Author"
 msgstr "Autor zajęć"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Link do materiału źródłowego"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Repozytoria"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Portal powstał przy wsparciu finansowym programu Horyzont 2020 Komisji 
 msgid "Load more"
 msgstr "Pokaż więcej"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Pokrewne zasoby"
 
 msgid "find by category"

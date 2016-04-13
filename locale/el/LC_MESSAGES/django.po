@@ -190,52 +190,52 @@ msgstr "Περισσότερες πληροφορίες"
 msgid "Conclusion"
 msgstr "Συμπεράσματα"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Επισυνάψεις"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Θέμα αναλυτικού προγράμματος"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Μεγάλη Επιστημονική Ιδέα"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Λέξεις-κλειδιά"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Ηλικίες"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Εκπαιδευτική βαθμίδα"
 
-msgid "time"
+msgid "Time"
 msgstr "Χρόνος"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Μέγεθος ομάδας"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Επιβλεπόμενο για λόγους ασφάλειας"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Κόστος"
 
-msgid "location"
+msgid "Location"
 msgstr "Μέρος"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Βασικές Δεξιότητες"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Τύπος μαθησιακής δραστηριότητας"
 
-msgid "author"
+msgid "Author"
 msgstr "Συγγραφέας της δραστηριότητας"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Σύνδεσμος για την πηγή της δραστηριότητας"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Αποθετήρια"
 
 msgid "Contact us"
@@ -262,7 +262,7 @@ msgstr "Ο παρών ιστότοπος αναπτύχθηκε με χρημα�
 msgid "Load more"
 msgstr "Φορτώστε περισσότερα"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Συναφείς πόροι"
 
 msgid "find by category"

@@ -1,6 +1,6 @@
 ,en,nl,it,de,es,pl,cs,fr,el,ro,pt
 ,English,Dutch,Italian,German,Spanish,Polish,Czech,French,Greek,Romanian,Portuguese
-,,,,,,,,,,,
+,Language name in native,Nederlands,Italiano,Deutsch,Español,polski,Česky,français,Ελληνικά,Română,Português
 Section texts – News,,,,,,,,,,,
 ,News,Nieuws,News,Aktuelles,Noticias,Wiadomości,Novinky,Actualités,Νέα ,Noutăţi,Notícias
 ,Latest updates about Space Awareness,,,,,,,,,,
@@ -65,6 +65,8 @@ Space Scoops,,,,,,,,,,,
 ,This Space Scoop is based on a Press Release from,,,,,,,,,,
 ,This Space Scoop is based on Press Releases from,,,,,,,,,,
 ,more news,,,,,,,,,,
+Space Scoops (print),,,,,,,,,,,
+,Space Scoop,,,,,,,,,,
 Game type,,,,,,,,,,,
 ,Citizen Science,Burgerwetenschap ,Citizen Science ,Bürgerwissenschaft,Ciencia ciudadana ,Nauka obywatelska ,Občanská věda,Sciences citoyennes ,Επιστήμη των Πολιτών ,Ştiinţă civică,Ciência Cidadã 
 ,Fun Learning,Leuk leren ,Apprendere divertendosi ,Lernen mit Spaß,Aprender divirtiéndose ,Nauka przez zabawę ,Zábavné učení,Apprendre en s’amusant ,Διασκεδαστική Μάθηση ,Învăţare ludică,Aprendizagem lúdica 
@@ -95,22 +97,24 @@ Activities – sections,,,,,,,,,,,
 ,Additional Information,Aanvullende informatie,Informazioni aggiuntive,Zusätzliche Informationen,Más información,Informacje dodatkowe,Další informace,Informations supplémentaires,Περισσότερες πληροφορίες,Informaţii suplimentare,Informações adicionais
 ,Conclusion,Conclusie,Conclusione,Fazit,Conclusión,Zakończenie,Závěr,Conclusion,Συμπεράσματα,Concluzie,Conclusão
 Activities – metadata column,,,,,,,,,,,
-,attachments,Bijlagen,Allegati,Anhänge,Archivos adjuntos,Załączniki,Přílohy,Les pièces jointes,Επισυνάψεις,Anexe,Anexos
-,curriculum topic,Curriculumonderwerp,Argomento del programma di studi,Lehrplanthema,Tema del plan de estudio,Temat z programu nauczania,Téma podle vzdělávacího plánu,Matière au programme ,Θέμα αναλυτικού προγράμματος,Materie din programă,Tópico curricular
-,big idea of science,Grote idee van wetenschap,Le grandi idee della scienza,Übergeordnetes wissenschaftliches Konzept,La gran idea de la ciencia,Ważna koncepcja nauki,Velká vědecká myšlenka,Une grande idée de la science  ,Μεγάλη Επιστημονική Ιδέα,Marea idee ştiinţifică,Grande ideia científica
-,keywords,Trefwoorden,Parole chiave,Schlüsselwörter,Palabras clave,Słowa kluczowe,Klíčová slova,Mots clés ,Λέξεις-κλειδιά,Cuvinte-cheie,Palavras-chave
-,age range,Leeftijdsgroep,Fascia d’età,Altersgruppe,Edades,Wiek,Věková skupina,Tranche d’âge ,Ηλικίες,Grupa de vârstă,Faixa etária
-,education level,Onderwijsniveau,Livello scolastico,Bildungsebene,Nivel del sistema educativo,Poziom kształcenia,Stupeň vzdělávání,Niveau d’études ,Εκπαιδευτική βαθμίδα,Nivel de studii,Nível de ensino
-,time,Tijd,Tempo,Zeit,Tiempo,Czas trwania,Čas,Durée ,Χρόνος,Timp,Duração
-,group size,Groepsgrootte,Dimensione del gruppo,Gruppengröße,Tamaño del grupo,Rozmiar grupy,Velikost skupiny,Taille du groupe,Μέγεθος ομάδας,Dimensiune grup,Dimensão do grupo
-,supervised for safety,Toezicht voor de veiligheid,Supervisionato a fini di sicurezza,Sicherheitsüberwacht,Supervisión de seguridad,Nadzór ze względów bezpieczeństwa,Dohled z důvodu bezpečnosti,Supervisé par rapport à la sécurité ,Επιβλεπόμενο για λόγους ασφάλειας,Supraveghere din motive de siguranţă,Controlo de segurança
-,cost,Kosten,Costo,Kosten,Gasto,Koszt,Cena,Dépense ,Κόστος,Costuri,Custo
-,location,Locatie ,Luogo ,Ort ,Ubicación ,Lokalizacja ,Místo ,Lieu ,Μέρος ,Loc ,Localização 
-,core skills,Kernvaardigheden,Competenze chiave,Kernkompetenzen,Competencias básicas,Umiejętności kluczowe,Základní dovednosti,Compétences de base ,Βασικές Δεξιότητες,Competenţe de bază,Competências básicas
-,type of learning activity,Type leeractiviteit,Tipo di attività didattica,Art der Lernaktivität,Tipo de actividad de aprendizaje,Rodzaj zajęć edukacyjnych,Typ vzdělávací aktivity,Type d’activité d’apprentissage ,Τύπος μαθησιακής δραστηριότητας,Tip de activitate de învăţare,Tipo de atividade de aprendizagem
-,author,Auteur van de activiteit,Autore dell’attività,Autor der Aktivität,Autor de la actividad,Autor zajęć,Autor aktivity,Auteur de l’activité ,Συγγραφέας της δραστηριότητας,Autorul activităţii,Autor da atividade
-,link to source activity,Link naar de bronactiviteit,Link alla fonte dell’attività,Link zur ursprünglichen Aktivität,Enlace a la actividad original,Link do materiału źródłowego,Odkaz na původní aktivitu,Lien vers l’activité d’origine ,Σύνδεσμος για την πηγή της δραστηριότητας,Pagina activităţii de origine,Ligação à atividade de origem
-,repositories,Verzamelplaatsen,Archivi,Archive,Repositorios,Repozytoria,Archivy,Répertoires ,Αποθετήρια,Arhive,Repositórios 
+,Attachments,Bijlagen,Allegati,Anhänge,Archivos adjuntos,Załączniki,Přílohy,Les pièces jointes,Επισυνάψεις,Anexe,Anexos
+,Curriculum topic,Curriculumonderwerp,Argomento del programma di studi,Lehrplanthema,Tema del plan de estudio,Temat z programu nauczania,Téma podle vzdělávacího plánu,Matière au programme ,Θέμα αναλυτικού προγράμματος,Materie din programă,Tópico curricular
+,Big idea of science,Grote idee van wetenschap,Le grandi idee della scienza,Übergeordnetes wissenschaftliches Konzept,La gran idea de la ciencia,Ważna koncepcja nauki,Velká vědecká myšlenka,Une grande idée de la science  ,Μεγάλη Επιστημονική Ιδέα,Marea idee ştiinţifică,Grande ideia científica
+,Keywords,Trefwoorden,Parole chiave,Schlüsselwörter,Palabras clave,Słowa kluczowe,Klíčová slova,Mots clés ,Λέξεις-κλειδιά,Cuvinte-cheie,Palavras-chave
+,Age range,Leeftijdsgroep,Fascia d’età,Altersgruppe,Edades,Wiek,Věková skupina,Tranche d’âge ,Ηλικίες,Grupa de vârstă,Faixa etária
+,Education level,Onderwijsniveau,Livello scolastico,Bildungsebene,Nivel del sistema educativo,Poziom kształcenia,Stupeň vzdělávání,Niveau d’études ,Εκπαιδευτική βαθμίδα,Nivel de studii,Nível de ensino
+,Time,Tijd,Tempo,Zeit,Tiempo,Czas trwania,Čas,Durée ,Χρόνος,Timp,Duração
+,Group size,Groepsgrootte,Dimensione del gruppo,Gruppengröße,Tamaño del grupo,Rozmiar grupy,Velikost skupiny,Taille du groupe,Μέγεθος ομάδας,Dimensiune grup,Dimensão do grupo
+,Supervised for safety,Toezicht voor de veiligheid,Supervisionato a fini di sicurezza,Sicherheitsüberwacht,Supervisión de seguridad,Nadzór ze względów bezpieczeństwa,Dohled z důvodu bezpečnosti,Supervisé par rapport à la sécurité ,Επιβλεπόμενο για λόγους ασφάλειας,Supraveghere din motive de siguranţă,Controlo de segurança
+,Cost,Kosten,Costo,Kosten,Gasto,Koszt,Cena,Dépense ,Κόστος,Costuri,Custo
+,Location,Locatie ,Luogo ,Ort ,Ubicación ,Lokalizacja ,Místo ,Lieu ,Μέρος ,Loc ,Localização 
+,Core skills,Kernvaardigheden,Competenze chiave,Kernkompetenzen,Competencias básicas,Umiejętności kluczowe,Základní dovednosti,Compétences de base ,Βασικές Δεξιότητες,Competenţe de bază,Competências básicas
+,Type of learning activity,Type leeractiviteit,Tipo di attività didattica,Art der Lernaktivität,Tipo de actividad de aprendizaje,Rodzaj zajęć edukacyjnych,Typ vzdělávací aktivity,Type d’activité d’apprentissage ,Τύπος μαθησιακής δραστηριότητας,Tip de activitate de învăţare,Tipo de atividade de aprendizagem
+,Author,Auteur van de activiteit,Autore dell’attività,Autor der Aktivität,Autor de la actividad,Autor zajęć,Autor aktivity,Auteur de l’activité ,Συγγραφέας της δραστηριότητας,Autorul activităţii,Autor da atividade
+,Link to source activity,Link naar de bronactiviteit,Link alla fonte dell’attività,Link zur ursprünglichen Aktivität,Enlace a la actividad original,Link do materiału źródłowego,Odkaz na původní aktivitu,Lien vers l’activité d’origine ,Σύνδεσμος για την πηγή της δραστηριότητας,Pagina activităţii de origine,Ligação à atividade de origem
+,Repositories,Verzamelplaatsen,Archivi,Archive,Repositorios,Repozytoria,Archivy,Répertoires ,Αποθετήρια,Arhive,Repositórios 
+Activities - print,,,,,,,,,,,
+,Tested by teachers,,,,,,,,,,
 Page – About,,,,,,,,,,,
 ,Contact us,Neem contact met ons op,Contattaci,Kontakt,Contacto,Skontaktuj się z nami,Kontaktujte nás,Contactez-nous,Επικοινωνήστε μαζί μας,Contactaţi-ne,Contacte-nos
 ,National contacts, Nationale contactpersonen,Contatti nazionali,Nationale Ansprechpartner,Contactos en el país,Kontakty krajowe,Zástupci v jednotlivých zemích,Personnes à contacter au niveau national,Εθνικά σημεία επαφής,Contacte naţionale,Contactos nacionais
@@ -122,7 +126,7 @@ Misc,,,,,,,,,,,
 ,This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653,Deze website is ontwikkeld met financiering uit het Horizon 2020-programma van de Europese Commissie in het kader van subsidieovereenkomst 638653,"Questo sito web è stato sviluppato grazie al finanziamento del Programma Horizon 2020 della Commissione europea, Grant Agreement n. 638653",Diese Website wurde mit finanzieller Unterstützung durch das Horizon 2020-Programm der Europäischen Kommission unter Finanzhilfevereinbarung 638653 entwickelt.,Esta página web se diseñó gracias a la financiación del programa Horizonte 2020 de la Comisión Europea con el acuerdo de subvención 638653.,Portal powstał przy wsparciu finansowym programu Horyzont 2020 Komisji Europejskiej na podstawie umowy grantowej nr 638653,"Tvorba webových stránek byla financována z programu Evropské komise Horizont 2020, grantová smlouva č. 638653",Ce site a été réalisé avec un financement de la Commission européenne dans le cadre de son programme Horizon 2020 aux termes d’un accord de subvention n° 638653,"Ο παρών ιστότοπος αναπτύχθηκε με χρηματοδότηση από το πρόγραμμα της Ευρωπαϊκής Επιτροπής ""Horizon 2020"" στο πλαίσιο της συμφωνίας επιχορήγησης 638653","Acest site a fost conceput cu finanţare de la Comisia Europeană, în cadrul programului Orizont 2020, conform acordului de subvenţionare nr. 638653.",Este sítio web foi desenvolvido com financiamento do Programa Horizon 2020 da Comissão Europeia ao abrigo do Acordo de Subvenção n.º 638653
 ,Load more,Meer laden,Carica altro,Mehr laden,Más información,Pokaż więcej,Načíst více,En télécharger d’autres,Φορτώστε περισσότερα,Încarcă mai multe,Ver mais
 ,Loading,,,,,,,,,,
-,related resources,Gerelateerde middelen,Risorse correlate,Zugehörige Ressourcen,Recursos relacionados,Pokrewne zasoby,Související zdroje,Ressources apparentées,Συναφείς πόροι,Resurse conexe,Recursos relacionados
+,Related resources,Gerelateerde middelen,Risorse correlate,Zugehörige Ressourcen,Recursos relacionados,Pokrewne zasoby,Související zdroje,Ressources apparentées,Συναφείς πόροι,Resurse conexe,Recursos relacionados
 ,find by category,ZOEKEN OP CATEGORIE,TROVA PER CATEGORIA,NACH KATEGORIE SUCHEN,BUSCAR POR CATEGORÍA,SZUKAJ WG KATEGORII,VYHLEDÁVÁNÍ PODLE KATEGORIÍ,TROUVER PAR CATÉGORIE,ΕΥΡΕΣΗ ΑΝΑ ΚΑΤΗΓΟΡΙΑ,CĂUTARE DUPĂ CATEGORIE,LOCALIZAR POR CATEGORIA
 ,all,Alle,Tutte,Alle,Todos,Wszystkie,Všechny,Tous,Όλα,Toate,Todas
 ,see more,,,,,,,,,,
