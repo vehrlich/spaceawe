@@ -193,52 +193,52 @@ msgstr "Zusätzliche Informationen"
 msgid "Conclusion"
 msgstr "Fazit"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Anhänge"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Lehrplanthema"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Übergeordnetes wissenschaftliches Konzept"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Schlüsselwörter"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Altersgruppe"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Bildungsebene"
 
-msgid "time"
+msgid "Time"
 msgstr "Zeit"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Gruppengröße"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Sicherheitsüberwacht"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Kosten"
 
-msgid "location"
+msgid "Location"
 msgstr "Ort"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Kernkompetenzen"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Art der Lernaktivität"
 
-msgid "author"
+msgid "Author"
 msgstr "Autor der Aktivität"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Link zur ursprünglichen Aktivität"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Archive"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Diese Website wurde mit finanzieller Unterstützung durch das Horizon 20
 msgid "Load more"
 msgstr "Mehr laden"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Zugehörige Ressourcen"
 
 msgid "find by category"

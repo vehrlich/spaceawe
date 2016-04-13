@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.views.generic import TemplateView, RedirectView
 
 from .views import TranslatableTemplateView
+from develop.views import DevelopView
 
 
 urlpatterns = [
@@ -38,7 +39,8 @@ urlpatterns += i18n_patterns(
     url(r'^games/', include('games.urls', namespace='games')),
     url(r'^about/$', 'spaceawe.views.about', name='about'),
     # url(r'^soon/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon.html', view_url_name='soon'), name='soon'),
-    url(r'^skills/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_skills.html', view_url_name='soon_skills'), name='soon_skills'),
+    # url(r'^skills/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_skills.html', view_url_name='soon_skills'), name='soon_skills'),
+    url(r'^skills/$', DevelopView.as_view(), name='soon_skills'),
     url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
 )
 

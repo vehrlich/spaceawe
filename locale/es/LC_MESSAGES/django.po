@@ -193,52 +193,52 @@ msgstr "Más información"
 msgid "Conclusion"
 msgstr "Conclusión"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Archivos adjuntos"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Tema del plan de estudio"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "La gran idea de la ciencia"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Palabras clave"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Edades"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Nivel del sistema educativo"
 
-msgid "time"
+msgid "Time"
 msgstr "Tiempo"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Tamaño del grupo"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Supervisión de seguridad"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Gasto"
 
-msgid "location"
+msgid "Location"
 msgstr "Ubicación"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Competencias básicas"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Tipo de actividad de aprendizaje"
 
-msgid "author"
+msgid "Author"
 msgstr "Autor de la actividad"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Enlace a la actividad original"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Repositorios"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Esta página web se diseñó gracias a la financiación del programa Hor
 msgid "Load more"
 msgstr "Más información"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Recursos relacionados"
 
 msgid "find by category"

@@ -193,52 +193,52 @@ msgstr "Další informace"
 msgid "Conclusion"
 msgstr "Závěr"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Přílohy"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Téma podle vzdělávacího plánu"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Velká vědecká myšlenka"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Klíčová slova"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Věková skupina"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Stupeň vzdělávání"
 
-msgid "time"
+msgid "Time"
 msgstr "Čas"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Velikost skupiny"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Dohled z důvodu bezpečnosti"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Cena"
 
-msgid "location"
+msgid "Location"
 msgstr "Místo"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Základní dovednosti"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Typ vzdělávací aktivity"
 
-msgid "author"
+msgid "Author"
 msgstr "Autor aktivity"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Odkaz na původní aktivitu"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Archivy"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Tvorba webových stránek byla financována z programu Evropské komise 
 msgid "Load more"
 msgstr "Načíst více"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Související zdroje"
 
 msgid "find by category"

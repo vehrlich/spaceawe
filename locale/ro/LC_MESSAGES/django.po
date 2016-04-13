@@ -193,52 +193,52 @@ msgstr "Informaţii suplimentare"
 msgid "Conclusion"
 msgstr "Concluzie"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Anexe"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Materie din programă"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Marea idee ştiinţifică"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Cuvinte-cheie"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Grupa de vârstă"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Nivel de studii"
 
-msgid "time"
+msgid "Time"
 msgstr "Timp"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Dimensiune grup"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Supraveghere din motive de siguranţă"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Costuri"
 
-msgid "location"
+msgid "Location"
 msgstr "Loc"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Competenţe de bază"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Tip de activitate de învăţare"
 
-msgid "author"
+msgid "Author"
 msgstr "Autorul activităţii"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Pagina activităţii de origine"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Arhive"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Acest site a fost conceput cu finanţare de la Comisia Europeană, în c
 msgid "Load more"
 msgstr "Încarcă mai multe"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Resurse conexe"
 
 msgid "find by category"

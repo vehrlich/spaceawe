@@ -193,52 +193,52 @@ msgstr "Informazioni aggiuntive"
 msgid "Conclusion"
 msgstr "Conclusione"
 
-msgid "attachments"
+msgid "Attachments"
 msgstr "Allegati"
 
-msgid "curriculum topic"
+msgid "Curriculum topic"
 msgstr "Argomento del programma di studi"
 
-msgid "big idea of science"
+msgid "Big idea of science"
 msgstr "Le grandi idee della scienza"
 
-msgid "keywords"
+msgid "Keywords"
 msgstr "Parole chiave"
 
-msgid "age range"
+msgid "Age range"
 msgstr "Fascia d’età"
 
-msgid "education level"
+msgid "Education level"
 msgstr "Livello scolastico"
 
-msgid "time"
+msgid "Time"
 msgstr "Tempo"
 
-msgid "group size"
+msgid "Group size"
 msgstr "Dimensione del gruppo"
 
-msgid "supervised for safety"
+msgid "Supervised for safety"
 msgstr "Supervisionato a fini di sicurezza"
 
-msgid "cost"
+msgid "Cost"
 msgstr "Costo"
 
-msgid "location"
+msgid "Location"
 msgstr "Luogo"
 
-msgid "core skills"
+msgid "Core skills"
 msgstr "Competenze chiave"
 
-msgid "type of learning activity"
+msgid "Type of learning activity"
 msgstr "Tipo di attività didattica"
 
-msgid "author"
+msgid "Author"
 msgstr "Autore dell’attività"
 
-msgid "link to source activity"
+msgid "Link to source activity"
 msgstr "Link alla fonte dell’attività"
 
-msgid "repositories"
+msgid "Repositories"
 msgstr "Archivi"
 
 msgid "Contact us"
@@ -265,7 +265,7 @@ msgstr "Questo sito web è stato sviluppato grazie al finanziamento del Programm
 msgid "Load more"
 msgstr "Carica altro"
 
-msgid "related resources"
+msgid "Related resources"
 msgstr "Risorse correlate"
 
 msgid "find by category"
