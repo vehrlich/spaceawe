@@ -13,9 +13,15 @@ class Mooc(models.Model):
     what_skills_will_you_need = models.TextField()
     duration_of_the_course = models.TextField()
 
+    def __str__(self, **kwargs):
+        return self.info
+
 
 class Module(models.Model):
 
     mooc = models.ForeignKey(Mooc)
     info = models.CharField(max_length=255)
     duration = models.CharField(max_length=255)
+
+    def __str__(self, **kwargs):
+        return self.info
