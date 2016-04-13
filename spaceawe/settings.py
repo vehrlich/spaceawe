@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'glossary',
     'activities',
     'games',
+    'develop',
     # 'spaceawe.apps.SpaceScoopConfig',
     # 'spaceawe.search',
 
