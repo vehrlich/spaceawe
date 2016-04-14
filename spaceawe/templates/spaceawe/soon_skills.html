@@ -1,9 +1,108 @@
-{% extends 'spaceawe/soon.html' %}
+{% extends 'base.html' %}
 {% load i18n %}
+{% load staticfiles thumbnail i18n %}
 
 {% block extra_body_class %}section-skills{% endblock %}
 
 {% block slogan %}
 <div class="slogan subtitle">{{ SECTIONS.skills.title }}</div>
 <div class="slogan">{{ SECTIONS.skills.subtitle }}</div>
+{% endblock %}
+
+{% block extra_js %}
+  {{ block.super }}
+<script src="{% static 'js/scripts.topbar.js' %}"></script>
+<script src="{% static 'js/jQueryRotate.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="cover">
+  <div class="feature-container">
+    <div class="fake-padding" style="height: 215px;"></div>
+    <div class="feature" style="background-image: url(/static/img/line_pattern_04.png), url(/static/img/cover/develop.jpg);">
+      <div class="title-container">
+	<div class="title-subcontainer">
+	  <div class="title">
+	      Space science is a unique combination of science, technology, history, and culture and can be used to teach many different topics in science, technology, but also non-science subjects. The excitement of space missions and discoveries are excellent tools to capture the imagination of young people and raise their interest in science and technology.
+	  </div>
+	</div>
+	<nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="/static/img/buttons/arrow_down_white.svg"></a></nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="list" class="thumbnailed-list scoops page2 pure-g">
+  <div class="pure-u-1 text-content smartembed">
+    <p>
+      The <b>Space Awareness MOOC</b> series is free and open to anyone. It especially targets <b>primary and secondary school teachers and other</b> education or science communication professionals interested in <b>developing their skills and use space for education</b>. The MOOC series is available in English.
+    </p>
+    <p>
+      Following the <b>MOOCs</b>, you learn how to use space as an inspirational tool for education, receive tips about innovative ways to educate, and find support in using the Space Awareness education resources the most efficient way.
+    </p>
+    <p>
+      <b>Space Awareness MOOCs</b> have been developed by the Space Awareness partners in close collaboration with voluntary teachers.
+    </p>
+  </div>
+</div>
+
+
+{% for mooc in moocs %}
+<div class="content-page pure-g" style="letter-spacing: 0px;">
+<table width="100%" align="center">
+  <tr bgcolor="#52C36F" line-height="50" style="height: 30px;">
+    <td align="left" style="padding-left: 50px; color: white;"><b>MOOC {{ forloop.counter }}</b>: {{ mooc.info }}</td>
+    <td align="right" style="padding-right: 50px; color: white;">{% trans "STARTING DATE" %}: <b>{{ mooc.starting_date }}</b></td>
+  </tr>
+  {% for module in mooc.module_set.all %}
+  <tr bgcolor="#f3f3f3" style="height: 30px;">
+    <td align="left" style="padding-left: 50px; color: #4d4d4d;">{{ module.info }}</td>
+    <td align="right" style="padding-right: 50px; color: #4d4d4d;">{{ module.duration }}</td>
+  </tr>
+  {% endfor %}
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px; padding-top: 7px;" align="center">
+      <text style="color: #52C36F">Overview</text>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      <b>{% trans "Introduction" %}</b>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      {{ mooc.introduction }}<br>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      <b>{% trans "What you will learn" %}</b>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      {{ mooc.what_you_will_learn }}<br>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      <b>{% trans "What skills will you need" %}</b>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      {{ mooc.what_skills_will_you_need }}<br>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      <b>{% trans "Duration of the course" %}</b>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
+      {{ mooc.duration_of_the_course }}<br>
+  </td></tr>
+  <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 15px;" align="center">
+      <a rel="page" href="#" style="border: 2px solid #808080; border-radius: 100px; padding: 4px 20px; font-size: 12px; text-decoration: none; color: inherit; display: inline-block; background: #52C36F; color: white;">Enroll</a><br>
+      ({{ mooc.starting_date }})
+  </td></tr>
+  <tr bgcolor="#f3f3f3"><td class="hidden_mooc{{ forloop.counter }}" colspan=2 style="display: none;" align="center">
+      (facebook) (twitter)
+  </td></tr>
+  <tr>
+    <td colspan=2 align="center" style="padding-top: 7px;">
+      <img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}" onclick="$('.mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);">
+    </td>
+  </tr>
+</table>
+</div>
+
+{% endfor %}
+
 {% endblock %}
