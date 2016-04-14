@@ -25,7 +25,7 @@ def home(request):
 
 def about(request):
     return render(request, 'spaceawe/about.html', {
-        'partners': Person.objects.filter(Q(spaceawe_partner=True) | Q(spaceawe_node=True)).select_related('institution'),
+        'partners': Person.objects.filter(Q(spaceawe_partner=True) | Q(spaceawe_node=True)).select_related('institution').order_by('spaceawe_partner'),
     })
 
 

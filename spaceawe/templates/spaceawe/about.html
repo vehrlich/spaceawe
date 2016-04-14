@@ -9,41 +9,41 @@
   {{ block.super }}
 <script src="{% static 'js/scripts.topbar.js' %}"></script>
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src="{% static 'js/oms.min.js' %}"></script>
+
 <script>
-var map = L.map('partnermap').setView([25, 0], 2);
-L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
-    continuousWorld: false,
-    noWrap: true,
-    attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-// create custom icon
-var nodeIcon = L.icon({
-    iconUrl: '{% static "img/map-dot-node.svg" %}',
-    iconSize: [16, 16],
-    popupAnchor: [0,-15]
-    });
-var partnerIcon = L.icon({
-    iconUrl: '{% static "img/map-dot-partner.svg" %}',
-    iconSize: [16, 16],
-    popupAnchor: [0,-15]
-    });
-var dualIcon = L.icon({
-    iconUrl: '{% static "img/map-dot-dual.svg" %}',
-    iconSize: [16, 16],
-    popupAnchor: [0,-15]
-    });
-
-// specify popup options 
-var customOptions = {
-    'minWidth': '200',
-    'maxWidth': '500',
-    'className' : 'custom'
-}
+    window.onload = function() {
+        // create map
+        var map = new L.Map('partnermap').setView([25, 0], 2);
+        L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
+            continuousWorld: false,
+            noWrap: true,
+            attribution: 'Tiles courtesy of <a href="http://openstreetmap.se/" target="_blank">OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        // create custom icons
+        var nodeIcon = L.Icon.extend({options: {
+            iconUrl: '{% static "img/map-dot-node.svg" %}',
+            iconSize: [16, 16],
+            popupAnchor: [0,-15]
+        }});
+        var partnerIcon = L.Icon.extend({options: {
+            iconUrl: '{% static "img/map-dot-partner.svg" %}',
+            iconSize: [16, 16],
+            popupAnchor: [0,-15]
+        }});
+        var dualIcon = L.Icon.extend({options: {
+            iconUrl: '{% static "img/map-dot-dual.svg" %}',
+            iconSize: [16, 16],
+            popupAnchor: [0,-15]
+        }});
+        // overlapping markers
+        var oms = new OverlappingMarkerSpiderfier(map);
 
 {% for partner in partners %}
 {% spaceless %}
-L.marker([{{ partner.institution.location.latitude|unlocalize }}, {{ partner.institution.location.longitude|unlocalize }}], {icon: nodeIcon}).bindPopup('<div class="partnermap-popup">
+        var loc = new L.LatLng({{ partner.institution.location.latitude|unlocalize }}, {{ partner.institution.location.longitude|unlocalize }});
+        var marker = new L.Marker(loc, {icon: new {% if partner.spaceawe_partner %}partnerIcon{% elif partner.spaceawe_node %}nodeIcon{% endif %}()});
+        marker.desc = '<div class="partnermap-popup">
     <a href="{{ partner.institution.url }}">
     {% thumbnail partner.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as thumb %}
         <div class="institution-logo">
@@ -64,9 +64,29 @@ L.marker([{{ partner.institution.location.latitude|unlocalize }}, {{ partner.ins
             <div class="email">{{ partner.email }}</div>
         </a>
     </div>
-</div>', customOptions).addTo(map);
+</div>';
+        map.addLayer(marker);
+        oms.addMarker(marker);
 {% endspaceless %}
 {% endfor %}
+
+      var popup = new L.Popup({closeButton: false, offset: new L.Point(0.5, -24)});
+      oms.addListener('click', function(marker) {
+        popup.setContent(marker.desc);
+        popup.setLatLng(marker.getLatLng());
+        map.openPopup(popup);
+      });
+      // oms.addListener('spiderfy', function(markers) {
+      //   for (var i = 0, len = markers.length; i < len; i ++) markers[i].setIcon(new parnerIcon());
+      //   map.closePopup();
+      // });
+      // oms.addListener('unspiderfy', function(markers) {
+      //   for (var i = 0, len = markers.length; i < len; i ++) markers[i].setIcon(new dualIcon());
+      // });
+
+
+    }
+
 
 </script>
 {% endblock %}
@@ -150,6 +170,11 @@ L.marker([{{ partner.institution.location.latitude|unlocalize }}, {{ partner.ins
             <div class="smartembed">{% smartembed 'about-040-where' %}</div>
             <div class="content">
                 <div id="partnermap"></div>
+                <div class="partnermap-legend">
+                    <img src="{% static "img/map-dot-partner.svg" %}"> Partner
+                    &nbsp; &nbsp; &nbsp; 
+                    <img src="{% static "img/map-dot-node.svg" %}"> Node
+                </div>
             </div>
         </div>
     </div>

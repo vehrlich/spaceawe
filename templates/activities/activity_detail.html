@@ -68,6 +68,7 @@
 
             </div>
             <div class="content-right-column">
+                {% if not object.is_translation_fallback %}
                 <div class="download">
                     <div class="caption">{% trans "download" %}</div>
                     <div class="value">
@@ -75,6 +76,7 @@
                         <!-- <a href="http://astroedu.iau.org/media/activities/download/{{ object.slug }}-astroEDU-{{ object.code }}.rtf"><img class="button" src="{% static 'img/icon_download.svg' %}"></a> -->
                     </div>
                 </div>
+                {% endif %}                
         {% if object.attachment_list %}
                 <div>
                     <div class="caption">{% trans "attachments" %}</div>

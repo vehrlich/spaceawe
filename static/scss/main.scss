@@ -953,6 +953,11 @@ body.section-#{$section} {
 /* Make sure the map container has a defined height */
 #partnermap { height: 600px; background-color: #3DBCEF; }
 
+.partnermap-legend {
+  img {
+    height: 1em;
+  }
+}
 .partnermap-popup {
   font-family: $font-normal;
   .institution-logo, .institution-details {

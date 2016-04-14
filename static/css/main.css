@@ -930,6 +930,9 @@ body.section-skills #footer .social-background {
   height: 600px;
   background-color: #3DBCEF; }
 
+.partnermap-legend img {
+  height: 1em; }
+
 .partnermap-popup {
   font-family: "Ubuntu", sans-serif; }
   .partnermap-popup .institution-logo, .partnermap-popup .institution-details {
