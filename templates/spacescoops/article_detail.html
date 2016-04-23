@@ -54,7 +54,7 @@
 
                 {% if not object.is_translation_fallback %}
                 <div class="download">
-                    <a href="/media/articles/download/spacescoop-{{ object.code }}{{ object.language_code }}-{{ object.slug }}.pdf">{% trans "download" %}<br><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
+                    <a href="?format=pdf">{% trans "download" %}<br><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
                 </div>
                 {% endif %}
                 <div class="social-sharing">
