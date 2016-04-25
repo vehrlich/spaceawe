@@ -55,7 +55,7 @@
     <td align="left" style="padding-left: 50px; color: white;"><b>MOOC {{ forloop.counter }}</b>: {{ mooc.info }}</td>
     <td align="right" style="padding-right: 50px; color: white;">{% trans "STARTING DATE" %}: <b>{{ mooc.starting_date }}</b></td>
   </tr>
-  {% for module in mooc.module_set.all %}
+  {% for module in mooc.module_set.all reversed %}
   <tr bgcolor="#f3f3f3" style="height: 30px;">
     <td align="left" style="padding-left: 50px; color: #4d4d4d;">{{ module.info }}</td>
     <td align="right" style="padding-right: 50px; color: #4d4d4d;">{{ module.duration }}</td>
