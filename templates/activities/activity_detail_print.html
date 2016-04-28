@@ -82,19 +82,19 @@
         </div>
         <div id="story">
             <div class="section-caption">{% trans "Brief Description" %}</div>
-            <div class="section-content text">{{ object.description|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Goals" %}</div>
-            <div class="section-content text">{{ object.goals|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.goals|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Learning Objectives" %}</div>
-            <div class="section-content text">{{ object.objectives|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.objectives|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Evaluation" %}</div>
-            <div class="section-content text">{{ object.evaluation|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.evaluation|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Materials" %}</div>
-            <div class="section-content text">{{ object.materials|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.materials|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Background Information" %}</div>
-            <div class="section-content text">{{ object.background|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.background|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Full Activity Description" %}</div>
-            <div class="section-content text">{{ object.fulldesc|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.fulldesc|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Curriculum" %}</div>
             <div class="section-content text">
                 <h3>Space Awareness curricula topics (EU and South Africa)</h3>
@@ -103,14 +103,14 @@
                    {% endfor %}
                    {{ object.theme }}
                 </p>
-                {{ object.curriculum|markdown|relativise_img_src:object }}
+                {{ object.curriculum|markdown|relativise_constrain_img_src:object }}
             </div>
         {% if object.additional_information %}
             <div class="section-caption">{% trans "Additional Information" %}</div>
-            <div class="section-content text">{{ object.additional_information|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.additional_information|markdown|relativise_constrain_img_src:object }}</div>
         {% endif %}
             <div class="section-caption">{% trans "Conclusion" %}</div>
-            <div class="section-content text">{{ object.conclusion|markdown|relativise_img_src:object }}</div>
+            <div class="section-content text">{{ object.conclusion|markdown|relativise_constrain_img_src:object }}</div>
 
         </div>
         <div id="footer">
