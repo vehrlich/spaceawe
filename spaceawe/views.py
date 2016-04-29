@@ -24,8 +24,11 @@ def home(request):
 
 
 def about(request):
+    q = Q(spaceawe_partner=True) | Q(spaceawe_node=True)
+    q = q & Q(institution__location__latitude__isnull=False)
+    q = q & Q(institution__location__longitude__isnull=False)
     return render(request, 'spaceawe/about.html', {
-        'partners': Person.objects.filter(Q(spaceawe_partner=True) | Q(spaceawe_node=True)).select_related('institution').order_by('spaceawe_partner'),
+        'partners': Person.objects.filter(q).select_related('institution').order_by('spaceawe_partner'),
     })
 
 
