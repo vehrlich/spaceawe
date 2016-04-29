@@ -958,6 +958,9 @@ body.section-#{$section} {
     height: 1em;
   }
 }
+.leaflet-popup-content {
+  width: 200px;
+}
 .partnermap-popup {
   font-family: $font-normal;
   .institution-logo, .institution-details {
@@ -967,9 +970,11 @@ body.section-#{$section} {
     clear: both;
   }
   .institution-logo {
-    min-width: 33%;
+    // min-width: 33%;
+    // max-width: 80%;
     img {
-      height: 50px;
+      max-height: 50px;
+      max-width: 200px !important;
     }
   }
   .institution-details {

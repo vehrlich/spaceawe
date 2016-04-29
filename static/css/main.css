@@ -933,16 +933,18 @@ body.section-skills #footer .social-background {
 .partnermap-legend img {
   height: 1em; }
 
+.leaflet-popup-content {
+  width: 200px; }
+
 .partnermap-popup {
   font-family: "Ubuntu", sans-serif; }
   .partnermap-popup .institution-logo, .partnermap-popup .institution-details {
     float: left; }
   .partnermap-popup .contact-details {
     clear: both; }
-  .partnermap-popup .institution-logo {
-    min-width: 33%; }
-    .partnermap-popup .institution-logo img {
-      height: 50px; }
+  .partnermap-popup .institution-logo img {
+    max-height: 50px;
+    max-width: 200px !important; }
   .partnermap-popup .institution-details {
     max-width: 66%; }
   .partnermap-popup hr {
