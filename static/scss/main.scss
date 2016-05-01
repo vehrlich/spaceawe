@@ -642,13 +642,18 @@ body {
 }
 
 .content-page {
-  padding-top: 60px;
+  padding-top: 100px;
   max-width: $content-max-width;
   margin: auto;
   .title {
     font-family: $font-headings;
     font-size: 24px;
+    // padding-top: 100px;
     text-transform: uppercase;
+  }
+  .subtitle {
+    padding-bottom: 50px;
+    color: map-get($section-colors, 'about');
   }
   .content {
     font-size: 12px;
@@ -659,9 +664,16 @@ body {
   .title-container {
     text-align: center;
     padding: 10px 20px;
+    // h1 {
+    //   padding-top: 100px;      
+    // }
+    p {
+      padding-bottom: 50px;
+      color: map-get($section-colors, 'about');      
+    }
   }
   .page-about-goals {
-    padding-top: 60px;
+    // padding-top: 60px;
     text-align: center;
   }
   .page-about-what {
@@ -671,17 +683,9 @@ body {
     text-align: center;
   }
   .page-about-team {
-    .title {
-      padding-top: 100px;
-    }
-    .subtitle {
-      padding-bottom: 50px;
-      color: map-get($section-colors, 'about');
-    }
     text-align: center;
     img {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 10px 20px;
       vertical-align: middle;
     }
   }

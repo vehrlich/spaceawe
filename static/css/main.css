@@ -405,13 +405,16 @@ body {
         cursor: pointer; }
 
 .content-page {
-  padding-top: 60px;
+  padding-top: 100px;
   max-width: 1000px;
   margin: auto; }
   .content-page .title {
     font-family: "Miso", sans-serif;
     font-size: 24px;
     text-transform: uppercase; }
+  .content-page .subtitle {
+    padding-bottom: 50px;
+    color: #3e5fdb; }
   .content-page .content {
     font-size: 12px; }
   .content-page .pure-u-1-4 > div {
@@ -419,21 +422,17 @@ body {
   .content-page .title-container {
     text-align: center;
     padding: 10px 20px; }
+    .content-page .title-container p {
+      padding-bottom: 50px;
+      color: #3e5fdb; }
   .content-page .page-about-goals {
-    padding-top: 60px;
     text-align: center; }
   .content-page .page-about-contact {
     text-align: center; }
   .content-page .page-about-team {
     text-align: center; }
-    .content-page .page-about-team .title {
-      padding-top: 100px; }
-    .content-page .page-about-team .subtitle {
-      padding-bottom: 50px;
-      color: #3e5fdb; }
     .content-page .page-about-team img {
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 10px 20px;
       vertical-align: middle; }
 
 #subscribe {
