@@ -671,7 +671,19 @@ body {
     text-align: center;
   }
   .page-about-team {
+    .title {
+      padding-top: 100px;
+    }
+    .subtitle {
+      padding-bottom: 50px;
+      color: map-get($section-colors, 'about');
+    }
     text-align: center;
+    img {
+      padding-left: 20px;
+      padding-right: 20px;
+      vertical-align: middle;
+    }
   }
 }
 

@@ -426,6 +426,15 @@ body {
     text-align: center; }
   .content-page .page-about-team {
     text-align: center; }
+    .content-page .page-about-team .title {
+      padding-top: 100px; }
+    .content-page .page-about-team .subtitle {
+      padding-bottom: 50px;
+      color: #3e5fdb; }
+    .content-page .page-about-team img {
+      padding-left: 20px;
+      padding-right: 20px;
+      vertical-align: middle; }
 
 #subscribe {
   min-height: 280px;
