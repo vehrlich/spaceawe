@@ -1004,6 +1004,16 @@ body.section-#{$section} {
 }
 
 
+.thumbnailed-list {
+  .filters.level {
+    margin-top: 10px; 
+    font-size: 12px;
+    .pure-menu-has-children {
+      width: 150px;
+    }
+  }
+}
+
 // @media screen and (min-width: 35.5em) { // sm: 568px
 //   @import "main_568";
 // }

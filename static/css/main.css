@@ -961,6 +961,12 @@ body.section-skills #footer .social-background {
     height: 1px;
     background: #888; }
 
+.thumbnailed-list .filters.level {
+  margin-top: 10px;
+  font-size: 12px; }
+  .thumbnailed-list .filters.level .pure-menu-has-children {
+    width: 150px; }
+
 @media screen and (min-width: 48em) {
   #categories .category .icon {
     position: relative;
