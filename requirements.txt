@@ -3,7 +3,7 @@
 ## check outdated dependencies:
 #    pip list --outdated
 
-Django==1.8.12
+Django==1.8.13
 pytz
 psycopg2==2.6.1  # postgreSQL 
 django-pipeline==1.6.8
@@ -18,7 +18,7 @@ django-el-pagination==2.1.2
 
 pillow==3.2.0
 sorl-thumbnail==12.3
-WeasyPrint==0.27
+WeasyPrint==0.28
 redis==2.10.5
 celery==3.1.23
 Whoosh==2.7.4
