@@ -54,7 +54,7 @@ class CareersViewList(ViewUrlMixin, TemplateView):
 
 
 class CareerDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
-    view_url_name = 'careers:detail'
+    view_url_name = 'careers:career-detail'
     template_name = 'careers/detail.html'
 
     def get_queryset(self):
@@ -67,7 +67,7 @@ class CareerDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
 
 
 class InterviewDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
-    view_url_name = 'interviews:detail'
+    view_url_name = 'careers:interview-detail'
     template_name = 'interviews/detail.html'
 
     def get_queryset(self):
@@ -79,7 +79,7 @@ class InterviewDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
         return context
 
 class WebinarDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
-    view_url_name = 'webinars:detail'
+    view_url_name = 'careers:webinar-detail'
     template_name = 'webinars/detail.html'
 
     def get_queryset(self):
