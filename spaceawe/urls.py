@@ -41,7 +41,8 @@ urlpatterns += i18n_patterns(
     # url(r'^soon/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon.html', view_url_name='soon'), name='soon'),
     # url(r'^skills/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_skills.html', view_url_name='soon_skills'), name='soon_skills'),
     url(r'^skills/$', DevelopView.as_view(), name='soon_skills'),
-    url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
+    # url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
+    url(r'^careers/', include('careers.urls', namespace='careers')),
 )
 
 if settings.DEBUG:

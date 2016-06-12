@@ -1,0 +1,13 @@
+Title : {{ object.title }}<br>
+Slug : {{ object.slug }}<br>
+Teaser : {{ object.teaser }}<br>
+Story : {{ object.story|safe }}<br>
+Video url : {{ object.video_url }}<br>
+Name : {{ object.name }}<br>
+Country : {{ object.country }}<br>
+Place of job : {{ object.place_of_job }}<br>
+Pdf url : {{ object.pdf_url }}<br>
+Questions:<br>
+{% for question in object.questions.all %}
+- {{ question.question_text }} ({{ question.video_url }})<br>
+{% endfor %}

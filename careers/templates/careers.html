@@ -1,0 +1,60 @@
+{% load staticfiles thumbnail smartpages i18n%}
+<center><h1>Careers</h1></center>
+{% for career in careers %}
+<!-- Will not work locally -->
+{% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+	<div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }}) ;">
+	    <a href="{% url 'career:detail' slug=career.slug %}">
+		<div class="title-container"><div class="title-subcontainer">
+		    <div class="title">{{ career.title }}</div>
+		    <div class="subtitle">{{ career.teaser }}</div>
+		</div></div>
+	    </a>
+	</div>
+{% endthumbnail %}
+
+Slug : {{ career.slug }}<br>
+Teaser : {{ career.teaser }}<br>
+Story : {{ career.story|safe }}<br>
+Field: {{ career.field }}<br>
+Career type : {{ career.career_type}}<br>
+Level of study : {{ career.level_of_study }}<br>
+Interview : {{ career.interview }}<br>
+<a href="{% url 'careers:career-detail' slug=career.slug %}">URL</a><br>
+Pdf url : {{ career.pdf_url }}
+<hr/>
+{% endfor %}
+
+<center><h1>Interviews</h1></center>
+{% for interview in interviews %}
+Teaser : {{ interview.teaser }}<br>
+Story : {{ interview.story|safe }}<br>
+Title : {{ interview.title }}<br>
+Name : {{ interview.name }}<br>
+Country : {{ interview.country }}<br>
+Place of job : {{ interview.place_of_job }}<br>
+<a href="{% url 'careers:interview-detail' slug=interview.slug %}">URL</a><br>
+Questions:<br>
+{% for question in interview.questions.all %}
+<p>
+  - Text : {{ question.question_text }}<br>
+  - Video url : {{ question.video_url }}<br>
+</p>
+{% endfor %}
+Pdf url : {{ interview.pdf_url }}
+<hr/>
+{% endfor %}
+
+<center><h1>Webinars</h1></center>
+{% for webinar in webinars %}
+Teaser : {{ webinar.teaser }}<br>
+Story : {{ webinar.story|safe }}<br>
+Title : {{ webinar.title }}<br>
+Register : {{ webinar.register }}<br>
+Location : {{ webinar.location }}<br>
+Target group : {{ webinar.target_group }}<br>
+Language : {{ webinar.language }}<br>
+<a href="{% url 'careers:webinar-detail' slug=webinar.slug %}">URL</a><br>
+Pdf url : {{ webinar.pdf_url }}
+<hr/>
+{% endfor %}
