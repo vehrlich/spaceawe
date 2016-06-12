@@ -1096,3 +1096,96 @@ body.section-skills #footer .social-background {
     display: none; } }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+/* --- Alex Devksh 11.06.16 --- */
+
+/* --- section-careers ---*/
+
+.section-careers .menu-bar-left .active{
+  
+}
+
+body.section-careers #header.small {
+    color: black;
+    height: 80px;
+}
+
+body.section-careers #header.small .logo .logo-el {
+    background-image: url(../img/logo.svg);
+}
+
+.section-careers .thumbnailed-list.careers .list-header .selected {
+  text-transform: capitalize;
+}
+
+.section-careers .thumbnailed-list .list-header .filters .filter-topic-image {
+    padding: 0 4em;
+}
+
+.wrapper_block_previews > .title {
+    font-family: "Miso", sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.thumbnailed-list .list-item .text .title {
+    padding-top: 50px;
+}
+
+.wrapper_block_previews .title_green {
+    color: #4ed8c3;
+    display: block;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.wrapper_block_previews{
+  width: 100%;
+  margin-bottom: 140px;
+}
+
+.thumbnailed-list .list-item.careers .color {
+    background-color: rgba(78, 216, 195, 0.8);
+}
+
+.thumbnailed-list .list-item.careers .expand li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.thumbnailed-list .list-item .bottom {
+    bottom: 50%;
+    margin-bottom: -50px;
+}
+
+.thumbnailed-list .list-item .text > div {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+.thumbnailed-list .list-item .text > div.bottom ,
+.thumbnailed-list .list-item:hover .text > div {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.thumbnailed-list .list-item:hover .text > div.bottom {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+
+/* --- section-careers ---*/
