@@ -42,12 +42,12 @@
                 <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
             </div>
             <div class="filters">
-           		 <div class="filter-topic-image"><a href="/activities/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_purple.svg' %}" /></div></a></div>
-                <div class="filter-topic-image"><a href="/activities/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_purple.svg' %}" /></div></a></div>
-                <div class="filter-topic-image"><a href="/activities/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_purple.svg' %}" /></div></a></div>
-                <div class="filter-topic-image"><a href="/activities/category/heritage/"><div><img src="{% static 'img/icons/categories/icon_heritage_purple.svg' %}" /></div></a></div>
+           		 <div class="filter-topic-image"><a href="/careers/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_purple.svg' %}" /></div></a></div>
+                <div class="filter-topic-image"><a href="/careers/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_purple.svg' %}" /></div></a></div>
+                <div class="filter-topic-image"><a href="/careers/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_purple.svg' %}" /></div></a></div>
+                <div class="filter-topic-image"><a href="/careers/category/heritage/"><div><img src="{% static 'img/icons/categories/icon_heritage_purple.svg' %}" /></div></a></div>
             </div>
-           
+
         </div>
 
 
@@ -59,7 +59,7 @@
 <div id="list" class="thumbnailed-list careers page2 snap pure-g">
 
 <!-- Interviews -->
-  	
+
 
 	<div class="wrapper_block_previews">
         <p class="title">Interviews</p>
@@ -69,7 +69,8 @@
     	{% for interview in interviews %}
 		    <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
 		        <div class="list-item-container">
-		            <div class="list-item careers" style="background-image:url( /static/img/cover/earth.jpg);" aria-haspopup="true">
+			  {% thumbnail interview.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+		            <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
 		                <div class="color"></div>
 		                <div class="color-black"></div>
 		                <div class="text">
@@ -89,8 +90,10 @@
 		                        </ul>
 		                    </div>
 		                </div>
-		                
+
+
 		            </div>
+			    {% endthumbnail %}
 		        </div>
 		    </div>
 
@@ -133,7 +136,7 @@
 
 <!-- Careers -->
 
-	
+
 	<div class="wrapper_block_previews">
         <p class="title">Careers</p>
         <p class="title_green">It is not all about becoming an astronaut!</p>
@@ -151,12 +154,13 @@
 				    </a>
 				</div>
 			{% endthumbnail %} -->
-			
+
 
 
 	        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
 		        <div class="list-item-container">
-		            <div class="list-item careers" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+			  {% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+		            <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
 		                <div class="color"></div>
 		                <div class="color-black"></div>
 		                <div class="text">
@@ -176,8 +180,9 @@
 		                        </ul>
 		                    </div>
 		                </div>
-		               
+
 		            </div>
+			  {% endthumbnail %}
 		        </div>
 		    </div>
 			<!-- Slug : {{ career.slug }}<br>
@@ -190,7 +195,7 @@
 			<a href="{% url 'careers:career-detail' slug=career.slug %}">URL</a><br>
 			Pdf url : {{ career.pdf_url }}
 			<hr/> -->
-		   
+
 	    {% endfor %}
 
 	    	<!-- load more -->
@@ -209,7 +214,7 @@
 
 
 
-<!-- Webinars -->		
+<!-- Webinars -->
 
 
 <div class="wrapper_block_previews">
@@ -220,7 +225,8 @@
 			{% for webinar in webinars %}
  			<div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
 	 			<div class="list-item-container">
-			        <div class="list-item careers" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+			  {% thumbnail webinar.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+			        <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
 			            <div class="color"></div>
 			            <div class="color-black"></div>
 			            <div class="text">
@@ -234,8 +240,9 @@
 			                    </ul>
 			                </div>
 			            </div>
-			           
+
 			        </div>
+			{% endthumbnail %}
 		        </div>
 	        </div>
 			<!-- Teaser : {{ webinar.teaser }}<br>
@@ -250,7 +257,7 @@
 			<hr/> -->
 			{% endfor %}
 
-  
+
 		<!-- load more -->
 				    <div class="endless_container pure-u-1 list-footer">
 				        <a class="endless_more{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{{ path }}{{ querystring }}"
@@ -265,7 +272,7 @@
 
 
 
-<!-- Webinars -->	
+<!-- Webinars -->
 
 
 {% endblock %}
