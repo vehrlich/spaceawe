@@ -1187,5 +1187,13 @@ body.section-careers #header.small .logo .logo-el {
     transition: 0.5s;
 }
 
+body.section-careers  #header.small {
+    height: 60px;
+}
+
+
+.content-card .content-container .content-right-column{
+  width: 22%;
+}
 
 /* --- section-careers ---*/
