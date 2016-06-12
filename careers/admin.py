@@ -23,7 +23,7 @@ class InterviewAdmin(TranslatableAdmin):
 
     fieldsets = (
         (None,
-         {'fields': ('title', 'slug', 'teaser', 'cover', ), }),
+         {'fields': ('title', 'slug', 'teaser', 'cover', 'video_url', ), }),
         ('Space Awareness Category',
          {'fields': (('space', 'earth', 'navigation', 'heritage', ), )}),
         (None,
