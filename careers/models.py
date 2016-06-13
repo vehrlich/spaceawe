@@ -1,5 +1,8 @@
+import os
+
 from django.db import models
 from django.conf import global_settings
+from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils.translation import get_language_info
 from django.utils.translation import ugettext as _
@@ -41,6 +44,37 @@ class Interview(TranslatableModel, PublishingModel, SpaceaweModel):
     def get_absolute_url(self):
         return reverse('interviews:detail', kwargs={'slug': self.slug, })
 
+    @classmethod
+    def media_key(cls):
+        return str(cls._meta.verbose_name_plural)
+
+    def zip_url(self):
+        return self.download_url('zip')
+
+    def pdf_url(self):
+        return self.download_url('pdf')
+
+    def epub_url(self):
+        return self.download_url('epub')
+
+    def rtf_url(self):
+        return self.download_url('rtf')
+
+    def download_url(self, resource):
+        return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
+    def download_path(self, resource):
+        return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
+
+    def attachment_url(self, filename):
+        if filename.startswith('http') or filename.startswith('/'):
+            result = filename
+        else:
+            result = os.path.join(settings.MEDIA_URL, 'activities/attach', self.uuid, filename)
+        return result
+
+    def download_key(self):
+        return self.slug + '-interviews-' + str(self.pk)
+
     class Meta:
         ordering = ['release_date']
 
@@ -54,6 +88,7 @@ class InterviewTranslation(TranslatedFieldsModel):
     name = models.CharField(max_length=255, blank=True)
     country = models.CharField(max_length=255, blank=True)
     place_of_job = models.CharField(max_length=255, blank=True)
+    profession = models.CharField(max_length=255, blank=True)
 
     class Meta:
         unique_together = (
@@ -101,6 +136,37 @@ class Career(TranslatableModel, PublishingModel, SpaceaweModel):
 
     def get_absolute_url(self):
         return reverse('careers:detail', kwargs={'slug': self.slug, })
+
+    def zip_url(self):
+        return self.download_url('zip')
+
+    def pdf_url(self):
+        return self.download_url('pdf')
+
+    def epub_url(self):
+        return self.download_url('epub')
+
+    def rtf_url(self):
+        return self.download_url('rtf')
+
+    def download_url(self, resource):
+        return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
+    def download_path(self, resource):
+        return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
+
+    def attachment_url(self, filename):
+        if filename.startswith('http') or filename.startswith('/'):
+            result = filename
+        else:
+            result = os.path.join(settings.MEDIA_URL, 'activities/attach', self.uuid, filename)
+        return result
+
+    def download_key(self):
+        return self.slug + '-careers-' + str(self.pk)
+
+    @classmethod
+    def media_key(cls):
+        return str(cls._meta.verbose_name_plural)
 
     class Meta:
         ordering = ['release_date']
@@ -152,6 +218,37 @@ class Webinar(TranslatableModel, PublishingModel, SpaceaweModel):
 
     def get_absolute_url(self):
         return reverse('webinars:detail', kwargs={'slug': self.slug, })
+
+    @classmethod
+    def media_key(cls):
+        return str(cls._meta.verbose_name_plural)
+
+    def zip_url(self):
+        return self.download_url('zip')
+
+    def pdf_url(self):
+        return self.download_url('pdf')
+
+    def epub_url(self):
+        return self.download_url('epub')
+
+    def rtf_url(self):
+        return self.download_url('rtf')
+
+    def download_url(self, resource):
+        return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
+    def download_path(self, resource):
+        return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
+
+    def attachment_url(self, filename):
+        if filename.startswith('http') or filename.startswith('/'):
+            result = filename
+        else:
+            result = os.path.join(settings.MEDIA_URL, 'activities/attach', self.uuid, filename)
+        return result
+
+    def download_key(self):
+        return self.slug + '-interviews-' + str(self.pk)
 
     class Meta:
         ordering = ['release_date']

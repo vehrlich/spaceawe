@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load staticfiles thumbnail i18n markdown relativise_img_src %}
+
+{% block site_title %}{{ object.title }} | {% trans SECTIONS.activities.title %} | Space Awareness {% endblock %}
+
+{% block extra_body_class %}section-careers single{% endblock %}
+
+{% block extra_header_class %}small{% endblock %}
+
+{% block extra_head %}
+<meta property="og:title" content="{{ object.title }}" />
+<meta property="og:description" content="{{ object.teaser }}" />
+{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
+<meta property="og:image" content="{{ SITE_URL }}{{ im.url }}" />
+{% endthumbnail %}
+{% endblock %}
+
+
+<!-- Title : {{ object.title }}<br>
+ +Slug : {{ object.slug }}<br>
+ +Teaser : {{ object.teaser }}<br>
+ +Story : {{ object.story|safe }}<br>
+ +Field : {{ object.field }}<br>
+ +Career type : {{ object.career_type }}<br>
+ +Level of study : {{ object.level_of_study }}<br>
+ +Interview : {{ object.interview }}<br>
+ +Pdf url : {{ object.pdf_url}}<br> -->
+
+{% block content %}
+    <div class="content-card">
+        <div class="fake-padding"></div>
+
+        <div class="title-container">
+            <p class="title">{{ object.title }}</p>
+            <p class="teaser">{{ object.teaser }}</p>
+        </div>
+        {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+           <div class="image-container" style="background-image: url({{ im.url }})"></div>
+
+        {% endthumbnail %}
+
+
+        
+        <div class="content-container">
+            <div class="content-main-column">
+
+                <div class="section-content">{{ object.story|safe }}</div>
+                
+
+
+            </div>
+
+            <div class="content-right-column">
+                
+                
+                <div>
+                    <div class="caption">Field</div>
+                    <div class="value">{{ object.field }}</div>
+                </div>
+               
+                <div>
+                    <div class="caption">Type</div>
+                    <div class="value">{{ object.career_type }}</div>
+                </div>
+                <div>
+                    <div class="caption">Level of stydy</div>
+                    <div class="value">{{ object.level_of_study }}</div>
+                </div>
+                 <div>
+                    <div class="caption">Interview</div>
+                    <div class="value">{{ object.interview }}</div>
+                </div>
+                 <div>
+                    <div class="caption">Download</div>
+                    <div ><a href="{{ object.pdf_url}}" class="value"><img src="{% static 'img/icon_download.svg' %}"></a></div>
+                </div>                
+                    <div class="social-sharing">
+                        <img id="facebook" class="button" data-url="" src="/static/img/icons/social/icon_sm_facebook_b.svg" />
+                        <img id="twitter" class="button" data-url="" src="/static/img/icons/social/icon_sm_twitter_b.svg" />
+                    </div>
+
+                </div>
+        </div>
+
+         <div class="more-container-header pure-g">
+            <div class="pure-u-1 list-header">
+                <div class="title">{% trans "Related resources" %}</div>
+            </div>
+            <div class="pure-u-1 list-header-padding"></div>
+        </div>
+        
+         <div class="thumbnailed-list more-container-list pure-g">
+
+            {% for item in random|slice:":3" %}
+                {% thumbnail item.object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+                    <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3"><div class="list-item-container">
+                        <div class="list-item {{ item.section }}" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+                            <div class="color"></div>
+                            <div class="color-black"></div>
+                            <div class="text">
+                                <div class="date">{{ item.object.release_date|date:"DATE_FORMAT" }}</div>
+                                <div class="title">{{ item.object.title }}</div>
+                                <div class="bottom">
+                                    <div class="theme">{% include 'categories/categories_icons.html' %}</div>
+                                    <div class="expand"><a href="{{ item.url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
+                                </div>
+                            </div>
+                            <div class="link-container">
+                                <a href="{{ item.url }}"><div class="link"></div></a>
+                            </div>
+                        </div>
+                    </div></div>
+                {% endthumbnail %}
+            {% endfor %}
+
+        </div>
+     
+    </div>
+
+{% endblock %}
+
+
+
