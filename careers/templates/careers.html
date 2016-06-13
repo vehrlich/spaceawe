@@ -37,7 +37,7 @@
 
 
        <div class="pure-u-1 list-header">
-            <h1>{% trans "find by category" %}</h1>
+            <h1>{% trans "find by topic" %}</h1>
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
             </div>
@@ -108,7 +108,7 @@
 		                <div class="color-black"></div>
 		                <div class="text">
 		                    <div class="title">{{ interview.title }}</div>
-		                    <div class="preview">{{ interview.story|safe }}</div>
+		                    <div class="preview">{{ interview.teaser }}</div>
 		                    <div class="bottom">
 		                        <ul class="expand">
 		                            <li>
@@ -198,7 +198,7 @@
 		                <div class="color-black"></div>
 		                <div class="text">
 		                    <div class="title">{{ career.title }}</div>
-		                    <div class="preview">{{ career.story|safe }}</div>
+		                    <div class="preview">{{ career.teaser }}</div>
 		                    <div class="bottom">
 		                        <ul class="expand">
 		                            <li>
@@ -264,7 +264,7 @@
 			            <div class="color-black"></div>
 			            <div class="text">
 			                <div class="title">{{ webinar.title }}</div>
-			                <div class="preview">{{ webinar.story|safe }}</div>
+			                <div class="preview">{{ webinar.teaser }}</div>
 			                <div class="bottom">
 			                    <ul class="expand">
 			                    	<li><a href="{% url 'careers:webinar-detail' slug=webinar.slug %}" target="_blank"><img src="{% static 'img/icon_plus.svg' %}"></a></li>

@@ -1347,4 +1347,25 @@ a:focus{
 width: 100%;
 }
 
+.section-careers .thumbnailed-list .list-item .text .title {
+    padding-bottom: 20px;
+}
+
+.section-careers .content-right-column img{
+  max-width: 28px;
+}
+
+.section-careers .title-container .title{
+  padding-top: 10px;
+}
+
+.section-careers .title-container .teaser{
+  color: #000;
+  padding: 10px 0;
+}
+
+.section-careers .title-container p{
+  margin: 0;
+}
+
 /* --- section-careers ---*/
