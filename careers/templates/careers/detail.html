@@ -42,6 +42,7 @@
 
         
         <div class="content-container">
+         <div class="row">
             <div class="content-main-column">
 
                 <div class="section-content">{{ object.story|safe }}</div>
@@ -75,11 +76,13 @@
                     <div ><a href="{{ object.pdf_url}}" class="value"><img src="{% static 'img/icon_download.svg' %}"></a></div>
                 </div>                
                     <div class="social-sharing">
-                        <img id="facebook" class="button" data-url="" src="/static/img/icons/social/icon_sm_facebook_b.svg" />
-                        <img id="twitter" class="button" data-url="" src="/static/img/icons/social/icon_sm_twitter_b.svg" />
+                        <a href=""><img id="facebook" class="button" data-url="" src="/static/img/icons/social/facebook.png" /></a>
+                        <a href=""><img id="twitter" class="button" data-url="" src="/static/img/icons/social/twitter.png" /></a>
+                        <a href=""><img id="google" class="button" data-url="" src="/static/img/icons/social/google.png" /></a>
                     </div>
 
                 </div>
+        </div>
         </div>
 
          <div class="more-container-header pure-g">
