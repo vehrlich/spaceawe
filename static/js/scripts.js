@@ -22,29 +22,24 @@ var small_nav_height = 60; // height of small navigation header
     }
 
 
-     $(window).scroll(function() {
-            if ($('.career_menu').offset().top < 90) {
-                $(".career_menu").addClass('top_block_fixed');
-            } else {
-                $(".career_menu").removeClass('top_block_fixed');
-            }
 
-        });
+     // $(window).scroll(function() { 
+     //  var top = $(document).scrollTop();
+     //  if (top > 700) $('.career_menu').addClass('top_block_fixed');
+     //  else $('.career_menu').removeClass('top_block_fixed');
+     // });
     
 
+   
 
     $(document).ready(function(){
 
-        $('.list-item-container .link-container a').on( "click", function(e) {
-          e.preventDefault();
-          var attrhref = $(this).attr('href');
-          $('.image-container iframe')[0].src= attrhref;
-        });
+       
 
          $('.career_menu a').click(function() {
             var target = $(this).attr('href');
             $('html, body').animate({
-                scrollTop: $(target).offset().top - 90
+                scrollTop: $(target).offset().top - 130
             }, 800);
             return false;
         });
@@ -55,7 +50,11 @@ var small_nav_height = 60; // height of small navigation header
             $(this).parents('.wrapper_block_previews').addClass('all_open');
         });
 
-
+         $('.list-item-container .link-container a').on( "click", function(e) {
+          e.preventDefault();
+          var attrhref = $(this).attr('href');
+          $('.image-container iframe')[0].src= attrhref;
+        });
 
      
 
@@ -124,6 +123,16 @@ var small_nav_height = 60; // height of small navigation header
         $.endlessPaginate();
 
     });
+
+     $(function() {
+       var topPos = $('.career_menu').offset().top - 60;
+       $(window).scroll(function() {
+           var top = $(document).scrollTop();
+           if (top > topPos) { $('.career_menu').addClass('top_block_fixed'); } else { $('.career_menu').removeClass('top_block_fixed')}
+       });
+   });
+
+
 })(jQuery);
 
 // analytics
