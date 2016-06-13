@@ -21,7 +21,47 @@ var small_nav_height = 60; // height of small navigation header
             // }
     }
 
+
+     $(window).scroll(function() {
+            if ($('.career_menu').offset().top < 90) {
+                $(".career_menu").addClass('top_block_fixed');
+            } else {
+                $(".career_menu").removeClass('top_block_fixed');
+            }
+
+        });
+    
+
+
     $(document).ready(function(){
+
+        $('.list-item-container .link-container a').on( "click", function(e) {
+          e.preventDefault();
+          var attrhref = $(this).attr('href');
+          $('.image-container iframe')[0].src= attrhref;
+        });
+
+         $('.career_menu a').click(function() {
+            var target = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(target).offset().top - 90
+            }, 800);
+            return false;
+        });
+
+
+        $('.wrapper_block_previews .load-more').click(function(e) {
+          e.preventDefault();
+            $(this).parents('.wrapper_block_previews').addClass('all_open');
+        });
+
+
+
+     
+
+
+      
+
 
         // main menu
         $('#menu-main-button').on('click touchend', menu_main_click);

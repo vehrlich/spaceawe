@@ -38,20 +38,51 @@ Questions:<br>
             <div class="title">{{ object.title }}</div>
             <div class="date">{{ object.teaser }}</div>
         </div>
-<!--     {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+    <!--     {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
         <div  style="background-image: url({{ im.url }})"></div>
 
     {% endthumbnail %} -->
-        <div class="image-container"><iframe width="100%" height="550" src="https://www.youtube.com/embed/njCDZWTI-xg" frameborder="0" allowfullscreen></iframe></div>
+        <!-- <div class="image-container"><iframe width="100%" height="550" src="https://www.youtube.com/embed/ZtaKWt26dNs" frameborder="0" allowfullscreen></iframe></div> -->
+        <div class="image-container"><iframe width="100%" height="550" src="{{ object.video_url }}" frameborder="0" allowfullscreen></iframe></div>
+
+        
         <div class="content-container">
             <div class="content-main-column">
 
-   
+            <div class="thumbnailed-list video_thumbnailed">
+            <div class="row clearfix">
+             {% for question in object.questions.all %}
+                <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
+                    <div class="list-item-container">
+                 
+                        <!-- <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true"> -->
+                         <div class="list-item careers" style="background-image:url(/static/img/cover/about.jpg);" aria-haspopup="true">
+                            <div class="color"></div>
+                            <div class="color-black"></div>
+                             <div class="text">
+                                   <p class="question_mark">?</p>
+                                    <div class="bottom">
+                                    <div class="title">{{ question.question_text }}</div>
+                                        <div class="expand"><a href="{{ question.video_url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
+                                    </div>
+                                </div>
+                            <div class="link-container">
+                                <a href="{{ question.video_url }}"><div class="link"></div></a>
+                            </div>
+                        </div>
+                  
+                    </div>
+                </div>
+            {% endfor %}
+            </div> 
+            </div>
+
                 <div class="section-content">{{ object.story|safe }}</div>
                 
 
 
             </div>
+
             <div class="content-right-column">
                 
                 
@@ -70,7 +101,9 @@ Questions:<br>
                 </div>
                 <div>
                     <div class="caption">Profession</div>
+                    <!-- !!!!!!!!!!!!!!!!!! This field is not in the admin panel !!!!!!!!! -->
                     <div class="value"></div>
+
                 </div>
                 
                 <div class="social-sharing">
@@ -81,7 +114,7 @@ Questions:<br>
                 </div>
         </div>
 
-          <div class="more-container-header pure-g">
+         <div class="more-container-header pure-g">
             <div class="pure-u-1 list-header">
                 <div class="title">{% trans "Related resources" %}</div>
             </div>
@@ -90,33 +123,33 @@ Questions:<br>
         
          <div class="thumbnailed-list more-container-list pure-g">
 
-{% for item in random|slice:":3" %}
-    {% thumbnail item.object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
-        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3"><div class="list-item-container">
-            <div class="list-item {{ item.section }}" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
-                <div class="color"></div>
-                <div class="color-black"></div>
-                <div class="text">
-                    <div class="date">{{ item.object.release_date|date:"DATE_FORMAT" }}</div>
-                    <div class="title">{{ item.object.title }}</div>
-                    <div class="bottom">
-                        <div class="theme">{% include 'categories/categories_icons.html' %}</div>
-                        <div class="expand"><a href="{{ item.url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
-                    </div>
-                </div>
-                <div class="link-container">
-                    <a href="{{ item.url }}"><div class="link"></div></a>
-                </div>
-            </div>
-        </div></div>
-    {% endthumbnail %}
-{% endfor %}
+            {% for item in random|slice:":3" %}
+                {% thumbnail item.object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+                    <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3"><div class="list-item-container">
+                        <div class="list-item {{ item.section }}" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+                            <div class="color"></div>
+                            <div class="color-black"></div>
+                            <div class="text">
+                                <div class="date">{{ item.object.release_date|date:"DATE_FORMAT" }}</div>
+                                <div class="title">{{ item.object.title }}</div>
+                                <div class="bottom">
+                                    <div class="theme">{% include 'categories/categories_icons.html' %}</div>
+                                    <div class="expand"><a href="{{ item.url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
+                                </div>
+                            </div>
+                            <div class="link-container">
+                                <a href="{{ item.url }}"><div class="link"></div></a>
+                            </div>
+                        </div>
+                    </div></div>
+                {% endthumbnail %}
+            {% endfor %}
 
         </div>
-     
      
     </div>
 
 {% endblock %}
+
 
 

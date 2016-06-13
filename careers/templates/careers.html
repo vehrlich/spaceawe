@@ -50,6 +50,39 @@
 
         </div>
 
+        <div class="career_menu">
+        	<ul>
+        		<li>
+        			<a href="#interviews_menu">
+	        			<p class="menu_title">Interviews</p>
+	        			<p>What is it like to work close to space?</p>
+	        			<img src="{% static 'img/icon_plus.svg' %}">
+	        		</a>
+        		</li>
+        		<li>
+        			<a href="#careers_menu">
+	        			<p class="menu_title">Careers</p>
+	        			<p>It is not all about bocoming an astronaut!</p>
+	        			<img src="{% static 'img/icon_plus.svg' %}">
+	        		</a>
+        		</li>
+        		<li>
+        			<a href="#webinars_menu">
+	        			<p class="menu_title">Webinars</p>
+	        			<p>Watch live talks about space sciences</p>
+	        			<img src="{% static 'img/icon_plus.svg' %}">
+	        		</a>
+        		</li>
+        		<li>
+        			<a href="#booklets_menu">
+	        			<p class="menu_title">Booklets & posters</p>
+	        			<p>Print, share, and download materials on space careers</p>
+	        			<img src="{% static 'img/icon_plus.svg' %}">
+	        		</a>
+        		</li>
+        	</ul>
+        </div>
+
 
 
 
@@ -61,7 +94,7 @@
 <!-- Interviews -->
 
 
-	<div class="wrapper_block_previews">
+	<div id="interviews_menu" class="wrapper_block_previews">
         <p class="title">Interviews</p>
         <p class="title_green">What is it like to work to space?</p>
         <div class="row">
@@ -116,10 +149,10 @@
 	    {% endfor %}
 
 		<!-- load more -->
-				    <div class="endless_container pure-u-1 list-footer">
-				        <a class="endless_more{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{{ path }}{{ querystring }}"
-				            rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
-				        <div class="endless_loading load-more-button" style="display: none;">{{ loading|safe }}</div>
+				     <div class="c-green-u-1 list-footer">
+				        <a class="load-more" href=" "
+				            >Load more</a>
+				       
 				    </div>
 
 		<!-- load more -->
@@ -137,7 +170,7 @@
 <!-- Careers -->
 
 
-	<div class="wrapper_block_previews">
+	<div id="careers_menu" class="wrapper_block_previews">
         <p class="title">Careers</p>
         <p class="title_green">It is not all about becoming an astronaut!</p>
         <div class="row">
@@ -199,10 +232,10 @@
 	    {% endfor %}
 
 	    	<!-- load more -->
-				    <div class="endless_container pure-u-1 list-footer">
-				        <a class="endless_more{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{{ path }}{{ querystring }}"
-				            rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
-				        <div class="endless_loading load-more-button" style="display: none;">{{ loading|safe }}</div>
+				    <div class="c-green-u-1 list-footer">
+				        <a class="load-more" href=" "
+				            >Load more</a>
+				       
 				    </div>
 
 		<!-- load more -->
@@ -217,7 +250,7 @@
 <!-- Webinars -->
 
 
-<div class="wrapper_block_previews">
+<div id="webinars_menu" class="wrapper_block_previews">
         <p class="title">Webinars</p>
         <p class="title_green">Whatch live talks about space sciences</p>
         <div class="row">
@@ -259,10 +292,10 @@
 
 
 		<!-- load more -->
-				    <div class="endless_container pure-u-1 list-footer">
-				        <a class="endless_more{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{{ path }}{{ querystring }}"
-				            rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
-				        <div class="endless_loading load-more-button" style="display: none;">{{ loading|safe }}</div>
+				    <div class="green-u-1 list-footer">
+				        <a class="load-more" href="#"
+				           >Load more</a>
+				       
 				    </div>
 
 		<!-- load more -->
