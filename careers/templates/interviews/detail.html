@@ -41,7 +41,6 @@ Questions:<br>
 
     	<div class="image-container"><iframe width="100%" height="550" src="{{ object.video_url }}" frameborder="0" allowfullscreen></iframe></div>
 
-		
         <div class="content-container">
         <div class="row">
             <div class="content-main-column">
@@ -82,13 +81,11 @@ Questions:<br>
             </div>
 
             <div class="content-right-column">
-                
-                
+
                 <div>
                     <div class="caption">Name</div>
                     <div class="value">{{ object.name }}</div>
                 </div>
-               
                 <div>
                     <div class="caption">Country</div>
                     <div class="value">{{ object.country }}</div>
@@ -99,8 +96,7 @@ Questions:<br>
                 </div>
                 <div>
                     <div class="caption">Profession</div>
-                    <!-- !!!!!!!!!!!!!!!!!! This field is not in the admin panel !!!!!!!!! -->
-                    <div class="value"></div>
+                    <div class="value">{{ object.profession }}</div>
 
                 </div>
                 
@@ -121,7 +117,6 @@ Questions:<br>
             </div>
             <div class="pure-u-1 list-header-padding"></div>
         </div>
-        
      	 <div class="thumbnailed-list more-container-list pure-g">
 
 			{% for item in random|slice:":3" %}
@@ -147,14 +142,6 @@ Questions:<br>
 			{% endfor %}
 
         </div>
-     
     </div>
 
 {% endblock %}
-
-
-
-
-
-
-

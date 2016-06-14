@@ -88,6 +88,7 @@ class InterviewTranslation(TranslatedFieldsModel):
     name = models.CharField(max_length=255, blank=True)
     country = models.CharField(max_length=255, blank=True)
     place_of_job = models.CharField(max_length=255, blank=True)
+    profession = models.CharField(max_length=255, blank=True)
 
     class Meta:
         unique_together = (

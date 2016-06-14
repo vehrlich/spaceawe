@@ -1,2 +1,8 @@
 .sass-cache
 secrets.json
+*.pyc
+*.py~
+*.html~
+*.sqlite3
+*.bac
+venv/

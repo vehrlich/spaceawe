@@ -28,7 +28,7 @@ class InterviewAdmin(TranslatableAdmin):
          {'fields': (('space', 'earth', 'navigation', 'heritage', ), )}),
         (None,
          {'fields': (('_languages', ),
-                     ('name', 'country', 'place_of_job', ), )}),
+                     ('name', 'country', 'place_of_job', 'profession', ), )}),
         ('Publishing',
          {'fields': (('release_date', ),
                      ('published', 'featured', ),) }),
