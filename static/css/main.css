@@ -1334,13 +1334,22 @@ body.section-careers #header.small {
     box-sizing: border-box;
 }
 
+
 .section-careers .career_menu li img {
-    max-width: 20px;
+    max-width: 34px;
 }
 
 .section-careers .career_menu li a {
     text-decoration: none! important;
     display: block;
+}
+
+.section-careers .social-sharing img{
+  max-width: 46px;
+}
+
+.section-careers .social-sharing a {
+    padding: 0 5px;
 }
 
 .section-careers .career_menu li .menu_title {
