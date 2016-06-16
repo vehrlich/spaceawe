@@ -124,13 +124,13 @@ var small_nav_height = 60; // height of small navigation header
 
     });
 
-     $(function() {
-       var topPos = $('.career_menu').offset().top - 60;
-       $(window).scroll(function() {
-           var top = $(document).scrollTop();
-           if (top > topPos) { $('.career_menu').addClass('top_block_fixed'); } else { $('.career_menu').removeClass('top_block_fixed')}
-       });
-   });
+   //  $(function() {
+   //     var topPos = $('.career_menu').offset().top - 60;
+   //     $(window).scroll(function() {
+   //         var top = $(document).scrollTop();
+   //         if (top > topPos) { $('.career_menu').addClass('top_block_fixed'); } else { $('.career_menu').removeClass('top_block_fixed')}
+   //     });
+   // });
 
 
 })(jQuery);
