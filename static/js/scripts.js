@@ -50,7 +50,7 @@ var small_nav_height = 60; // height of small navigation header
             $(this).parents('.wrapper_block_previews').addClass('all_open');
         });
 
-         $('.list-item-container .link-container a').on( "click", function(e) {
+         $('.section-careers .content-card .list-item-container .link-container a').on( "click", function(e) {
           e.preventDefault();
           var attrhref = $(this).attr('href');
           $('.image-container iframe')[0].src= attrhref;
