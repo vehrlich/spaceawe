@@ -52,7 +52,8 @@ Questions:<br>
 					        <div class="list-item-container">
 						 
 					            <!-- <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true"> -->
-					             <div class="list-item careers" style="background-image:url(/static/img/cover/about.jpg);" aria-haspopup="true">
+                                                    {% thumbnail question.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
+					             <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
 					                <div class="color"></div>
 					                <div class="color-black"></div>
 					                 <div class="text">
@@ -66,7 +67,7 @@ Questions:<br>
 					                    <a href="{{ question.video_url }}"><div class="link"></div></a>
 					                </div>
 					            </div>
-						  
+						    {% endthumbnail %}
 					        </div>
 					    </div>
 					{% endfor %}

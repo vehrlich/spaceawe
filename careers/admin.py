@@ -6,7 +6,7 @@ from .models import Interview, InterviewQuestion, Career, Webinar
 
 class InterviewQuestionInlineAdmin(admin.TabularInline):
     model = InterviewQuestion
-    fields = ('question_text', 'video_url', )
+    fields = ('question_text', 'video_url', 'image', )
     extra = 1
 
 
