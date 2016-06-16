@@ -52,6 +52,13 @@ var small_nav_height = 60; // height of small navigation header
 
          $('.section-careers .content-card .list-item-container .link-container a').on( "click", function(e) {
           e.preventDefault();
+          $('.section-careers .content-card .thumbnailed-list .list-item').removeClass('active');
+          $(this).parents('.list-item').addClass('active');
+
+          $('html, body').animate({
+                scrollTop: $('.video-container').offset().top - 60
+          }, 300);
+      
           var attrhref = $(this).attr('href');
           $('.image-container iframe')[0].src= attrhref;
         });
