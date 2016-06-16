@@ -200,7 +200,7 @@ class WebinarManager(PublishingManager, TranslatableManager):
 
 
 class Webinar(TranslatableModel, PublishingModel, SpaceaweModel):
-    video_url = models.URLField(max_length=255)
+    video_url = models.URLField(max_length=255, blank=True, null=True)
     cover = ImageField(null=True, blank=True, upload_to='webinars')
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
 
