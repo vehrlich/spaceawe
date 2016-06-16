@@ -42,7 +42,7 @@ class Interview(TranslatableModel, PublishingModel, SpaceaweModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('interviews:detail', kwargs={'slug': self.slug, })
+        return reverse('careers:interview-detail', kwargs={'slug': self.slug, })
 
     @classmethod
     def media_key(cls):
@@ -135,7 +135,7 @@ class Career(TranslatableModel, PublishingModel, SpaceaweModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('careers:detail', kwargs={'slug': self.slug, })
+        return reverse('careers:career-detail', kwargs={'slug': self.slug, })
 
     def zip_url(self):
         return self.download_url('zip')
@@ -217,7 +217,7 @@ class Webinar(TranslatableModel, PublishingModel, SpaceaweModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('webinars:detail', kwargs={'slug': self.slug, })
+        return reverse('careers:webinar-detail', kwargs={'slug': self.slug, })
 
     @classmethod
     def media_key(cls):
