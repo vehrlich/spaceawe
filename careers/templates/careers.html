@@ -56,28 +56,28 @@
         			<a href="#interviews_menu">
 	        			<p class="menu_title">Interviews</p>
 	        			<p>What is it like to work close to space?</p>
-	        			<span class="arrow_down"></span>
+	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         		<li>
         			<a href="#careers_menu">
 	        			<p class="menu_title">Careers</p>
 	        			<p>It is not all about bocoming an astronaut!</p>
-	        			<span class="arrow_down"></span>
+	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         		<li>
         			<a href="#webinars_menu">
 	        			<p class="menu_title">Webinars</p>
 	        			<p>Watch live talks about space sciences</p>
-	        			<span class="arrow_down"></span>
+	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         		<li>
         			<a href="#booklets_menu">
 	        			<p class="menu_title">Booklets & posters</p>
 	        			<p>Print, share, and download materials on space careers</p>
-	        			<span class="arrow_down"></span>
+	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         	</ul>
@@ -87,7 +87,6 @@
 
 
    </div>
-
 
 <div id="list" class="thumbnailed-list careers page2 snap pure-g">
 
@@ -112,13 +111,13 @@
 		                    <div class="bottom">
 		                        <ul class="expand">
 		                            <li>
-		                                <a href="{% url 'careers:interview-detail' slug=interview.slug %}" target="_blank"><img src="{% static 'img/icon_plus.svg' %}"></a>
+		                                <a href="{% url 'careers:interview-detail' slug=interview.slug %}" target="_blank"><img src="{% static 'img/images_white.svg' %}"></a>
 		                            </li>
 		                            <li>
 		                                <a href="{% url 'careers:interview-detail' slug=interview.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a>
 		                            </li>
 		                            <li>
-		                                <a href="{{ interview.pdf_url }}"><img src="{% static 'img/icon_download.svg' %}"></a>
+		                                <a href="{{ interview.pdf_url }}"><img src="{% static 'img/download_white.svg' %}"></a>
 		                            </li>
 		                        </ul>
 		                    </div>
@@ -130,22 +129,8 @@
 		        </div>
 		    </div>
 
-		    <!-- Teaser : {{ interview.teaser }}<br>
-					Story : {{ interview.story|safe }}<br>
-					Title : {{ interview.title }}<br>
-					Name : {{ interview.name }}<br>
-					Country : {{ interview.country }}<br>
-					Place of job : {{ interview.place_of_job }}<br>
-					<a href="{% url 'careers:interview-detail' slug=interview.slug %}">URL</a><br>
-					Questions:<br>
-					{% for question in interview.questions.all %}
-					<p>
-					  - Text : {{ question.question_text }}<br>
-					  - Video url : {{ question.video_url }}<br>
-					</p>
-					{% endfor %}
-					Pdf url : {{ interview.pdf_url }}
-					<hr/>-->
+
+		  
 	    {% endfor %}
 
 		<!-- load more -->
@@ -202,14 +187,16 @@
 		                    <div class="bottom">
 		                        <ul class="expand">
 		                            <li>
-		                                <a href="{% url 'careers:career-detail' slug=career.slug %}" target="_blank"><img src="{% static 'img/icon_plus.svg' %}"></a>
+		                                <a href="{% url 'careers:career-detail' slug=career.slug %}" target="_blank"><img src="{% static 'img/images_white.svg' %}"></a>
 		                            </li>
 		                            <li>
 		                                <a href="{% url 'careers:career-detail' slug=career.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a>
 		                            </li>
 		                            <li>
-		                                <a href="{{ interview.pdf_url }}"><img src="{% static 'img/icon_download.svg' %}"></a>
+		                                <a href="{{ interview.pdf_url }}"><img src="{% static 'img/download_white.svg' %}"></a>
 		                            </li>
+
+
 		                        </ul>
 		                    </div>
 		                </div>
@@ -267,9 +254,9 @@
 			                <div class="preview">{{ webinar.teaser }}</div>
 			                <div class="bottom">
 			                    <ul class="expand">
-			                    	<li><a href="{% url 'careers:webinar-detail' slug=webinar.slug %}" target="_blank"><img src="{% static 'img/icon_plus.svg' %}"></a></li>
+			                    	<li><a href="{% url 'careers:webinar-detail' slug=webinar.slug %}" target="_blank"><img src="{% static 'img/images_white.svg' %}"></a></li>
 			                    	<li><a href="{% url 'careers:webinar-detail' slug=webinar.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a></li>
-			                    	<li><a href="{{ interview.pdf_url }}"><img src="{% static 'img/icon_download.svg' %}"></a></li>
+			                    	<li><a href="{{ interview.pdf_url }}"><img src="{% static 'img/download_white.svg' %}"></a></li>
 			                    </ul>
 			                </div>
 			            </div>
