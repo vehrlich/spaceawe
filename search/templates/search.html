@@ -1,0 +1,10 @@
+<a href="/search/?models=Article,Interview&q=word1 word2&page=1">/search/?models=Article,Interview&q=word1 word2&page=1</a><br>
+
+{% for result in search_results %}
+<a href="{{ result.get_absolute_url }}">{{ result.title }}</a><br>
+{{ result.story|safe }}<br>
+{% endfor %}
+
+{% for page in pages %}
+{{ page }},
+{% endfor %}

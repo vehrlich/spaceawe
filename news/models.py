@@ -9,6 +9,7 @@ from parler.models import TranslatableModel, TranslatedFieldsModel
 from parler.managers import TranslatableManager, TranslatableQuerySet
 
 from django_ext.models import PublishingModel, PublishingManager
+from django_ext.models.search import SearchModel
 from institutions.models import Institution
 
 
@@ -20,7 +21,7 @@ class ArticleManager(PublishingManager, TranslatableManager):
     queryset_class = ArticleQuerySet
 
 
-class Article(TranslatableModel, PublishingModel):
+class Article(TranslatableModel, PublishingModel, SearchModel):
     cover = ImageField(null=True, blank=True, upload_to='news')
     event_organiser = models.ForeignKey(Institution, blank=True, null=True)
     _event_language = models.CharField(blank=True, null=True, max_length=10, choices=global_settings.LANGUAGES, db_column='event_language', verbose_name='event language')

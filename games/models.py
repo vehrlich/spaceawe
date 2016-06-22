@@ -11,6 +11,7 @@ from select_multiple_field.models import SelectMultipleField
 
 from django_ext.models import PublishingModel, PublishingManager
 from django_ext.models.spaceawe import SpaceaweModel
+from django_ext.models.search import SearchModel
 
 
 class GameQuerySet(TranslatableQuerySet):
@@ -21,7 +22,7 @@ class GameManager(PublishingManager, TranslatableManager):
     queryset_class = GameQuerySet
 
 
-class Game(TranslatableModel, PublishingModel, SpaceaweModel):
+class Game(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
     TYPE_CHOICES = (
         ('c', _('Citizen Science')),
         ('f', _('Fun Learning')),

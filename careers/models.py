@@ -14,6 +14,7 @@ from select_multiple_field.models import SelectMultipleField
 
 from django_ext.models import PublishingModel, PublishingManager
 from django_ext.models.spaceawe import SpaceaweModel
+from django_ext.models.search import SearchModel
 
 
 class InterviewQuerySet(TranslatableQuerySet):
@@ -24,7 +25,7 @@ class InterviewManager(PublishingManager, TranslatableManager):
     queryset_class = InterviewQuerySet
 
 
-class Interview(TranslatableModel, PublishingModel, SpaceaweModel):
+class Interview(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
     video_url = models.URLField(max_length=255)
     cover = ImageField(null=True, blank=True, upload_to='interviews')
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
@@ -42,7 +43,7 @@ class Interview(TranslatableModel, PublishingModel, SpaceaweModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('interviews:detail', kwargs={'slug': self.slug, })
+        return reverse('careers:interview-detail', kwargs={'slug': self.slug, })
 
     @classmethod
     def media_key(cls):
@@ -118,7 +119,7 @@ class CareerManager(PublishingManager, TranslatableManager):
     queryset_class=CareerQuerySet
 
 
-class Career(TranslatableModel, PublishingModel, SpaceaweModel):
+class Career(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
     cover = ImageField(null=True, blank=True, upload_to='careers')
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
 
@@ -135,7 +136,7 @@ class Career(TranslatableModel, PublishingModel, SpaceaweModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('careers:detail', kwargs={'slug': self.slug, })
+        return reverse('careers:career-detail', kwargs={'slug': self.slug, })
 
     def zip_url(self):
         return self.download_url('zip')
@@ -199,7 +200,7 @@ class WebinarManager(PublishingManager, TranslatableManager):
     queryset_class = WebinarQuerySet
 
 
-class Webinar(TranslatableModel, PublishingModel, SpaceaweModel):
+class Webinar(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
     video_url = models.URLField(max_length=255, blank=True, null=True)
     cover = ImageField(null=True, blank=True, upload_to='webinars')
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
@@ -217,7 +218,7 @@ class Webinar(TranslatableModel, PublishingModel, SpaceaweModel):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('webinars:detail', kwargs={'slug': self.slug, })
+        return reverse('careers:webinar-detail', kwargs={'slug': self.slug, })
 
     @classmethod
     def media_key(cls):
