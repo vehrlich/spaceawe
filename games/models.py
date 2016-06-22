@@ -11,7 +11,7 @@ from select_multiple_field.models import SelectMultipleField
 
 from django_ext.models import PublishingModel, PublishingManager
 from django_ext.models.spaceawe import SpaceaweModel
-from django_ext.models.search import SearchModel
+from search.mixins import SearchModel
 
 
 class GameQuerySet(TranslatableQuerySet):

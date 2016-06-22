@@ -9,7 +9,7 @@ from parler.models import TranslatableModel, TranslatedFieldsModel
 from parler.managers import TranslatableManager, TranslatableQuerySet
 
 from django_ext.models import PublishingModel, PublishingManager
-from django_ext.models.search import SearchModel
+from search.mixins import SearchModel
 from institutions.models import Institution
 
 
