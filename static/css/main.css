@@ -1200,14 +1200,17 @@ body.section-careers #header.small .logo .logo-el {
     height: 170px;
 }
 
+.section-careers .thumbnailed-list .list-item.active .question_mark,
 .section-careers .thumbnailed-list .list-item:hover .question_mark,
 .section-careers .thumbnailed-list .list-item .text > div.bottom,
+.section-careers .thumbnailed-list .list-item.active .text > div,
 .section-careers .thumbnailed-list .list-item:hover .text > div {
     visibility: hidden;
     opacity: 0;
     transition: 0.5s;
 }
 
+.section-careers .thumbnailed-list .list-item.active .text > div.bottom,
 .section-careers .thumbnailed-list .list-item:hover .text > div.bottom {
     visibility: visible;
     opacity: 1;
@@ -1551,6 +1554,14 @@ a:focus {
   height: auto;
 }
 
+.thumbnailed-list .list-item.active .color,
+.thumbnailed-list .list-item.active .date,
+.thumbnailed-list .list-item.active .bottom {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 /*body.section-careers #header.small{
   height: 80px;
 }
@@ -1596,7 +1607,9 @@ a:focus {
      .section-careers .career_menu {
         display: none
     }
+    .section-careers .content-card .content-container .content-right-column,
      .section-careers .content-card .content-container .content-main-column{
       width: 100%;
     }
+
 }

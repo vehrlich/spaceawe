@@ -103,6 +103,11 @@ class InterviewQuestion(models.Model):
     interview = models.ForeignKey(Interview, related_name='questions')
     question_text = models.CharField(max_length=255, blank=True)
     video_url = models.URLField(max_length=255)  # Maybe not good idea
+    image = ImageField(null=True, blank=True, upload_to='interviews')
+
+    @property
+    def main_visual(self):
+        return self.image.file if self.image else None
 
     def caption(self):
         return self.question_text if self.question_text else self.video_url
