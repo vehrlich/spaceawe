@@ -1,4 +1,179 @@
-<a href="/search/?models=Article,Interview&q=word1 word2&page=1">/search/?models=Article,Interview&q=word1 word2&page=1</a><br>
+{% extends 'base.html' %} {% load staticfiles thumbnail i18n markdown relativise_img_src %} {% block site_title %}{{ object.title }} | {% trans SECTIONS.news.title %} | Space Awareness {% endblock %} {% block extra_body_class %}section-news single{% endblock %} {% block extra_header_class %}small{% endblock %} {% block extra_head %}
+<meta property="og:title" content="{{ object.title }}" />
+<meta property="og:description" content="{{ object.teaser }}" /> {% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
+<meta property="og:image" content="{{ SITE_URL }}{{ im.url }}" /> {% endthumbnail %} {% endblock %} {% block content %}
+<div class="search_wrapper content-card">
+    <div class="fake-padding"></div>
+    <div class="content-container">
+        <div class="row">
+            <div class="result_title">Approximately 278,000 results (0.44 seconds)</div>
+            <div class="content-main-column">
+                <div class="search_result_wrap">
+                    <div class="row result_block">
+                        <div class="search_img col-md-3">
+                            <a href=""><img src="/static/img/cover/about.jpg" alt=""></a>
+                        </div>
+                        <div class="search_preview">
+                            <p class="title"><a href="">Our Galaxy Is Young At Heart</a></p>
+                            <p><span class="date">2 November 2015</span> - If you stand in a very dark spot on a moonless night, you might see a faint fuzzy glow stretching across the sky, with a glowing milky-white bul...</p>
+                            <p><a href="">http://www.space-awareness.org/spacescoops/ourgalaxy…</a></p>
+                        </div>
+                    </div>
+                    <div class="row result_block">
+                        <div class="search_img col-md-3">
+                            <a href=""><img src="/static/img/cover/about.jpg" alt=""></a>
+                        </div>
+                        <div class="search_preview">
+                            <p class="title"><a href="">Our Galaxy Is Young At Heart</a></p>
+                            <p><span class="date">2 November 2015</span> - If you stand in a very dark spot on a moonless night, you might see a faint fuzzy glow stretching across the sky, with a glowing milky-white bul...</p>
+                            <p><a href="">http://www.space-awareness.org/spacescoops/ourgalaxy…</a></p>
+                        </div>
+                    </div>
+                    <div class="row result_block">
+                        <div class="search_img col-md-3">
+                            <a href=""><img src="/static/img/cover/about.jpg" alt=""></a>
+                        </div>
+                        <div class="search_preview">
+                            <p class="title"><a href="">Our Galaxy Is Young At Heart</a></p>
+                            <p><span class="date">2 November 2015</span> - If you stand in a very dark spot on a moonless night, you might see a faint fuzzy glow stretching across the sky, with a glowing milky-white bul...</p>
+                            <p><a href="">http://www.space-awareness.org/spacescoops/ourgalaxy…</a></p>
+                        </div>
+                    </div>
+                    <div class="row result_block">
+                        <div class="search_img col-md-3">
+                            <a href=""><img src="/static/img/cover/about.jpg" alt=""></a>
+                        </div>
+                        <div class="search_preview">
+                            <p class="title"><a href="">Our Galaxy Is Young At Heart</a></p>
+                            <p><span class="date">2 November 2015</span> - If you stand in a very dark spot on a moonless night, you might see a faint fuzzy glow stretching across the sky, with a glowing milky-white bul...</p>
+                            <p><a href="">http://www.space-awareness.org/spacescoops/ourgalaxy…</a></p>
+                        </div>
+                    </div>
+                    <div class="row result_block">
+                        <div class="search_img col-md-3">
+                            <a href=""><img src="/static/img/cover/about.jpg" alt=""></a>
+                        </div>
+                        <div class="search_preview">
+                            <p class="title"><a href="">Our Galaxy Is Young At Heart</a></p>
+                            <p><span class="date">2 November 2015</span> - If you stand in a very dark spot on a moonless night, you might see a faint fuzzy glow stretching across the sky, with a glowing milky-white bul...</p>
+                            <p><a href="">http://www.space-awareness.org/spacescoops/ourgalaxy…</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-right-column">
+                <div>
+                    <div class="caption">Add filter</div>
+                    <form>
+                        <input type="text" class="filter_search">
+                    </form>
+                </div>
+                <div>
+                    <div class="caption">Topic</div>
+                    <div class="filters">
+                        <div class="filter-topic-text">{% trans "All" %}</div>
+                    </div>
+                    <div class="filters">
+                        <div class="filter-topic-image">
+                            <a href="/careers/category/earth/">
+                                <div><img src="{% static 'img/icons/categories/icon_planet_turquoise.svg' %}" /></div>
+                            </a>
+                        </div>
+                        <div class="filter-topic-image">
+                            <a href="/careers/category/navigation/">
+                                <div><img src="{% static 'img/icons/categories/icon_nav_turquoise.svg' %}" /></div>
+                            </a>
+                        </div>
+                        <div class="filter-topic-image">
+                            <a href="/careers/category/space/">
+                                <div><img src="{% static 'img/icons/categories/icon_space_turquoise.svg' %}" /></div>
+                            </a>
+                        </div>
+                        <div class="filter-topic-image">
+                            <a href="/careers/category/heritage/">
+                                <div><img src="{% static 'img/icons/categories/icon_herit_turquoise.svg' %}" /></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="caption">Section</div>
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <a href="#" id="menuLink1" class="pure-menu-link">All</a>
+                                <ul class="pure-menu-children">
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+                                    <!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="caption">Kino</div>
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <a href="#" id="menuLink1" class="pure-menu-link">All</a>
+                                <ul class="pure-menu-children">
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+                                    <!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="caption">Time</div>
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <a href="#" id="menuLink1" class="pure-menu-link">All</a>
+                                <ul class="pure-menu-children">
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+                                    <!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="caption">Cost</div>
+                    <div class="pure-menu pure-menu-horizontal">
+                        <ul class="pure-menu-list">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <a href="#" id="menuLink1" class="pure-menu-link">All</a>
+                                <ul class="pure-menu-children">
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+                                    <!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+                                    <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+<!-- <a href="/search/?models=Article,Interview&q=word1 word2&page=1">/search/?models=Article,Interview&q=word1 word2&page=1</a><br>
 
 {% for result in search_results %}
 <a href="{{ result.get_absolute_url }}">{{ result.title }}</a><br>
@@ -8,3 +183,4 @@
 {% for page in pages %}
 {{ page }},
 {% endfor %}
+ -->
