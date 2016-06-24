@@ -100,8 +100,9 @@
 <div class="slogan">{{ SECTIONS.about.subtitle }}</div>
 {% endblock %}
 
-
+   
 {% block content %}
+
     <div id="cover">
         <div class="feature-container">
             <div class="fake-padding"></div>
@@ -114,7 +115,7 @@
             </div>
         </div>
     </div>
-
+    <div class="know_us">
     <div class="content-page pure-g">
 
         <div class="title-container pure-u-1">
@@ -142,21 +143,23 @@
         <div class="page-about-what pure-u-1">
             <div class="smartembed">{% smartembed 'about-030-resources' %}</div>
         </div>
-        <div class="page-about-categories pure-u-1-4">
+        <div id="categories">
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4">
             <div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
             <div class="smartembed">{% smartembed 'about-031-space' %}</div>
         </div>
-        <div class="page-about-categories pure-u-1-4">
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4">
             <div class="icon"><a href="{% url 'categories' code='earth' %}"><img src="{% static 'img/icons/categories/icon_earth_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_earth_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_earth_blue.svg' %}'" /></a></div>
             <div class="smartembed">{% smartembed 'about-032-earth' %}</div>
         </div>
-        <div class="page-about-categories pure-u-1-4">
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4">
             <div class="icon"><a href="{% url 'categories' code='navigation' %}"><img src="{% static 'img/icons/categories/icon_navigation_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_navigation_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_navigation_blue.svg' %}'" /></a></div>
             <div class="smartembed">{% smartembed 'about-033-navigation' %}</div>
         </div>
-        <div class="page-about-categories pure-u-1-4">
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4">
             <div class="icon"><a href="{% url 'categories' code='heritage' %}"><img src="{% static 'img/icons/categories/icon_heritage_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_heritage_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_heritage_blue.svg' %}'" /></a></div>
             <div class="smartembed">{% smartembed 'about-034-heritage' %}</div>
+        </div>
         </div>
 
         <div class="pure-u-1">
@@ -224,6 +227,7 @@
         <div class="page-about-imagecredits pure-u-1">
             <div class="smartembed">{% smartembed 'about-090-imagecredits' %}</div>
         </div>
+    </div>
     </div>
 
 {% endblock %}
