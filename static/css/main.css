@@ -692,6 +692,7 @@ body {
     background: url(../img/subscribe/background.jpg);
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
 
 #subscribe .subscribe-container-2 {
@@ -1467,6 +1468,7 @@ body.section-skills #footer .social-background {
     #header {
         height: 215px;
     }
+
     #header .menu-bar {
         display: table;
         position: absolute;
@@ -1592,6 +1594,7 @@ body.section-skills #footer .social-background {
     .more-container-list .list-item-container {
         margin: 10px;
     }
+   
 }
 
 @media screen and (min-width: 100em) {
@@ -2434,6 +2437,8 @@ input:focus {
     border: 2px solid #fff;
 }
 
+
+
 .small .lang_btn {
     color: #fff;
     background: none;
@@ -2488,7 +2493,7 @@ input:focus {
 }
 
 body.homepage #header .logo {
-    margin-top: 18px;
+    margin-top: 8px;
     margin-bottom: 0;
 }
 
@@ -2667,6 +2672,10 @@ body.section-careers #header.small {
     background: #4ed8c3;
 }
 
+#menu-language{
+  display: none;
+}
+
 /*all site*/
 
 
@@ -2681,6 +2690,42 @@ body.section-careers #header.small {
 
 /* --- section-careers ---*/
 
+@media screen and (max-width: 1555px) {
+   body.homepage #header .logo .logo-el{
+      height: 100px;
+      margin-bottom: 20px;
+  }
+  .search_head_right + .sp-links_wrap,
+  .search_head_right{
+    display: none;
+  }
+  #menu-language{
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .small .search_head,
+  .search_head{
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #header .slogan{
+    opacity: 0;
+  }
+  body.homepage #header .logo .logo-el {
+    height: 70px;
+  }
+
+#header {
+    background:  url(/static/img/news_dote.png) no-repeat center top, #fff;
+}
+
+.homepage #header {
+    background: url(/static/img/mainpage_dote.png) no-repeat center top, #fff;
+}
+}
 @media screen and (max-width: 992px) {
     .section-careers .career_menu li {
         padding: 0;
@@ -2695,6 +2740,9 @@ body.section-careers #header.small {
     .search_preview {
         width: 68%;
     }
+    #subscribe .subscribe-container-3 {
+      padding: 0 10%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2738,4 +2786,19 @@ body.section-careers #header.small {
     .search_wrapper.content-card .search_preview p {
         word-wrap: break-word;
     }
+      .homepage #mc_embed_signup .row > div.w50 {
+      width: 100%;
+  }
+  #subscribe .subscribe-container-2:after{
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .to_top{
+    right: 39px;
+  bottom: 21px;
+  }
 }
+

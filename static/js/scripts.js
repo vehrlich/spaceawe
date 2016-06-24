@@ -83,7 +83,7 @@ var small_nav_height = 60; // height of small navigation header
 
       $('.lang_btn').click(function(e) {
           e.preventDefault();
-          $(this).next().fadeIn();
+          $(this).next().toggle();
       });  
 
       $('.section-news .select_language .sp-links a').click(function(e) {

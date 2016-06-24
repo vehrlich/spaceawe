@@ -80,7 +80,7 @@
                 <a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
             </div>
         </nav>
-         <nav id="menu-language" class="select_language sp-menu-vertical" aria-haspopup="true">
+         <nav id="menu-language1" class="select_language sp-menu-vertical" aria-haspopup="true">
             <!-- <div class="sp-button"><div id="menu-language-button" class="button language"></div></div> -->
              <div class="search_head_right">
                 <a href="/search/"></a>
@@ -97,7 +97,7 @@
             </div>
             </div>
         </nav>
-       <!--  <nav id="menu-language1" class="sp-menu sp-menu-vertical sp-menu-right" aria-haspopup="true">
+        <nav id="menu-language" class="sp-menu sp-menu-vertical sp-menu-right" aria-haspopup="true">
             <div class="sp-button"><div id="menu-language-button" class="button language"></div></div>
             <div class="sp-links">
             {% for lang_code, title in LANGUAGES %}
@@ -106,7 +106,7 @@
                 {% if tr_url %}<a {% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %}href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}
             {% endfor %}
             </div>
-        </nav> -->
+        </nav>
     </div>
 
 
