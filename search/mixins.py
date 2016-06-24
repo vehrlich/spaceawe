@@ -13,6 +13,8 @@ class SearchModel(object):
 
     @classmethod
     def search(cls, query_string):
+        if not query_string:
+            return []
         query = cls.get_query(query_string)
         objects = list(cls.objects.filter(query))
         return objects
