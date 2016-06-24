@@ -44,6 +44,15 @@ var small_nav_height = 60; // height of small navigation header
             return false;
         });
 
+       
+
+          // if($('.filter_search').val() != ''){
+          // $('.filter_search').addClass('empty_field');
+          //     } else {
+          // $('.filter_search').removeClass('empty_field');
+          //     }
+
+
 
         $('.wrapper_block_previews .load-more').click(function(e) {
           e.preventDefault();
@@ -63,10 +72,31 @@ var small_nav_height = 60; // height of small navigation header
           $('.image-container iframe')[0].src= attrhref;
         });
 
-     
-
-
       
+        $('.to_top').click(function() {
+          $('html, body').animate({
+              scrollTop: 0
+          }, 'slow');
+          return false;
+
+      });  
+
+      $('.lang_btn').click(function(e) {
+          e.preventDefault();
+          $(this).next().fadeIn();
+      });  
+
+      $('.section-news .select_language .sp-links a').click(function(e) {
+          e.preventDefault();
+          var selectName = $(this).html();
+          $(this).parent('.sp-links').prev().html(selectName);
+      });  
+
+      $(document).click(function(event) {
+          if ($(event.target).closest('.select_language').length == 0) {
+              $('.select_language .sp-links').fadeOut();
+            }
+      });
 
 
         // main menu
