@@ -23,7 +23,7 @@
 
         </div>
         <div id="metadata">
-
+            
             <table><tr><td>
                 <div class="metadata-item">
                     <div class="caption">{% trans "Curriculum topic" %}</div>
@@ -81,6 +81,7 @@
 
         </div>
         <div id="story">
+            <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
             <div class="section-caption">{% trans "Brief Description" %}</div>
             <div class="section-content text">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
             <div class="section-caption">{% trans "Goals" %}</div>
