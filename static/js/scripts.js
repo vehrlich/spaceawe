@@ -34,7 +34,13 @@ var small_nav_height = 60; // height of small navigation header
 
     $(document).ready(function(){
 
-       
+       if ($("div").is(".section-scoops ")) {
+          $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
+      }
+
+      if ($("div").is(".section-activities")) {
+          $('.section-activities .pure-u-1 .list-item-container .title').matchHeight(false);
+      }
 
          $('.career_menu a').click(function() {
             var target = $(this).attr('href');

@@ -155,8 +155,8 @@ WSGI_APPLICATION = 'spaceawe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'spaceawe',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'spaceawe.sqlite3',
         'USER': secrets['DATABASE_USER_PROD'],
         'PASSWORD': secrets['DATABASE_PASSWORD_PROD'],
         'HOST': '127.0.0.1',
@@ -290,6 +290,7 @@ PIPELINE = {
                 'js/jquery.cycle2.js',
                 'el-pagination/js/el-pagination.js',
                 'js/jquery.sharrre.min.js',
+                'js/jquery.matchHeight.js',
                 'js/scripts.js',
             ],
             'output_filename': 'js/spaceawe.min.js',

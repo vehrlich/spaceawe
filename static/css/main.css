@@ -432,12 +432,17 @@ body {
 }
 
 .thumbnailed-list .list-item {
-    height: 215px;
+    /*height: 215px;*/
+    min-height: 215px;
     position: relative;
     background-position: center;
     background-size: cover;
     color: white;
     text-align: center;
+}
+
+.section-careers .thumbnailed-list .list-item {
+    height: 215px;
 }
 
 .thumbnailed-list .list-item > div,
@@ -456,17 +461,20 @@ body {
     font-family: "Miso", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
-    padding-top: 5px;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding: 5px 2em 95px;
 }
 
 .thumbnailed-list .list-item .bottom {
-    position: absolute;
+     position: absolute; 
+    /*position: relative;*/
     bottom: 0;
     width: 100%;
     text-align: center;
 }
+
+/*.section-careers .thumbnailed-list .list-item .bottom {
+    position: relative;
+}*/
 
 .thumbnailed-list .list-item .theme img {
     height: 32px;
@@ -1445,6 +1453,9 @@ body.section-skills #footer .social-background {
 .thumbnailed-list .filters.level .pure-menu-has-children {
     width: 150px;
 }
+
+.thumbnailed-list .list-item > div.text{position: relative;}
+..section-careers  .thumbnailed-list .list-item > div.text{position: absolute;}
 
 @media screen and (min-width: 48em) {
     #categories .category .icon {
@@ -2604,18 +2615,13 @@ body.homepage #header.small .logo .logo-el {
     margin: auto;
 }
 
-.homepage #mc_embed_signup .row > div {
-    width: 100%;
-    float: left;
-}
-
 .homepage #mc_embed_signup .mc-field-group {
     max-width: 100%;
     border: solid 4px white;
 }
 
 .homepage #mc_embed_signup .mc-field-group input {
-    font-size: 25px;
+    font-size: 14px;
 }
 
 .homepage #mc_embed_signup .row {
@@ -2626,7 +2632,8 @@ body.homepage #header.small .logo .logo-el {
     padding: 0px 17px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%;
+    width: 33.3%;
+    float: left;
 }
 
 .homepage #mc_embed_signup .row > div.w50 {
@@ -2712,9 +2719,9 @@ body.section-careers #header.small {
     background: #4ed8c3;
 }
 
-#menu-language {
+/*#menu-language {
     display: none;
-}
+}*/
 
 .smartembed p {
     line-height: 190%;
@@ -2849,7 +2856,7 @@ body.section-careers #header.small {
     .search_wrapper.content-card .search_preview p {
         word-wrap: break-word;
     }
-    .homepage #mc_embed_signup .row > div.w50 {
+    .homepage #mc_embed_signup .row > div {
         width: 100%;
     }
     #subscribe .subscribe-container-2:after {
@@ -2865,6 +2872,14 @@ body.section-careers #header.small {
     }
 }
 
-@media screen and (max-width: 567px) {
-
+@media screen and (max-width: 450px) {
+    .thumbnailed-list .list-header .filters .filter-topic-image{
+        width: 33.3%;
+        margin-bottom: 10px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        padding: 0 10px;
+        text-align: center;
+    }
 }
