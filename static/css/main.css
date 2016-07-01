@@ -240,7 +240,7 @@ body {
 
 #sections .section .description {
     padding: 1em 0.5em;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #sections .section .expand {
@@ -331,11 +331,15 @@ body {
 }
 
 #categories {
-    max-width: 1000px;
+    max-width: 1270px;
     margin: auto;
     text-align: center;
     padding-top: 100px;
     padding-bottom: 70px;
+}
+
+.grey_block{
+  background: #f3f3f3;
 }
 
 #categories .category .icon {
@@ -632,10 +636,20 @@ body {
     cursor: pointer;
 }
 
+.pure-u-sm-1-4{
+    padding: 0 45px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 .content-page {
     padding-top: 100px;
     max-width: 1000px;
     margin: auto;
+}
+
+.content-page-1270{
+    max-width: 1270px;
 }
 
 .content-page .title {
@@ -1384,22 +1398,33 @@ body.section-skills #footer .social-background {
 
 .text-content .title {
     font-family: "Miso", sans-serif;
-    font-size: 26px;
+    font-size: 41px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .smartembed h1 {
     font-family: "Miso", sans-serif;
-    font-size: 26px;
+    font-size: 41px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .smartembed p {
-    font-size: 12px;
+    font-size: 14px;
 }
 
+
+.title-container .smartembed h1 {
+    margin-bottom: 0;
+}
+
+
+.title-container .smartembed p {
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+}
 
 /* Make sure the map container has a defined height */
 
@@ -1485,7 +1510,7 @@ body.section-skills #footer .social-background {
         margin-top: 25px;
         width: 100%;
         text-transform: uppercase;
-        font-size: 11px;
+        font-size: 14px;
     }
     #header .menu-bar > div {
         display: table-cell;
@@ -1493,11 +1518,11 @@ body.section-skills #footer .social-background {
     }
     #header .menu-bar > div.menu-bar-left {
         text-align: right;
-        padding-right: 120px;
+        padding-right: 155px;
     }
     #header .menu-bar > div.menu-bar-right {
         text-align: left;
-        padding-left: 120px;
+        padding-left: 155px;
     }
     #header .menu-bar a {
         text-decoration: none;
@@ -2621,7 +2646,7 @@ body.homepage #header.small .logo .logo-el {
 }
 
 .homepage #mc_embed_signup .mc-field-group input {
-    font-size: 14px;
+    font-size: 25px;
 }
 
 .homepage #mc_embed_signup .row {
@@ -2719,16 +2744,24 @@ body.section-careers #header.small {
     background: #4ed8c3;
 }
 
-/*#menu-language {
+#menu-language {
     display: none;
-}*/
+}
 
 .smartembed p {
     line-height: 190%;
 }
 
-.know_us {
+/*.know_us {
     background: url(/static/img/know_us.png) no-repeat 50% 190px;
+}*/
+
+.know_us_block1 {
+    background: url(/static/img/know_us_block1.png) no-repeat 50% bottom;
+}
+
+.know_us_block2 {
+    background: url(/static/img/know_us_block2.png) no-repeat 50% #f3f3f3;
 }
 
 .page-about-categories .smartembed p {
@@ -2749,6 +2782,19 @@ body.section-careers #header.small {
 
 
 /* --- section-careers ---*/
+
+@media screen and (max-width: 1755px) {
+    #header .menu-bar > div.menu-bar-right {
+      padding-left: 130px;
+    }
+    #header .menu-bar > div.menu-bar-left {
+      padding-right: 130px;
+    }
+    #header .menu-bar a {
+
+      margin: 2em 1em;
+  }
+}
 
 @media screen and (max-width: 1555px) {
     body.homepage #header .logo .logo-el {
