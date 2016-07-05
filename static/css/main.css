@@ -1675,11 +1675,11 @@ body.section-careers #header.small .logo .logo-el {
 }
 
 .section-careers .thumbnailed-list .list-item .text .title {
-    padding: 23px 20px 0 !important;
+    padding: 57px 20px 10px !important;
     font-size: 30px;
     font-family: "Miso", sans-serif;
     font-weight: 700;
-    min-height: 94px;
+    /*min-height: 94px;*/
 }
 
 .section-careers .content-card .thumbnailed-list .list-item .expand {
@@ -1970,15 +1970,15 @@ a:focus {
     display: none;
 }
 
+.section-careers .wrapper_block_previews .endless_container,
 .section-careers .wrapper_block_previews .row > div.pure-u-1:nth-of-type(1),
 .section-careers .wrapper_block_previews .row > div.pure-u-1:nth-of-type(2),
 .section-careers .wrapper_block_previews .row > div.pure-u-1:nth-of-type(3) {
     display: inline-block !important;
 }
 
-.section-careers .wrapper_block_previews .endless_container,
 .section-careers .wrapper_block_previews.all_open .row > div {
-    display: inline-block !important;
+    display: block !important;
 }
 
 .section-careers .wrapper_block_previews .load-more {
