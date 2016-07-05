@@ -84,7 +84,7 @@
              <div class="search_head_right">
                 <a href="/search/"></a>
             </div>
-           <!--  <div class="sp-links_wrap">
+            <div class="sp-links_wrap">
                <a href="" class="lang_btn">English<span></span></a>
                
                 <div class="sp-links">
@@ -94,7 +94,7 @@
                     {% if tr_url %}<a {% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %}href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}
                 {% endfor %}
                 </div>
-            </div> -->
+            </div>
         </nav>
         <nav id="menu-language" class="sp-menu sp-menu-vertical sp-menu-right" aria-haspopup="true">
             <div class="sp-button"><div id="menu-language-button" class="button language"></div></div>
@@ -122,8 +122,7 @@
                 <div class="eu-flag"><img src="{% static 'img/eu.svg' %}"></div>
                 <p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
                 <!-- <p>COPYRIGHT, CREATIVE COMMONS, LICENCES. 2015.</p> -->
-                <p>"COPYRIGHT, CREATIVE COMMONS, LICENSES 2015" by this :
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="color: #fff;">Creative Commons Attribution 4.0 International License</a>.</p>
+                <p>"This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="color: #fff;">Creative Commons Attribution 4.0 International License</a>.</p>
 
             </div>
         </div>
