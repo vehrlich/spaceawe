@@ -50,6 +50,16 @@ var small_nav_height = 60; // height of small navigation header
             return false;
         });
 
+        $('.close_search').click(function(e) {
+            e.preventDefault();
+            $('.search_head').removeClass('open');
+        });
+
+        $('.search_btn.closed').click(function(e) {
+            e.preventDefault();
+            $('.search_head').addClass('open');
+        });
+
        
 
           // if($('.filter_search').val() != ''){

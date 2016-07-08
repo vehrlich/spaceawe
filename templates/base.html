@@ -50,7 +50,11 @@
     <body id="to_top" class="{% block extra_body_class %}{% endblock %}">
     <div id="header" class="{% block extra_header_class %}{% endblock %}">
         <div class="search_head">
-            <a href="/search/"></a>
+            <form >
+                <a href="" class="search_btn closed"></a>
+                <input type="text" placeholder="Search...">
+                <a href="" class="close_search"></a>
+            </form>
         </div>
         <div class="menu-bar">
             <div class="menu-bar-left">
@@ -81,9 +85,9 @@
             </div>
         </nav>
          <nav id="menu-language1" class="select_language sp-menu-vertical" aria-haspopup="true">
-             <div class="search_head_right">
+            <!--  <div class="search_head_right">
                 <a href="/search/"></a>
-            </div>
+            </div> -->
             <div class="sp-links_wrap">
                <a href="" class="lang_btn">English<span></span></a>
                
