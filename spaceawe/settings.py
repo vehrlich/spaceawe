@@ -155,8 +155,8 @@ WSGI_APPLICATION = 'spaceawe.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'spaceawe.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'spaceawe',
         'USER': secrets['DATABASE_USER_PROD'],
         'PASSWORD': secrets['DATABASE_PASSWORD_PROD'],
         'HOST': '127.0.0.1',
