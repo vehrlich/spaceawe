@@ -1,7 +1,8 @@
 html, button, input, select, textarea,
 .pure-g [class*="pure-u"] {
   font-family: "Ubuntu", sans-serif;
-  letter-spacing: 0.09em; }
+  line-height: 2.2em;
+  letter-spacing: 0.11em; }
 
 html, body {
   height: 100%; }
@@ -48,10 +49,10 @@ body {
       background-size: contain; }
   #header .slogan {
     font-family: "Miso", sans-serif;
+    letter-spacing: 0.11em;
     font-size: 14px;
     line-height: 0.9em;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
     -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease; }
     #header .slogan.subtitle {
@@ -100,6 +101,7 @@ body {
         display: table;
         height: 100%;
         width: 90%;
+        max-width: 840px;
         margin: auto; }
         #cover .feature-container .feature .title-container .title-subcontainer {
           display: table-cell;
@@ -111,14 +113,16 @@ body {
             font-size: 12px; }
           #cover .feature-container .feature .title-container .title-subcontainer .title {
             font-family: "Miso", sans-serif;
+            letter-spacing: 0.11em;
             font-size: 26px;
             font-weight: bold;
             text-transform: uppercase; }
           #cover .feature-container .feature .title-container .title-subcontainer .subtitle {
             font-family: "Ubuntu", sans-serif;
+            line-height: 2.2em;
             text-transform: none;
             font-size: 12px;
-            padding-top: 4em; }
+            padding-top: 1em; }
     #cover .feature-container .cycle-pager {
       z-index: 199;
       left: 1%;
@@ -129,13 +133,13 @@ body {
       margin: auto; }
       #cover .feature-container .cycle-pager span {
         font-family: arial;
-        font-size: 24px;
+        font-size: 28px;
         width: 18px;
         cursor: pointer;
         display: inline-block;
         color: #94959A; }
         #cover .feature-container .cycle-pager span.cycle-pager-active {
-          color: #B7B8BB; }
+          color: #f2f2f2; }
     #cover .feature-container .arrow-pagedown {
       z-index: 199;
       display: block;
@@ -144,7 +148,7 @@ body {
       bottom: 0; }
       #cover .feature-container .arrow-pagedown img {
         opacity: 0.6;
-        height: 14px;
+        height: 18px;
         padding: 20px; }
 
 #sections {
@@ -158,6 +162,7 @@ body {
     text-align: center; }
     #sections .section .title {
       font-family: "Miso", sans-serif;
+      letter-spacing: 0.11em;
       text-rendering: optimizeLegibility;
       font-size: 24px;
       line-height: 0.9em;
@@ -165,7 +170,8 @@ body {
       padding: 1em 0.2em; }
     #sections .section .description {
       padding: 1em 0.5em;
-      font-size: 12px; }
+      font-size: 12px;
+      line-height: 2.0em; }
     #sections .section .expand {
       padding: 32px; }
       #sections .section .expand img {
@@ -257,6 +263,7 @@ body {
     text-align: center; }
     .thumbnailed-list .list-header .title {
       font-family: "Miso", sans-serif;
+      letter-spacing: 0.11em;
       font-size: 32px;
       text-transform: uppercase;
       padding-top: 30px;
@@ -294,6 +301,7 @@ body {
       padding-top: 50px; }
     .thumbnailed-list .list-item .title {
       font-family: "Miso", sans-serif;
+      letter-spacing: 0.11em;
       font-size: 24px;
       text-transform: uppercase;
       padding-top: 5px;
@@ -344,6 +352,7 @@ body {
   box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.2); }
   .content-card .title-container {
     font-family: "Miso", sans-serif;
+    letter-spacing: 0.11em;
     padding: 10px 20px; }
     .content-card .title-container .title {
       font-size: 24px;
@@ -370,6 +379,7 @@ body {
       max-width: 100%; }
     .content-card .content-container .coolfact_title {
       font-family: "Miso", sans-serif;
+      letter-spacing: 0.11em;
       color: #ed3b5a;
       text-transform: uppercase;
       font-size: 20px;
@@ -381,6 +391,7 @@ body {
       padding: 0 20px; }
       .content-card .content-container .content-main-column .section-caption {
         font-family: "Miso", sans-serif;
+        letter-spacing: 0.11em;
         text-transform: uppercase;
         font-size: 20px; }
     .content-card .content-container .content-right-column {
@@ -393,6 +404,7 @@ body {
         padding: 20px 0; }
         .content-card .content-container .content-right-column > div .caption {
           font-family: "Miso", sans-serif;
+          letter-spacing: 0.11em;
           font-size: 20px;
           text-transform: uppercase; }
       .content-card .content-container .content-right-column a {
@@ -410,6 +422,7 @@ body {
   margin: auto; }
   .content-page .title {
     font-family: "Miso", sans-serif;
+    letter-spacing: 0.11em;
     font-size: 24px;
     text-transform: uppercase; }
   .content-page .subtitle {
@@ -461,6 +474,7 @@ body {
     padding: 0 20%; }
   #subscribe .line1 {
     font-family: "Miso", sans-serif;
+    letter-spacing: 0.11em;
     font-size: 26px;
     text-transform: uppercase; }
   #subscribe .line2 {
@@ -551,6 +565,7 @@ body {
   padding: 0 !important; }
   .more-container-header .list-header .title {
     font-family: "Miso", sans-serif;
+    letter-spacing: 0.11em;
     text-transform: uppercase;
     font-size: 24px;
     color: white;
@@ -920,12 +935,14 @@ body.section-skills #footer .social-background {
   font-size: 14px; }
   .text-content .title {
     font-family: "Miso", sans-serif;
+    letter-spacing: 0.11em;
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase; }
 
 .smartembed h1 {
   font-family: "Miso", sans-serif;
+  letter-spacing: 0.11em;
   font-size: 26px;
   font-weight: bold;
   text-transform: uppercase; }
@@ -1010,7 +1027,7 @@ body.section-skills #footer .social-background {
         height: 60px;
         width: 146px; }
     #header .slogan {
-      font-size: 22px;
+      font-size: 25px;
       font-weight: bold;
       margin-bottom: 5px; }
       #header .slogan.subtitle {
