@@ -30,13 +30,21 @@ $content-max-width: 1000px;
 }
 @mixin normaltext() {
   font-family: $font-normal;
-  line-height: 2.2em;
+  letter-spacing: 0.13em;
+}
+@mixin highlight() {
+  font-family: $font-normal;
+  font-weight: bold;
+  line-height: 1.2em;
 }
 
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    @include normaltext();
-    letter-spacing: 0.11em;
+html, .pure-g [class *= "pure-u"] {
+  @include normaltext();
+  line-height: 2.2em;
+}
+button, input, select, textarea {
+  @include normaltext();
+  line-height: 1.2em;
 }
 html,body { height: 100%;  }
 
@@ -191,7 +199,7 @@ body {
           // padding-bottom: 4em;
           color: white;
           .suptitle {
-            font-family: $font-normal;
+            @include normaltext();
             text-transform: none;
             font-size: 12px;
           }
@@ -202,7 +210,7 @@ body {
             text-transform: uppercase;
           }
           .subtitle {
-            // font-family: $font-normal;
+            // @include normaltext();
             @include normaltext();
             text-transform: none;
             font-size: 12px;
@@ -311,6 +319,7 @@ body {
   .section {
     height: 320px;
     background-size: cover;
+    background-position: 50%;
     text-align: center;
     // display: table-cell;
     
@@ -324,7 +333,7 @@ body {
       padding: 1em 0.2em;
     }
     .description {
-      padding: 1em 0.5em;
+      padding: 1em 1.5em;
       font-size: 12px;
       line-height: 2.0em;
     }
@@ -429,6 +438,7 @@ body {
       }
     }    
     .title {
+      @include highlight();
       width: 100px;
       margin: auto;
       font-size: 12px;
@@ -740,7 +750,7 @@ body {
     text-transform: uppercase;
   }
   .line2 {
-    font-family: $font-normal;
+    @include normaltext();
     font-size: 12px;
   }
 } 
@@ -751,7 +761,7 @@ body {
     position: absolute;
     width: 100%;
   }
-  margin-top: 40px;
+  margin-top: 60px;
   .social-background {
     height: 200px;
     background-image: url(../img/footer-bg-social.svg);
@@ -783,16 +793,21 @@ body {
       color: white;
       font-size: 10px;
       .eu-flag img {
+        margin-top: 10px;
         width: 36px;
       }
       p {
         margin: 2em;
+        line-height: 1.2em;
       }
     }
   }
 }
 
 #mc_embed_signup {
+    .w30 div {
+      line-height: 0em;
+    }
     .newsletter-call {
         font-size: 32px;
         text-align: center;
@@ -811,8 +826,9 @@ body {
         input {
             background: none;
             border: none;
-            font-family: $font-normal;
+            @include normaltext();
             font-size: 14px;
+            line-height: 1.2em;
             width: 100%;
             text-align: center;
             &::-webkit-input-placeholder { text-align: center; color: white; opacity: 0.6; }
@@ -990,7 +1006,7 @@ body.section-#{$section} {
   width: 200px;
 }
 .partnermap-popup {
-  font-family: $font-normal;
+  @include normaltext();
   .institution-logo, .institution-details {
     float: left;
   }

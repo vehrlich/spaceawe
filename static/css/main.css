@@ -1,8 +1,12 @@
-html, button, input, select, textarea,
-.pure-g [class*="pure-u"] {
+html, .pure-g [class*="pure-u"] {
   font-family: "Ubuntu", sans-serif;
-  line-height: 2.2em;
-  letter-spacing: 0.11em; }
+  letter-spacing: 0.13em;
+  line-height: 2.2em; }
+
+button, input, select, textarea {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.13em;
+  line-height: 1.2em; }
 
 html, body {
   height: 100%; }
@@ -109,6 +113,7 @@ body {
           color: white; }
           #cover .feature-container .feature .title-container .title-subcontainer .suptitle {
             font-family: "Ubuntu", sans-serif;
+            letter-spacing: 0.13em;
             text-transform: none;
             font-size: 12px; }
           #cover .feature-container .feature .title-container .title-subcontainer .title {
@@ -119,7 +124,7 @@ body {
             text-transform: uppercase; }
           #cover .feature-container .feature .title-container .title-subcontainer .subtitle {
             font-family: "Ubuntu", sans-serif;
-            line-height: 2.2em;
+            letter-spacing: 0.13em;
             text-transform: none;
             font-size: 12px;
             padding-top: 1em; }
@@ -159,6 +164,7 @@ body {
   #sections .section {
     height: 320px;
     background-size: cover;
+    background-position: 50%;
     text-align: center; }
     #sections .section .title {
       font-family: "Miso", sans-serif;
@@ -169,7 +175,7 @@ body {
       text-transform: uppercase;
       padding: 1em 0.2em; }
     #sections .section .description {
-      padding: 1em 0.5em;
+      padding: 1em 1.5em;
       font-size: 12px;
       line-height: 2.0em; }
     #sections .section .expand {
@@ -245,6 +251,9 @@ body {
       visibility: visible;
       opacity: 1; }
   #categories .category .title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    line-height: 1.2em;
     width: 100px;
     margin: auto;
     font-size: 12px; }
@@ -479,11 +488,12 @@ body {
     text-transform: uppercase; }
   #subscribe .line2 {
     font-family: "Ubuntu", sans-serif;
+    letter-spacing: 0.13em;
     font-size: 12px; }
 
 #footer {
   position: relative;
-  margin-top: 40px; }
+  margin-top: 60px; }
   #footer > div {
     position: absolute;
     width: 100%; }
@@ -515,9 +525,14 @@ body {
       color: white;
       font-size: 10px; }
       #footer .copyright .copyright-content .eu-flag img {
+        margin-top: 10px;
         width: 36px; }
       #footer .copyright .copyright-content p {
-        margin: 2em; }
+        margin: 2em;
+        line-height: 1.2em; }
+
+#mc_embed_signup .w30 div {
+  line-height: 0em; }
 
 #mc_embed_signup .newsletter-call {
   font-size: 32px;
@@ -537,7 +552,9 @@ body {
     background: none;
     border: none;
     font-family: "Ubuntu", sans-serif;
+    letter-spacing: 0.13em;
     font-size: 14px;
+    line-height: 1.2em;
     width: 100%;
     text-align: center; }
     #mc_embed_signup .mc-field-group input::-webkit-input-placeholder {
@@ -962,7 +979,8 @@ body.section-skills #footer .social-background {
   width: 200px; }
 
 .partnermap-popup {
-  font-family: "Ubuntu", sans-serif; }
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.13em; }
   .partnermap-popup .institution-logo, .partnermap-popup .institution-details {
     float: left; }
   .partnermap-popup .contact-details {
@@ -1003,7 +1021,7 @@ body.section-skills #footer .social-background {
     #header .menu-bar {
       display: table;
       position: absolute;
-      margin-top: 25px;
+      margin-top: 15px;
       width: 100%;
       text-transform: uppercase;
       font-size: 11px; }
@@ -1022,7 +1040,7 @@ body.section-skills #footer .social-background {
         margin: 2em; }
     #header .logo {
       margin-top: 20px;
-      margin-bottom: 33px; }
+      margin-bottom: 24px; }
       #header .logo .logo-el {
         height: 60px;
         width: 146px; }
