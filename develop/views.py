@@ -8,5 +8,5 @@ class DevelopView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(DevelopView, self).get_context_data(**kwargs)
-        context['moocs'] = Mooc.objects.all()
+        context['moocs'] = Mooc.objects.all().order_by('position')
         return context
