@@ -7,7 +7,7 @@ $color-background: white;
 // $color-footer-grey: #2B2B2B;
 
 $color-cycle-pager-1: #94959A;
-$color-cycle-pager-2: #B7B8BB;
+$color-cycle-pager-2: #f2f2f2;
 
 $homepage-sections-opacity: 0.8;
 $homepage-sections-background-carrers: rgba(78, 216, 195, $homepage-sections-opacity);
@@ -24,10 +24,27 @@ $header-height-small: 71px;
 
 $content-max-width: 1000px;
 
-html, button, input, select, textarea,
-.pure-g [class *= "pure-u"] {
-    font-family:  $font-normal;
-    letter-spacing: 0.09em;
+@mixin heading() {
+  font-family: $font-headings;
+  letter-spacing: 0.11em;
+}
+@mixin normaltext() {
+  font-family: $font-normal;
+  letter-spacing: 0.13em;
+}
+@mixin highlight() {
+  font-family: $font-normal;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+html, .pure-g [class *= "pure-u"] {
+  @include normaltext();
+  line-height: 2.2em;
+}
+button, input, select, textarea {
+  @include normaltext();
+  line-height: 1.2em;
 }
 html,body { height: 100%;  }
 
@@ -36,6 +53,7 @@ body {
   color: $color-text;
   overflow-x: hidden; // to keep sliding menus hidden
 }
+
 
 .box-middle-ext { display: table; width: 100%; height: 100%; }
 .box-middle-int { display: table-cell; vertical-align: middle; }
@@ -79,12 +97,11 @@ body {
 
   }
   .slogan {
-    font-family: $font-headings;
+    @include heading();
     font-size: 14px;
     line-height: 0.9em;
     text-transform: uppercase;
     // font-weight: bold;
-    letter-spacing: 0.08em;
     // padding-bottom: 20px;
     -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease;
@@ -174,6 +191,7 @@ body {
         display: table;
         height: 100%;
         width: 90%;
+        max-width: 840px;
         margin: auto;
         .title-subcontainer {
           display: table-cell;
@@ -181,21 +199,22 @@ body {
           // padding-bottom: 4em;
           color: white;
           .suptitle {
-            font-family: $font-normal;
+            @include normaltext();
             text-transform: none;
             font-size: 12px;
           }
           .title {
-            font-family: $font-headings;
+            @include heading();
             font-size: 26px;
             font-weight: bold;
             text-transform: uppercase;
           }
           .subtitle {
-            font-family: $font-normal;
+            // @include normaltext();
+            @include normaltext();
             text-transform: none;
             font-size: 12px;
-            padding-top: 4em;
+            padding-top: 1em;
           }
         }
       }
@@ -209,7 +228,7 @@ body {
       padding: 5px 45px;
       margin: auto;
       span { 
-        font-family: arial; font-size: 24px; 
+        font-family: arial; font-size: 28px;
         width: 18px;
         cursor: pointer; 
         display: inline-block; color: $color-cycle-pager-1; 
@@ -225,7 +244,7 @@ body {
       bottom: 0;
       img {
         opacity: 0.6;
-        height: 14px;
+        height: 18px;
         padding: 20px;
       }
     }
@@ -262,7 +281,7 @@ body {
     //     .title {
     //       display: table-cell;
     //       vertical-align: top;
-    //       font-family: $font-headings;
+    //       @include heading();
     //       font-size: 26px;
     //       text-transform: uppercase;
     //       font-weight: bold;
@@ -300,11 +319,12 @@ body {
   .section {
     height: 320px;
     background-size: cover;
+    background-position: 50%;
     text-align: center;
     // display: table-cell;
     
     .title {
-      font-family: $font-headings;
+      @include heading();
       text-rendering: optimizeLegibility; // enable kerning
       font-size: 24px;
       // letter-spacing: 0.09em;
@@ -313,8 +333,9 @@ body {
       padding: 1em 0.2em;
     }
     .description {
-      padding: 1em 0.5em;
+      padding: 1em 1.5em;
       font-size: 12px;
+      line-height: 2.0em;
     }
     .expand {
       padding: 32px;
@@ -417,6 +438,7 @@ body {
       }
     }    
     .title {
+      @include highlight();
       width: 100px;
       margin: auto;
       font-size: 12px;
@@ -439,7 +461,7 @@ body {
     padding-bottom: 30px;
     text-align: center;
     .title {
-      font-family: $font-headings;
+      @include heading();
       font-size: 32px;
       text-transform: uppercase;
       padding-top: 30px;
@@ -485,7 +507,7 @@ body {
       // text-shadow: 0 0 4px black;
     }
     .title {
-      font-family: $font-headings;
+      @include heading();
       font-size: 24px;
       text-transform: uppercase;
       padding-top: 5px;
@@ -555,7 +577,7 @@ body {
   background-color: #fafafa;
   box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.2);
   .title-container {
-    font-family: $font-headings;
+    @include heading();
     padding: 10px 20px;
     .title {
       font-size: 24px;
@@ -590,7 +612,7 @@ body {
     }
 
     .coolfact_title {
-      font-family: $font-headings;
+      @include heading();
       color: map-get($section-colors, 'scoops');
       text-transform: uppercase;
       font-size: 20px;
@@ -603,7 +625,7 @@ body {
     .content-main-column {
       padding: 0 20px;
       .section-caption {
-        font-family: $font-headings;
+        @include heading();
         text-transform: uppercase;
         font-size: 20px;
       }
@@ -618,7 +640,7 @@ body {
         border-top: solid thin grey;
         padding: 20px 0;
         .caption {
-          font-family: $font-headings;
+          @include heading();
           font-size: 20px;
           text-transform: uppercase;
         }
@@ -646,7 +668,7 @@ body {
   max-width: $content-max-width;
   margin: auto;
   .title {
-    font-family: $font-headings;
+    @include heading();
     font-size: 24px;
     // padding-top: 100px;
     text-transform: uppercase;
@@ -723,12 +745,12 @@ body {
     // width: 100%;
   }
   .line1 {
-    font-family: $font-headings;
+    @include heading();
     font-size: 26px;
     text-transform: uppercase;
   }
   .line2 {
-    font-family: $font-normal;
+    @include normaltext();
     font-size: 12px;
   }
 } 
@@ -739,7 +761,7 @@ body {
     position: absolute;
     width: 100%;
   }
-  margin-top: 40px;
+  margin-top: 60px;
   .social-background {
     height: 200px;
     background-image: url(../img/footer-bg-social.svg);
@@ -771,16 +793,21 @@ body {
       color: white;
       font-size: 10px;
       .eu-flag img {
+        margin-top: 10px;
         width: 36px;
       }
       p {
         margin: 2em;
+        line-height: 1.2em;
       }
     }
   }
 }
 
 #mc_embed_signup {
+    .w30 div {
+      line-height: 0em;
+    }
     .newsletter-call {
         font-size: 32px;
         text-align: center;
@@ -799,8 +826,9 @@ body {
         input {
             background: none;
             border: none;
-            font-family: $font-normal;
+            @include normaltext();
             font-size: 14px;
+            line-height: 1.2em;
             width: 100%;
             text-align: center;
             &::-webkit-input-placeholder { text-align: center; color: white; opacity: 0.6; }
@@ -836,7 +864,7 @@ body {
     text-align: center;
     padding: 0 !important; // override the padding defined in .thumbnailed-list
     .title {
-      font-family: $font-headings;
+      @include heading();
       text-transform: uppercase;
       font-size: 24px;
       color: white;
@@ -942,7 +970,7 @@ body.section-#{$section} {
   font-size: 14px;
 
   .title {
-            font-family: $font-headings;
+            @include heading();
             font-size: 26px;
             font-weight: bold;
             text-transform: uppercase;
@@ -955,7 +983,7 @@ body.section-#{$section} {
 
 .smartembed {
   h1 {
-    font-family: $font-headings;
+    @include heading();
     font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;
@@ -978,7 +1006,7 @@ body.section-#{$section} {
   width: 200px;
 }
 .partnermap-popup {
-  font-family: $font-normal;
+  @include normaltext();
   .institution-logo, .institution-details {
     float: left;
   }
@@ -1028,5 +1056,5 @@ body.section-#{$section} {
 }
 
 @media print {
-  @import "print"
+  @import "print";
 }

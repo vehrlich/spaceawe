@@ -273,6 +273,7 @@ PIPELINE = {
             'source_filenames': [
                 'css/fonts.css',
                 'css/main.css',
+                'css/main-alex.css',
             ],
             'output_filename': 'css/spaceawe.min.css',
             'extra_context': {

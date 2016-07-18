@@ -15,7 +15,7 @@ $header-height-small: 60px;
   .menu-bar {
     display: table;
     position: absolute;
-    margin-top: 25px;
+    margin-top: 15px;
     width: 100%;
     > div {
       display: table-cell;
@@ -40,7 +40,7 @@ $header-height-small: 60px;
   }
   .logo {
     margin-top: 20px;
-    margin-bottom: 33px;
+    margin-bottom: 24px;
     .logo-el {
       height: 60px;
       width: 146px;
@@ -48,7 +48,7 @@ $header-height-small: 60px;
   }
   .slogan {
     // padding: 1em;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
     margin-bottom: 5px;
     &.subtitle {
