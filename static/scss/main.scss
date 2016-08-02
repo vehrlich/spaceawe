@@ -77,10 +77,19 @@ body {
   z-index: 999;
   .menu-bar {
     display: none;
+    position: relative;
+    z-index: 1;
   }
   .logo {
     margin-top: 12px;
     margin-bottom: 12px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    a {
+    	display: inline-block;
+    	line-height: 0px;
+    }
     .logo-el {
       display: inline-block;
       height: 43px;
@@ -145,6 +154,7 @@ body {
   }
   &.small {
     height: $header-height-small;
+    overflow: hidden;
     .logo {
       .logo-el {
         height: 43px;
@@ -323,6 +333,11 @@ body {
     text-align: center;
     // display: table-cell;
     
+    a.fill-container {
+      display: block;
+      height: 100%;
+    }
+
     .title {
       @include heading();
       text-rendering: optimizeLegibility; // enable kerning
@@ -728,6 +743,7 @@ body {
     background: url(../img/subscribe/background.jpg);
     background-position: center;
     background-size: cover;
+    overflow: hidden;
   }
   .subscribe-container-2 {
     display: table;
