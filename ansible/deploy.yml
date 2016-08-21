@@ -3,9 +3,9 @@
   gather_facts: False
   vars:
     BASE_DIR: /home/web/spaceawe
-    BASE_DIR_LOCAL: /Users/rino/dev/unawe/spaceawe
+    BASE_DIR_LOCAL: "{{ lookup('env','HOME') }}/dev/unawe/spaceawe"
     BASE_DIR_EXTRAS: /home/web/django-apps
-    BASE_DIR_EXTRAS_LOCAL: /Users/rino/dev/unawe/django-apps
+    BASE_DIR_EXTRAS_LOCAL: "{{ lookup('env','HOME') }}/dev/unawe/django-apps"
     VIRTUALENV: /home/web/.virtualenvs/spaceawe
     REPO: https://github.com/unawe/spaceawe.git
     SHORT_NAME: spaceawe

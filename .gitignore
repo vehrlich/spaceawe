@@ -1,6 +1,7 @@
 .sass-cache
 secrets.json
 *.pyc
+*.retry
 *.py~
 *.html~
 *.sqlite3
