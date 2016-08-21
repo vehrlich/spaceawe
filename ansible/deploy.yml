@@ -69,7 +69,7 @@
         requirements: "{{ BASE_DIR }}/requirements.txt"
         virtualenv: "{{ VIRTUALENV }}"
         # extra_args: "-i ../dependencies"
-        executable: pip3
+        # executable: pip3
         virtualenv_python: python3
       notify:
         - restart uwsgi
