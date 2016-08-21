@@ -44,6 +44,9 @@
     <p>
       <b>Space Awareness MOOCs</b> have been developed by the Space Awareness partners in close collaboration with voluntary teachers.
     </p>
+    <p>
+      <center><a href="http://www.europeanschoolnetacademy.eu/web/teaching-space-awareness-in-your-classroom/">Register now</a></center>
+    </p>
   </div>
 </div>
 
@@ -89,7 +92,7 @@
       {{ mooc.duration_of_the_course }}<br>
   </td></tr>
   <tr><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 15px;" align="center">
-      <a rel="page" href="#" style="border: 2px solid #808080; border-radius: 100px; padding: 4px 20px; font-size: 12px; text-decoration: none; color: inherit; display: inline-block; background: #52C36F; color: white;">Enroll</a><br>
+      <a rel="page" href="{% if mooc.enroll_url %}{{ mooc.enroll_url }}{% else %}#{% endif %}" style="border: 2px solid #808080; border-radius: 100px; padding: 4px 20px; font-size: 12px; text-decoration: none; color: inherit; display: inline-block; background: #52C36F; color: white;">Enroll</a><br>
       ({{ mooc.starting_date }})
   </td></tr>
   <tr bgcolor="#f3f3f3"><td class="hidden_mooc{{ forloop.counter }}" colspan=2 style="display: none;" align="center">

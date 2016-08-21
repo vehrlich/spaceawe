@@ -39,10 +39,18 @@ body {
   -webkit-transition: height 0.5s ease;
   transition: height 0.5s ease; }
   #header .menu-bar {
-    display: none; }
+    display: none;
+    position: relative;
+    z-index: 1; }
   #header .logo {
     margin-top: 12px;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    display: inline-block;
+    position: relative;
+    z-index: 2; }
+    #header .logo a {
+      display: inline-block;
+      line-height: 0px; }
     #header .logo .logo-el {
       display: inline-block;
       height: 43px;
@@ -78,7 +86,8 @@ body {
     -webkit-transition: height 1s ease;
     transition: height 1s ease; }
   #header.small {
-    height: 71px; }
+    height: 71px;
+    overflow: hidden; }
     #header.small .logo .logo-el {
       height: 43px; }
     #header.small .slogan {
@@ -166,6 +175,9 @@ body {
     background-size: cover;
     background-position: 50%;
     text-align: center; }
+    #sections .section a.fill-container {
+      display: block;
+      height: 100%; }
     #sections .section .title {
       font-family: "Miso", sans-serif;
       letter-spacing: 0.11em;
@@ -470,7 +482,8 @@ body {
     margin: 40px 0;
     background: url(../img/subscribe/background.jpg);
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    overflow: hidden; }
   #subscribe .subscribe-container-2 {
     display: table;
     height: 184px;

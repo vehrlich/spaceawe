@@ -7,6 +7,8 @@ class Mooc(models.Model):
     is_active = models.BooleanField(default=False)
     enroll_url = models.URLField(blank=True)
 
+    position = models.IntegerField(default=True)
+
     # description
     introduction = models.TextField()
     what_you_will_learn = models.TextField()

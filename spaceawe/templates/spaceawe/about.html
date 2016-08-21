@@ -14,7 +14,7 @@
 <script>
     window.onload = function() {
         // create map
-        var map = new L.Map('partnermap').setView([25, 0], 2);
+        var map = new L.Map('partnermap',{'scrollWheelZoom':false}).setView([25, 0], 2);
         L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/base/{z}/{x}/{y}.png', {
             continuousWorld: false,
             noWrap: true,
