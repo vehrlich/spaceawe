@@ -25,7 +25,7 @@
         owner: web
         group: www-data
         line: "*:*:*:backmeup:{{ DATABASE_PASSWORD_BACKUP }}"
-    - name: ensure database backup user exists with permissions
+    - name: ensure database backup user exists with permissions (tables)
       become: yes
       become_user: postgres
       postgresql_privs: 
@@ -34,7 +34,7 @@
         privs: SELECT
         type: table
         objs: ALL_IN_SCHEMA
-    - name: ensure database backup user exists with permissions
+    - name: ensure database backup user exists with permissions (sequences)
       become: yes
       become_user: postgres
       postgresql_privs: 
