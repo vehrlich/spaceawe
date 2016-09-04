@@ -15,7 +15,7 @@ $header-height-small: 60px;
   .menu-bar {
     display: table;
     position: absolute;
-    margin-top: 15px;
+    margin-top: 2em;
     width: 100%;
     > div {
       display: table-cell;
@@ -35,7 +35,8 @@ $header-height-small: 60px;
       // display: inline-block;
       text-decoration: none;
       color: inherit;
-      margin: 2em;
+      padding: 2em 0;
+      margin: 0 2em;
     }
   }
   .logo {
@@ -63,6 +64,13 @@ $header-height-small: 60px;
       margin-top: 8px;
     }
   }
+}
+
+body.section-news #header.small .menu-bar a.menu-news {
+	border-color: white;
+}
+body.section-careers #header.small .menu-bar a.menu-careers {
+	border-color: black;
 }
 
 #cover .feature-container .feature .title-container .title-subcontainer .title {

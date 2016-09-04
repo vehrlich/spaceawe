@@ -59,15 +59,15 @@
         </div>
         <div class="menu-bar">
             <div class="menu-bar-left">
-                <a href="{% url 'news:list' %}">{{ SECTIONS.news.menu }}</a>
-                <a href="{% url 'careers:list' %}">{{ SECTIONS.careers.menu }}</a>
-                <a href="{% url 'scoops:list' %}">{{ SECTIONS.scoops.menu }}</a>
-                <a href="{% url 'games:list' %}">{{ SECTIONS.games.menu }}</a>
+                <a href="{% url 'news:list' %}" class="menu-news">{{ SECTIONS.news.menu }}</a>
+                <a href="{% url 'careers:list' %}" class="menu-careers">{{ SECTIONS.careers.menu }}</a>
+                <a href="{% url 'scoops:list' %}" class="menu-scoops">{{ SECTIONS.scoops.menu }}</a>
+                <a href="{% url 'games:list' %}" class="menu-games">{{ SECTIONS.games.menu }}</a>
             </div>
             <div class="menu-bar-right">
-                <a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
-                <a href="{% url 'soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
-                <a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
+                <a href="{% url 'activities:list' %}" class="menu-activities">{{ SECTIONS.activities.menu }}</a>
+                <a href="{% url 'soon_skills' %}" class="menu-skills">{{ SECTIONS.skills.menu }}</a>
+                <a href="{% url 'about' %}" class="menu-about">{{ SECTIONS.about.menu }}</a>
             </div>
         </div>
         <div class="logo"><a href="/"><span class="logo-el"></span></a></div>

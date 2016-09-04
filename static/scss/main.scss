@@ -17,6 +17,8 @@ $sections: "news", "careers", "scoops", "games", "activities", "skills";
 $section-colors: ("news": #3e5fdb, "careers": #4ed8c3, "scoops": #ed3b5a, "games": #f9b653, "activities": #9d59e4, "skills": #52c36f, "about": #3e5fdb);
 $section-background-colors: ("news": rgba(62, 95, 219, .8), "careers": rgba(78, 216, 195, .8), "scoops": rgba(237, 59, 90, .8), "games": rgba(249, 182, 83, .8), "activities": rgba(157, 89, 228, .8), "skills": rgba(82, 195, 111, .8), "about": rgba(62, 95, 219, .8) );
 
+
+
 $section-color-home: #3e5fdb;
 
 $header-height-normal: 120px;
@@ -79,6 +81,9 @@ body {
     display: none;
     position: relative;
     z-index: 1;
+  }
+  .menu-bar a {
+     border-bottom: 3px solid transparent;
   }
   .logo {
     margin-top: 12px;
@@ -144,8 +149,8 @@ body {
 
   // resize header when scrolling down
   height: 120px;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
+  -webkit-transition: height 1s ease, background-position 1s ease;
+  transition: height 1s ease, background-position 1s ease;
   .logo {
     .logo-el {
       -webkit-transition: height 1s ease;
@@ -155,6 +160,7 @@ body {
   &.small {
     height: $header-height-small;
     overflow: hidden;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.35);
     .logo {
       .logo-el {
         height: 43px;
@@ -162,10 +168,13 @@ body {
     }
     .slogan {
       opacity: 0;
+      color: black!important;
     }
   }
 }
 
+body.section-news #header .menu-bar a.menu-news { border-color: map-get($section-colors, 'news'); }
+body.section-careers #header .menu-bar a.menu-careers { border-color: map-get($section-colors, 'careers'); }
 
 #cover {
   height: 100%;

@@ -941,9 +941,16 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     background: url(/static/img/mainpage_1.png) no-repeat right top, url(/static/img/mainpage_dote.png) no-repeat center top, #fff;
 }
 
+#header {
+    background-position: 100% middle;
+    background-size: contain;
+}
 .section-news #header.small,
 .homepage #header.small {
     background: #fff;
+}
+.homepage #header.small {
+    background-position: 120% center;
 }
 
 .#header .menu-bar {
