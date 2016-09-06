@@ -1,64 +1,96 @@
-var small_nav_height = 60; // height of small navigation header
+// Create a fake element with the ID+class of the main navigation 
+// header to find what its height is defined as in the style sheet
+var small_nav_height = parseInt($('<div id="header" class="small"></div>').css('height')) || 60;
 
-(function($){ // create closure so we can safely use $ as alias for jQuery
-    function menu_main_click() {
-        $('#menu-main').toggleClass('sp-menu-open');
-        $('#menu-language').removeClass('sp-menu-open');
-    }
-    function menu_language_click() {
-        $('#menu-language').toggleClass('sp-menu-open');
-        $('#menu-main').removeClass('sp-menu-open');        
-    }
-    function resize_me() {
-        // if ($(window).width() < 1024) {
-            // var h = $(window).height() - $('.feature-container .fake-padding').height();
-            var h = $('#header').height();
-            $('.feature-container .fake-padding').height(h);
-            $('.feature-container .cycle-slideshow').height($(window).height() - h);
-            // if ($(window).width() >= 1024) {
-            //     $('#header .logo img').height(.40*h);
-            //     $('#header .slogan').css('font-size', 30 + 'px');
-            // }
-    }
+// Create closure so we can safely use $ as alias for jQuery
+(function($){
 
+	function spaceAwareness(){
+		this.pushstate = !!(window.history && history.pushState);
+		var _obj = this;
 
+		$('a').each(function(e){
+			var href = $(this).attr('href');
+			// Any links on the page that go to page anchors on this page,
+			// except placeholder anchors, need to stop the default behaviour
+			if(href.indexOf('#') >= 0 && href != "#"){
+				// Attach a click event
+				$(this).on('click',function(e){
+					// Stop the default behaviour
+					e.preventDefault();
+					e.stopPropagation();
+					// Update the history state
+					history.pushState({},"SpaceAwareness",href);
+					// Do the navigation step
+					_obj.navigate(e);
+				});
+			}
+		});
+		// Any anchor changes (say by manual edit of the URL bar) need to have the navigation function called
+		window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
 
-     // $(window).scroll(function() { 
-     //  var top = $(document).scrollTop();
-     //  if (top > 700) $('.career_menu').addClass('top_block_fixed');
-     //  else $('.career_menu').removeClass('top_block_fixed');
-     // });
-    
+		// A function that scrolls down/up the page to the anchor point
+		this.navigate = function(e){
+			
+			// Find the anchor point
+			var anchor = location.href.split("#")[1];
 
-   
+			// Get the y location of this anchor
+			var y = 0;
+			if(anchor){
+				if($('#'+anchor).length == 1){
+					y = $('#'+anchor).offset().top;
+					if(anchor != "main") y -= small_nav_height;
+				}else{
+					y = -1;
+				}
+			}
 
-    $(document).ready(function(){
+			if(y >= 0) $('html, body').animate({ scrollTop: y }, 800);
+		}
+		return this;
+	}
+	
+	function menu_main_click() {
+		$('#menu-main').toggleClass('sp-menu-open');
+		$('#menu-language').removeClass('sp-menu-open');
+	}
+	function menu_language_click() {
+		$('#menu-language').toggleClass('sp-menu-open');
+		$('#menu-main').removeClass('sp-menu-open');        
+	}
+	function resize_me() {
+		var h = $('#header').height();
+		$('.feature-container .fake-padding').height(h);
+		$('.feature-container .cycle-slideshow').height($(window).height() - h);
+	}
 
-       if ($("div").is(".section-scoops ")) {
-          $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
-      }
+	$(document).ready(function(){
 
-      if ($("div").is(".section-activities")) {
-          $('.section-activities .pure-u-1 .list-item-container .title').matchHeight(false);
-      }
+		var space = new spaceAwareness();
 
-         $('.career_menu a').click(function() {
-            var target = $(this).attr('href');
-            $('html, body').animate({
-                scrollTop: $(target).offset().top - 130
-            }, 800);
-            return false;
-        });
+		if($("div").is(".section-scoops ")) $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
+		
+		if($("div").is(".section-activities")) $('.section-activities .pure-u-1 .list-item-container .title').matchHeight(false);
 
-        $('.close_search').click(function(e) {
-            e.preventDefault();
-            $('.search_head').removeClass('open');
-        });
+/*
+		$('.career_menu a').click(function() {
+			var target = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: $(target).offset().top - 130
+			}, 800);
+			return false;
+		});
+*/
+		$('.close_search').click(function(e) {
+			e.preventDefault();
+			$('.search_head').removeClass('open');
+		});
 
-        $('.search_btn.closed').click(function(e) {
-            e.preventDefault();
-            $('.search_head').addClass('open');
-        });
+		$('.search_btn.closed').click(function(e) {
+			e.preventDefault();
+			$('.search_head').addClass('open');
+		});
 
        
 
@@ -121,22 +153,24 @@ var small_nav_height = 60; // height of small navigation header
 
         // language menu
         $('#menu-language-button').on('click touchend', menu_language_click);
-        $('#menu-language').hover(menu_language_click);
+        //$('#menu-language').hover(menu_language_click);
 
         // snap scrolling
-        $(document).scrollsnap({
+        /*$(document).scrollsnap({
             snaps: '.snap',
             proximity_top: 200,
             proximity_bottom: 0,
             offset: -small_nav_height, 
             duration: 500,
             // easing: 'easeOutBack'
-        });
+        });*/
 
+/*
         // page down buttons
         $('#cover .arrow-pagedown').click(function() {
             $(window).scrollTo({top: $('#sections').offset().top-small_nav_height, left: 0 }, 500);
         });
+*/
         $('#sections .arrow-pagedown').click(function() {
             $(window).scrollTo({top: $('#subscribe').offset().top-small_nav_height, left: 0 }, 500);
             // $(window).scrollTo('#subscribe', 500);
