@@ -1,101 +1,100 @@
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 /* General styles for all menus */
 
 .sp-menu {
-  background: white;
-  position: fixed;
-  height: 100%;
-  a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    &:hover {
-      background: lightgrey;
-      opacity: 0.5;
-    }
-  }
+	background: white;
+	position: fixed;
+	height: 100%;
+	a {
+		display: block;
+		color: black;
+		text-decoration: none;
+		&:hover {
+		background: lightgrey;
+		opacity: 0.5;
+		}
+	}
 }
 
 .sp-menu-vertical {
-  width: 190px;
-  /*height: 100%;*/
-  top: 0;
-  z-index: 1000;
-  a {
-    /*border-bottom: 1px solid black;*/
-    padding: 0.5em 1em;
-  }
+	width: 190px;
+	top: 0;
+	z-index: 1000;
+	a {
+		/*border-bottom: 1px solid black;*/
+		padding: 0.5em 1em;
+	}
 }
 
 .sp-button {
-  position: absolute;
-  .button {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    // padding: 20px;
-    height: 60px;
-    width: 60px;
-    &.mainmenu:after {
-      background-image: url(../img/buttons/menu_black.svg);
-    }
-    &.language:after {
-      background-image: url(../img/buttons/language_black.svg);
-    }
-    &:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      opacity: .3;
-      height: 70px;
-      width: 70px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 40%;
-    }
-  }
+	position: absolute;
+	.button {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		// padding: 20px;
+		height: 60px;
+		width: 60px;
+		&.mainmenu:after {
+			background-image: url(../img/buttons/menu_black.svg);
+		}
+		&.language:after {
+			background-image: url(../img/buttons/language_black.svg);
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			opacity: .3;
+			height: 70px;
+			width: 70px;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 40%;
+		}
+	}
 }
 
 .sp-links {
-  height: 100%;
-  overflow: scroll;
-  z-index: 999;
-  :first-child {
-    margin-top: 14px;
-  }
+	height: 100%;
+	overflow: scroll;
+	z-index: 999;
+	:first-child {
+		margin-top: 14px;
+	}
 }
 
 /* Vertical menu that slides from the left or right */
 
 .sp-menu-left {
-  left: -190px;
-  &.sp-menu-open {
-    left: 0px;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
-    .button {
-      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
-    }
-  }
-  .sp-button {
-    right: 0px;
-  }
+	left: -190px;
+	&.sp-menu-open {
+		left: 0px;
+		box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
+		.button {
+			box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
+		}
+	}
+	.sp-button {
+		right: 0px;
+	}
 }
 
 .sp-menu-right {
-  right: -190px;
-  &.sp-menu-open {
-    right: 0px;
-    box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175);
-    .button {
-      box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175);
-    }
-  }
-  .sp-button {
-    left: 0px;
-  }
+	right: -190px;
+	&.sp-menu-open {
+		right: 0px;
+		box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175);
+		.button {
+			box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175);
+		}
+	}
+	.sp-button {
+		left: 0px;
+	}
 }
 
 
@@ -103,9 +102,9 @@ body {
 
 .sp-menu,
 .sp-menu-push {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+	-webkit-transition: right 0.3s ease, background $time ease;
+	-moz-transition: right 0.3s ease, background $time ease;
+	transition: right 0.3s ease, background $time ease;
 }
 
 

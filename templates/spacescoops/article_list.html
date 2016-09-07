@@ -35,18 +35,18 @@
         {% endthumbnail %}
     {% endfor %}
 
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
         </div>
     </div>
     <div id="list" class="thumbnailed-list scoops page2 snap pure-g">
-
+		<div id="main"></div>
         <div class="pure-u-1 text-content smartembed">
             {% smartembed 'section-spacescoop-intro' %}
         </div>
 
         <div class="pure-u-1 list-header">
-            <div class="title">{% trans "find by category" %}</div>
+            <h2 class="title">{% trans "find by category" %}</h2>
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/scoops/">{% trans "all" %}</a></div>
             </div>
@@ -57,8 +57,7 @@
             </div>
         </div>
 
-    {% include page_template %}
-
+		{% include page_template %}
     </div>
 
 {% endblock %}

@@ -2,9 +2,13 @@
 
 {% lazy_paginate 9 object_list.all as page_object_list %}
 
+<div class="padded">
+	<ol class="padded-list">
 {% for object in page_object_list %}
 
     {% include 'games/game_list_item.html' %}
 
 {% endfor %}
+	</ol>
+</div>
 {% show_more %}

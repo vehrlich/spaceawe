@@ -30,24 +30,24 @@
         <div class="content-container">
             <div class="content-main-column">
 
-                <div class="section-caption">{% trans "Brief Description" %}</div>
+                <h2 class="section-caption">{% trans "Brief Description" %}</h2>
                 <div class="section-content">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
             {% if object.alert_message %}
                 <div class="section-content alert">{{ object.alert_message|markdown }}</div>
             {% endif %}
-                <div class="section-caption">{% trans "Goals" %}</div>
+                <h2 class="section-caption">{% trans "Goals" %}</h2>
                 <div class="section-content">{{ object.goals|markdown|relativise_constrain_img_src:object }}</div>
-                <div class="section-caption">{% trans "Learning Objectives" %}</div>
+                <h2 class="section-caption">{% trans "Learning Objectives" %}</h2>
                 <div class="section-content">{{ object.objectives|markdown|relativise_constrain_img_src:object }}</div>
-                <div class="section-caption">{% trans "Evaluation" %}</div>
+                <h2 class="section-caption">{% trans "Evaluation" %}</h2>
                 <div class="section-content">{{ object.evaluation|markdown|relativise_constrain_img_src:object }}</div>
-                <div class="section-caption">{% trans "Materials" %}</div>
+                <h2 class="section-caption">{% trans "Materials" %}</h2>
                 <div class="section-content">{{ object.materials|markdown|relativise_constrain_img_src:object }}</div>
-                <div class="section-caption">{% trans "Background Information" %}</div>
+                <h2 class="section-caption">{% trans "Background Information" %}</h2>
                 <div class="section-content">{{ object.background|markdown|relativise_constrain_img_src:object }}</div>
-                <div class="section-caption">{% trans "Full Activity Description" %}</div>
+                <h2 class="section-caption">{% trans "Full Activity Description" %}</h2>
                 <div class="section-content">{{ object.fulldesc|markdown|relativise_constrain_img_src:object }}</div>
-                <div class="section-caption">{% trans "Curriculum" %}</div>
+                <h2 class="section-caption">{% trans "Curriculum" %}</h2>
                 <div class="section-content">
                     <h3>Space Awareness curricula topics (EU and South Africa)</h3>
                     <p>{% for category in object.spaceawe_categories %}
@@ -58,10 +58,10 @@
                     {{ object.curriculum|markdown|relativise_constrain_img_src:object }}
                 </div>
             {% if object.additional_information %}
-                <div class="section-caption">{% trans "Additional Information" %}</div>
+                <h2 class="section-caption">{% trans "Additional Information" %}</h2>
                 <div class="section-content">{{ object.additional_information|markdown|relativise_constrain_img_src:object }}</div>
             {% endif %}
-                <div class="section-caption">{% trans "Conclusion" %}</div>
+                <h2 class="section-caption">{% trans "Conclusion" %}</h2>
                 <div class="section-content">{{ object.conclusion|markdown|relativise_constrain_img_src:object }}</div>
                 <div class="section-content"><img style="height: 50px; width: 175px; margin-right: 10px; float: left;" src="{% static 'img/astroedu_peerreview_badge.png' %}"><p>{{ object.spaceawe_authorship }}</p></div>
 
@@ -168,28 +168,32 @@
         </div>
 
         <div class="thumbnailed-list more-container-list pure-g">
-
+			<div class="padded">
+        		<ol class="padded-list">
 {% for item in random|slice:":3" %}
     {% thumbnail item.object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
-        <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3"><div class="list-item-container">
-            <div class="list-item {{ item.section }}" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
-                <div class="color"></div>
-                <div class="color-black"></div>
-                <div class="text">
-                    <div class="date">{{ item.object.release_date|date:"DATE_FORMAT" }}</div>
-                    <div class="title">{{ item.object.title }}</div>
-                    <div class="bottom">
-                        <div class="theme">{% include 'categories/categories_icons.html' %}</div>
-                        <div class="expand"><a href="{{ item.url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
-                    </div>
-                </div>
-                <div class="link-container">
-                    <a href="{{ item.url }}"><div class="link"></div></a>
-                </div>
-            </div>
-        </div></div>
+					<li class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3"><div class="list-item-container">
+						<div class="list-item {{ item.section }}" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+							<div class="color"></div>
+							<div class="color-black"></div>
+							<div class="text">
+								<div class="date">{{ item.object.release_date|date:"DATE_FORMAT" }}</div>
+								<div class="title">{{ item.object.title }}</div>
+								<div class="bottom">
+									<div class="theme">{% include 'categories/categories_icons.html' %}</div>
+									<div class="expand"><a href="{{ item.url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
+								</div>
+							</div>
+							<div class="link-container">
+								<a href="{{ item.url }}"><div class="link"></div></a>
+							</div>
+						</div>
+					</div></li>
     {% endthumbnail %}
 {% endfor %}
+				</ol>
+				<div style="clear:both;"></div>
+			</div>
 
         </div>
     </div>
