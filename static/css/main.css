@@ -123,7 +123,7 @@ p:last-child {
     #header.small .slogan {
       opacity: 0; }
 
-body.single #header, #header.small {
+body.single #header, #header.small, .header-small {
   height: 60px; }
 
 .homepage #header {
@@ -429,7 +429,8 @@ body.single #header, #header.small {
         border-color: #ed3b5a; }
 
 .padded {
-  margin: 0 45px; }
+  margin: 0 45px;
+  width: 100%; }
 
 .thumbnailed-list.news .padded {
   margin-top: 45px; }

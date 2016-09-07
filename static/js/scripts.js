@@ -66,12 +66,23 @@ var nav_height = { 'small' : 60, 'big': 215 };
 		$('.feature-container .cycle-slideshow').height($(window).height() - h);
 	}
 
+	function getStyleSheetPropertyValue(selectorText, propertyName) {
+		// search backwards because the last match is more likely the right one
+		for (var s= document.styleSheets.length - 1; s >= 0; s--) {
+			var cssRules = document.styleSheets[s].cssRules || document.styleSheets[s].rules || []; // IE support
+			for (var c=0; c < cssRules.length; c++) {
+				if (cssRules[c].selectorText === selectorText) return cssRules[c].style[propertyName];
+			}
+		}
+		return null;
+	}
+
 	$(document).ready(function(){
 		// Get current height of header bar
-		var h = parseInt($('#header').css('height'));
+		var h = parseInt($('#header').css("height"));
 		if(typeof h === "number") nav_height.big = h;
 		// Get height it would have if the header bar was in compact mode
-		var h = parseInt($('<div id="header" class="small"></div>').css('height'));
+		var h = getStyleSheetPropertyValue('.header-small', "height");
 		if(typeof h === "number") nav_height.small = h;
 
 		var space = new spaceAwareness();
@@ -86,7 +97,9 @@ var nav_height = { 'small' : 60, 'big': 215 };
 			down = $(document).scrollTop() > y;
 			y = $(document).scrollTop();
 			f = Math.max(0,Math.min((nav_height.big - nav_height.small - y)/(nav_height.big - nav_height.small),1));
-			h = Math.max(nav_height.big - $(document).scrollTop(), nav_height.small);
+			h = nav_height.big - $(document).scrollTop();
+			if(h < nav_height.small) h = nav_height.small;
+
 			if(down || y >= nav_height.big || nav_height.big==nav_height.small) $('#header').addClass('small');
 			else $('#header').removeClass('small');
 			

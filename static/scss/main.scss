@@ -187,7 +187,7 @@ p:last-child {
 		}
 	}
 }
-body.single #header, #header.small {
+body.single #header, #header.small, .header-small {
 	height: $header-height-small;
 }
 .homepage #header {
@@ -557,6 +557,7 @@ body.single #header, #header.small {
 
 .padded {
 	margin: 0 45px;
+	width: 100%;
 }
 
 .thumbnailed-list.news .padded {
