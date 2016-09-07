@@ -116,13 +116,15 @@ p:last-child {
     #header .button.language {
       right: 0; }
   #header.small {
-    height: 60px;
     overflow: hidden;
     box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.35); }
     #header.small .logo .logo-el {
       height: 1.8em; }
     #header.small .slogan {
       opacity: 0; }
+
+body.single #header, #header.small {
+  height: 60px; }
 
 .homepage #header {
   background: url(/static/img/mainpage_1.png) no-repeat right top, url(/static/img/mainpage_dote.png) no-repeat left top, #fff; }

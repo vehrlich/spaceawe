@@ -1,6 +1,7 @@
 // Create a fake element with the ID+class of the main navigation 
 // header to find what its height is defined as in the style sheet
-var small_nav_height = parseInt($('<div id="header" class="small"></div>').css('height')) || 60;
+var small_nav_height = 60;
+var nav_height = { 'small' : 60, 'big': 215 };
 
 // Create closure so we can safely use $ as alias for jQuery
 (function($){
@@ -40,7 +41,7 @@ var small_nav_height = parseInt($('<div id="header" class="small"></div>').css('
 			if(anchor){
 				if($('#'+anchor).length == 1){
 					y = $('#'+anchor).offset().top;
-					if(anchor != "main") y -= small_nav_height;
+					if(anchor != "main") y -= nav_height.small;
 				}else{
 					y = -1;
 				}
@@ -66,8 +67,43 @@ var small_nav_height = parseInt($('<div id="header" class="small"></div>').css('
 	}
 
 	$(document).ready(function(){
+		// Get current height of header bar
+		var h = parseInt($('#header').css('height'));
+		if(typeof h === "number") nav_height.big = h;
+		// Get height it would have if the header bar was in compact mode
+		var h = parseInt($('<div id="header" class="small"></div>').css('height'));
+		if(typeof h === "number") nav_height.small = h;
 
 		var space = new spaceAwareness();
+
+		// resize top bar on scroll
+		var y = 0;
+		var h1 = parseFloat($('.logo-el').css('height'));
+		var h2 = 43;
+		var mt = parseInt($('.logo').css('margin-top'));
+		var down,f,h;
+		function adjustHeader(){
+			down = $(document).scrollTop() > y;
+			y = $(document).scrollTop();
+			f = Math.max(0,Math.min((nav_height.big - nav_height.small - y)/(nav_height.big - nav_height.small),1));
+			h = Math.max(nav_height.big - $(document).scrollTop(), nav_height.small);
+			if(down || y >= nav_height.big || nav_height.big==nav_height.small) $('#header').addClass('small');
+			else $('#header').removeClass('small');
+			
+			if(y < nav_height.big){
+				$('.logo-el').css({'height':(h2 + f*(h1-h2))+'px'});
+				$('.logo').css({'margin-top':(8 + f*(mt-8))+'px'});
+				$('#header').css({'height':h+'px'});
+			}else{
+				$('.logo-el').css({'height':''});
+				$('.logo').css({'margin-top':''});
+				$('#header').css({'height':''});
+			}
+			return;
+		}
+		$(document).on('scroll', adjustHeader);
+		adjustHeader();
+
 
 		if($("div").is(".section-scoops ")) $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
 		
@@ -172,7 +208,7 @@ var small_nav_height = parseInt($('<div id="header" class="small"></div>').css('
         });
 */
         $('#sections .arrow-pagedown').click(function() {
-            $(window).scrollTo({top: $('#subscribe').offset().top-small_nav_height, left: 0 }, 500);
+            $(window).scrollTo({top: $('#subscribe').offset().top - nav_height.small, left: 0 }, 500);
             // $(window).scrollTo('#subscribe', 500);
         });
 
