@@ -35,22 +35,16 @@
 <div class="thumbnailed-list careers page2 snap pure-g smartembed">
 
 	<div id="main"></div>
-       <div class="pure-u-1 list-header">
-            <h1>{% trans "find by topic" %}</h1>
-            <div class="filters">
-                <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
-            </div>
-            <div class="filters">
-           		 <div class="filter-topic-image"><a href="/careers/category/earth/"><div><img src="{% static 'img/icons/categories/icon_planet_turquoise.svg' %}" /></div></a></div>
-                <div class="filter-topic-image"><a href="/careers/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_nav_turquoise.svg' %}" /></div></a></div>
-                <div class="filter-topic-image"><a href="/careers/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_turquoise.svg' %}" /></div></a></div>
-                <div class="filter-topic-image"><a href="/careers/category/heritage/"><div><img src="{% static 'img/icons/categories/icon_herit_turquoise.svg' %}" /></div></a></div>
-            </div>
+		<div class="pure-u-1 list-header">
+			<h1>{% trans "find by topic" %}</h1>
+			<div class="filters">
+				<div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
+			</div>
+			{% include 'filters.html' %}
+		</div>
 
-        </div>
-
-        <div class="career_menu horizontal-jump-menu">
-        	<ul>
+        <div class="career_menu horizontal-jump-menu padded">
+        	<ul class="list-4col">
         		<li>
         			<a href="#interviews_menu">
 	        			<p class="menu_title">Interviews</p>
@@ -96,24 +90,23 @@
         <h3 class="title_green">What is it like to work to space?</h3>
         <div class="row">
 			<div class="padded">
-        		<ol class="padded-list">
+        		<ol class="padded-list list-3col{% if interviews|length < 3 %} under-filled{% endif %}">
 				{% for interview in interviews %}
-					<li class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
+					<li>
 						<div class="list-item-container">
 							<div class="list-item careers"{% thumbnail interview.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %} style="background-image:url({{ im.url }});"{% endthumbnail %} aria-haspopup="true">
-								<div class="color"></div>
-								<div class="color-black"></div>
-								<div class="text">
-									<div class="title">{{ interview.title }}</div>
-									<div class="preview">{{ interview.teaser }}</div>
-									<div class="bottom">
-										<div class="expand">
-											<a href="{% url 'careers:interview-detail' slug=interview.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a>
-										</div>
-									</div>
-								</div>
 								<div class="link-container">
-									<a href="{% url 'careers:interview-detail' slug=interview.slug %}"><div class="link"></div></a>
+									<a href="{% url 'careers:interview-detail' slug=interview.slug %}">
+										<div class="color"></div>
+										<div class="color-black"></div>
+										<div class="text">
+											<div class="title">{{ interview.title }}</div>
+											<div class="preview">{{ interview.teaser }}</div>
+											<div class="bottom">
+												<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+											</div>
+										</div>
+									</a>
 								</div>
 							</div>
 						
@@ -147,8 +140,7 @@
         <h3 class="title_green">It is not all about becoming an astronaut!</h3>
         <div class="row">
 			<div class="padded">
-        		<ol class="padded-list">
-
+        		<ol class="padded-list list-3col{% if careers|length < 3 %} under-filled{% endif %}">
 				{% for career in careers %}
 					<!-- Will not work locally -->
 					<!-- {% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
@@ -161,35 +153,22 @@
 							</a>
 						</div>
 					{% endthumbnail %} -->
-
-
-
-					<li class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
+					<li>
 						<div class="list-item-container">
 					  {% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
 							<div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
-								<div class="color"></div>
-								<div class="color-black"></div>
-								<div class="text">
-									<div class="title">{{ career.title }}</div>
-									<div class="preview">{{ career.teaser }}</div>
-									<div class="bottom">
-										<div class="expand">
-										<!--<ul class="expand">
-											<li>
-												<a href="{% url 'careers:career-detail' slug=career.slug %}" target="_blank"><img src="{% static 'img/images_white.svg' %}"></a>
-											</li>
-											<li>
-												--><a href="{% url 'careers:career-detail' slug=career.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a>
-											<!--</li>
-											<li>
-												<a href="{{ interview.pdf_url }}"><img src="{% static 'img/download_white.svg' %}"></a>
-											</li>
-										</ul>-->
-									</div>
-								</div>
 								<div class="link-container">
-									<a href="{% url 'careers:career-detail' slug=career.slug %}"><div class="link"></div></a>
+									<a href="{% url 'careers:career-detail' slug=career.slug %}">
+										<div class="color"></div>
+										<div class="color-black"></div>
+										<div class="text">
+											<div class="title">{{ career.title }}</div>
+											<div class="preview">{{ career.teaser }}</div>
+											<div class="bottom">
+												<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+											</div>
+										</div>
+									</a>
 								</div>
 							</div>
 					  {% endthumbnail %}
@@ -205,7 +184,6 @@
 					<a href="{% url 'careers:career-detail' slug=career.slug %}">URL</a><br>
 					Pdf url : {{ career.pdf_url }}
 					<hr/> -->
-
 				{% endfor %}
 				</ol>
 				<div style="clear:both;"></div>
@@ -235,27 +213,24 @@
         <h3 class="title_green">Watch live talks about space sciences</h3>
         <div class="row">
 			<div class="padded">
-        		<ol class="padded-list">
+        		<ol class="padded-list list-3col{% if webinars|length < 3 %} under-filled{% endif %}">
 					{% for webinar in webinars %}
-					<li class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3">
+					<li>
 						<div class="list-item-container">
 					  {% thumbnail webinar.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
 							<div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
-								<div class="color"></div>
-								<div class="color-black"></div>
-								<div class="text">
-									<div class="title">{{ webinar.title }}</div>
-									<!--<div class="preview">{{ webinar.teaser }}</div>-->
-									<div class="bottom">
-										<div class="expand">
-											<!--<li><a href="{% url 'careers:webinar-detail' slug=webinar.slug %}" target="_blank"><img src="{% static 'img/images_white.svg' %}"></a></li>
-											<li>--><a href="{% url 'careers:webinar-detail' slug=webinar.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a><!--</li>
-											<li><a href="{{ interview.pdf_url }}"><img src="{% static 'img/download_white.svg' %}"></a></li>-->
-										</div>
-									</div>
-								</div>
 								<div class="link-container">
-									<a href="{% url 'careers:webinar-detail' slug=webinar.slug %}"><div class="link"></div></a>
+									<a href="{% url 'careers:webinar-detail' slug=webinar.slug %}">
+										<div class="color"></div>
+										<div class="color-black"></div>
+										<div class="text">
+											<div class="title">{{ webinar.title }}</div>
+											<!--<div class="preview">{{ webinar.teaser }}</div>-->
+											<div class="bottom">
+												<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+											</div>
+										</div>
+									</a>
 								</div>
 							</div>
 					{% endthumbnail %}

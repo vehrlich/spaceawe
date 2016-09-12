@@ -55,7 +55,7 @@
             <h2 class="title">{{ SECTIONS.scoops.title }}</h2>
         </div>
 		<div class="row">
-			<div class="padded">
+			<div class="padded-h">
 				<ol class="padded-list">
 					{% include 'spacescoops/article_list_page_in_category.html' %}
 				</ol>
@@ -70,7 +70,7 @@
             <h2 class="title">{{ SECTIONS.games.title }}</h2>
         </div>
 		<div class="row">
-			<div class="padded">
+			<div class="padded-h">
 				<ol class="padded-list">
 			        {% include 'games/game_list_page_in_category.html' %}
 				</ol>
@@ -85,7 +85,7 @@
             <h2 class="title">{{ SECTIONS.activities.title }}</h2>
         </div>
 		<div class="row">
-			<div class="padded">
+			<div class="padded-h">
 				<ol class="padded-list">
 			        {% include 'activities/activity_list_page_in_category.html' %}
 				</ol>
@@ -96,7 +96,13 @@
 
 
     <div id="categories" class="pure-g">
+		<div class="row">
+			<div class="padded-h">
+				<ol class="list-4col">
     {% include 'spaceawe/categories_bigicons.html' %}
+				</ol>
+	        </div>
+	    </div>
     </div>
 
 {% endblock %}

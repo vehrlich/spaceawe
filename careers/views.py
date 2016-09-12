@@ -51,6 +51,10 @@ class CareersViewList(ViewUrlMixin, TemplateView):
         context['interviews'] = self.get_interviews_queryset()
         context['careers'] = self.get_careers_queryset()
         context['webinars'] = self.get_webinars_queryset()
+        if 'category' in self.kwargs:
+            context['category'] = self.kwargs['category']
+        else:
+            context['category'] = ''
         return context
 
 

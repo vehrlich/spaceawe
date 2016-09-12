@@ -2,12 +2,31 @@
 
 {% lazy_paginate 9 object_list.all as page_object_list %}
 
-<div class="padded">
-	<ol class="padded-list">
-	{% for object in page_object_list %}
-	
-		{% include 'spacescoops/article_list_item.html' %}
+{% load staticfiles thumbnail %}
 
+<div class="padded">
+	<ol class="padded-list{% if page_object_list|length < 3 %} under-filled{% endif %}">
+	{% for object in page_object_list %}
+		{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+			<li><div class="list-item-container">
+				<div class="list-item scoops" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+					<div class="link-container">
+						<a href="{% url 'scoops:detail' code=object.code slug=object.slug %}">
+							<div class="color"></div>
+							<div class="color-black"></div>
+							<div class="text">
+								<div class="date">{{ object.release_date|date:"DATE_FORMAT" }}</div>
+								<div class="title">{{ object.title }}</div>
+								<div class="theme">{% include 'categories/categories_icons.html' %}</div>
+								<div class="bottom">
+									<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div></li>
+		{% endthumbnail %}
 	{% endfor %}
 	</ol>
 </div>

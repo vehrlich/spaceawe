@@ -50,12 +50,7 @@
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
             </div>
-            <div class="filters">
-                <div class="filter-topic-image"><a href="/activities/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_purple.svg' %}" /></div><div>{{ CATEGORIES.space.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/activities/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_purple.svg' %}" /></div><div>{{ CATEGORIES.earth.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/activities/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_purple.svg' %}" /></div><div>{{ CATEGORIES.navigation.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/activities/category/heritage/"><div><img src="{% static 'img/icons/categories/icon_heritage_purple.svg' %}" /></div><div>{{ CATEGORIES.heritage.filter_description }}</div></a></div>
-            </div>
+            {% include 'filters.html' %}
             <div class="filters level">
                 <div class="pure-menu pure-menu-horizontal">
                     <ul class="pure-menu-list">

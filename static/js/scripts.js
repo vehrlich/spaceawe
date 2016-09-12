@@ -13,17 +13,19 @@ var nav_height = { 'small' : 60, 'big': 215 };
 			var href = $(this).attr('href');
 			// Any links on the page that go to page anchors on this page,
 			// except placeholder anchors, need to stop the default behaviour
-			if(href.indexOf('#') >= 0 && href != "#"){
-				// Attach a click event
-				$(this).on('click',function(e){
-					// Stop the default behaviour
-					e.preventDefault();
-					e.stopPropagation();
-					// Update the history state
-					history.pushState({},"SpaceAwareness",href);
-					// Do the navigation step
-					_obj.navigate(e);
-				});
+			if(href == window.location.pathname){
+				if(href.indexOf('#') >= 0 && href != "#"){
+					// Attach a click event
+					$(this).on('click',function(e){
+						// Stop the default behaviour
+						e.preventDefault();
+						e.stopPropagation();
+						// Update the history state
+						history.pushState({},"SpaceAwareness",href);
+						// Do the navigation step
+						_obj.navigate(e);
+					});
+				}
 			}
 		});
 		// Any anchor changes (say by manual edit of the URL bar) need to have the navigation function called

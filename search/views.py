@@ -38,4 +38,8 @@ class SearchView(TemplateView):
         context['search_results'] = result
         context['pages'] = range(1, int(pages_count)+1)
         context['page'] = page
+        if 'category' in self.kwargs:
+            context['category'] = self.kwargs['category']
+        else:
+            context['category'] = ''
         return context

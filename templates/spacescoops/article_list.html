@@ -49,11 +49,7 @@
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/scoops/">{% trans "all" %}</a></div>
             </div>
-            <div class="filters">
-                <div class="filter-topic-image"><a href="/scoops/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_red.svg' %}" /></div><div>{{ CATEGORIES.space.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/scoops/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_red.svg' %}" /></div><div>{{ CATEGORIES.earth.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/scoops/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_red.svg' %}" /></div><div>{{ CATEGORIES.navigation.filter_description }}</div></a></div>
-            </div>
+            {% include 'filters.html' %}
         </div>
 
 		{% include page_template %}
