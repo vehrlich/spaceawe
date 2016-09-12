@@ -4,7 +4,7 @@
 
 {% load staticfiles thumbnail %}
 
-<div class="padded">
+<div class="padded-h">
 	<ol class="padded-list{% if page_object_list|length < 3 %} under-filled{% endif %}">
 	{% for object in page_object_list %}
 		{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
