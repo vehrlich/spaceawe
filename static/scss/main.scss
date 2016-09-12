@@ -1206,8 +1206,8 @@ body.single {
     color: black;
 }
 
-
-.search_head {
+/* STUART: Hide pointless navigation elements. Why do *two* language menus exist? */
+.search_head, #menu-language1 {
 	display: none;
 }
 
