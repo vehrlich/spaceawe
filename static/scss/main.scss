@@ -1207,6 +1207,9 @@ body.single {
 }
 
 
+.search_head {
+	display: none;
+}
 
 // @media screen and (min-width: 35.5em) { // sm: 568px
 //	 @import "main_568";
@@ -1218,9 +1221,9 @@ body.single {
 	@import "main_1024";
 }
 
-//@media screen and (min-width: 1200px) { // 1200px
+// @media screen and (min-width: 1200px) { // 1200px
 //	@import "main_1600";
-//}
+// }
 
 @media print {
 	@import "print";

@@ -457,6 +457,7 @@ input:focus {
     right: 25%;
 }
 
+/* REMOVE-STUART
 .search_head {
     position: fixed;
     z-index: 999;
@@ -494,6 +495,7 @@ input:focus {
 .small .search_head_right {
     display: none;
 }
+*/
 
 .to_top {
     position: absolute;
@@ -505,6 +507,7 @@ input:focus {
     background: url(/static/img/anchor.png);
 }
 
+/*
 .select_language {
     position: absolute;
     top: 18px;
@@ -523,9 +526,9 @@ input:focus {
     text-decoration: none;
     z-index: 9999;
     color: #000000;
-    /*border: 2px solid #000;*/
     background: #fff;
 }
+*/
 
 
 /*.small .lang_btn{
@@ -535,6 +538,7 @@ input:focus {
   opacity:1;
 }*/
 
+/*
 .lang_btn span {
     margin-left: 15px;
     width: 0;
@@ -546,7 +550,7 @@ input:focus {
     border-width: 7px 7px 0 7px;
     border-color: #a3a3a3 transparent transparent transparent;
 }
-
+*/
 
 /*.small .lang_btn span{
   border-color: #fff transparent transparent transparent;
@@ -799,11 +803,6 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     font-weight: 700;
 }
 
-#menu-language {
-    display: none;
-}
-
-
 /*.know_us {
     background: url(/static/img/know_us.png) no-repeat 50% 190px;
 }*/
@@ -820,6 +819,7 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     text-align: center;
 }
 
+/*
 .search_head{
     border: 2px solid rgba(0,0,0,0);
     width: 28px;
@@ -845,8 +845,6 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
 
 .search_head.open input{
     width: 100%;
-    
-    /*float: left;*/
 }
 
 .search_head .search_btn{
@@ -868,7 +866,6 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     display: inline-block;
     background-size: 100%;
     height: 21px;
-    /*background: url() no-repeat center;*/
     float: right;
 }
 
@@ -887,7 +884,7 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     padding: 3px 35px;
     height: 20px;
 }
-
+*/
 
 
 /*all site*/
@@ -916,27 +913,33 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
         margin-bottom: 20px;
     }
 */
+/* REMOVE-STUART
     .search_head_right + .sp-links_wrap,
     .search_head_right {
         display: none;
     }
+*/
     #menu-language {
         display: block;
     }
     #menu-language1 {
         display: none;
     }
+/* REMOVE-STUART
      .search_head{
         left: 1%;
         width: 5% !important;
     }
+*/
 }
 
 @media screen and (max-width: 1300px) {
+/* REMOVE-STUART
     .small .search_head,
     .search_head {
         display: none;
     }
+    */
 }
 
 @media screen and (max-width: 1024px) {
