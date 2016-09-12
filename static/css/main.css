@@ -36,19 +36,28 @@ body {
 .fake-padding {
   height: 120px; }
 
-ul li, ol li {
-  line-height: 2em; }
+ul, ol {
+  list-style: disc;
+  margin-left: 1em; }
 
-h1, h2, h3 {
+ul li, ol li {
+  line-height: 2em;
+  margin-left: 1em; }
+
+h1, h2, h3, h4, h5, h6, h7 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px; }
 
 h2, h3 {
   font-size: 20px; }
 
-p {
+h4, h5, h6 {
+  font-size: 14px; }
+
+p, ul, ol {
   margin-bottom: 24px; }
 
 p:last-child {
@@ -95,6 +104,7 @@ p:last-child {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     line-height: 0.9em;
     text-transform: uppercase;
@@ -174,6 +184,7 @@ body.single #header, #header.small, .header-small {
             font-family: "Miso", sans-serif;
             letter-spacing: 0.1em;
             font-size: 28px;
+            font-weight: 700;
             line-height: 24px;
             font-weight: bold;
             text-transform: uppercase; }
@@ -346,6 +357,7 @@ body.single #header, #header.small, .header-small {
       font-family: "Miso", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
+      font-weight: 700;
       line-height: 24px;
       text-transform: uppercase;
       padding-top: 30px;
@@ -387,6 +399,7 @@ body.single #header, #header.small, .header-small {
       font-family: "Miso", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
+      font-weight: 700;
       line-height: 24px;
       font-size: 24px;
       text-transform: uppercase;
@@ -428,30 +441,40 @@ body.single #header, #header.small, .header-small {
         background-color: #ed3b5a;
         border-color: #ed3b5a; }
 
-.padded {
-  margin: 0 45px;
+.row {
   width: 100%; }
+
+.padded {
+  padding: 45px;
+  max-width: 1250px;
+  width: 100%;
+  position: relative;
+  left: 0px;
+  right: 0px;
+  margin: auto; }
 
 .thumbnailed-list.news .padded {
   margin-top: 45px; }
 
-ol.padded-list {
+.padded-list {
   position: relative;
   margin-left: -45px;
   right: -45px;
   min-width: 100%;
   display: block;
   list-style: outside none none; }
-  ol.padded-list li {
+  .padded-list li {
     float: left;
+    width: 33.33333%;
     border-right: 45px solid rgba(255, 255, 255, 0);
+    margin-left: 0;
     margin-bottom: 45px; }
-  ol.padded-list li:last-child:after {
+  .padded-list li:last-child:after {
     clear: both; }
-  ol.padded-list .list-item-container {
+  .padded-list .list-item-container {
     margin: 0px; }
 
-ol.padded-list:after {
+.padded-list:after {
   clear: both; }
 
 .more-container-header {
@@ -492,6 +515,7 @@ table.mooc {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     padding: 10px 20px; }
     .content-card .title-container .title {
@@ -519,6 +543,7 @@ table.mooc {
       font-family: "Miso", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
+      font-weight: 700;
       line-height: 24px;
       color: #ed3b5a;
       text-transform: uppercase;
@@ -545,6 +570,7 @@ table.mooc {
           font-family: "Miso", sans-serif;
           letter-spacing: 0.1em;
           font-size: 28px;
+          font-weight: 700;
           line-height: 24px;
           font-size: 20px;
           text-transform: uppercase; }
@@ -560,11 +586,13 @@ table.mooc {
 .content-page {
   padding-top: 100px;
   max-width: 1250px;
-  margin: auto 45px; }
+  margin: auto auto;
+  padding: 0 45px; }
   .content-page .title {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     text-transform: uppercase; }
   .content-page .subtitle {
@@ -617,6 +645,7 @@ table.mooc {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     text-transform: uppercase; }
   #subscribe .line2 {
@@ -672,6 +701,7 @@ table.mooc {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   padding-top: 60px;
@@ -722,6 +752,7 @@ table.mooc {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     text-transform: uppercase;
     font-size: 24px;
@@ -880,6 +911,7 @@ body.section-news .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #3e5fdb;
@@ -940,6 +972,7 @@ body.section-careers .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #4ed8c3;
@@ -1000,6 +1033,7 @@ body.section-scoops .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #ed3b5a;
@@ -1060,6 +1094,7 @@ body.section-games .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #f9b653;
@@ -1120,6 +1155,7 @@ body.section-activities .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #9d59e4;
@@ -1180,6 +1216,7 @@ body.section-skills .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #52c36f;
@@ -1240,6 +1277,7 @@ body.section-about .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   text-align: center;
   color: #3e5fdb;
@@ -1356,6 +1394,7 @@ body.section-about .wrapper_block_previews h3 {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     font-weight: bold;
     text-transform: uppercase; }
@@ -1367,6 +1406,7 @@ body.section-about .wrapper_block_previews h3 {
     font-family: "Miso", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
+    font-weight: 700;
     line-height: 24px;
     font-weight: bold;
     text-transform: uppercase; }
@@ -1455,6 +1495,7 @@ body.section-about .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   font-size: 144px;
   letter-spacing: 0;
@@ -1481,6 +1522,7 @@ body.section-about .wrapper_block_previews h3 {
   font-family: "Miso", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
+  font-weight: 700;
   line-height: 24px;
   font-size: 48px;
   font-weight: bold;
@@ -1597,16 +1639,6 @@ body.section-about .wrapper_block_previews h3 {
     height: 130px; }
   .more-container-list .list-item-container {
     margin: 10px; } }
-
-@media screen and (min-width: 1600px) {
-  .fake-padding {
-    height: 280px; }
-  #header {
-    height: 280px; }
-    #header.small {
-      height: 90px; }
-  #sections .section {
-    height: 665px; } }
 
 @media print {
   .image-container {

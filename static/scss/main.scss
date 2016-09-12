@@ -46,6 +46,7 @@ $content-max-width: 1250px;
 	font-family: $font-headings;
 	letter-spacing: 0.1em;
 	font-size: $font-size-heading;
+	font-weight: 700;
 	line-height: $baseline;
 }
 @mixin normaltext() {
@@ -87,17 +88,25 @@ body {
 
 .fake-padding { height: $header-height-normal; }
 
+ul, ol {
+	list-style: disc;
+	margin-left: 1em;
+}
 ul li, ol li {
 	line-height: 2em;
+	margin-left: 1em;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4,h5,h6,h7 {
 	@include heading();
 }
 h2,h3 {
 	font-size: $font-size-heading2;
 }
-p {
+h4,h5,h6 {
+	font-size: $font-size-heading3;
+}
+p, ul, ol {
 	margin-bottom: $baseline;
 }
 p:last-child {
@@ -555,16 +564,24 @@ body.single #header, #header.small, .header-small {
 	}
 }
 
-.padded {
-	margin: 0 45px;
+.row {
 	width: 100%;
+}
+.padded {
+	padding: 45px;
+	max-width: $content-max-width;
+	width: 100%;
+	position: relative;
+	left: 0px;
+	right: 0px;
+	margin: auto;
 }
 
 .thumbnailed-list.news .padded {
 	margin-top: 45px;
 }
 
-ol.padded-list {
+.padded-list {
 	position: relative;
 	margin-left: -45px;
 	right: -45px;
@@ -573,7 +590,9 @@ ol.padded-list {
     list-style: outside none none;
 	li {
 		float: left;
+		width: 33.33333%;
 		border-right: 45px solid rgba(255, 255, 255, 0);
+		margin-left: 0;
 		margin-bottom: 45px;
 	}
 	li:last-child:after {
@@ -583,7 +602,7 @@ ol.padded-list {
 		margin: 0px;
 	}
 }
-ol.padded-list:after {
+.padded-list:after {
 	clear:both;
 }
 .more-container-header {
@@ -711,7 +730,8 @@ table.mooc {
 .content-page {
 	padding-top: 100px;
 	max-width: $content-max-width;
-	margin: auto 45px;
+	margin: auto auto;
+	padding: 0 45px;
 	.title {
 		@include heading();
 		text-transform: uppercase;
@@ -1197,9 +1217,10 @@ body.single {
 @media screen and (min-width: 1024px) { // lg: 1024px
 	@import "main_1024";
 }
-@media screen and (min-width: 1600px) { // 1600px
-	@import "main_1600";
-}
+
+//@media screen and (min-width: 1200px) { // 1200px
+//	@import "main_1600";
+//}
 
 @media print {
 	@import "print";

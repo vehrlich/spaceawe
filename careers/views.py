@@ -3,6 +3,7 @@ from django.template import loader
 from django.views.generic import ListView, DetailView, View, TemplateView
 from django.core.urlresolvers import reverse
 from parler.views import ViewUrlMixin, TranslatableSlugMixin
+from django.utils.timezone import datetime
 
 from spaceawe import misc
 from .models import Interview, Career, Webinar
@@ -19,17 +20,17 @@ class CareersViewList(ViewUrlMixin, TemplateView):
 
     def get_careers_queryset(self):
         queryset = Career.objects.all()
-        queryset = self.filter_category(queryset)
+        queryset = self.filter_category(queryset).exclude(published=False).exclude(release_date__gte=datetime.today())
         return queryset
 
     def get_interviews_queryset(self):
         queryset = Interview.objects.all()
-        queryset = self.filter_category(queryset)
+        queryset = self.filter_category(queryset).exclude(cover__isnull=True).exclude(published=False).exclude(release_date__gte=datetime.today())
         return queryset
 
     def get_webinars_queryset(self):
         queryset = Webinar.objects.all()
-        queryset = self.filter_category(queryset)
+        queryset = self.filter_category(queryset).exclude(published=False).exclude(release_date__gte=datetime.today())
         return queryset
 
     def get_view_url(self):

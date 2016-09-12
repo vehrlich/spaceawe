@@ -1,6 +1,5 @@
-// Create a fake element with the ID+class of the main navigation 
-// header to find what its height is defined as in the style sheet
-var small_nav_height = 60;
+// Define the minimum and maximum height of the header bar on this page
+// These are dummy values; we'll get them from the CSS later
 var nav_height = { 'small' : 60, 'big': 215 };
 
 // Create closure so we can safely use $ as alias for jQuery
@@ -68,10 +67,16 @@ var nav_height = { 'small' : 60, 'big': 215 };
 
 	function getStyleSheetPropertyValue(selectorText, propertyName) {
 		// search backwards because the last match is more likely the right one
-		for (var s= document.styleSheets.length - 1; s >= 0; s--) {
-			var cssRules = document.styleSheets[s].cssRules || document.styleSheets[s].rules || []; // IE support
-			for (var c=0; c < cssRules.length; c++) {
-				if (cssRules[c].selectorText === selectorText) return cssRules[c].style[propertyName];
+		for(var s= document.styleSheets.length - 1; s >= 0; s--) {
+			// Use a try/catch to stop Firefox throwing a security error for stylesheets originating from a different domain. 
+			// See http://stackoverflow.com/questions/21642277/security-error-the-operation-is-insecure-in-firefox-document-stylesheets?noredirect=1&lq=1
+			try {
+				var cssRules = document.styleSheets[s].rules || document.styleSheets[s].cssRules
+				for (var c=0; c < cssRules.length; c++) {
+					if (cssRules[c].selectorText === selectorText) return cssRules[c].style[propertyName];
+				}
+			}catch(e){
+
 			}
 		}
 		return null;
@@ -122,15 +127,6 @@ var nav_height = { 'small' : 60, 'big': 215 };
 		
 		if($("div").is(".section-activities")) $('.section-activities .pure-u-1 .list-item-container .title').matchHeight(false);
 
-/*
-		$('.career_menu a').click(function() {
-			var target = $(this).attr('href');
-			$('html, body').animate({
-				scrollTop: $(target).offset().top - 130
-			}, 800);
-			return false;
-		});
-*/
 		$('.close_search').click(function(e) {
 			e.preventDefault();
 			$('.search_head').removeClass('open');
@@ -259,15 +255,6 @@ var nav_height = { 'small' : 60, 'big': 215 };
         $.endlessPaginate();
 
     });
-
-   //  $(function() {
-   //     var topPos = $('.career_menu').offset().top - 60;
-   //     $(window).scroll(function() {
-   //         var top = $(document).scrollTop();
-   //         if (top > topPos) { $('.career_menu').addClass('top_block_fixed'); } else { $('.career_menu').removeClass('top_block_fixed')}
-   //     });
-   // });
-
 
 })(jQuery);
 
