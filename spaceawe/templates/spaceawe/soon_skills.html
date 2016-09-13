@@ -58,7 +58,7 @@
     <th><b>MOOC {{ forloop.counter }}</b>: {{ mooc.info }}</th>
     <th>{% trans "STARTING DATE" %}: <b>{{ mooc.starting_date }}</b></th>
   </tr>
-  {% for module in mooc.module_set.all %}
+  {% for module in mooc.module_set.all reversed %}
   <tr>
     <td>{{ module.info }}</td>
     <td>{{ module.duration }}</td>
