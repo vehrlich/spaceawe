@@ -13,7 +13,7 @@ var nav_height = { 'small' : 60, 'big': 215 };
 			var href = $(this).attr('href');
 			// Any links on the page that go to page anchors on this page,
 			// except placeholder anchors, need to stop the default behaviour
-			if(href == window.location.pathname){
+			if(href == window.location.pathname || href.indexOf("#")==0){
 				if(href.indexOf('#') >= 0 && href != "#"){
 					// Attach a click event
 					$(this).on('click',function(e){
@@ -47,6 +47,8 @@ var nav_height = { 'small' : 60, 'big': 215 };
 					y = -1;
 				}
 			}
+			// If we want the top, that is at y = 0
+			if(anchor == "top") y = 0;
 
 			if(y >= 0) $('html, body').animate({ scrollTop: y }, 800);
 		}
@@ -168,14 +170,6 @@ var nav_height = { 'small' : 60, 'big': 215 };
         });
 
       
-        $('.to_top').click(function() {
-          $('html, body').animate({
-              scrollTop: 0
-          }, 'slow');
-          return false;
-
-      });  
-
       $('.lang_btn').click(function(e) {
           e.preventDefault();
           $(this).next().toggle();

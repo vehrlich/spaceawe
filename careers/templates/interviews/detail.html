@@ -54,17 +54,19 @@ Questions:<br>
 									<!-- <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true"> -->
 														{% thumbnail question.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
 									 <div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
-										<div class="color"></div>
-										<div class="color-black"></div>
-										 <div class="text">
-											   <p class="question_mark">?</p>
-												<div class="bottom">
-												<div class="title">{{ question.question_text }}</div>
-													<div class="expand"><a href="{{ question.video_url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
-												</div>
-											</div>
 										<div class="link-container">
-											<a href="{{ question.video_url }}"><div class="link"></div></a>
+											<a href="{{ question.video_url }}">
+												<div class="color"></div>
+												<div class="color-black"></div>
+												<div class="text">
+													<p class="question_mark">?</p>
+													<div class="bottom">
+														<div class="title">{{ question.question_text }}</div>
+														<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+													</div>
+												</div>
+												<div class="link"></div>
+											</a>
 										</div>
 									</div>
 								{% endthumbnail %}
@@ -113,9 +115,10 @@ Questions:<br>
         	</div>
         </div>
 
+{% if random|length > 0 %}
          <div class="more-container-header pure-g">
             <div class="pure-u-1 list-header">
-                <div class="title">{% trans "Related resources" %}</div>
+                <div class="title">{% trans "Related resources" %} {{ random|length }}</div>
             </div>
             <div class="pure-u-1 list-header-padding"></div>
         </div>
@@ -142,8 +145,8 @@ Questions:<br>
 			        </div></div>
 			    {% endthumbnail %}
 			{% endfor %}
-
         </div>
+{% endif %}
     </div>
 
 {% endblock %}

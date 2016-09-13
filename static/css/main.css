@@ -605,6 +605,12 @@ body.single #header, #header.small, .header-small {
   right: 0px;
   margin: auto; }
 
+.padded-top {
+  padding-top: 45px; }
+
+.padded-bottom {
+  padding-bottom: 45px; }
+
 .padded {
   padding: 45px; }
 
@@ -675,6 +681,7 @@ table td, table th {
   padding: 12px 0; }
 
 table.mooc {
+  margin-top: 45px;
   /* We define the last column first because we want the first column to win when there is only one column */ }
   table.mooc tr {
     background-color: #f2f2f2; }
@@ -705,6 +712,7 @@ table.mooc {
     .content-card .title-container .title {
       text-transform: uppercase; }
     .content-card .title-container .date {
+      height: 24px;
       font-size: 14px;
       text-transform: uppercase; }
   .content-card .image-container {
@@ -865,6 +873,9 @@ table.mooc {
         display: inline-block;
         line-height: 0px;
         padding: 6px; }
+      #footer .social .buttons a:hover, #footer .social .buttons a:focus {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 100%; }
       #footer .social .buttons img {
         height: 24px;
         width: 24px; }
@@ -2248,12 +2259,12 @@ input:focus {
 }
 */
 .to_top {
-  position: absolute;
+  position: fixed;
   width: 33px;
-  display: inline-block;
   height: 18px;
-  right: 110px;
-  bottom: 30px;
+  display: inline-block;
+  right: 45px;
+  bottom: 45px;
   background: url(/static/img/anchor.png); }
 
 /*

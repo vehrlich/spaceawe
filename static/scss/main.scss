@@ -615,6 +615,12 @@ body.single #header, #header.small, .header-small {
 	right: 0px;
 	margin: auto;
 }
+.padded-top {
+	padding-top: $padding;
+}
+.padded-bottom {
+	padding-bottom: $padding;
+}
 .padded {
 	padding: $padding;
 }
@@ -696,6 +702,7 @@ table td, table th {
 	padding: $baseline/2 0;
 }
 table.mooc {
+	margin-top: $padding;
 	tr {
 		background-color: $color-cycle-pager-2;
 	}
@@ -731,6 +738,7 @@ table.mooc {
 			text-transform: uppercase;
 		}
 		.date {
+			height: $baseline;
 			font-size: $font-size-heading3;
 			text-transform: uppercase;		
 		}
@@ -919,6 +927,10 @@ table.mooc {
 				display: inline-block;
 				line-height: 0px;
 				padding: 6px;
+			}
+			a:hover, a:focus {
+				background: rgba(0,0,0,0.2);
+				border-radius: 100%;
 			}
 			img {
 				height: $baseline;
@@ -1822,13 +1834,13 @@ input:focus {
 */
 
 .to_top {
-    position: absolute;
-    width: 33px;
-    display: inline-block;
-    height: 18px;
-    right: 110px;
-    bottom: 30px;
-    background: url(/static/img/anchor.png);
+	position: fixed;
+	width: 33px;
+	height: 18px;
+	display: inline-block;
+	right: $padding;
+	bottom: $padding;
+	background: url(/static/img/anchor.png);
 }
 
 /*

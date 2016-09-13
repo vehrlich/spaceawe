@@ -2,8 +2,8 @@
 
 {% lazy_paginate 9 object_list.all as page_object_list %}
 
-<div class="padded">
-	<ol class="padded-list">
+<div class="padded-h">
+	<ol class="list-3col">
 {% for object in page_object_list %}
 
     {% include 'news/article_list_item.html' %}

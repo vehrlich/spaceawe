@@ -75,18 +75,19 @@
             </div>
         </div>
         
-        <div class="more-container-header pure-g">
-            <div class="pure-u-1 list-header">
-                <div class="title">{% trans "more news" %}</div>
-            </div>
-            <div class="pure-u-1 list-header-padding"></div>
-        </div>
+{% if random|length > 0 %}
+		<div class="more-container-header pure-g">
+			<div class="pure-u-1 list-header">
+				<div class="title">{% trans "more news" %}</div>
+			</div>
+			<div class="pure-u-1 list-header-padding"></div>
+		</div>
 
-        <div class="thumbnailed-list more-container-list pure-g">
-        	<div class="padded-h">
-        		<ol class="padded-list list-3col">
-			{% for object in random|slice:":3" %}
-				{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+		<div class="thumbnailed-list more-container-list pure-g">
+			<div class="padded-h">
+				<ol class="padded-list list-3col">
+					{% for object in random|slice:":3" %}
+					{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
 					<li><div class="list-item-container">
 						<div class="list-item scoops" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
 							<div class="link-container">
@@ -105,13 +106,13 @@
 							</div>
 						</div>
 					</div></li>
-				{% endthumbnail %}
-			{% endfor %}
+					{% endthumbnail %}
+					{% endfor %}
 				</ol>
 				<div style="clear:both;"></div>
 			</div>
-
-        </div>
-    </div>
+		</div>
+{% endif %}
+	</div>
 
 {% endblock %}
