@@ -37,8 +37,13 @@ body {
 .fake-padding {
   height: 120px; }
 
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
 ul, ol {
-  list-style: disc;
   margin-left: 1em; }
 
 ul li, ol li {
@@ -58,11 +63,17 @@ h2, h3 {
 h4, h5, h6 {
   font-size: 14px; }
 
-p, ul, ol {
+p, ul, ol, table {
   margin-bottom: 24px; }
 
 p:last-child {
   margin-bottom: 0px; }
+
+b, strong {
+  font-weight: 700; }
+
+i, em {
+  font-style: italic; }
 
 #header {
   background: url(/static/img/news_head2.png) no-repeat right 45px, url(/static/img/news_dote.png) no-repeat center top, #fff;
@@ -678,7 +689,12 @@ table td, table th {
   letter-spacing: 0.1em;
   font-size: 14px;
   line-height: 24px;
-  padding: 12px 0; }
+  padding: 6px 12px;
+  border: 1px solid #444444; }
+
+table th {
+  background-color: #444444;
+  color: white; }
 
 table.mooc {
   margin-top: 45px;

@@ -90,8 +90,13 @@ body {
 
 .fake-padding { height: $header-height-normal; }
 
-ul, ol {
+ul {
 	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ul, ol {
 	margin-left: 1em;
 }
 ul li, ol li {
@@ -108,11 +113,17 @@ h2,h3 {
 h4,h5,h6 {
 	font-size: $font-size-heading3;
 }
-p, ul, ol {
+p, ul, ol, table {
 	margin-bottom: $baseline;
 }
 p:last-child {
 	margin-bottom: 0px;
+}
+b, strong {
+	font-weight: 700;
+}
+i, em {
+	font-style: italic;
 }
 
 #header {
@@ -699,7 +710,12 @@ body.single #header, #header.small, .header-small {
 
 table td, table th {
 	@include normaltext();
-	padding: $baseline/2 0;
+	padding: $baseline/4 $baseline/2;
+	border: 1px solid #444444;
+}
+table th {
+	background-color: #444444;
+	color: white;
 }
 table.mooc {
 	margin-top: $padding;
@@ -1792,6 +1808,7 @@ input:focus {
 .content-main-column {
     right: 25%;
 }
+
 
 /* REMOVE-STUART
 .search_head {
