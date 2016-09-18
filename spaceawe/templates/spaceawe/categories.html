@@ -19,7 +19,6 @@
 
 {% block extra_js %}
   {{ block.super }}
-<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -38,47 +37,72 @@
                         </div>
                     </div></div>
                 </div>
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#sections"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
         </div>
     </div>
 
-    <div class="pure-g">
-        <div class="title-container pure-u-1" aria-haspopup="true">
-            <div class="title">{% trans 'Related content' %}</div>    
+    <div class="thumbnailed-list pure-g">
+		<div id="main"></div>
+        <div class="title-container pure-u-1 text-content smartembed" aria-haspopup="true">
+            <h1 class="title">{% trans 'Related content' %}</h1>    
         </div>
     </div>
 
     {% with object_list=scoops %}{% if object_list %}
     <div class="thumbnailed-list scoops pure-g">
         <div class="pure-u-1 list-header">
-            <div class="title">{{ SECTIONS.scoops.title }}</div>
+            <h2 class="title">{{ SECTIONS.scoops.title }}</h2>
         </div>
-        {% include 'spacescoops/article_list_page_in_category.html' %}
+		<div class="row">
+			<div class="padded-h">
+				<ol class="padded-list">
+					{% include 'spacescoops/article_list_page_in_category.html' %}
+				</ol>
+	        </div>
+	    </div>
     </div>
     {% endif %}{% endwith %}
 
     {% with object_list=games %}{% if object_list %}
     <div class="thumbnailed-list games pure-g">
         <div class="pure-u-1 list-header">
-            <div class="title">{{ SECTIONS.games.title }}</div>
+            <h2 class="title">{{ SECTIONS.games.title }}</h2>
         </div>
-        {% include 'games/game_list_page_in_category.html' %}
+		<div class="row">
+			<div class="padded-h">
+				<ol class="padded-list">
+			        {% include 'games/game_list_page_in_category.html' %}
+				</ol>
+	        </div>
+	    </div>
     </div>
     {% endif %}{% endwith %}
 
     {% with object_list=activities %}{% if object_list %}
     <div class="thumbnailed-list activities pure-g">  
         <div class="pure-u-1 list-header">
-            <div class="title">{{ SECTIONS.activities.title }}</div>
+            <h2 class="title">{{ SECTIONS.activities.title }}</h2>
         </div>
-        {% include 'activities/activity_list_page_in_category.html' %}
+		<div class="row">
+			<div class="padded-h">
+				<ol class="padded-list">
+			        {% include 'activities/activity_list_page_in_category.html' %}
+				</ol>
+	        </div>
+	    </div>
     </div>
     {% endif %}{% endwith %}
 
 
     <div id="categories" class="pure-g">
+		<div class="row">
+			<div class="padded-h">
+				<ol class="list-4col">
     {% include 'spaceawe/categories_bigicons.html' %}
+				</ol>
+	        </div>
+	    </div>
     </div>
 
 {% endblock %}

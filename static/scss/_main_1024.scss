@@ -15,7 +15,6 @@ $header-height-small: 60px;
   .menu-bar {
     display: table;
     position: absolute;
-    margin-top: 15px;
     width: 100%;
     > div {
       display: table-cell;
@@ -30,19 +29,19 @@ $header-height-small: 60px;
       }
     }
     text-transform: uppercase;
-    font-size: 11px;
     a {
-      // display: inline-block;
+      display: inline-block;
       text-decoration: none;
       color: inherit;
-      margin: 2em;
+      padding: 18px 0 15px 0;
+      margin: 0 1.5em;
     }
   }
   .logo {
     margin-top: 20px;
     margin-bottom: 24px;
     .logo-el {
-      height: 60px;
+      height: 2.5em;
       width: 146px;
     }
   }
@@ -71,12 +70,14 @@ $header-height-small: 60px;
 
 #footer {
   .social {
-    height: 250px;
     .buttons {
       padding-top: 40px;
-      img {
-        height: 40px; width: 40px;
+      a {
         padding: 12px;
+      }
+      img {
+        height: 40px;
+        width: 40px;
       }
     }
   }
@@ -94,7 +95,7 @@ body.homepage {
     .logo {
       margin-top: 35px;
       .logo-el {
-        height: 90px;
+        height: 3.5em;
         width: 212px; /**/
       }
     }
@@ -102,7 +103,7 @@ body.homepage {
       .logo {
         margin-top: 8px;
         .logo-el {
-          height: 43px;
+          height: 1.8em;
         }
       }
     }
@@ -120,9 +121,6 @@ body.single {
 #sections {
   .section {
     height: 460px;
-    .title {
-      font-size: 36px;      
-    }
   }
 }
 
@@ -163,14 +161,10 @@ body.single {
   }
 }
 
-.more-container-header {
-  .list-header-padding {
-    height: 130px;
-  } 
-}
+/* REMOVE STUART
 .more-container-list {
-  padding: 10px;
   .list-item-container{
     margin: 10px;
   } 
 }
+*/

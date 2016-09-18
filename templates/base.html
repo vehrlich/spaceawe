@@ -48,7 +48,7 @@
 {% block extra_head %}{% endblock %}
 
     </head>
-    <body id="to_top" class="{% block extra_body_class %}{% endblock %}">
+    <body id="top" class="{% block extra_body_class %}{% endblock %}">
     <div id="header" class="{% block extra_header_class %}{% endblock %}">
         <div class="search_head">
             <form >
@@ -59,15 +59,15 @@
         </div>
         <div class="menu-bar">
             <div class="menu-bar-left">
-                <a href="{% url 'news:list' %}">{{ SECTIONS.news.menu }}</a>
-                <a href="{% url 'careers:list' %}">{{ SECTIONS.careers.menu }}</a>
-                <a href="{% url 'scoops:list' %}">{{ SECTIONS.scoops.menu }}</a>
-                <a href="{% url 'games:list' %}">{{ SECTIONS.games.menu }}</a>
+                <a href="{% url 'news:list' %}" class="menu-news">{{ SECTIONS.news.menu }}</a>
+                <a href="{% url 'careers:list' %}" class="menu-careers">{{ SECTIONS.careers.menu }}</a>
+                <a href="{% url 'scoops:list' %}" class="menu-scoops">{{ SECTIONS.scoops.menu }}</a>
+                <a href="{% url 'games:list' %}" class="menu-games">{{ SECTIONS.games.menu }}</a>
             </div>
             <div class="menu-bar-right">
-                <a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
-                <a href="{% url 'soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
-                <a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
+                <a href="{% url 'activities:list' %}" class="menu-activities">{{ SECTIONS.activities.menu }}</a>
+                <a href="{% url 'soon_skills' %}" class="menu-skills">{{ SECTIONS.skills.menu }}</a>
+                <a href="{% url 'about' %}" class="menu-about">{{ SECTIONS.about.menu }}</a>
             </div>
         </div>
         <div class="logo"><a href="/"><span class="logo-el"></span></a></div>
@@ -125,8 +125,8 @@
         <div class="copyright">
             <div class="copyright-content">
                 <div class="eu-flag"><img src="{% static 'img/eu.svg' %}"></div>
-                <p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
-                <p>"This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="color: #fff;">Creative Commons Attribution 4.0 International License</a>.</p>
+                <p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}
+                <br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="color: #fff;">Creative Commons Attribution 4.0 International License</a>.</p>
 
             </div>
         </div>
@@ -138,7 +138,7 @@
                 <a href="http://www.youtube.com/channel/UCffM5OiBW2VjvkH5695rOGw" target="_blank"><img src="{% static 'img/icons/social/icon_sm_youtube_w.svg' %}"></a>
                 <a href="mailto:euspaceawe@eun.org"><img src="{% static 'img/icons/social/icon_sm_mail_w.svg' %}"></a>
             </div>
-            <a href="#to_top" class="to_top"></a>
+            <a href="#top" class="to_top"></a>
         </div>
     </div>
 

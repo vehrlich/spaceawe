@@ -12,7 +12,6 @@
 
 {% block extra_js %}
   {{ block.super }}
-<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -35,30 +34,25 @@
         {% endthumbnail %}
     {% endfor %}
 
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
         </div>
     </div>
     <div id="list" class="thumbnailed-list scoops page2 snap pure-g">
-
+		<div id="main"></div>
         <div class="pure-u-1 text-content smartembed">
             {% smartembed 'section-spacescoop-intro' %}
         </div>
 
         <div class="pure-u-1 list-header">
-            <div class="title">{% trans "find by category" %}</div>
+            <h2 class="title">{% trans "find by category" %}</h2>
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/scoops/">{% trans "all" %}</a></div>
             </div>
-            <div class="filters">
-                <div class="filter-topic-image"><a href="/scoops/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_red.svg' %}" /></div><div>{{ CATEGORIES.space.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/scoops/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_red.svg' %}" /></div><div>{{ CATEGORIES.earth.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/scoops/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_red.svg' %}" /></div><div>{{ CATEGORIES.navigation.filter_description }}</div></a></div>
-            </div>
+            {% include 'filters.html' %}
         </div>
 
-    {% include page_template %}
-
+		{% include page_template %}
     </div>
 
 {% endblock %}

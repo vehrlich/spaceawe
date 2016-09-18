@@ -12,7 +12,6 @@
 
 {% block extra_js %}
   {{ block.super }}
-<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -35,14 +34,14 @@
         {% endthumbnail %}
     {% endfor %}
 
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
         </div>
     </div>
     <div id="list" class="thumbnailed-list games page2 snap pure-g">
+    	<div id="main"></div>
         <div class="pure-u-1 text-content smartembed">
             {% smartembed 'section-games-intro' %}
-            <p>&nbsp;</p>
             <p><a href="https://issuu.com/unawe/docs/citizen_science_booklet/1?e=2518028/34581362" target="_blank">MISSION: SPACE EXPLORER</a></p>
             <p>The online booklet with apps and projects for Space Exploration</p>
         </div>
@@ -52,12 +51,7 @@
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/games/">{% trans "all" %}</a></div>
             </div>
-            <div class="filters">
-                <div class="filter-topic-image"><a href="/games/category/space/"><div><img src="{% static 'img/icons/categories/icon_space_orange.svg' %}" /></div><div>{{ CATEGORIES.space.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/games/category/earth/"><div><img src="{% static 'img/icons/categories/icon_earth_orange.svg' %}" /></div><div>{{ CATEGORIES.earth.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/games/category/navigation/"><div><img src="{% static 'img/icons/categories/icon_navigation_orange.svg' %}" /></div><div>{{ CATEGORIES.navigation.filter_description }}</div></a></div>
-                <div class="filter-topic-image"><a href="/games/category/heritage/"><div><img src="{% static 'img/icons/categories/icon_heritage_orange.svg' %}" /></div><div>{{ CATEGORIES.heritage.filter_description }}</div></a></div>
-            </div>
+            {% include 'filters.html' %}
         </div>
 
     {% include page_template with item_count=9 %}

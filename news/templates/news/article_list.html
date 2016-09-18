@@ -12,7 +12,6 @@
 
 {% block extra_js %}
   {{ block.super }}
-<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -35,11 +34,12 @@
         {% endthumbnail %}
     {% endfor %}
 
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#list"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
+                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
         </div>
     </div>
     <div id="list" class="thumbnailed-list news page2 snap pure-g">
+    	<div id="main" class="padded-top"></div>
 
     {% include page_template with item_count=9 %}
 

@@ -9,4 +9,8 @@ class DevelopView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(DevelopView, self).get_context_data(**kwargs)
         context['moocs'] = Mooc.objects.all().order_by('position')
+        if 'category' in self.kwargs:
+            context['category'] = self.kwargs['category']
+        else:
+            context['category'] = ''
         return context

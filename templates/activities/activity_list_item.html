@@ -1,22 +1,23 @@
 {% load staticfiles thumbnail %}
 
 {% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
-    <div class="pure-u-1 pure-u-sm-1-2 pure-u-lg-1-3"><div class="list-item-container">
+    <li><div class="list-item-container">
         <div class="list-item activities" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
-            <div class="color"></div>
-            <div class="color-black"></div>
-            <div class="text">
-                <div class="date">{{ object.release_date|date:"DATE_FORMAT" }}</div>
-                <div class="title">{{ object.title }}</div>
-                <div class="bottom">
-                    <div class="age">Age: {{ object.age_range }}</div>
-                    <div class="theme">{% include 'categories/categories_icons.html' %}</div>
-                    <div class="expand"><a href="{% url 'activities:detail' code=object.code slug=object.slug %}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
-                </div>
-            </div>
             <div class="link-container">
-                <a href="{% url 'activities:detail' code=object.code slug=object.slug %}"><div class="link"></div></a>
+                <a href="{% url 'activities:detail' code=object.code slug=object.slug %}">
+					<div class="color"></div>
+					<div class="color-black"></div>
+					<div class="text">
+						<div class="date">{{ object.release_date|date:"DATE_FORMAT" }}</div>
+						<div class="title">{{ object.title }}</div>
+						<div class="age">Age: {{ object.age_range }}</div>
+						<div class="theme">{% include 'categories/categories_icons.html' %}</div>
+						<div class="bottom">
+							<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+						</div>
+					</div>
+				</a>
             </div>
         </div>
-    </div></div>
+    </div></li>
 {% endthumbnail %}

@@ -1,64 +1,145 @@
-var small_nav_height = 60; // height of small navigation header
+// Define the minimum and maximum height of the header bar on this page
+// These are dummy values; we'll get them from the CSS later
+var nav_height = { 'small' : 60, 'big': 215 };
 
-(function($){ // create closure so we can safely use $ as alias for jQuery
-    function menu_main_click() {
-        $('#menu-main').toggleClass('sp-menu-open');
-        $('#menu-language').removeClass('sp-menu-open');
-    }
-    function menu_language_click() {
-        $('#menu-language').toggleClass('sp-menu-open');
-        $('#menu-main').removeClass('sp-menu-open');        
-    }
-    function resize_me() {
-        // if ($(window).width() < 1024) {
-            // var h = $(window).height() - $('.feature-container .fake-padding').height();
-            var h = $('#header').height();
-            $('.feature-container .fake-padding').height(h);
-            $('.feature-container .cycle-slideshow').height($(window).height() - h);
-            // if ($(window).width() >= 1024) {
-            //     $('#header .logo img').height(.40*h);
-            //     $('#header .slogan').css('font-size', 30 + 'px');
-            // }
-    }
+// Create closure so we can safely use $ as alias for jQuery
+(function($){
+
+	function spaceAwareness(){
+		this.pushstate = !!(window.history && history.pushState);
+		var _obj = this;
+
+		$('a').each(function(e){
+			var href = $(this).attr('href');
+			// Any links on the page that go to page anchors on this page,
+			// except placeholder anchors, need to stop the default behaviour
+			if(href == window.location.pathname || href.indexOf("#")==0){
+				if(href.indexOf('#') >= 0 && href != "#"){
+					// Attach a click event
+					$(this).on('click',function(e){
+						// Stop the default behaviour
+						e.preventDefault();
+						e.stopPropagation();
+						// Update the history state
+						history.pushState({},"SpaceAwareness",href);
+						// Do the navigation step
+						_obj.navigate(e);
+					});
+				}
+			}
+		});
+		// Any anchor changes (say by manual edit of the URL bar) need to have the navigation function called
+		window[(this.pushstate) ? 'onpopstate' : 'onhashchange'] = function(e){ _obj.navigate(e); };
+
+		// A function that scrolls down/up the page to the anchor point
+		this.navigate = function(e){
+			
+			// Find the anchor point
+			var anchor = location.href.split("#")[1];
+
+			// Get the y location of this anchor
+			var y = 0;
+			if(anchor){
+				if($('#'+anchor).length == 1){
+					y = $('#'+anchor).offset().top;
+					if(anchor != "main") y -= nav_height.small;
+				}else{
+					y = -1;
+				}
+			}
+			// If we want the top, that is at y = 0
+			if(anchor == "top") y = 0;
+
+			if(y >= 0) $('html, body').animate({ scrollTop: y }, 800);
+		}
+		return this;
+	}
+	
+	function menu_main_click() {
+		$('#menu-main').toggleClass('sp-menu-open');
+		$('#menu-language').removeClass('sp-menu-open');
+	}
+	function menu_language_click() {
+		$('#menu-language').toggleClass('sp-menu-open');
+		$('#menu-main').removeClass('sp-menu-open');        
+	}
+	function resize_me() {
+		var h = $('#header').height();
+		$('.feature-container .fake-padding').height(h);
+		$('.feature-container .cycle-slideshow').height($(window).height() - h);
+	}
+
+	function getStyleSheetPropertyValue(selectorText, propertyName) {
+		// search backwards because the last match is more likely the right one
+		for(var s= document.styleSheets.length - 1; s >= 0; s--) {
+			// Use a try/catch to stop Firefox throwing a security error for stylesheets originating from a different domain. 
+			// See http://stackoverflow.com/questions/21642277/security-error-the-operation-is-insecure-in-firefox-document-stylesheets?noredirect=1&lq=1
+			try {
+				var cssRules = document.styleSheets[s].rules || document.styleSheets[s].cssRules
+				for (var c=0; c < cssRules.length; c++) {
+					if (cssRules[c].selectorText === selectorText) return cssRules[c].style[propertyName];
+				}
+			}catch(e){
+
+			}
+		}
+		return null;
+	}
+
+	$(document).ready(function(){
+		// Get current height of header bar
+		var h = parseInt($('#header').css("height"));
+		if(typeof h === "number") nav_height.big = h;
+		// Get height it would have if the header bar was in compact mode
+		var h = getStyleSheetPropertyValue('.header-small', "height");
+		if(typeof h === "number") nav_height.small = h;
+
+		var space = new spaceAwareness();
+
+		// resize top bar on scroll
+		var y = 0;
+		var h1 = parseFloat($('.logo-el').css('height'));
+		var h2 = 43;
+		var mt = parseInt($('.logo').css('margin-top'));
+		var down,f,h;
+		function adjustHeader(){
+			down = $(document).scrollTop() > y;
+			y = $(document).scrollTop();
+			f = Math.max(0,Math.min((nav_height.big - nav_height.small - y)/(nav_height.big - nav_height.small),1));
+			h = nav_height.big - $(document).scrollTop();
+			if(h < nav_height.small) h = nav_height.small;
+
+			if(down || y >= nav_height.big || nav_height.big==nav_height.small) $('#header').addClass('small');
+			else $('#header').removeClass('small');
+			
+			if(y < nav_height.big){
+				$('.logo-el').css({'height':(h2 + f*(h1-h2))+'px'});
+				$('.logo').css({'margin-top':(8 + f*(mt-8))+'px'});
+				$('#header').css({'height':h+'px'});
+			}else{
+				$('.logo-el').css({'height':''});
+				$('.logo').css({'margin-top':''});
+				$('#header').css({'height':''});
+			}
+			return;
+		}
+		$(document).on('scroll', adjustHeader);
+		adjustHeader();
 
 
+		if($("div").is(".section-scoops ")) $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
+		
+		if($("div").is(".section-activities")) $('.section-activities .pure-u-1 .list-item-container .title').matchHeight(false);
 
-     // $(window).scroll(function() { 
-     //  var top = $(document).scrollTop();
-     //  if (top > 700) $('.career_menu').addClass('top_block_fixed');
-     //  else $('.career_menu').removeClass('top_block_fixed');
-     // });
-    
+		$('.close_search').click(function(e) {
+			e.preventDefault();
+			$('.search_head').removeClass('open');
+		});
 
-   
-
-    $(document).ready(function(){
-
-       if ($("div").is(".section-scoops ")) {
-          $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
-      }
-
-      if ($("div").is(".section-activities")) {
-          $('.section-activities .pure-u-1 .list-item-container .title').matchHeight(false);
-      }
-
-         $('.career_menu a').click(function() {
-            var target = $(this).attr('href');
-            $('html, body').animate({
-                scrollTop: $(target).offset().top - 130
-            }, 800);
-            return false;
-        });
-
-        $('.close_search').click(function(e) {
-            e.preventDefault();
-            $('.search_head').removeClass('open');
-        });
-
-        $('.search_btn.closed').click(function(e) {
-            e.preventDefault();
-            $('.search_head').addClass('open');
-        });
+		$('.search_btn.closed').click(function(e) {
+			e.preventDefault();
+			$('.search_head').addClass('open');
+		});
 
        
 
@@ -89,14 +170,6 @@ var small_nav_height = 60; // height of small navigation header
         });
 
       
-        $('.to_top').click(function() {
-          $('html, body').animate({
-              scrollTop: 0
-          }, 'slow');
-          return false;
-
-      });  
-
       $('.lang_btn').click(function(e) {
           e.preventDefault();
           $(this).next().toggle();
@@ -121,24 +194,26 @@ var small_nav_height = 60; // height of small navigation header
 
         // language menu
         $('#menu-language-button').on('click touchend', menu_language_click);
-        $('#menu-language').hover(menu_language_click);
+        //$('#menu-language').hover(menu_language_click);
 
         // snap scrolling
-        $(document).scrollsnap({
+        /*$(document).scrollsnap({
             snaps: '.snap',
             proximity_top: 200,
             proximity_bottom: 0,
             offset: -small_nav_height, 
             duration: 500,
             // easing: 'easeOutBack'
-        });
+        });*/
 
+/*
         // page down buttons
         $('#cover .arrow-pagedown').click(function() {
             $(window).scrollTo({top: $('#sections').offset().top-small_nav_height, left: 0 }, 500);
         });
+*/
         $('#sections .arrow-pagedown').click(function() {
-            $(window).scrollTo({top: $('#subscribe').offset().top-small_nav_height, left: 0 }, 500);
+            $(window).scrollTo({top: $('#subscribe').offset().top - nav_height.small, left: 0 }, 500);
             // $(window).scrollTo('#subscribe', 500);
         });
 
@@ -176,15 +251,6 @@ var small_nav_height = 60; // height of small navigation header
         $.endlessPaginate();
 
     });
-
-   //  $(function() {
-   //     var topPos = $('.career_menu').offset().top - 60;
-   //     $(window).scroll(function() {
-   //         var top = $(document).scrollTop();
-   //         if (top > topPos) { $('.career_menu').addClass('top_block_fixed'); } else { $('.career_menu').removeClass('top_block_fixed')}
-   //     });
-   // });
-
 
 })(jQuery);
 

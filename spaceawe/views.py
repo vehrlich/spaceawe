@@ -43,6 +43,7 @@ def categories(request, code, template='spaceawe/categories.html', extra_context
         'games': Game.objects.available().filter(**{code: True})[:3],
         'activities': Activity.objects.available().filter(**{code: True})[:3],
         'spaceawe_category': code,
+        'category': code,
     }
     if extra_context is not None:
         context.update(extra_context)

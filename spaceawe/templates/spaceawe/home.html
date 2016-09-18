@@ -9,7 +9,6 @@
 
 {% block extra_js %}
   {{ block.super }}
-<script src="{% static 'js/scripts.topbar.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -76,14 +75,11 @@
                 <div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
             </div></div></a>
         </div>
-<!--         <div class="pure-u-1">
-            <div class="arrow-pagedown-container"><a class="arrow-pagedown"><img src="{% static 'img/buttons/arrow_down_black.svg' %}"></a></div>
-        </div>
- -->
     </div>
-    <!-- <div id="categories" class="snap pure-g"> -->
-    <div id="categories" class="pure-g">
-    {% include 'spaceawe/categories_bigicons.html' %}
+		<div class="padded-h">
+		<ul id="categories" class="list-4col">
+			{% include 'spaceawe/categories_bigicons.html' %}
+		</ul>
     </div>
     <div id="subscribe" class="snap pure-g">
         <div class="subscribe-container-1 pure-u-1"><div class="subscribe-container-2"><div class="subscribe-container-3">
