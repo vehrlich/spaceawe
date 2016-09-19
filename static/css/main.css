@@ -545,6 +545,8 @@ body.single #header, #header.small, .header-small {
       font-size: 24px;
       text-transform: uppercase;
       padding: 0 45px; }
+    .thumbnailed-list .list-item .text .preview {
+      line-height: 24px; }
     .thumbnailed-list .list-item .bottom {
       position: absolute;
       bottom: 0;
@@ -679,11 +681,6 @@ body.single #header, #header.small, .header-small {
 .more-container-header {
   line-height: 0px; }
 
-/* REMOVE STUART
-.more-container-list {
-	padding: 45px 0px 0px 0px;
-}
-*/
 table td, table th {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
@@ -773,7 +770,7 @@ table.mooc {
       width: 25%; }
       .content-card .content-container .content-right-column > div {
         border-top: solid thin grey;
-        padding: 20px 0; }
+        padding: 24px 0; }
         .content-card .content-container .content-right-column > div .caption {
           font-family: "Miso", sans-serif;
           letter-spacing: 0.1em;
@@ -781,14 +778,14 @@ table.mooc {
           font-weight: 700;
           line-height: 24px;
           font-size: 20px;
-          text-transform: uppercase; }
+          text-transform: uppercase;
+          margin-bottom: 12px; }
       .content-card .content-container .content-right-column a {
         text-decoration: underline;
         color: inherit; }
       .content-card .content-container .content-right-column img.button {
-        height: 28px;
-        width: 28px;
-        margin: 6px;
+        width: 36px;
+        height: 36px;
         cursor: pointer; }
 
 .content-page {
@@ -1877,10 +1874,7 @@ body.section-careers #header.small .logo .logo-el {
   background-image: url(../img/logo.svg); }
 
 .section-careers .thumbnailed-list .list-item .text .title {
-  padding: 57px 20px 10px !important;
-  font-size: 30px;
-  font-family: "Miso", sans-serif;
-  font-weight: 700; }
+  padding-top: 45px; }
 
 .section-careers .content-card .thumbnailed-list .list-item .expand {
   padding: 7px 0 0; }
@@ -1889,25 +1883,10 @@ body.section-careers #header.small .logo .logo-el {
   width: 100%;
   margin-bottom: 140px; }
 
-.section-careers .content-card .content-container .content-main-column {
-  padding-top: 26px;
-  display: block;
-  float: left;
-  width: 74%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
 .section-careers .content-container .row:after {
   content: "";
   clear: both;
   display: block; }
-
-.section-careers .content-card .content-container .content-right-column {
-  width: 26%;
-  display: block;
-  float: left;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
 
 .section-careers .content-card .content-container {
   display: block;
@@ -1927,33 +1906,6 @@ body.section-careers #header.small .logo .logo-el {
   content: "";
   display: block;
   clear: both; }
-
-.section-careers .content-card {
-  max-width: 1360px; }
-
-.section-careers .content-card .content-container .content-right-column > div .caption {
-  font-weight: 700;
-  font-size: 25px;
-  margin-bottom: 10px; }
-
-.section-careers .content-right-column .value {
-  font-size: 16px; }
-
-.section-careers .content-card .content-container {
-  padding: 50px 44px; }
-
-.section-careers .content-card .content-container .content-right-column > div {
-  border-top: 1px solid #dddbd9; }
-
-.section-careers .content-card .content-container .content-right-column > div:first-child {
-  padding-top: 0;
-  border-top: 0; }
-
-.section-careers .content-card .content-container > .row {
-  margin: 0 -22px; }
-
-.section-careers .content-card .content-container > .row > div {
-  padding: 0px 22px; }
 
 .section-careers .content-right-column .value {
   color: #4ed8c3; }
@@ -2035,19 +1987,8 @@ a:focus {
   clear: both;
   width: 100%; }
 
-.section-careers .content-right-column img {
-  max-width: 28px; }
-
 .section-careers .thumbnailed-list .list-footer {
   padding-top: 20px; }
-
-.section-careers .content-card .content-container .content-right-column img.button {
-  max-width: 44px;
-  width: 44px;
-  height: 44px; }
-
-.section-careers .content-card .image-container {
-  height: auto; }
 
 .thumbnailed-list .list-item.active .color,
 .thumbnailed-list .list-item.active .date,
@@ -2140,7 +2081,6 @@ body.single .fake-padding {
   float: right;
   padding: 0 45px;
   display: block;
-  /*    float: left;*/
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 

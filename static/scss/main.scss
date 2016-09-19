@@ -531,6 +531,11 @@ body.single #header, #header.small, .header-small {
 			text-transform: uppercase;
 			padding: 0 $padding;
 		}
+		.text {
+			.preview {
+				line-height: $baseline;
+			}
+		}
 		.bottom {
 			position: absolute;
 			bottom: 0;
@@ -702,11 +707,6 @@ body.single #header, #header.small, .header-small {
 .more-container-header {
 	line-height: 0px;
 }
-/* REMOVE STUART
-.more-container-list {
-	padding: 45px 0px 0px 0px;
-}
-*/
 
 table td, table th {
 	@include normaltext();
@@ -809,11 +809,12 @@ table.mooc {
 			width: 25%;
 			> div {
 				border-top: solid thin grey;
-				padding: 20px 0;
+				padding: $baseline 0;
 				.caption {
 					@include heading();
 					font-size: $font-size-heading2;
 					text-transform: uppercase;
+					margin-bottom: $baseline/2;
 				}
 			}
 			a {
@@ -821,9 +822,8 @@ table.mooc {
 				color: inherit;
 			}
 			img.button {
-				height: 28px;
-				width: 28px;
-				margin: 6px;
+				width: 1.5*$baseline;
+				height: 1.5*$baseline;
 				cursor: pointer;
 			}
 		}
@@ -1365,10 +1365,7 @@ body.section-careers #header.small .logo .logo-el {
 }
 
 .section-careers .thumbnailed-list .list-item .text .title {
-    padding: 57px 20px 10px !important;
-    font-size: 30px;
-    font-family: "Miso", sans-serif;
-    font-weight: 700;
+    padding-top: $padding;
 }
 
 .section-careers .content-card .thumbnailed-list .list-item .expand {
@@ -1380,14 +1377,6 @@ body.section-careers #header.small .logo .logo-el {
     margin-bottom: 140px;
 }
 
-.section-careers .content-card .content-container .content-main-column {
-    padding-top: 26px;
-    display: block;
-    float: left;
-    width: 74%;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 .section-careers .content-container .row:after {
     content: "";
@@ -1395,13 +1384,6 @@ body.section-careers #header.small .logo .logo-el {
     display: block;
 }
 
-.section-careers .content-card .content-container .content-right-column {
-    width: 26%;
-    display: block;
-    float: left;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
 
 .section-careers .content-card .content-container {
     display: block;
@@ -1425,41 +1407,6 @@ body.section-careers #header.small .logo .logo-el {
     content: "";
     display: block;
     clear: both;
-}
-
-.section-careers .content-card {
-    max-width: 1360px;
-}
-
-.section-careers .content-card .content-container .content-right-column > div .caption {
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 10px;
-}
-
-.section-careers .content-right-column .value {
-    font-size: 16px;
-}
-
-.section-careers .content-card .content-container {
-    padding: 50px 44px;
-}
-
-.section-careers .content-card .content-container .content-right-column > div {
-    border-top: 1px solid #dddbd9;
-}
-
-.section-careers .content-card .content-container .content-right-column > div:first-child {
-    padding-top: 0;
-    border-top: 0;
-}
-
-.section-careers .content-card .content-container > .row {
-    margin: 0 -22px;
-}
-
-.section-careers .content-card .content-container > .row > div {
-    padding: 0px 22px;
 }
 
 .section-careers .content-right-column .value {
@@ -1559,24 +1506,9 @@ a:focus {
     width: 100%;
 }
 
-.section-careers .content-right-column img {
-    max-width: 28px;
-}
-
-
 
 .section-careers .thumbnailed-list .list-footer {
     padding-top: 20px;
-}
-
-.section-careers .content-card .content-container .content-right-column img.button {
-    max-width: 44px;
-    width: 44px;
-    height: 44px;
-}
-
-.section-careers .content-card .image-container {
-    height: auto;
 }
 
 .thumbnailed-list .list-item.active .color,
@@ -1602,7 +1534,7 @@ a:focus {
 }
 
 .search_wrapper .content-container > .row > div {
-    padding: 0 45px;
+    padding: 0 $padding;
 }
 
 .search_preview p a,
@@ -1678,7 +1610,7 @@ body.single .fake-padding {
 
 .search_wrapper.content-card .content-container .content-main-column {
     padding-top: 26px;
-    padding: 0 0 0 45px;
+    padding: 0 0 0 $padding;
     display: block;
     float: left;
     width: 75%;
@@ -1689,9 +1621,8 @@ body.single .fake-padding {
 .search_wrapper.content-card .content-container .content-right-column {
     width: 25%;
     float: right;
-    padding: 0 45px;
+    padding: 0 $padding;
     display: block;
-    /*    float: left;*/
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
