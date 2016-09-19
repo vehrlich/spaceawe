@@ -773,7 +773,7 @@ table.mooc {
       min-width: 100px;
       width: 25%; }
       .content-card .content-container .content-right-column > div {
-        border-top: solid thin grey;
+        border-top: 1px solid #dddbd9;
         padding: 24px 0; }
         .content-card .content-container .content-right-column > div .caption {
           font-family: "Miso", sans-serif;

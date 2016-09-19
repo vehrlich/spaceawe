@@ -813,7 +813,7 @@ table.mooc {
 			min-width: 100px;
 			width: 25%;
 			> div {
-				border-top: solid thin grey;
+				border-top: 1px solid #dddbd9;
 				padding: $baseline 0;
 				.caption {
 					@include heading();
