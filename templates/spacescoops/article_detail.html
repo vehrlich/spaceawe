@@ -21,7 +21,7 @@
         <div class="fake-padding"></div>
 
         <div class="title-container">
-            <div class="title">{{ object.title }}</div>
+            <h1 class="title">{{ object.title }}</h1>
             <div class="date">{{ object.release_date|date:"DATE_FORMAT" }}</div>
         </div>
     {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
@@ -54,7 +54,8 @@
 
                 {% if not object.is_translation_fallback %}
                 <div class="download">
-                    <a href="?format=pdf">{% trans "download" %}<br><img class="button" src="{% static 'img/icon_download.svg' %}" /></a>
+	                <div class="caption">{% trans "download" %}</div>
+                    <a href="?format=pdf"><img class="button" src="{% static 'img/icon_download.svg' %}" /></a>
                 </div>
                 {% endif %}
                 <div class="social-sharing">

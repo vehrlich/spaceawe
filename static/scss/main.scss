@@ -31,7 +31,7 @@ $baseline: 24px;
 $font-size-big: 36px;
 $font-size-heading: 28px;
 $font-size-heading2: 20px;
-$font-size-heading3: 14px;
+$font-size-heading3: 16px;
 $font-size-normal: 14px;
 $font-size-small: 12px;
 $padding: 45px;
@@ -749,12 +749,14 @@ table.mooc {
 
 	.title-container {
 		@include heading();
-		padding: 10px 20px;
+		padding: $padding/2 $padding;
 		.title {
 			text-transform: uppercase;
+			font-size: $font-size-big;
+			line-height: 1.5*$baseline;
+			margin: 0;
 		}
-		.date {
-			height: $baseline;
+		.date, .teaser {
 			font-size: $font-size-heading3;
 			text-transform: uppercase;		
 		}
@@ -775,6 +777,9 @@ table.mooc {
 		}
 		.section-content {
 			margin-bottom: $baseline;
+		}
+		.section-content:last-child {
+			margin-bottom: 0;
 		}
 		.section-content p img {
 			max-width: 100%;
@@ -1294,19 +1299,6 @@ body.single {
     height: 100%;
     margin-bottom: 0;
 }
-.section-careers .content-card .title-container .title {
-	@include heading();
-    font-size: 48px;
-    font-weight: bold;
-    line-height: $baseline*2;
-}
-
-.section-careers .content-card .title-container .teaser {
-	@include normaltext();
-    font-size: $font-size-heading2;
-    padding: 6px 0 10px;
-    color: black;
-}
 
 /* STUART: Hide pointless navigation elements. Why do *two* language menus exist? */
 .search_head, #menu-language1 {
@@ -1563,12 +1555,8 @@ a:focus {
     margin-bottom: 3px;
 }
 
-.date {
+.date, .teaser {
     color: #818181;
-}
-
-body.single .fake-padding {
-    height: 80px;
 }
 
 .search_img {
@@ -1980,12 +1968,6 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
 
 /*search*/
 
-
-/*all site*/
-/*
-#header .menu-bar {
-    margin-top: 40px;
-}*/
 
 .sp-links:first-child {
     margin-top: 0;

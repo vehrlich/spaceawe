@@ -61,7 +61,7 @@ h2, h3 {
   font-size: 20px; }
 
 h4, h5, h6 {
-  font-size: 14px; }
+  font-size: 16px; }
 
 p, ul, ol, table {
   margin-bottom: 24px; }
@@ -721,12 +721,14 @@ table.mooc {
     font-size: 28px;
     font-weight: 700;
     line-height: 24px;
-    padding: 10px 20px; }
+    padding: 22.5px 45px; }
     .content-card .title-container .title {
-      text-transform: uppercase; }
-    .content-card .title-container .date {
-      height: 24px;
-      font-size: 14px;
+      text-transform: uppercase;
+      font-size: 36px;
+      line-height: 36px;
+      margin: 0; }
+    .content-card .title-container .date, .content-card .title-container .teaser {
+      font-size: 16px;
       text-transform: uppercase; }
   .content-card .image-container {
     height: 400px;
@@ -741,6 +743,8 @@ table.mooc {
       padding-bottom: 10px; }
     .content-card .content-container .section-content {
       margin-bottom: 24px; }
+    .content-card .content-container .section-content:last-child {
+      margin-bottom: 0; }
     .content-card .content-container .section-content p img {
       max-width: 100%;
       display: block; }
@@ -1726,25 +1730,6 @@ body.section-about .wrapper_block_previews h3 {
   height: 100%;
   margin-bottom: 0; }
 
-.section-careers .content-card .title-container .title {
-  font-family: "Miso", sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 24px;
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 48px; }
-
-.section-careers .content-card .title-container .teaser {
-  font-family: "Ubuntu", sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 14px;
-  line-height: 24px;
-  font-size: 20px;
-  padding: 6px 0 10px;
-  color: black; }
-
 /* STUART: Hide pointless navigation elements. Why do *two* language menus exist? */
 .search_head, #menu-language1 {
   display: none; }
@@ -1835,10 +1820,6 @@ body.section-about .wrapper_block_previews h3 {
     width: 145px; }
   .content-card .image-container {
     height: 550px; }
-  .content-card .title-container {
-    padding: 15px 40px; }
-    .content-card .title-container .title {
-      font-size: 32px; }
   .content-card .content-container {
     display: table; }
     .content-card .content-container .content-main-column {
@@ -2032,11 +2013,8 @@ a:focus {
   line-height: 1 !important;
   margin-bottom: 3px; }
 
-.date {
+.date, .teaser {
   color: #818181; }
-
-body.single .fake-padding {
-  height: 80px; }
 
 .search_img {
   width: 19%; }
@@ -2382,11 +2360,6 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
   color: #000; }
 
 /*search*/
-/*all site*/
-/*
-#header .menu-bar {
-    margin-top: 40px;
-}*/
 .sp-links:first-child {
   margin-top: 0; }
 

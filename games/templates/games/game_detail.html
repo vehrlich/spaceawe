@@ -21,8 +21,8 @@
         <div class="fake-padding"></div>
 
         <div class="title-container">
-            <div class="title">{{ object.title }}</div>
-            <div class="date">{{ object.teaser }}</div>
+            <h1 class="title">{{ object.title }}</h1>
+            <div class="teaser">{{ object.teaser }}</div>
         </div>
     {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
         <div class="image-container" style="background-image: url({{ im.url }})"></div>

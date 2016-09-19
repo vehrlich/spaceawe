@@ -31,7 +31,7 @@
 		<div class="fake-padding"></div>
 
 		<div class="title-container">
-			<p class="title">{{ object.title }}</p>
+			<h1 class="title">{{ object.title }}</h1>
 			<p class="teaser">{{ object.teaser }}</p>
 		</div>
 		{% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
@@ -46,23 +46,23 @@
 				</div>
 				<div class="content-right-column">
 					<div>
-						<div class="caption">Field</div>
+						<div class="caption">{% trans "Field" %}</div>
 						<div class="value">{{ object.field }}</div>
 					</div>
 					<div>
-						<div class="caption">Type</div>
+						<div class="caption">{% trans "Type" %}</div>
 						<div class="value">{{ object.career_type }}</div>
 					</div>
 					<div>
-						<div class="caption">Level of stydy</div>
+						<div class="caption">{% trans "Level of study" %}</div>
 						<div class="value">{{ object.level_of_study }}</div>
 					</div>
 					<div>
-						<div class="caption">Interview</div>
+						<div class="caption">{% trans "Interview" %}</div>
 						<div class="value">{{ object.interview }}</div>
 					</div>
 					<div>
-						<div class="caption">Download</div>
+						<div class="caption">{% trans "Download" %}</div>
 						<a href="{{ object.pdf_url}}" class="value"><img src="{% static 'img/icon_download.svg' %}" class="button" /></a>
 					</div>
 					<div class="social-sharing">
