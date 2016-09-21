@@ -188,39 +188,20 @@ var nav_height = { 'small' : 60, 'big': 215 };
       });
 
 
-        // main menu
-        $('#menu-main-button').on('click touchend', menu_main_click);
-        $('#menu-main').hover(menu_main_click);
+		// main menu
+		$('#menu-main-button').on('click touchend', menu_main_click);
 
-        // language menu
-        $('#menu-language-button').on('click touchend', menu_language_click);
-        //$('#menu-language').hover(menu_language_click);
+		// language menu
+		$('#menu-language-button').on('click touchend', menu_language_click);
 
-        // snap scrolling
-        /*$(document).scrollsnap({
-            snaps: '.snap',
-            proximity_top: 200,
-            proximity_bottom: 0,
-            offset: -small_nav_height, 
-            duration: 500,
-            // easing: 'easeOutBack'
-        });*/
-
-/*
-        // page down buttons
-        $('#cover .arrow-pagedown').click(function() {
-            $(window).scrollTo({top: $('#sections').offset().top-small_nav_height, left: 0 }, 500);
-        });
-*/
-        $('#sections .arrow-pagedown').click(function() {
-            $(window).scrollTo({top: $('#subscribe').offset().top - nav_height.small, left: 0 }, 500);
-            // $(window).scrollTo('#subscribe', 500);
-        });
+		$('#sections .arrow-pagedown').click(function() {
+			$(window).scrollTo({top: $('#subscribe').offset().top - nav_height.small, left: 0 }, 500);
+		});
 
 
-        // resize main feature
-        $(window).resize(resize_me);
-        resize_me();
+		// resize main feature
+		$(window).resize(resize_me);
+		resize_me();
 
         // social sharing
         $('#twitter').sharrre({

@@ -115,65 +115,61 @@
         </div>
     </div>
     <div class="know_us">
-    	 <div id="main"></div>
-    <div class="know_us_block1">
-        <div class="content-page-1270 content-page pure-g">
+    	 <div id="main" class="anchor"></div>
+	<div class="know_us_block1">
+		<div class="content-page-1270 content-page pure-g">
 
-            <div class="title-container pure-u-1">
-                <div class="smartembed">{% smartembed 'about-020-what' %}</div>
-            </div>
-        </div>
-        <div class="padded">
-			 <div class="content-page-1270 content-page pure-g">
-				<div class="page-about-goals pure-u-1-4">
-					<div class="smartembed">{% smartembed 'about-021-01' %}</div>
-				</div>
-				<div class="page-about-goals pure-u-1-4">
-					<div class="smartembed">{% smartembed 'about-022-02' %}</div>
-				</div>
-				<div class="page-about-goals pure-u-1-4">
-					<div class="smartembed">{% smartembed 'about-023-03' %}</div>
-				</div>
-				<div class="page-about-goals pure-u-1-4">
-					<div class="smartembed">{% smartembed 'about-024-04' %}</div>
-				</div>
-				<div class="content pure-u-1" style="padding-top: 20px;">
-					<div class="smartembed">{% smartembed 'about-029-what-footer' %}</div>
-				</div>
+		<div class="title-container pure-u-1">
+			<div class="smartembed">{% smartembed 'about-020-what' %}</div>
+		</div>
+	</div>
+	<div class="content-page-1270 content-page pure-g">
+		<ul class="list-4col">
+			<li class="page-about-goals">
+				<div>{% smartembed 'about-021-01' %}</div>
+			</li>
+			<li class="page-about-goals">
+				<div>{% smartembed 'about-022-02' %}</div>
+			</li>
+			<li class="page-about-goals">
+				<div>{% smartembed 'about-023-03' %}</div>
+			</li>
+			<li class="page-about-goals">
+				<div>{% smartembed 'about-024-04' %}</div>
+			</li>
+		</ul>
+		<div class="content pure-u-1" style="padding-top: 20px;">
+			<div class="smartembed">{% smartembed 'about-029-what-footer' %}</div>
+		</div>
+	</div>      
+	<div class="know_us_block2 grey_block">
+		<div class="content-page-1270 content-page pure-g">
+			<div class="page-about-what pure-u-1">
+				<div class="smartembed">{% smartembed 'about-030-resources' %}</div>
 			</div>
 		</div>
-    </div>      
-	<div class="know_us_block2 grey_block">
-		<div class="padded">
-			<div class="content-page-1270 content-page pure-g">
-				<div class="page-about-what pure-u-1">
-					<div class="smartembed">{% smartembed 'about-030-resources' %}</div>
-				</div>
-			</div>
-			<div class="content-page-1270 content-page pure-g">
-				<ul id="categories" class="list-4col">
-					<li class="category category-1">
-						<div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
-						<div class="smartembed">{% smartembed 'about-031-space' %}</div>
-					</li>
-					<li class="category category-1">
-						<div class="icon"><a href="{% url 'categories' code='earth' %}"><img src="{% static 'img/icons/categories/icon_earth_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_earth_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_earth_blue.svg' %}'" /></a></div>
-						<div class="smartembed">{% smartembed 'about-032-earth' %}</div>
-					</li>
-					<li class="category category-1">
-						<div class="icon"><a href="{% url 'categories' code='navigation' %}"><img src="{% static 'img/icons/categories/icon_navigation_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_navigation_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_navigation_blue.svg' %}'" /></a></div>
-						<div class="smartembed">{% smartembed 'about-033-navigation' %}</div>
-					</li>
-					<li class="category category-1">
-						<div class="icon"><a href="{% url 'categories' code='heritage' %}"><img src="{% static 'img/icons/categories/icon_heritage_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_heritage_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_heritage_blue.svg' %}'" /></a></div>
-						<div class="smartembed">{% smartembed 'about-034-heritage' %}</div>
-					</li>
-				</ul>
+		<div class="content-page-1270 content-page pure-g">
+			<ul id="categories" class="list-4col">
+				<li class="category category-1">
+					<div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
+					<div class="smartembed">{% smartembed 'about-031-space' %}</div>
+				</li>
+				<li class="category category-1">
+					<div class="icon"><a href="{% url 'categories' code='earth' %}"><img src="{% static 'img/icons/categories/icon_earth_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_earth_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_earth_blue.svg' %}'" /></a></div>
+					<div class="smartembed">{% smartembed 'about-032-earth' %}</div>
+				</li>
+				<li class="category category-1">
+					<div class="icon"><a href="{% url 'categories' code='navigation' %}"><img src="{% static 'img/icons/categories/icon_navigation_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_navigation_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_navigation_blue.svg' %}'" /></a></div>
+					<div class="smartembed">{% smartembed 'about-033-navigation' %}</div>
+				</li>
+				<li class="category category-1">
+					<div class="icon"><a href="{% url 'categories' code='heritage' %}"><img src="{% static 'img/icons/categories/icon_heritage_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_heritage_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_heritage_blue.svg' %}'" /></a></div>
+					<div class="smartembed">{% smartembed 'about-034-heritage' %}</div>
+				</li>
+			</ul>
 
-				<div class="pure-u-1">
-					<div class="smartembed">{% smartembed 'about-039-resources-footer' %}</div>
-				</div>
-
+			<div class="pure-u-1">
+				<div class="smartembed">{% smartembed 'about-039-resources-footer' %}</div>
 			</div>
 		</div>
     </div>
@@ -207,8 +203,8 @@
 
     <div class="content-page pure-g">
         <div class="page-about-team pure-u-1">
-            <div class="title">{% trans "The Space Awareness team" %}</div>
-            <div class="subtitle">{% trans "Space Awareness is developed by" %}</div>
+            <h2 class="title">{% trans "The Space Awareness team" %}</h2>
+            <h3 class="subtitle">{% trans "Space Awareness is developed by" %}</h3>
             <div class="content">
                 <img src="{% static 'img/partners/1.01_Leiden_60px.svg' %}" style="height: 60px;" title="Leiden University">
                 <img src="{% static 'img/partners/1.02_EUSchoolnet_60px.svg' %}" style="height: 60px;" title="European Schoolnet">
@@ -222,7 +218,7 @@
                 <img src="{% static 'img/partners/1.09_CViva_67px.png' %}" style="height: 67px;" title="Ciência Viva">
             </div>
 
-            <div class="subtitle" style="padding-top: 50px;">{% trans "Space Awareness is developed in collaboration with" %}</div>
+            <h3 class="subtitle" style="padding-top: 50px;">{% trans "Space Awareness is developed in collaboration with" %}</h3>
             <div class="content">
                 <img src="{% static 'img/partners/2.01_ESA_60px.png' %}" style="height: 60px;" title="Galileo Teacher training">
                 <img src="{% static 'img/partners/2.02_Galileo_75px.png' %}" style="height: 75px;" title="ESA">

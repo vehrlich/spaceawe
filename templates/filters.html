@@ -1,38 +1,41 @@
-			<div class="filters" id="filters">
-				<div class="filter-topic-image">
-					<a href="{% if category %}../../{% endif %}category/space/#main">
-						<div class="icon">
-							<div class="normal icon-space"></div>
-							<div class="hover icon-space"></div>
-						</div>
-						<div class="filter-title">{{ CATEGORIES.space.title }}</div>
-					</a>
-				</div>
-				<div class="filter-topic-image">
-					<a href="{% if category %}../../{% endif %}category/earth/#main">
-						<div class="icon">
-							<div class="normal icon-earth"></div>
-							<div class="hover icon-earth"></div>
-						</div>
-						<div class="filter-title">{{ CATEGORIES.earth.title }}</div>
-					</a>
-				</div>
-				<div class="filter-topic-image">
-					<a href="{% if category %}../../{% endif %}category/navigation/#main">
-						<div class="icon">
-							<div class="normal icon-navigation"></div>
-							<div class="hover icon-navigation"></div>
-						</div>
-						<div class="filter-title">{{ CATEGORIES.navigation.title }}</div>
-					</a>
-				</div>
-				<div class="filter-topic-image">
-					<a href="{% if category %}../../{% endif %}category/heritage/#main">
-						<div class="icon">
-							<div class="normal icon-heritage"></div>
-							<div class="hover icon-heritage"></div>
-						</div>
-						<div class="filter-title">{{ CATEGORIES.heritage.title }}<!--{{ CATEGORIES.heritage.filter_description }}--></div>
-					</a>
-				</div>
+			<div class="text-content">
+				<div id="filters" class="anchor"></div>
+				<ul class="list-4col filters{% if category %} category-{{ category }}{% endif %}">
+					<li class="filter-topic-image">
+						<a href="{% if category %}../../{% endif %}category/space/#filters">
+							<div class="icon">
+								<div class="normal icon-space"></div>
+								<div class="hover icon-space"></div>
+							</div>
+							<div class="filter-title">{{ CATEGORIES.space.title }}</div>
+						</a>
+					</li>
+					<li class="filter-topic-image">
+						<a href="{% if category %}../../{% endif %}category/earth/#filters">
+							<div class="icon">
+								<div class="normal icon-earth"></div>
+								<div class="hover icon-earth"></div>
+							</div>
+							<div class="filter-title">{{ CATEGORIES.earth.title }}</div>
+						</a>
+					</li>
+					<li class="filter-topic-image">
+						<a href="{% if category %}../../{% endif %}category/navigation/#filters">
+							<div class="icon">
+								<div class="normal icon-navigation"></div>
+								<div class="hover icon-navigation"></div>
+							</div>
+							<div class="filter-title">{{ CATEGORIES.navigation.title }}</div>
+						</a>
+					</li>
+					<li class="filter-topic-image">
+						<a href="{% if category %}../../{% endif %}category/heritage/#filters">
+							<div class="icon">
+								<div class="normal icon-heritage"></div>
+								<div class="hover icon-heritage"></div>
+							</div>
+							<div class="filter-title">{{ CATEGORIES.heritage.title }}<!--{{ CATEGORIES.heritage.filter_description }}--></div>
+						</a>
+					</li>
+				</ul>
 			</div>

@@ -39,7 +39,7 @@
         </div>
     </div>
     <div id="list" class="thumbnailed-list activities page2 snap pure-g">
-    	<div id="main"></div>
+    	<div id="main" class="anchor"></div>
 
         <div class="pure-u-1 text-content smartembed">
             {% smartembed 'section-activities-intro' %}
@@ -51,24 +51,24 @@
                 <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
             </div>
             {% include 'filters.html' %}
-            <div class="filters level">
-                <div class="pure-menu pure-menu-horizontal">
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                            <a href="#" id="menuLink1" class="pure-menu-link">Level</a>
-                            <ul class="pure-menu-children">
-                                <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
-                                <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
-                                <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
-                                <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
-                                <!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
-                                <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+			<div class="filters level">
+				<div class="pure-menu pure-menu-horizontal">
+					<ul class="pure-menu-list">
+						<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+							<a href="#" id="menuLink1" class="pure-menu-link">Level</a>
+							<ul class="pure-menu-children">
+								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+								<!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 
-            </div>
+			</div>
         </div>
 
     {% include page_template with item_count=9 %}
