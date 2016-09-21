@@ -268,7 +268,7 @@ msgstr "Carica altro"
 msgid "Related resources"
 msgstr "Risorse correlate"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "TROVA PER CATEGORIA"
 
 msgid "all"

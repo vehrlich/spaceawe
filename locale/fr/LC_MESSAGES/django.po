@@ -268,7 +268,7 @@ msgstr "En télécharger d’autres"
 msgid "Related resources"
 msgstr "Ressources apparentées"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "TROUVER PAR CATÉGORIE"
 
 msgid "all"

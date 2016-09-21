@@ -268,7 +268,7 @@ msgstr "Načíst více"
 msgid "Related resources"
 msgstr "Související zdroje"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "VYHLEDÁVÁNÍ PODLE KATEGORIÍ"
 
 msgid "all"

@@ -265,7 +265,7 @@ msgstr "Φορτώστε περισσότερα"
 msgid "Related resources"
 msgstr "Συναφείς πόροι"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "ΕΥΡΕΣΗ ΑΝΑ ΚΑΤΗΓΟΡΙΑ"
 
 msgid "all"

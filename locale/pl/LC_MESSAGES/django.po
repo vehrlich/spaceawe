@@ -268,7 +268,7 @@ msgstr "Pokaż więcej"
 msgid "Related resources"
 msgstr "Pokrewne zasoby"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "SZUKAJ WG KATEGORII"
 
 msgid "all"
