@@ -268,7 +268,7 @@ msgstr "Ver mais"
 msgid "Related resources"
 msgstr "Recursos relacionados"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "LOCALIZAR POR CATEGORIA"
 
 msgid "all"

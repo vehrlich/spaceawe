@@ -11,7 +11,7 @@ $header-height-small: 60px;
 }
 
 #header {
-  height: $header-height-normal;
+	height: $header-height-normal;
   .menu-bar {
     display: table;
     position: absolute;
@@ -141,12 +141,6 @@ body.single {
 .content-card {
   .image-container {
     height: 550px;
-  }
-  .title-container {
-    padding: 15px 40px;
-    .title {
-      font-size: 32px;
-    }
   }
   .content-container {
     display: table;

@@ -176,7 +176,7 @@ msgid "Evaluation"
 msgstr "Bewertung"
 
 msgid "Materials"
-msgstr "Zu prüfendes"
+msgstr "Materialien"
 
 msgid "Background Information"
 msgstr "Hintergrundinformationen"
@@ -218,7 +218,7 @@ msgid "Group size"
 msgstr "Gruppengröße"
 
 msgid "Supervised for safety"
-msgstr "Sicherheitsüberwacht"
+msgstr "Überwachung aus Sicherheitsgründen"
 
 msgid "Cost"
 msgstr "Kosten"
@@ -268,7 +268,7 @@ msgstr "Mehr laden"
 msgid "Related resources"
 msgstr "Zugehörige Ressourcen"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "NACH KATEGORIE SUCHEN"
 
 msgid "all"

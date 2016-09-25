@@ -21,7 +21,7 @@
         <div class="fake-padding"></div>
 
         <div class="title-container">
-            <div class="title">{{ object.title }}</div>
+            <h1 class="title">{{ object.title }}</h1>
             <div class="date">{{ object.release_date|date:"DATE_FORMAT" }}</div>
         </div>
     {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
@@ -54,12 +54,13 @@
 
                 {% if not object.is_translation_fallback %}
                 <div class="download">
-                    <a href="?format=pdf">{% trans "download" %}<br><img class="button" src="{% static 'img/icon_download.svg' %}"></a>
+	                <div class="caption">{% trans "download" %}</div>
+                    <a href="?format=pdf" target="download"><img class="button" src="{% static 'img/icon_download.svg' %}" /></a>
                 </div>
                 {% endif %}
                 <div class="social-sharing">
                     <img id="facebook" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_facebook_b.svg' %}" />
-                <img id="twitter" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_twitter_b.svg' %}" />
+                	<img id="twitter" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_twitter_b.svg' %}" />
                 </div>
 
                 <div>{% trans "Go to" %}: <a href="http://www.spacescoop.org/scoops/{{ object.code }}/">www.spacescoop.org</a></div>

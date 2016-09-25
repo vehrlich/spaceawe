@@ -90,7 +90,7 @@ Activities – sections,,,,,,,,,,,
 ,Goals,Doelen,Finalità,Ziele,Objetivos,Cele ogólne,Cíle,Objectifs,Στόχοι,Scopuri,Objetivos
 ,Learning Objectives,Leerdoelen,Obiettivi didattici,Lernziele,Objetivos de aprendizaje,Cele operacyjne,Výukové cíle,Objectifs pédagogiques ,Μαθησιακοί Στόχοι,Obiective de învăţare,Objetivos de aprendizagem
 ,Evaluation,Evaluatie,Valutazione,Bewertung,Evaluación,Ewaluacja,Hodnocení,Évaluation,Αξιολόγηση,Evaluare,Avaliação
-,Materials,Materiaal,Materiali,Zu prüfendes,Materiales,Materiał,Pomůcky,Matériel,Υλικό,Material,Material
+,Materials,Materiaal,Materiali,Materialien,Materiales,Materiał,Pomůcky,Matériel,Υλικό,Material,Material
 ,Background Information,Achtergrondinformatie,Informazioni di base,Hintergrundinformationen,Información de referencia,Podstawowe informacje,Informace o tématu,Informations complémentaires,Θεωρητικές πληροφορίες ,Informaţii de bază,Informações de referência
 ,Full Activity Description,Volledige beschrijving van de activiteit,Descrizione completa dell’attività,Vollständige Beschreibung der Aktivität,Descripción completa de la actividad,Pełny opis zajęć,Podrobný popis aktivity,Description complète de l’activité,Πλήρης Περιγραφή της Δραστηριότητας,Descrierea completă a activităţii,Descrição da atividade completa
 ,Curriculum,Curriculum,Programma di studi,Lehrplan,Plan de estudio,Program nauczania,Vzdělávací plán,Programme scolaire,Πρόγραμμα σπουδών,Curriculum,Currículo
@@ -105,7 +105,7 @@ Activities – metadata column,,,,,,,,,,,
 ,Education level,Onderwijsniveau,Livello scolastico,Bildungsebene,Nivel del sistema educativo,Poziom kształcenia,Stupeň vzdělávání,Niveau d’études ,Εκπαιδευτική βαθμίδα,Nivel de studii,Nível de ensino
 ,Time,Tijd,Tempo,Zeit,Tiempo,Czas trwania,Čas,Durée ,Χρόνος,Timp,Duração
 ,Group size,Groepsgrootte,Dimensione del gruppo,Gruppengröße,Tamaño del grupo,Rozmiar grupy,Velikost skupiny,Taille du groupe,Μέγεθος ομάδας,Dimensiune grup,Dimensão do grupo
-,Supervised for safety,Toezicht voor de veiligheid,Supervisionato a fini di sicurezza,Sicherheitsüberwacht,Supervisión de seguridad,Nadzór ze względów bezpieczeństwa,Dohled z důvodu bezpečnosti,Supervisé par rapport à la sécurité ,Επιβλεπόμενο για λόγους ασφάλειας,Supraveghere din motive de siguranţă,Controlo de segurança
+,Supervised for safety,Toezicht voor de veiligheid,Supervisionato a fini di sicurezza,Überwachung aus Sicherheitsgründen,Supervisión de seguridad,Nadzór ze względów bezpieczeństwa,Dohled z důvodu bezpečnosti,Supervisé par rapport à la sécurité ,Επιβλεπόμενο για λόγους ασφάλειας,Supraveghere din motive de siguranţă,Controlo de segurança
 ,Cost,Kosten,Costo,Kosten,Gasto,Koszt,Cena,Dépense ,Κόστος,Costuri,Custo
 ,Location,Locatie ,Luogo ,Ort ,Ubicación ,Lokalizacja ,Místo ,Lieu ,Μέρος ,Loc ,Localização 
 ,Core skills,Kernvaardigheden,Competenze chiave,Kernkompetenzen,Competencias básicas,Umiejętności kluczowe,Základní dovednosti,Compétences de base ,Βασικές Δεξιότητες,Competenţe de bază,Competências básicas
@@ -127,7 +127,7 @@ Misc,,,,,,,,,,,
 ,Load more,Meer laden,Carica altro,Mehr laden,Más información,Pokaż więcej,Načíst více,En télécharger d’autres,Φορτώστε περισσότερα,Încarcă mai multe,Ver mais
 ,Loading,,,,,,,,,,
 ,Related resources,Gerelateerde middelen,Risorse correlate,Zugehörige Ressourcen,Recursos relacionados,Pokrewne zasoby,Související zdroje,Ressources apparentées,Συναφείς πόροι,Resurse conexe,Recursos relacionados
-,find by category,ZOEKEN OP CATEGORIE,TROVA PER CATEGORIA,NACH KATEGORIE SUCHEN,BUSCAR POR CATEGORÍA,SZUKAJ WG KATEGORII,VYHLEDÁVÁNÍ PODLE KATEGORIÍ,TROUVER PAR CATÉGORIE,ΕΥΡΕΣΗ ΑΝΑ ΚΑΤΗΓΟΡΙΑ,CĂUTARE DUPĂ CATEGORIE,LOCALIZAR POR CATEGORIA
+,Sort by category,ZOEKEN OP CATEGORIE,TROVA PER CATEGORIA,NACH KATEGORIE SUCHEN,BUSCAR POR CATEGORÍA,SZUKAJ WG KATEGORII,VYHLEDÁVÁNÍ PODLE KATEGORIÍ,TROUVER PAR CATÉGORIE,ΕΥΡΕΣΗ ΑΝΑ ΚΑΤΗΓΟΡΙΑ,CĂUTARE DUPĂ CATEGORIE,LOCALIZAR POR CATEGORIA
 ,all,Alle,Tutte,Alle,Todos,Wszystkie,Všechny,Tous,Όλα,Toate,Todas
 ,see more,,,,,,,,,,
 ,Inspiring a new generation of space explorers,Een nieuwe generatie ruimteverkenners inspireren,Ispirare una nuova generazione di esploratori dello spazio,Inspiration für eine neue Generation von Weltraumforschern,Queremos plantar la semilla de los exploradores espaciales del futuro,Inspirując nowe pokolenie badaczy kosmosu,Inspirace pro nové průzkumníky vesmíru,Inspirer une nouvelle génération d’explorateurs de l’espace,Εμπνέοντας την επόμενη γενιά εξερευνητών του διαστήματος,Aripi pentru o nouă generaţie de exploratori ai spaţiului,Inspirar uma nova geração de exploradores do espaço
@@ -136,3 +136,8 @@ Misc,,,,,,,,,,,
 ,This section is coming soon!,Dit onderdeel is binnenkort beschikbaar! ,Questa sezione arriverà presto! ,Dieser Bereich wird demnächst veröffentlicht! ,Esta sección estará lista muy pronto. ,Rozdział zostanie wkrótce udostępniony! ,Tuto sekci zveřejníme již brzy! ,Cette section sera disponible prochainement.  ,Η ενότητα θα είναι σύντομα κοντά σας! ,Această secţiune va fi disponibilă în curând! ,Esta secção estará disponível em breve! 
 ,Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page,Word als een van de eersten op de hoogte gesteld van de update door je op de homepage in te schrijven voor de nieuwsbrief van Space Awareness! ,"Sii fra i primi a essere informato sull’aggiornamento, iscrivendoti alla newsletter di Space Awareness in Homepage! ","Abonnieren Sie den Space Awareness-Newsletter auf der Homepage, um unter den Ersten zu sein, die über das Update informiert werden! ","Si quieres ser el primero en enterarte, suscríbete al boletín de noticias Space Awareness en la página de inicio. ","Zapewnij sobie najszybsze powiadamianie o aktualizacjach, prenumerując biuletyn informacyjny Space Awareness na stronie głównej! ","Buďte mezi prvními, kdo se o aktualizaci dozví. Na hlavní stránce se přihlaste k odběru zpravodaje programu „Povědomí o vesmíru“. ",Soyez parmi les premiers à être avertis de la mise à jour en vous inscrivant à la lettre d’information de Space Awareness sur la page d’accueil ! ,"Εγγραφείτε στο ενημερωτικό δελτίο του ""Space Awareness"" στην αρχική σελίδα, ώστε να είσαστε από τους πρώτους που θα ειδοποιηθείτε για την καινούργια ενότητα! ","Abonează-te la buletinul informativ Space Awareness, de pe prima pagină, şi vei fi printre primii care va fi înştiinţat cu privire la actualizare! ","Seja dos primeiros a serem notificados sobre a atualização, subscrevendo a newsletter do Space Awareness na página inicial! "
 ,Related content,Gerelateerde content,Contenuti correlati,Verwandte Inhalte,Información relacionada,Pokrewne treści,Související,Contenus sur les mêmes sujets,Συναφές περιεχόμενο,Conţinut conex,Conteúdo relacionado
+,STARTING DATE,,,,,,,,,,
+,Introduction,,,,,,,,,,
+,What you will learn,,,,,,,,,,
+,What skills will you need,,,,,,,,,,
+,Duration of the course,,,,,,,,,,

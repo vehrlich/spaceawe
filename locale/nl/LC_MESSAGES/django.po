@@ -271,7 +271,7 @@ msgstr "Meer laden"
 msgid "Related resources"
 msgstr "Gerelateerde middelen"
 
-msgid "find by category"
+msgid "Sort by category"
 msgstr "ZOEKEN OP CATEGORIE"
 
 msgid "all"
