@@ -1,0 +1,43 @@
+{% load staticfiles thumbnail %}
+
+<!-- Will not work locally -->
+<!-- {% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+	<div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }}) ;">
+		<a href="{% url 'career:detail' slug=career.slug %}">
+		<div class="title-container"><div class="title-subcontainer">
+			<div class="title">{{ career.title }}</div>
+			<div class="subtitle">{{ career.teaser }}</div>
+		</div></div>
+		</a>
+	</div>
+{% endthumbnail %} -->
+{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+<li><div class="list-item-container">
+	<div class="list-item games" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+		<div class="link-container">
+			<a href="{% url 'careers:career-detail' slug=object.slug %}">
+				<div class="color"></div>
+				<div class="color-black"></div>
+				<div class="text">
+					<div class="title">{{ object.title }}</div>
+					<div class="preview">{{ object.teaser }}</div>
+					<div class="bottom">
+						<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div></li>
+{% endthumbnail %}
+<!-- Slug : {{ career.slug }}<br>
+Teaser : {{ career.teaser }}<br>
+Story : {{ career.story|safe }}<br>
+Field: {{ career.field }}<br>
+Career type : {{ career.career_type}}<br>
+Level of study : {{ career.level_of_study }}<br>
+Interview : {{ career.interview }}<br>
+<a href="{% url 'careers:career-detail' slug=career.slug %}">URL</a><br>
+Pdf url : {{ career.pdf_url }}
+<hr/> -->
+

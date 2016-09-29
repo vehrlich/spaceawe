@@ -667,7 +667,7 @@ body.single #header, #header.small, .header-small {
     .thumbnailed-list .list-item .no-hover .question_mark {
       display: none; }
   .thumbnailed-list .list-footer {
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     text-align: center; }
     .thumbnailed-list .list-footer .load-more-button {
       display: inline-block;
@@ -2138,9 +2138,10 @@ a:focus {
   clear: both;
   width: 100%; }
 
+/*
 .section-careers .thumbnailed-list .list-footer {
-  padding-top: 20px; }
-
+    padding-top: 20px;
+}*/
 .thumbnailed-list .list-item.active .color,
 .thumbnailed-list .list-item.active .date,
 .thumbnailed-list .list-item.active .bottom {

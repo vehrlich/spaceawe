@@ -89,39 +89,7 @@
         <h2 class="title">{% trans "Interviews" %}</h2>
         <h3 class="title_green">{% trans "What is it like to have a space-related job?" %}</h3>
         <div class="row">
-			<div class="padded">
-        		<ol class="padded-list list-3col{% if interviews|length < 3 %} under-filled{% endif %}">
-				{% for interview in interviews %}
-					<li>
-						<div class="list-item-container">
-							<div class="list-item careers"{% thumbnail interview.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %} style="background-image:url({{ im.url }});"{% endthumbnail %} aria-haspopup="true">
-								<div class="link-container">
-									<a href="{% url 'careers:interview-detail' slug=interview.slug %}">
-										<div class="color"></div>
-										<div class="color-black"></div>
-										<div class="text">
-											<div class="title">{{ interview.title }}</div>
-											<div class="preview">{{ interview.teaser }}</div>
-											<div class="bottom">
-												<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-						
-						</div>
-					</li>
-				{% endfor %}
-				</ol>
-				<div style="clear:both;"></div>
-			</div>
-			<!-- load more -->
-			 <div class="c-green-u-1 list-footer">
-				<a class="load-more" href=" "
-					>Load more</a>
-			</div>
-			<!-- end load more -->
+			{% include 'interviews/interview_list_page.html' %}
 	    </div>
 	</div>
 
@@ -133,139 +101,26 @@
 
 
 <!-- Careers -->
-
-
 	<div id="careers_menu" class="wrapper_block_previews">
         <h2 class="title">{% trans "Careers" %}</h2>
         <h3 class="title_green">{% trans "It is not all about becoming an astronaut!" %}</h3>
         <div class="row">
-			<div class="padded">
-        		<ol class="padded-list list-3col{% if careers|length < 3 %} under-filled{% endif %}">
-				{% for career in careers %}
-					<!-- Will not work locally -->
-					<!-- {% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
-						<div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }}) ;">
-							<a href="{% url 'career:detail' slug=career.slug %}">
-							<div class="title-container"><div class="title-subcontainer">
-								<div class="title">{{ career.title }}</div>
-								<div class="subtitle">{{ career.teaser }}</div>
-							</div></div>
-							</a>
-						</div>
-					{% endthumbnail %} -->
-					<li>
-						<div class="list-item-container">
-					  {% thumbnail career.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
-							<div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
-								<div class="link-container">
-									<a href="{% url 'careers:career-detail' slug=career.slug %}">
-										<div class="color"></div>
-										<div class="color-black"></div>
-										<div class="text">
-											<div class="title">{{ career.title }}</div>
-											<div class="preview">{{ career.teaser }}</div>
-											<div class="bottom">
-												<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-					  {% endthumbnail %}
-						</div>
-					</li>
-					<!-- Slug : {{ career.slug }}<br>
-					Teaser : {{ career.teaser }}<br>
-					Story : {{ career.story|safe }}<br>
-					Field: {{ career.field }}<br>
-					Career type : {{ career.career_type}}<br>
-					Level of study : {{ career.level_of_study }}<br>
-					Interview : {{ career.interview }}<br>
-					<a href="{% url 'careers:career-detail' slug=career.slug %}">URL</a><br>
-					Pdf url : {{ career.pdf_url }}
-					<hr/> -->
-				{% endfor %}
-				</ol>
-				<div style="clear:both;"></div>
-			</div>
-
-	    	<!-- load more -->
-				    <div class="c-green-u-1 list-footer">
-				        <a class="load-more" href=" "
-				            >Load more</a>
-				       
-				    </div>
-
-		<!-- load more -->
+	        {% include 'careers/career_list_page.html' %}
 	    </div>
 	</div>
-
-
 <!-- Careers -->
 
 
 
 <!-- Webinars -->
-
-
 <div id="webinars_menu" class="wrapper_block_previews">
         <h2 class="title">{% trans "Webinars" %}</h2>
         <h3 class="title_green">{% trans "Watch live talks about space sciences" %}</h3>
         <div class="row">
-			<div class="padded">
-        		<ol class="padded-list list-3col{% if webinars|length < 3 %} under-filled{% endif %}">
-					{% for webinar in webinars %}
-					<li>
-						<div class="list-item-container">
-					  {% thumbnail webinar.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
-							<div class="list-item careers" style="background-image:url({{ im.url }});" aria-haspopup="true">
-								<div class="link-container">
-									<a href="{% url 'careers:webinar-detail' slug=webinar.slug %}">
-										<div class="color"></div>
-										<div class="color-black"></div>
-										<div class="text">
-											<div class="title">{{ webinar.title }}</div>
-											<!--<div class="preview">{{ webinar.teaser }}</div>-->
-											<div class="bottom">
-												<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
-											</div>
-										</div>
-									</a>
-								</div>
-							</div>
-					{% endthumbnail %}
-						</div>
-					</li>
-					<!-- Teaser : {{ webinar.teaser }}<br>
-					Story : {{ webinar.story|safe }}<br>
-					Title : {{ webinar.title }}<br>
-					Register : {{ webinar.register }}<br>
-					Location : {{ webinar.location }}<br>
-					Target group : {{ webinar.target_group }}<br>
-					Language : {{ webinar.language }}<br>
-					<a href="{% url 'careers:webinar-detail' slug=webinar.slug %}">URL</a><br>
-					Pdf url : {{ webinar.pdf_url }}
-					<hr/> -->
-					{% endfor %}
-				</ol>
-				<div style="clear:both;"></div>
-			</div>
-
-
-		<!-- load more -->
-				    <div class="green-u-1 list-footer">
-				        <a class="load-more" href="#"
-				           >Load more</a>
-				       
-				    </div>
-
-		<!-- load more -->
+	        {% include 'webinars/webinar_list_page.html' %}
 		</div>
 	</div>
 </div>
-
-
-
 <!-- Webinars -->
 
 
