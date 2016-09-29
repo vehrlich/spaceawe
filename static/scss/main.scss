@@ -569,11 +569,28 @@ body.single #header, #header.small, .header-small {
 			opacity: 0;
 			transition: all 0.5s ease;
 		}
-		a:hover, a:focus {
+		a:hover, a:focus, .no-hover {
 			.date, .bottom, .age, .color, .theme {
 				visibility: visible;
 				opacity: 1;
 			}
+		}
+		.question_mark {
+			display: inline-block;
+			@include heading();
+			font-size: $baseline*6;
+			letter-spacing: 0;
+			font-weight: 700;
+			line-height: $baseline*9 !important;
+			margin-bottom: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+			text-align: center;
+			width: 100%;
+		}
+		.no-hover .question_mark {
+			display: none;
 		}
 	}
 	.list-footer {
@@ -1362,20 +1379,6 @@ body.single {
     background: url(../img/arrow_down.png) no-repeat center 56%, #4ed8c3;
 }
 
-.question_mark {
-    display: inline-block;
-    @include heading();
-    font-size: $baseline*6;
-    letter-spacing: 0;
-    font-weight: 700;
-    line-height: $baseline*9 !important;
-    margin-bottom: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: center;
-    width: 100%;
-}
 .section-careers .thumbnailed-list .list-item.active .question_mark, .section-careers .thumbnailed-list .list-item:hover .question_mark {
 	opacity: 0;
 	transition: all 0.5s ease 0s;

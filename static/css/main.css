@@ -644,9 +644,28 @@ body.single #header, #header.small, .header-small {
       visibility: hidden;
       opacity: 0;
       transition: all 0.5s ease; }
-    .thumbnailed-list .list-item a:hover .date, .thumbnailed-list .list-item a:hover .bottom, .thumbnailed-list .list-item a:hover .age, .thumbnailed-list .list-item a:hover .color, .thumbnailed-list .list-item a:hover .theme, .thumbnailed-list .list-item a:focus .date, .thumbnailed-list .list-item a:focus .bottom, .thumbnailed-list .list-item a:focus .age, .thumbnailed-list .list-item a:focus .color, .thumbnailed-list .list-item a:focus .theme {
+    .thumbnailed-list .list-item a:hover .date, .thumbnailed-list .list-item a:hover .bottom, .thumbnailed-list .list-item a:hover .age, .thumbnailed-list .list-item a:hover .color, .thumbnailed-list .list-item a:hover .theme, .thumbnailed-list .list-item a:focus .date, .thumbnailed-list .list-item a:focus .bottom, .thumbnailed-list .list-item a:focus .age, .thumbnailed-list .list-item a:focus .color, .thumbnailed-list .list-item a:focus .theme, .thumbnailed-list .list-item .no-hover .date, .thumbnailed-list .list-item .no-hover .bottom, .thumbnailed-list .list-item .no-hover .age, .thumbnailed-list .list-item .no-hover .color, .thumbnailed-list .list-item .no-hover .theme {
       visibility: visible;
       opacity: 1; }
+    .thumbnailed-list .list-item .question_mark {
+      display: inline-block;
+      font-family: "Miso", sans-serif;
+      letter-spacing: 0.1em;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 24px;
+      font-size: 144px;
+      letter-spacing: 0;
+      font-weight: 700;
+      line-height: 216px !important;
+      margin-bottom: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      width: 100%; }
+    .thumbnailed-list .list-item .no-hover .question_mark {
+      display: none; }
   .thumbnailed-list .list-footer {
     padding-top: 30px;
     text-align: center; }
@@ -1869,24 +1888,6 @@ body.section-about .wrapper_block_previews h3 {
 
 .horizontal-jump-menu li a .arrow_down {
   background: url(../img/arrow_down.png) no-repeat center 56%, #4ed8c3; }
-
-.question_mark {
-  display: inline-block;
-  font-family: "Miso", sans-serif;
-  letter-spacing: 0.1em;
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 24px;
-  font-size: 144px;
-  letter-spacing: 0;
-  font-weight: 700;
-  line-height: 216px !important;
-  margin-bottom: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  text-align: center;
-  width: 100%; }
 
 .section-careers .thumbnailed-list .list-item.active .question_mark, .section-careers .thumbnailed-list .list-item:hover .question_mark {
   opacity: 0;
