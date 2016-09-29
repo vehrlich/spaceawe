@@ -41,7 +41,7 @@
 {% for partner in partners %}
 {% spaceless %}
         var loc = new L.LatLng({{ partner.institution.location.latitude|unlocalize }}, {{ partner.institution.location.longitude|unlocalize }});
-        var marker = new L.Marker(loc, {icon: new {% if partner.spaceawe_partner %}partnerIcon{% elif partner.spaceawe_node %}nodeIcon{% endif %}()});
+        var marker = new L.Marker(loc, {icon: new {% if partner.spaceawe_partner and partner.spaceawe_node %}dualIcon{% elif partner.spaceawe_partner %}partnerIcon{% elif partner.spaceawe_node %}nodeIcon{% endif %}()});
         marker.desc = '<div class="partnermap-popup">
     <a href="{{ partner.institution.url }}">
     {% thumbnail partner.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as thumb %}
