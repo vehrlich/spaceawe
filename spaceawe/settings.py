@@ -271,7 +271,6 @@ PIPELINE = {
     'STYLESHEETS': {
         'styles': {
             'source_filenames': [
-                'css/fonts.css',
                 'css/main.css',
             ],
             'output_filename': 'css/spaceawe.min.css',

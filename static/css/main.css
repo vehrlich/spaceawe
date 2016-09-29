@@ -51,7 +51,7 @@ ul li, ol li {
   margin-left: 1em; }
 
 h1, h2, h3, h4, h5, h6, h7 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -112,7 +112,7 @@ i, em {
       background-position: center;
       background-size: contain; }
   #header .slogan {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -192,7 +192,7 @@ body.single #header, #header.small, .header-small {
             text-transform: none;
             font-size: 12px; }
           #cover .feature-container .feature .title-container .title-subcontainer .title {
-            font-family: "Miso", sans-serif;
+            font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
             letter-spacing: 0.1em;
             font-size: 28px;
             font-weight: 700;
@@ -257,7 +257,7 @@ body.single #header, #header.small, .header-small {
       display: block;
       height: 100%; }
     #sections .section .title {
-      font-family: "Miso", sans-serif;
+      font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
       letter-spacing: 0.1em;
       font-size: 36px;
       line-height: 48px;
@@ -571,7 +571,7 @@ body.single #header, #header.small, .header-small {
     .thumbnailed-list .list-header .selected {
       text-transform: capitalize; }
     .thumbnailed-list .list-header .title {
-      font-family: "Miso", sans-serif;
+      font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
       font-weight: 700;
@@ -614,7 +614,7 @@ body.single #header, #header.small, .header-small {
     .thumbnailed-list .list-item .date {
       padding-top: 24px; }
     .thumbnailed-list .list-item .title {
-      font-family: "Miso", sans-serif;
+      font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
       font-weight: 700;
@@ -649,7 +649,7 @@ body.single #header, #header.small, .header-small {
       opacity: 1; }
     .thumbnailed-list .list-item .question_mark {
       display: inline-block;
-      font-family: "Miso", sans-serif;
+      font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
       font-weight: 700;
@@ -823,7 +823,7 @@ table th {
   .mooc table th, .mooc table td {
     border: 0px; }
   .mooc table th {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -843,7 +843,7 @@ table th {
     text-align: left; }
 
 .mooc h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -853,7 +853,7 @@ table th {
   margin-bottom: 6px; }
 
 .mooc h4 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -894,7 +894,7 @@ table th {
   background-color: #fafafa;
   box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.2); }
   .content-card .title-container {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -927,7 +927,7 @@ table th {
       max-width: 100%;
       display: block; }
     .content-card .content-container .coolfact_title {
-      font-family: "Miso", sans-serif;
+      font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
       letter-spacing: 0.1em;
       font-size: 28px;
       font-weight: 700;
@@ -954,7 +954,7 @@ table th {
         border-top: 1px solid #dddbd9;
         padding: 24px 0; }
         .content-card .content-container .content-right-column > div .caption {
-          font-family: "Miso", sans-serif;
+          font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
           letter-spacing: 0.1em;
           font-size: 28px;
           font-weight: 700;
@@ -976,7 +976,7 @@ table th {
   margin: auto auto;
   padding: 0 45px; }
   .content-page .title {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -1036,7 +1036,7 @@ table th {
     vertical-align: middle;
     padding: 0 20%; }
   #subscribe .line1 {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -1095,7 +1095,7 @@ table th {
   line-height: 0em; }
 
 #mc_embed_signup .newsletter-call {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1146,7 +1146,7 @@ table th {
   text-align: center;
   padding: 0 !important; }
   .more-container-header .list-header .title {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -1293,7 +1293,7 @@ body.section-news #footer .social-background {
   background-image: url(../img/footer-bg-social-news.svg); }
 
 body.section-news .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1302,7 +1302,7 @@ body.section-news .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-news .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1356,7 +1356,7 @@ body.section-careers #footer .social-background {
   background-image: url(../img/footer-bg-social-careers.svg); }
 
 body.section-careers .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1365,7 +1365,7 @@ body.section-careers .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-careers .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1419,7 +1419,7 @@ body.section-scoops #footer .social-background {
   background-image: url(../img/footer-bg-social-scoops.svg); }
 
 body.section-scoops .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1428,7 +1428,7 @@ body.section-scoops .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-scoops .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1482,7 +1482,7 @@ body.section-games #footer .social-background {
   background-image: url(../img/footer-bg-social-games.svg); }
 
 body.section-games .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1491,7 +1491,7 @@ body.section-games .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-games .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1545,7 +1545,7 @@ body.section-activities #footer .social-background {
   background-image: url(../img/footer-bg-social-activities.svg); }
 
 body.section-activities .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1554,7 +1554,7 @@ body.section-activities .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-activities .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1608,7 +1608,7 @@ body.section-skills #footer .social-background {
   background-image: url(../img/footer-bg-social-skills.svg); }
 
 body.section-skills .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1617,7 +1617,7 @@ body.section-skills .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-skills .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1671,7 +1671,7 @@ body.section-about #footer .social-background {
   background-image: url(../img/footer-bg-social-about.svg); }
 
 body.section-about .wrapper_block_previews h2 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 36px;
   line-height: 48px;
@@ -1680,7 +1680,7 @@ body.section-about .wrapper_block_previews h2 {
   text-transform: uppercase; }
 
 body.section-about .wrapper_block_previews h3 {
-  font-family: "Miso", sans-serif;
+  font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
   letter-spacing: 0.1em;
   font-size: 28px;
   font-weight: 700;
@@ -1699,7 +1699,7 @@ body.section-about .wrapper_block_previews h3 {
   font-size: 14px;
   line-height: 24px; }
   .text-content .title {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;
@@ -1711,7 +1711,7 @@ body.section-about .wrapper_block_previews h3 {
   margin: auto;
   display: block; }
   .smartembed h1 {
-    font-family: "Miso", sans-serif;
+    font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
     letter-spacing: 0.1em;
     font-size: 28px;
     font-weight: 700;

@@ -28,9 +28,7 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
         <meta name="theme-color" content="#ffffff">
-
         <meta name="description" content="{% trans "Inspiring a new generation of space explorers" %}">
-
         <link rel="stylesheet" href="{% static 'css/reset.css' %}">
         <link rel="stylesheet" href="{% static 'css/pure/0.6.0/pure-min.css' %}">
         <!--[if lte IE 8]>
@@ -39,6 +37,13 @@
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="{% static 'css/pure/0.6.0/grids-responsive-min.css' %}">
         <!--<![endif]-->
+        {% if LANGUAGE_CODE == "pl" %}
+        <link rel="stylesheet" href="{% static 'fonts/BloggerSans/BloggerSans.css' %}">
+        {% elif LANGUAGE_CODE == "el" %}
+        <link rel="stylesheet" href="{% static 'fonts/BPreplay/BPreplay.css' %}">
+        {% else %}
+        <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+        {% endif %}
         <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,greek,cyrillic' rel='stylesheet' type='text/css'>
         {% load pipeline %}{% stylesheet 'styles' %}
         {% if debug %}<style>/* fix for django debug toolbar + purecss */ [hidden="hidden"][style*="display: block;"] { display: block !important; }</style>{% endif %}
