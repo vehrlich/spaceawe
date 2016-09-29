@@ -13,6 +13,7 @@
 {% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
 <meta property="og:image" content="{{ SITE_URL }}{{ im.url }}" />
 {% endthumbnail %}
+<!--<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>-->
 {% endblock %}
 
 
@@ -143,11 +144,11 @@
                     {% thumbnail object.authors.all.0.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as thumb %}
                     <div class="value"><img src="{{ thumb.url }}"></div>
                     {% endthumbnail %}
-                </div>
+                </div>{% if object.sourcelink_url %}
                 <div>
                     <div class="caption">{% trans "Link to source activity" %}</div>
                     <div class="value"><a href="{{ object.sourcelink_url }}">{{ object.sourcelink_caption }}</a></div>
-                </div>
+                </div>{% endif %}
         {% if object.repositoryentry_set.all %}
                 <div>
                     <div class="caption">{% trans "Repositories" %}</div>
