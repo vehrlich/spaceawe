@@ -27,3 +27,6 @@ class Module(models.Model):
 
     def __str__(self, **kwargs):
         return self.info
+
+    def info_parts(self, **kwargs):
+        return self.info.split(': ')

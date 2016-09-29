@@ -52,58 +52,53 @@
 
 
 {% for mooc in moocs %}
-<div class="content-page pure-g" style="letter-spacing: 0px;">
-<table width="100%" align="center" class="mooc">
-  <tr bgcolor="#52C36F" line-height="50" style="height: 30px;">
-    <th><b>MOOC {{ forloop.counter }}</b>: {{ mooc.info }}</th>
-    <th>{% trans "STARTING DATE" %}: <b>{{ mooc.starting_date }}</b></th>
-  </tr>
-  {% for module in mooc.module_set.all reversed %}
-  <tr>
-    <td>{{ module.info }}</td>
-    <td>{{ module.duration }}</td>
-  </tr>
-  {% endfor %}
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2>
-      <text style="color: #52C36F">Overview</text>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      <b>{% trans "Introduction" %}</b>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      {{ mooc.introduction }}<br>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      <b>{% trans "What you will learn" %}</b>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      {{ mooc.what_you_will_learn }}<br>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      <b>{% trans "What skills will you need" %}</b>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      {{ mooc.what_skills_will_you_need }}<br>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      <b>{% trans "Duration of the course" %}</b>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 7px;" align="center">
-      {{ mooc.duration_of_the_course }}<br>
-  </td></tr>
-  <tr class="mooc-extra"><td class="mooc{{ forloop.counter }}" colspan=2 style="display: none; align: center; padding-bottom: 15px;" align="center">
-      <a rel="page" href="{% if mooc.enroll_url %}{{ mooc.enroll_url }}{% else %}#{% endif %}" style="border: 2px solid #808080; border-radius: 100px; padding: 4px 20px; font-size: 12px; text-decoration: none; color: inherit; display: inline-block; background: #52C36F; color: white;">Enroll</a><br>
-      ({{ mooc.starting_date }})
-  </td></tr>
-  <tr bgcolor="#f3f3f3"><td class="hidden_mooc{{ forloop.counter }}" colspan=2 style="display: none;" align="center">
-      (facebook) (twitter)
-  </td></tr>
-  <tr>
-    <td colspan=2 align="center" style="padding-top: 7px;">
-      <img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}" onclick="$('.mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);">
-    </td>
-  </tr>
-</table>
+<div class="content-page pure-g mooc" style="letter-spacing: 0px;" id="mooc-{{ forloop.counter }}">
+	<table width="100%" align="center">
+		<tr bgcolor="#52C36F" line-height="50" style="height: 30px;">
+			<th colspan="2"><strong>MOOC {{ forloop.counter }}</strong>: {{ mooc.info }}</th>
+		</tr>
+		{% for module in mooc.module_set.all reversed %}
+		<tr>
+			<td>{% if module.info_parts|length == 2 %}<strong>{{ module.info_parts.0 }}:</strong> {{ module.info_parts.1 }}{% else %}{{ module.info }}{% endif %}</td>
+			<td><strong>{{ module.duration }}</strong></td>
+		</tr>
+		{% endfor %}
+		<tr class="mooc-extra">
+			<td class="mooc{{ forloop.counter }}" colspan=2>
+				<div id="mooc-{{ forloop.counter }}-more"></div>
+				<div class="mooc-more">
+					<h3>Overview</h3>
+
+					<h4>{% trans "Introduction" %}</h4>
+					{{ mooc.introduction }}
+
+					<h4>{% trans "What you will learn" %}</h4>
+					{{ mooc.what_you_will_learn }}
+
+					<h4>{% trans "What skills will you need" %}</h4>
+					{{ mooc.what_skills_will_you_need }}<br>
+
+					<h4>{% trans "Duration of the course" %}</h4>
+					{{ mooc.duration_of_the_course }}<br>
+				</div>
+			</td>
+		</tr>
+		<tr bgcolor="#f3f3f3">
+			<td class="hidden_mooc{{ forloop.counter }}" colspan=2 style="display: none;" align="center">
+				(facebook) (twitter)
+			</td>
+		</tr><!--
+		<tr>
+			<td colspan=2 align="center" style="padding-top: 7px;">
+				<img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}" onclick="$('.mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);">
+			</td>
+		</tr>-->
+	</table>
+	<div class="extra">
+		<span class="start-date">{% trans "STARTING DATE" %}: <strong>{{ mooc.starting_date }}</strong></span>
+		<br /><a href="#mooc-{{ forloop.counter }}-more" onclick="$('.mooc{{ forloop.counter }}').toggle('slow');$(this).hide();" class="call-to-action">{% trans "see more" %}</a> <a rel="page" href="{% if mooc.enroll_url %}{{ mooc.enroll_url }}{% else %}#{% endif %}" class="call-to-action">{% trans "Enroll" %}</a>
+	</div>
+
 </div>
 
 {% endfor %}

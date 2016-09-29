@@ -9,6 +9,7 @@ $bg-opacity: 0.3;
 
 $color-cycle-pager-1: #94959A;
 $color-cycle-pager-2: #f2f2f2;
+$color-cycle-hover: #dddddd;
 
 $homepage-sections-opacity: 0.85;
 $homepage-sections-background-carrers: rgba(78, 216, 195, $homepage-sections-opacity);
@@ -19,8 +20,6 @@ $section-colors: ("news": #3e5fdb, "careers": #4ed8c3, "scoops": #ed3b5a, "games
 $section-background-colors: ("news": rgba(62, 95, 219, $homepage-sections-opacity), "careers": rgba(78, 216, 195, $homepage-sections-opacity), "scoops": rgba(237, 59, 90, $homepage-sections-opacity), "games": rgba(249, 182, 83, $homepage-sections-opacity), "activities": rgba(157, 89, 228, $homepage-sections-opacity), "skills": rgba(82, 195, 111, $homepage-sections-opacity), "about": rgba(62, 95, 219, $homepage-sections-opacity) );
 $section-font-colors: ("news": white, "careers": white, "scoops": white, "games": white, "activities": white, "skills": white, "about": white );
 $section-icons: ("homepage": "blue", "section-categories": "blue", "careers": "turquoise", "scoops": "red", "games": "orange", "activities": "purple");
-
-
 
 $section-color-home: #3e5fdb;
 
@@ -34,7 +33,7 @@ $baseline: 24px;
 $font-size-big: 36px;
 $font-size-heading: 28px;
 $font-size-heading2: 20px;
-$font-size-heading3: 16px;
+$font-size-heading3: 18px;
 $font-size-normal: 14px;
 $font-size-small: 12px;
 $padding: 45px;
@@ -724,29 +723,107 @@ table th {
 	background-color: #444444;
 	color: white;
 }
-table.mooc {
-	margin-top: $padding;
-	tr {
-		background-color: $color-cycle-pager-2;
+.mooc {
+	table {
+		margin-top: $padding;
+		margin-bottom: $baseline/2;
+		tr {
+			background-color: $color-cycle-pager-2;
+			border: 4px solid black;
+			border-color: $color-cycle-pager-2;
+			border-bottom-width: 0px;
+			border-top-width: 0px;
+			&:first-child {
+				border-color: map-get($section-colors, 'skills');
+			}
+			&:nth-child(0n+2) {
+				border-top-width: 4px;
+			}
+			&:last-child {
+				border-bottom-width: 4px;
+			}
+			&:hover {
+				/*background-color: $color-cycle-hover;*/
+			}
+		}
+		tr.mooc-extra {
+			border-color: $color-cycle-pager-2;
+			background-color: white;
+			td {
+				display: none;
+				text-align: center;
+			}
+			td .mooc-more {
+				padding-top: $baseline;
+				padding-bottom: $baseline;
+				max-width: 780px;
+				margin: auto;
+			}
+			&:hover {
+				background-color: inherit;
+			}
+		}
+		th,td {
+			border: 0px;
+		}
+		th {
+			@include heading();
+			text-align: center;
+			font-weight: normal;
+			color: $color-background;
+			padding: $baseline/2;
+			background-color: map-get($section-colors, 'skills');
+		}
+		td {
+			padding: $baseline/4;
+		}
+		/* We define the last column first because we want the first column to win when there is only one column */
+		td:last-child {
+			padding-right: $padding;
+			text-align: right;
+		}
+		td:first-child {
+			padding-left: $padding;
+			text-align: left;
+		}
 	}
-	tr.mooc-extra td {
-		display: none;
+	h3 {
+		@include heading();
+		font-size: $font-size-heading2;
+		color: map-get($section-colors, 'skills');
+		margin-bottom: $baseline/4;
 	}
-	th {
-		color: $color-background;
-		background-color: map-get($section-colors, 'skills');
+	h4 {
+		@include heading();
+		font-size: $font-size-heading3;
+		margin: $baseline 0 $baseline/4 0;
 	}
-	/* We define the last column first because we want the first column to win when there is only one column */
-	th:last-child, td:last-child {
-		padding-right: $padding;
-		text-align: right;
+	.call-to-action {
+		background: map-get($section-colors, 'skills');
+		color: white;
 	}
-	th:first-child, td:first-child {
-		padding-left: $padding;
-		text-align: left;
+	.expander {
+		color: inherit;
+	}
+	.extra {
+		width: 100%;
+		text-align: center;
+		line-height: $baseline*1.5;
+		margin-bottom: $padding;
+	}
+	.start-date {
+		@include normaltext();
 	}
 }
 
+.call-to-action {
+	border-radius: $baseline;
+	line-height: $baseline;
+	padding: $baseline/6 $baseline;
+	text-decoration: none;
+	display: inline-block;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
 
 .content-card {
 	max-width: $content-max-width;

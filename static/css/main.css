@@ -61,7 +61,7 @@ h2, h3 {
   font-size: 20px; }
 
 h4, h5, h6 {
-  font-size: 16px; }
+  font-size: 18px; }
 
 p, ul, ol, table {
   margin-bottom: 24px; }
@@ -770,22 +770,104 @@ table th {
   background-color: #444444;
   color: white; }
 
-table.mooc {
+.mooc table {
   margin-top: 45px;
+  margin-bottom: 12px;
   /* We define the last column first because we want the first column to win when there is only one column */ }
-  table.mooc tr {
-    background-color: #f2f2f2; }
-  table.mooc tr.mooc-extra td {
-    display: none; }
-  table.mooc th {
+  .mooc table tr {
+    background-color: #f2f2f2;
+    border: 4px solid black;
+    border-color: #f2f2f2;
+    border-bottom-width: 0px;
+    border-top-width: 0px; }
+    .mooc table tr:first-child {
+      border-color: #52c36f; }
+    .mooc table tr:nth-child(0n+2) {
+      border-top-width: 4px; }
+    .mooc table tr:last-child {
+      border-bottom-width: 4px; }
+    .mooc table tr:hover {
+      /*background-color: $color-cycle-hover;*/ }
+  .mooc table tr.mooc-extra {
+    border-color: #f2f2f2;
+    background-color: white; }
+    .mooc table tr.mooc-extra td {
+      display: none;
+      text-align: center; }
+    .mooc table tr.mooc-extra td .mooc-more {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      max-width: 780px;
+      margin: auto; }
+    .mooc table tr.mooc-extra:hover {
+      background-color: inherit; }
+  .mooc table th, .mooc table td {
+    border: 0px; }
+  .mooc table th {
+    font-family: "Miso", sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    font-weight: normal;
     color: white;
+    padding: 12px;
     background-color: #52c36f; }
-  table.mooc th:last-child, table.mooc td:last-child {
+  .mooc table td {
+    padding: 6px; }
+  .mooc table td:last-child {
     padding-right: 45px;
     text-align: right; }
-  table.mooc th:first-child, table.mooc td:first-child {
+  .mooc table td:first-child {
     padding-left: 45px;
     text-align: left; }
+
+.mooc h3 {
+  font-family: "Miso", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 20px;
+  color: #52c36f;
+  margin-bottom: 6px; }
+
+.mooc h4 {
+  font-family: "Miso", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 18px;
+  margin: 24px 0 6px 0; }
+
+.mooc .call-to-action {
+  background: #52c36f;
+  color: white; }
+
+.mooc .expander {
+  color: inherit; }
+
+.mooc .extra {
+  width: 100%;
+  text-align: center;
+  line-height: 36px;
+  margin-bottom: 45px; }
+
+.mooc .start-date {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 14px;
+  line-height: 24px; }
+
+.call-to-action {
+  border-radius: 24px;
+  line-height: 24px;
+  padding: 4px 24px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); }
 
 .content-card {
   max-width: 1250px;
@@ -805,7 +887,7 @@ table.mooc {
       line-height: 36px;
       margin: 0; }
     .content-card .title-container .date, .content-card .title-container .teaser {
-      font-size: 16px;
+      font-size: 18px;
       text-transform: uppercase; }
   .content-card .image-container {
     min-height: 400px;
