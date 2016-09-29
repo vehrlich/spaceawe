@@ -47,29 +47,29 @@
         	<ul class="list-4col">
         		<li>
         			<a href="#interviews_menu">
-	        			<p class="menu_title">Interviews</p>
-	        			<p>What is it like to work close to space?</p>
+	        			<p class="menu_title">{% trans "Interviews" %}</p>
+	        			<p>{% trans "What is it like to have a space-related job?" %}</p>
 	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         		<li>
         			<a href="#careers_menu">
-	        			<p class="menu_title">Careers</p>
-	        			<p>It is not all about bocoming an astronaut!</p>
+	        			<p class="menu_title">{% trans "Careers" %}</p>
+	        			<p>{% trans "It is not all about becoming an astronaut!" %}</p>
 	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         		<li>
         			<a href="#webinars_menu">
-	        			<p class="menu_title">Webinars</p>
-	        			<p>Watch live talks about space sciences</p>
+	        			<p class="menu_title">{% trans "Webinars" %}</p>
+	        			<p>{% trans "Watch live talks about space sciences" %}</p>
 	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         		<li>
         			<a href="#booklets_menu">
-	        			<p class="menu_title">Booklets & posters</p>
-	        			<p>Print, share, and download materials on space careers</p>
+	        			<p class="menu_title">{% trans "Booklets & posters" %}</p>
+	        			<p>{% trans "Print, share, and download materials on space careers" %}</p>
 	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
@@ -86,8 +86,8 @@
 
 <!-- Interviews -->
 	<div id="interviews_menu" class="wrapper_block_previews">
-        <h2 class="title">Interviews</h2>
-        <h3 class="title_green">What is it like to work to space?</h3>
+        <h2 class="title">{% trans "Interviews" %}</h2>
+        <h3 class="title_green">{% trans "What is it like to have a space-related job?" %}</h3>
         <div class="row">
 			<div class="padded">
         		<ol class="padded-list list-3col{% if interviews|length < 3 %} under-filled{% endif %}">
@@ -136,8 +136,8 @@
 
 
 	<div id="careers_menu" class="wrapper_block_previews">
-        <h2 class="title">Careers</h2>
-        <h3 class="title_green">It is not all about becoming an astronaut!</h3>
+        <h2 class="title">{% trans "Careers" %}</h2>
+        <h3 class="title_green">{% trans "It is not all about becoming an astronaut!" %}</h3>
         <div class="row">
 			<div class="padded">
         		<ol class="padded-list list-3col{% if careers|length < 3 %} under-filled{% endif %}">
@@ -209,8 +209,8 @@
 
 
 <div id="webinars_menu" class="wrapper_block_previews">
-        <h2 class="title">Webinars</h2>
-        <h3 class="title_green">Watch live talks about space sciences</h3>
+        <h2 class="title">{% trans "Webinars" %}</h2>
+        <h3 class="title_green">{% trans "Watch live talks about space sciences" %}</h3>
         <div class="row">
 			<div class="padded">
         		<ol class="padded-list list-3col{% if webinars|length < 3 %} under-filled{% endif %}">
