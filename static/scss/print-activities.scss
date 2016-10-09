@@ -1,10 +1,13 @@
 @page {
     size: A4 portrait;
-    margin: 0.4cm 2.8cm 1.5cm 2.8cm; 
+    margin: 3.8cm 2.8cm 2.8cm 2.8cm; 
 }
 
 $logo-height: 3.0cm;
 $logo-width: 2.35 * $logo-height;
+
+$logo-small-height: 1.5cm;
+$logo-small-width: 2.35 * $logo-height;
 
 $font-titles: Miso, sans-serif;
 
@@ -84,6 +87,15 @@ body {
     }
 }
 
+#logo {
+	position: fixed;
+	top: 0;
+	margin-top: 1cm;
+	img {
+		height: $logo-small-height;
+		width: $logo-small-width;
+	}
+}
 #story {
     margin-top: 1.0cm;
     .section-caption {
@@ -95,16 +107,18 @@ body {
     }
 }
 
+#sponsors {
+	img {
+		height: 40px;
+		padding-right: 20pt;
+	}        
+}
+
 #footer {
     // position: absolute;
-    bottom: 0;
+    position: fixed;
+    bottom: 0px;
     width: 100%;
-    .sponsors {
-        img {
-            height: 40px;
-            padding-right: 20pt;
-        }        
-    }
     .separator {
         margin-top: 0.2cm;
         margin-bottom: 0.2cm;

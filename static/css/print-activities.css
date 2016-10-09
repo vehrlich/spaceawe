@@ -1,6 +1,6 @@
 @page {
   size: A4 portrait;
-  margin: 0.4cm 2.8cm 1.5cm 2.8cm; }
+  margin: 3.8cm 2.8cm 2.8cm 2.8cm; }
 
 body {
   font-family: Ubuntu, sans-serif;
@@ -55,6 +55,14 @@ body {
   #metadata .metadata-item .caption {
     font-weight: bold; }
 
+#logo {
+  position: fixed;
+  top: 0;
+  margin-top: 1cm; }
+  #logo img {
+    height: 1.5cm;
+    width: 7.05cm; }
+
 #story {
   margin-top: 1.0cm; }
   #story .section-caption {
@@ -64,12 +72,14 @@ body {
     text-transform: uppercase;
     color: #9d59e4; }
 
+#sponsors img {
+  height: 40px;
+  padding-right: 20pt; }
+
 #footer {
-  bottom: 0;
+  position: fixed;
+  bottom: 0px;
   width: 100%; }
-  #footer .sponsors img {
-    height: 40px;
-    padding-right: 20pt; }
   #footer .separator {
     margin-top: 0.2cm;
     margin-bottom: 0.2cm;
