@@ -18,7 +18,7 @@
     <div id="cover" class="">
         <div class="feature-container">
             <div class="fake-padding"></div>
-            <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="5000">
+            <div class="cycle-slideshow">
     {% for object in object_list|slice:":4" %}
         {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
                 <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }});">
