@@ -102,138 +102,138 @@
    
 {% block content %}
 
-    <div id="cover">
-        <div class="feature-container">
-            <div class="fake-padding"></div>
-                <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({% static 'img/cover/about.jpg' %}) ;">
-                    <div class="title-container"><div class="title-subcontainer">
-                        <div class="smartembed">{% smartembed 'about-010-intro' %}</div>
-                    </div></div>
-                </div>
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
-            </div>
-        </div>
-    </div>
-    <div class="know_us">
-    	 <div id="main" class="anchor"></div>
-	<div class="know_us_block1">
-		<div class="content-page-1270 content-page pure-g">
-
-		<div class="title-container pure-u-1">
-			<div class="smartembed">{% smartembed 'about-020-what' %}</div>
+	<div id="cover">
+		<div class="feature-container">
+			<div class="fake-padding"></div>
+			<div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({% static 'img/cover/about.jpg' %}) ;">
+				<div class="title-container">
+					<div class="title-subcontainer">
+						<div class="smartembed text-content">{% smartembed 'about-010-intro' %}</div>
+					</div>
+				</div>
+			</div>
+			<nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
 		</div>
 	</div>
-	<div class="content-page-1270 content-page pure-g">
-		<ul class="list-4col">
-			<li class="page-about-goals">
-				<div>{% smartembed 'about-021-01' %}</div>
-			</li>
-			<li class="page-about-goals">
-				<div>{% smartembed 'about-022-02' %}</div>
-			</li>
-			<li class="page-about-goals">
-				<div>{% smartembed 'about-023-03' %}</div>
-			</li>
-			<li class="page-about-goals">
-				<div>{% smartembed 'about-024-04' %}</div>
-			</li>
-		</ul>
-		<div class="content pure-u-1" style="padding-top: 20px;">
-			<div class="smartembed">{% smartembed 'about-029-what-footer' %}</div>
-		</div>
-	</div>      
-	<div class="know_us_block2 grey_block">
-		<div class="content-page-1270 content-page pure-g">
-			<div class="page-about-what pure-u-1">
-				<div class="smartembed">{% smartembed 'about-030-resources' %}</div>
+<!--</div>-->
+
+	<div class="know_us">
+		<div id="main" class="anchor"></div>
+		<div class="know_us_block1">
+			<div class="content-page-1270 content-page pure-g">
+				<div class="title-container pure-u-1">
+				<div class="smartembed text-content">{% smartembed 'about-020-what' %}</div>
 			</div>
 		</div>
 		<div class="content-page-1270 content-page pure-g">
-			<ul id="categories" class="list-4col">
-				<li class="category category-1">
-					<div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
-					<div class="smartembed">{% smartembed 'about-031-space' %}</div>
+			<ul class="list-4col">
+				<li class="page-about-goals">
+					<div>{% smartembed 'about-021-01' %}</div>
 				</li>
-				<li class="category category-1">
-					<div class="icon"><a href="{% url 'categories' code='earth' %}"><img src="{% static 'img/icons/categories/icon_earth_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_earth_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_earth_blue.svg' %}'" /></a></div>
-					<div class="smartembed">{% smartembed 'about-032-earth' %}</div>
+				<li class="page-about-goals">
+					<div>{% smartembed 'about-022-02' %}</div>
 				</li>
-				<li class="category category-1">
-					<div class="icon"><a href="{% url 'categories' code='navigation' %}"><img src="{% static 'img/icons/categories/icon_navigation_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_navigation_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_navigation_blue.svg' %}'" /></a></div>
-					<div class="smartembed">{% smartembed 'about-033-navigation' %}</div>
+				<li class="page-about-goals">
+					<div>{% smartembed 'about-023-03' %}</div>
 				</li>
-				<li class="category category-1">
-					<div class="icon"><a href="{% url 'categories' code='heritage' %}"><img src="{% static 'img/icons/categories/icon_heritage_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_heritage_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_heritage_blue.svg' %}'" /></a></div>
-					<div class="smartembed">{% smartembed 'about-034-heritage' %}</div>
+				<li class="page-about-goals">
+					<div>{% smartembed 'about-024-04' %}</div>
 				</li>
 			</ul>
+			<div class="content pure-u-1" style="padding-top: 20px;">
+				<div class="smartembed text-content">{% smartembed 'about-029-what-footer' %}</div>
+			</div>
+		</div>      
+		<div class="know_us_block2 grey_block">
+			<div class="content-page-1270 content-page pure-g">
+				<div class="page-about-what pure-u-1">
+					<div class="smartembed text-content">{% smartembed 'about-030-resources' %}</div>
+				</div>
+			</div>
+			<div class="content-page-1270 content-page pure-g">
+				<ul id="categories" class="list-4col">
+					<li class="category category-1">
+						<div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
+						<div class="smartembed">{% smartembed 'about-031-space' %}</div>
+					</li>
+					<li class="category category-1">
+						<div class="icon"><a href="{% url 'categories' code='earth' %}"><img src="{% static 'img/icons/categories/icon_earth_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_earth_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_earth_blue.svg' %}'" /></a></div>
+						<div class="smartembed">{% smartembed 'about-032-earth' %}</div>
+					</li>
+					<li class="category category-1">
+						<div class="icon"><a href="{% url 'categories' code='navigation' %}"><img src="{% static 'img/icons/categories/icon_navigation_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_navigation_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_navigation_blue.svg' %}'" /></a></div>
+						<div class="smartembed">{% smartembed 'about-033-navigation' %}</div>
+					</li>
+					<li class="category category-1">
+						<div class="icon"><a href="{% url 'categories' code='heritage' %}"><img src="{% static 'img/icons/categories/icon_heritage_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_heritage_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_heritage_blue.svg' %}'" /></a></div>
+						<div class="smartembed">{% smartembed 'about-034-heritage' %}</div>
+					</li>
+				</ul>
 
-			<div class="pure-u-1">
-				<div class="smartembed">{% smartembed 'about-039-resources-footer' %}</div>
+				<div class="pure-u-1">
+					<div class="smartembed text-content">{% smartembed 'about-039-resources-footer' %}</div>
+				</div>
 			</div>
 		</div>
-    </div>
 
-    <div class="page-about-map_wrap pure-g">
-        <div class="page-about-map pure-u-1">
-        <div class="content-page">
-            <div class="title-container">
-                <div class="smartembed">{% smartembed 'about-040-where' %}</div>
-            </div>
-        </div>
+		<div class="page-about-map_wrap pure-g">
+			<div class="page-about-map pure-u-1">
+				<div class="content-page">
+					<div class="title-container">
+						<div class="smartembed text-content">{% smartembed 'about-040-where' %}</div>
+					</div>
+				</div>
 
 
-            <div class="content">
-                <div id="partnermap"></div>
-                <div class="partnermap-legend">
-                    <img src="{% static 'img/map-dot-partner.svg' %}"> {% trans "Project partners" %}
-                    &nbsp; &nbsp; &nbsp; 
-                    <img src="{% static 'img/map-dot-node.svg' %}"> {% trans "National contacts" %}
-                </div>
-            </div>
-        </div>
-    </div>
+				<div class="content">
+					<div id="partnermap"></div>
+					<div class="partnermap-legend">
+						<img src="{% static 'img/map-dot-partner.svg' %}"> {% trans "Project partners" %}
+						&nbsp; &nbsp; &nbsp; 
+						<img src="{% static 'img/map-dot-node.svg' %}"> {% trans "National contacts" %}
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <div class="content-page pure-g">
-        <div class="page-about-contact smartembed pure-u-1">
-            <h2 class="title">{% trans "Contact us" %}</h2>
-            <div class="content"><a href="mailto:euspaceawe@eun.org">euspaceawe@eun.org</a></div>
-        </div>
-    </div>
+		<div class="content-page pure-g">
+			<div class="page-about-contact smartembed pure-u-1">
+				<h2 class="title">{% trans "Contact us" %}</h2>
+				<div class="content"><a href="mailto:euspaceawe@eun.org">euspaceawe@eun.org</a></div>
+			</div>
+		</div>
 
-    <div class="content-page pure-g">
-        <div class="page-about-team pure-u-1">
-            <h2 class="title">{% trans "The Space Awareness team" %}</h2>
-            <h3 class="subtitle">{% trans "Space Awareness is developed by" %}</h3>
-            <div class="content">
-                <img src="{% static 'img/partners/1.01_Leiden_60px.svg' %}" style="height: 60px;" title="Leiden University">
-                <img src="{% static 'img/partners/1.02_EUSchoolnet_60px.svg' %}" style="height: 60px;" title="European Schoolnet">
-                <img src="{% static 'img/partners/1.03_HDA_60px.png' %}" style="height: 60px;" title="Max Planck Gesellschaft - Haus der Astronomie">
-                <img src="{% static 'img/partners/1.03_UCL_48px.svg' %}" style="height: 48px;" title="University College London">
-                <img src="{% static 'img/partners/1.04_AGOGI_75px.svg' %}" style="height: 75px;" title="Ellinogermaniki Agogi">
-                <img src="{% static 'img/partners/1.05_TOU_60px.png' %}" style="height: 60px;" title="The Open University">
-                <img src="{% static 'img/partners/1.06_Ecsite_75px.png' %}" style="height: 75px;" title="Ecsite">
-                <img src="{% static 'img/partners/1.07_Nuclio_60px.png' %}" style="height: 60px;" title="Nuclio">
-                <img src="{% static 'img/partners/1.08_IAU_60px.png' %}" style="height: 60px;" title="IAU Office of Astronomy for Development">
-                <img src="{% static 'img/partners/1.09_CViva_67px.png' %}" style="height: 67px;" title="Ciência Viva">
-            </div>
+		<div class="content-page pure-g">
+			<div class="page-about-team pure-u-1">
+				<h2 class="title">{% trans "The Space Awareness team" %}</h2>
+				<h3 class="subtitle">{% trans "Space Awareness is developed by" %}</h3>
+				<div class="content">
+					<img src="{% static 'img/partners/1.01_Leiden_60px.svg' %}" style="height: 60px;" title="Leiden University">
+					<img src="{% static 'img/partners/1.02_EUSchoolnet_60px.svg' %}" style="height: 60px;" title="European Schoolnet">
+					<img src="{% static 'img/partners/1.03_HDA_60px.png' %}" style="height: 60px;" title="Max Planck Gesellschaft - Haus der Astronomie">
+					<img src="{% static 'img/partners/1.03_UCL_48px.svg' %}" style="height: 48px;" title="University College London">
+					<img src="{% static 'img/partners/1.04_AGOGI_75px.svg' %}" style="height: 75px;" title="Ellinogermaniki Agogi">
+					<img src="{% static 'img/partners/1.05_TOU_60px.png' %}" style="height: 60px;" title="The Open University">
+					<img src="{% static 'img/partners/1.06_Ecsite_75px.png' %}" style="height: 75px;" title="Ecsite">
+					<img src="{% static 'img/partners/1.07_Nuclio_60px.png' %}" style="height: 60px;" title="Nuclio">
+					<img src="{% static 'img/partners/1.08_IAU_60px.png' %}" style="height: 60px;" title="IAU Office of Astronomy for Development">
+					<img src="{% static 'img/partners/1.09_CViva_67px.png' %}" style="height: 67px;" title="Ciência Viva">
+				</div>
+				<h3 class="subtitle" style="padding-top: 50px;">{% trans "Space Awareness is developed in collaboration with" %}</h3>
+				<div class="content">
+					<img src="{% static 'img/partners/2.01_ESA_60px.png' %}" style="height: 60px;" title="Galileo Teacher training">
+					<img src="{% static 'img/partners/2.02_Galileo_75px.png' %}" style="height: 75px;" title="ESA">
+					<img src="{% static 'img/partners/2.03_Scientix_70px.png' %}" style="height: 70px;" title="Scientix">
+					<img src="{% static 'img/partners/2.04_AAU_60px.png' %}" style="height: 60px;" title="Al Akhawayn University">
+				</div>
+			</div>
+		</div>
 
-            <h3 class="subtitle" style="padding-top: 50px;">{% trans "Space Awareness is developed in collaboration with" %}</h3>
-            <div class="content">
-                <img src="{% static 'img/partners/2.01_ESA_60px.png' %}" style="height: 60px;" title="Galileo Teacher training">
-                <img src="{% static 'img/partners/2.02_Galileo_75px.png' %}" style="height: 75px;" title="ESA">
-                <img src="{% static 'img/partners/2.03_Scientix_70px.png' %}" style="height: 70px;" title="Scientix">
-                <img src="{% static 'img/partners/2.04_AAU_60px.png' %}" style="height: 60px;" title="Al Akhawayn University">
-            </div>
-
-        </div>
-    </div>
-
-    <div class="content-page pure-g">
-        <div class="page-about-imagecredits pure-u-1">
-            <div class="smartembed">{% smartembed 'about-090-imagecredits' %}</div>
-        </div>
-    </div>
+		<div class="content-page pure-g">
+			<div class="page-about-imagecredits pure-u-1">
+				<div class="smartembed text-content">{% smartembed 'about-090-imagecredits' %}</div>
+			</div>
+		</div>
     </div>
 
 {% endblock %}
