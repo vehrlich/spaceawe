@@ -159,6 +159,8 @@ body.single #header, #header.small, .header-small {
 
 #cover {
   height: 100%;
+  position: relative;
+  z-index: 2;
   text-align: center;
   overflow: hidden; }
   #cover a {
@@ -206,22 +208,21 @@ body.single #header, #header.small, .header-small {
             line-height: 24px;
             text-transform: none;
             padding-top: 1em; }
-    #cover .feature-container .cycle-pager {
+    #cover .feature-container .cycle-pager, #cover .feature-container .slick-dots {
       z-index: 199;
-      left: 1%;
-      right: 1%;
+      /*left: 1%; right: 1%;*/
       position: absolute;
       bottom: 40px;
       padding: 5px 45px;
       margin: auto; }
-      #cover .feature-container .cycle-pager span {
+      #cover .feature-container .cycle-pager span, #cover .feature-container .slick-dots span {
         font-family: arial;
         font-size: 28px;
         width: 18px;
         cursor: pointer;
         display: inline-block;
         color: #94959A; }
-        #cover .feature-container .cycle-pager span.cycle-pager-active {
+        #cover .feature-container .cycle-pager span.cycle-pager-active, #cover .feature-container .slick-dots span.cycle-pager-active {
           color: #f2f2f2; }
     #cover .feature-container .arrow-pagedown {
       z-index: 199;
@@ -236,6 +237,32 @@ body.single #header, #header.small, .header-small {
       #cover .feature-container .arrow-pagedown img:hover {
         opacity: 1; }
 
+/* Slideshow styles */
+.slick-list, .slick-track {
+  height: 100%; }
+
+.slick-dots {
+  bottom: 0px; }
+  .slick-dots li button:before {
+    top: auto;
+    color: #94959A;
+    line-height: 0px;
+    opacity: 1; }
+  .slick-dots li.slick-active button:before {
+    color: #f2f2f2; }
+
+.slick-prev {
+  left: 0px;
+  z-index: 100; }
+
+.slick-next {
+  right: 0px; }
+
+.slick-prev, .slick-next {
+  width: 60px;
+  height: 60px; }
+
+/* End slideshow styles */
 .anchor {
   position: relative;
   top: -60px;
@@ -2249,6 +2276,7 @@ input:focus {
 
 .to_top {
   position: fixed;
+  z-index: 1;
   width: 33px;
   height: 18px;
   display: inline-block;

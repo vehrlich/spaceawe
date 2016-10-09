@@ -126,6 +126,16 @@ var nav_height = { 'small' : 60, 'big': 215 };
 		$(document).on('scroll', adjustHeader);
 		adjustHeader();
 
+		$('.cycle-slideshow').slick({
+			autoplay: true,
+			// mobileFirst: true,
+			prevArrow: '<div><img class="slick-prev" src="/static/img/arrow-image-prev.svg"></div>',
+			nextArrow: '<div><img class="slick-next" src="/static/img/arrow-image-next.svg"></div>',
+			dots: true,
+			swipe: true,
+			autoplaySpeed: 5000,
+			pauseOnDotsHover: true,
+		});
 
 		if($("div").is(".section-scoops ")) $('.section-scoops .pure-u-1 .list-item-container .title').matchHeight(false);
 		
@@ -143,11 +153,7 @@ var nav_height = { 'small' : 60, 'big': 215 };
 
        
 
-          // if($('.filter_search').val() != ''){
-          // $('.filter_search').addClass('empty_field');
-          //     } else {
-          // $('.filter_search').removeClass('empty_field');
-          //     }
+
 
 
 

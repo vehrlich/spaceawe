@@ -271,6 +271,8 @@ PIPELINE = {
     'STYLESHEETS': {
         'styles': {
             'source_filenames': [
+                'js/slick/slick.css',
+                'js/slick/slick-theme.css',
                 'css/main.css',
             ],
             'output_filename': 'css/spaceawe.min.css',
@@ -282,11 +284,13 @@ PIPELINE = {
     'JAVASCRIPT': {
         'scripts': {
             'source_filenames': [
-                'js/jquery-1.10.1.js',
-                'js/jquery.scrollTo.js',
+                'js/jquery-1.10.1.min.js',
+                #'js/jquery-migrate-3.0.0.min.js',
+                #'js/jquery.scrollTo.js',
                 'js/jquery.event.special.js',
-                'js/jquery.scrollsnap.js',
-                'js/jquery.cycle2.js',
+                #'js/jquery.scrollsnap.js',
+                #'js/jquery.cycle2.js',
+                'js/slick/slick.min.js',
                 'el-pagination/js/el-pagination.js',
                 'js/jquery.sharrre.min.js',
                 'js/jquery.matchHeight.js',
@@ -430,6 +434,7 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
     )
     DEBUG_TOOLBAR_CONFIG = {
         'INTERCEPT_REDIRECTS': False,
+        'JQUERY_URL':'',
     }
     EMAIL_SUBJECT_PREFIX = '[spaceawe dev] '
 

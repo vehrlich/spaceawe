@@ -228,6 +228,8 @@ body.single #header, #header.small, .header-small {
 
 #cover {
 	height: 100%;
+	position: relative;
+	z-index: 2;
 	text-align: center;
 	overflow: hidden; // hides extra features when js is disabled
 	a {
@@ -276,9 +278,9 @@ body.single #header, #header.small, .header-small {
 				}
 		}
 	}
-	.cycle-pager {
+	.cycle-pager, .slick-dots {
 		z-index: 199;
-		left: 1%; right: 1%;	// instead of width: 100%;
+		/*left: 1%; right: 1%;*/	// instead of width: 100%;
 		position: absolute;
 		bottom: 40px;
 		padding: 5px $padding;
@@ -309,6 +311,34 @@ body.single #header, #header.small, .header-small {
 
 	}
 }
+
+/* Slideshow styles */
+.slick-list, .slick-track { height: 100%; }
+.slick-dots {
+	bottom: 0px;
+	li button:before {
+		top: auto;
+		color: $color-cycle-pager-1;
+		line-height: 0px;
+		opacity: 1;
+	}
+	li.slick-active button:before {
+		color: $color-cycle-pager-2;
+	}
+}
+.slick-prev {
+	left: 0px;
+	z-index: 100
+}
+.slick-next {
+	right: 0px;
+}
+.slick-prev, .slick-next {
+	width: 60px; height: 60px;
+}
+/* End slideshow styles */
+
+
 
 .anchor {
 	position: relative;
@@ -1727,6 +1757,7 @@ input:focus {
 
 .to_top {
 	position: fixed;
+	z-index: 1;
 	width: 33px;
 	height: 18px;
 	display: inline-block;
