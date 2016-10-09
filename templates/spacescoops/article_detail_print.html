@@ -1,49 +1,47 @@
-<!DOCTYPE html>
-{% load i18n parler_tags staticfiles smartpages thumbnail pipeline %}
-
-{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>{% load i18n parler_tags staticfiles smartpages thumbnail pipeline %}{% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ object.title }}</title>
-        <link href="{% static 'css/print-scoops.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
-    </head>
-    <body>
-        <div id="header">
-            <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
-            <div class="title">{% trans 'Space Scoop' %}</div>
-            <div class="subtitle">{% trans SECTIONS.scoops.subtitle %}</div>
-        </div>
-        {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
-        <div id="cover-image" style="background-image: url({{ im.url }}); "></div>
-        {% endthumbnail %}
-        <div id="story">
-            <div class="title">{{ object.title }}</div>
-            <div class="subtitle">{{ object.release_date|date:"DATE_FORMAT" }}</div>
-            <div class="text">
-                {{ object.story|safe }}
-            </div>
-        </div>
-        <div id="coolfact">
-            <div class="title"><img src="{% static 'img/star.svg' %}"> {% trans "Cool Fact!"%}</div>
-            <div class="text">{{ object.cool_fact|safe }}</div>
-        </div>
-        <div id="footer">
-            <div class="sponsors">
-                <a target="_blank" href="http://www.space-awareness.org/"><img src="{% static 'img/sponsors/spaceawareness.png' %}" /></a>
-                <a target="_blank" href="http://www.unawe.org/"><img src="{% static 'img/sponsors/unawe.png' %}" /></a>
-                <img src="{% static 'img/sponsors/eu.png' %}" />
-          {% for n in object.originalnews_set.all %}
-            {% thumbnail n.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as im %}
-                <a target="_blank" href="{{ n.institution.url }}"><img src="{{ im.url }}" alt="{{ n.institution.name }}"/></a>
-            {% endthumbnail %}
-          {% endfor %}
-            </div>
-            <div class="separator"></div>
-            <div class="footer_link">
-                <a href="http://www.space-awareness.org/scoops/">www.space-awareness.org/scoops</a>
-            </div>
-        </div>
+<head>
+	<meta charset="utf-8">
+	<title>{{ object.title }}</title>
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+	<link href="{% static 'css/print-scoops.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+</head>
+<body style="background-image: url({% static 'img/mainpage_1.png' %}">
+	<div id="header">
+		<div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
+		<div class="title">{% trans 'Space Scoop' %}</div>
+		<div class="subtitle">{% trans SECTIONS.scoops.subtitle %}</div>
+	</div>
+	{% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+	<div id="cover-image" style="background-image: url({{ im.url }}); "></div>
+	{% endthumbnail %}
+	<div id="story">
+		<div class="title">{{ object.title }}</div>
+		<div class="subtitle">{{ object.release_date|date:"DATE_FORMAT" }}</div>
+		<div class="text">
+			{{ object.story|safe }}
+		</div>
+	</div>
+	<div id="coolfact">
+		<div class="title"><img src="{% static 'img/star.svg' %}"> {% trans "Cool Fact!"%}</div>
+		<div class="text">{{ object.cool_fact|safe }}</div>
+	</div>
+	<div id="footer">
+		<div class="sponsors">
+			<a target="_blank" href="http://www.space-awareness.org/"><img src="{% static 'img/sponsors/spaceawareness.png' %}" /></a>
+			<a target="_blank" href="http://www.unawe.org/"><img src="{% static 'img/sponsors/unawe.png' %}" /></a>
+			<img src="{% static 'img/sponsors/eu.png' %}" />
+	  {% for n in object.originalnews_set.all %}
+		{% thumbnail n.institution.logo THUMBNAIL_ALIASES.scoop_source crop="center" as im %}
+			<a target="_blank" href="{{ n.institution.url }}"><img src="{{ im.url }}" alt="{{ n.institution.name }}"/></a>
+		{% endthumbnail %}
+	  {% endfor %}
+		</div>
+		<div class="separator"></div>
+		<div class="footer_link">
+			<a href="http://www.space-awareness.org/scoops/">www.space-awareness.org/scoops</a>
+		</div>
+	</div>
 
-    </body>
+</body>
 </html>
