@@ -23,7 +23,7 @@
 
 					{% for result in search_results %}
 					<li class="row result_block">
-						{% thumbnail result.main_visual THUMBNAIL_ALIASES.spread crop="center" as thumb %}
+						{% thumbnail result.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
 						<div class="search_img">
 							<a href="{{ result.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ result.title|truncatechars:20 }}" /></a>
 						</div>
