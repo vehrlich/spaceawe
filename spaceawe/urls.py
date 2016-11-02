@@ -21,6 +21,7 @@ from django.views.generic import TemplateView, RedirectView
 
 from .views import TranslatableTemplateView
 from develop.views import DevelopView
+from search.views import simple_search
 
 
 urlpatterns = [
@@ -32,7 +33,7 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     url(r'^$', 'spaceawe.views.home', name='home'),
     url(r'^categories/(?P<code>.+)?/$', 'spaceawe.views.categories', name='categories'),
-    # url(r'^search/', 'spaceawe.search.views.search', name='search'),
+    # url(r'^search/', simple_search, name='search'),
     url(r'^news/', include('news.urls', namespace='news'), name='news'),
     url(r'^scoops/', include('spacescoops.urls', namespace='scoops'),name='scoops'),
     url(r'^activities/', include('activities.urls', namespace='activities')),

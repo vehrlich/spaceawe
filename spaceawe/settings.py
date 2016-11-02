@@ -35,7 +35,7 @@ else:
 
 
 DEBUG = False
-DJANGO_SETTINGS_CONFIG = os.environ.get('DJANGO_SETTINGS_CONFIG', None)
+DJANGO_SETTINGS_CONFIG = 'DEV'#os.environ.get('DJANGO_SETTINGS_CONFIG', None)
 if DJANGO_SETTINGS_CONFIG == 'DEV':
     DEBUG = True
 
@@ -167,7 +167,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(PARENT_DIR, 'usr/sqlite/spaceawe.sqlite3'),
+#         'NAME': 'spaceawe.sqlite3',
 #     }
 # }
 
