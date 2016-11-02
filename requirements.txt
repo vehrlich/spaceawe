@@ -25,6 +25,8 @@ redis==2.10.5
 celery==3.1.23
 Whoosh==2.7.4
 
+django-simplesearch=1.0
+
 ## astroedu
 bleach==1.4.2
 # django-celery==3.1.23
