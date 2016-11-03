@@ -5,7 +5,7 @@
 
 Django==1.8.14
 pytz
-psycopg2==2.6.1  # postgreSQL 
+psycopg2==2.6.1  # postgreSQL
 django-pipeline==1.6.8
 django-autoslug==1.9.3
 awesome-slugify==1.6.5
@@ -25,7 +25,7 @@ redis==2.10.5
 celery==3.1.23
 Whoosh==2.7.4
 
-django-simplesearch=1.0
+django-simplesearch==1.0
 
 ## astroedu
 bleach==1.4.2

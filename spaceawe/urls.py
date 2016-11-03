@@ -45,8 +45,6 @@ urlpatterns += i18n_patterns(
     # url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
     url(r'^careers/', include('careers.urls', namespace='careers')),
     url(r'^search/', include('search.urls', namespace='search')),
-    url(r'^feedback', RedirectView.as_view(url='https://opinio.ucl.ac.uk/s?s=45081'), name='go-feedback'), # Added 2016-09-29
-    url(r'^esa', RedirectView.as_view(url='https://www.eventbrite.com/e/2016-a-big-year-in-space-for-the-european-space-agency-tickets-28389979192'), name='go-esa'), # Added 2016-10-07
 )
 
 if settings.DEBUG:

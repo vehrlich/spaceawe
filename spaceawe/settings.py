@@ -35,7 +35,7 @@ else:
 
 
 DEBUG = False
-DJANGO_SETTINGS_CONFIG = 'DEV'#os.environ.get('DJANGO_SETTINGS_CONFIG', None)
+DJANGO_SETTINGS_CONFIG = os.environ.get('DJANGO_SETTINGS_CONFIG', None)
 if DJANGO_SETTINGS_CONFIG == 'DEV':
     DEBUG = True
 
@@ -72,6 +72,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.redirects',
 
     'pipeline',
 
@@ -113,7 +115,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
+
+SITE_ID = 1
 
 ROOT_URLCONF = 'spaceawe.urls'
 
@@ -280,6 +285,15 @@ PIPELINE = {
                 'media': 'screen',
             },
         },
+        'print': {
+            'source_filenames': [
+                'css/print-activities.css',
+            ],
+            'output_filename': 'css/spaceawe.print.min.css',
+            'extra_context': {
+                'media': 'print',
+            },
+        }
     },
     'JAVASCRIPT': {
         'scripts': {

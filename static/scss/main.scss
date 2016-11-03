@@ -189,10 +189,10 @@ i, em {
 		}
 		&.mainmenu {
 			left: 0;
-		} 
+		}
 		&.language {
 			right: 0;
-		} 
+		}
 	}
 
 	/* resize header when scrolling down */
@@ -285,11 +285,11 @@ body.single #header, #header.small, .header-small {
 		bottom: 40px;
 		padding: 5px $padding;
 		margin: auto;
-		span { 
+		span {
 			font-family: arial; font-size: $font-size-heading;
 			width: 18px;
-			cursor: pointer; 
-			display: inline-block; color: $color-cycle-pager-1; 
+			cursor: pointer;
+			display: inline-block; color: $color-cycle-pager-1;
 			&.cycle-pager-active { color: $color-cycle-pager-2;}
 		}
 	}
@@ -360,7 +360,7 @@ body.single #header, #header.small, .header-small {
 		background-size: cover;
 		background-position: 50%;
 		text-align: center;
-	
+
 		a.fill-container {
 			display: block;
 			height: 100%;
@@ -541,7 +541,7 @@ body.single #header, #header.small, .header-small {
 				}
 			}
 			.filter-title {
-				
+
 			}
 		}
 	}
@@ -653,7 +653,7 @@ body.single #header, #header.small, .header-small {
 		width: 100%;
 		height: 100%;
 		background-repeat: no-repeat;
-		background-position: center; 
+		background-position: center;
 		background-size: contain;
 	}
 	.hover {
@@ -895,7 +895,7 @@ table th {
 		}
 		.date, .teaser {
 			font-size: $font-size-heading3;
-			text-transform: uppercase;		
+			text-transform: uppercase;
 		}
 	}
 	.image-container {
@@ -1050,7 +1050,7 @@ table th {
 	.subscribe-container-3 {
 		display: table-cell;
 		vertical-align: middle;
-		padding: 0 20%; 
+		padding: 0 20%;
 		// height: 100%;
 		// width: 100%;
 	}
@@ -1061,7 +1061,7 @@ table th {
 	.line2 {
 		@include normaltext();
 	}
-} 
+}
 
 #footer {
 	position: relative;
@@ -1192,7 +1192,7 @@ table th {
 
 .list-item-container{
 	margin: 10px;
-} 
+}
 
 
 @import "sp-menu";
@@ -1215,7 +1215,7 @@ body.single {
 				background-color: map-get($section-colors, $section);
 			}
 		}
-		
+
 		#header {
 			.menu-bar a.menu-#{$section} {
 				border-color: map-get($section-colors, '#{$section}');
@@ -1264,7 +1264,7 @@ body.single {
 			background-image: url(../img/more-title-bg-#{$section}.svg);
 		}
 		#footer .social-background {
-			background-image: url(../img/footer-bg-social-#{$section}.svg);	
+			background-image: url(../img/footer-bg-social-#{$section}.svg);
 		}
 
 
@@ -1343,7 +1343,7 @@ body.single {
 	hr {
 		width: 60%;
 		// https://css-tricks.com/examples/hrs/
-		border: 0; height: 1px; background: #888; //background-image: linear-gradient(to right, #ccc, #333, #ccc); 
+		border: 0; height: 1px; background: #888; //background-image: linear-gradient(to right, #ccc, #333, #ccc);
 	}
 }
 
@@ -1367,7 +1367,7 @@ body.single {
 	}
 }
 	.filters.level {
-		margin-top: 10px; 
+		margin-top: 10px;
 		font-size: $font-size-small;
 		.pure-menu-has-children {
 			width: 150px;
@@ -1434,7 +1434,7 @@ body.single {
 // @media screen and (min-width: 35.5em) { // sm: 568px
 //	 @import "main_568";
 // }
-@media screen and (min-width: 768px) { // md: 768px 
+@media screen and (min-width: 768px) { // md: 768px
 	@import "main_768";
 }
 @media screen and (min-width: 1024px) { // lg: 1024px
@@ -2081,14 +2081,14 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
 			background: none, none, map-get($section-colors, '#{$section}');
 		}
 	}
-	
+
 	#header {
 		padding-bottom: $baseline;
 	}
 	#header .logo {
 		margin-bottom: $baseline/3;
 	}
-	
+
 
     .section-careers .top_block_fixed {
         position: relative;
@@ -2176,4 +2176,3 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
         text-align: center;
     }
 }
-
