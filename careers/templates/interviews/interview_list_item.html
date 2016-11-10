@@ -1,5 +1,4 @@
 {% load staticfiles thumbnail %}
-
 <li><div class="list-item-container">
 	<div class="list-item games"{% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as thumb %} style="background-image:url({{ thumb.url }});"{% endthumbnail %} aria-haspopup="true">
 		<div class="link-container">
@@ -7,6 +6,7 @@
 				<div class="color"></div>
 				<div class="color-black"></div>
 				<div class="text">
+					<div class="date"></div>
 					<div class="title">{{ object.title }}</div>
 					<div class="preview">{{ object.teaser }}</div>
 					<div class="bottom">

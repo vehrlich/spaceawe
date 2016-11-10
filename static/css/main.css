@@ -1927,11 +1927,6 @@ body.section-about .wrapper_block_previews h3 {
   transition: all 0.5s ease 0s;
   visibility: hidden; }
 
-.section-careers .content-card .thumbnailed-list .list-item .text > div.bottom {
-  bottom: 0;
-  height: 100%;
-  margin-bottom: 0; }
-
 /* STUART: Hide pointless navigation elements. Why do *two* language menus exist? */
 .search_head, #menu-language1 {
   display: none; }
@@ -2057,10 +2052,21 @@ body.section-careers #header.small {
 body.section-careers #header.small .logo .logo-el {
   background-image: url(../img/logo.svg); }
 
-.section-careers .thumbnailed-list .list-item .text .title {
+.section-careers {
+  /* We just want to target the video thumbnail list and the */ }
+  .section-careers .thumbnailed-list.video_thumbnailed .list-item .text .title {
+    padding-top: 45px; }
+  .section-careers .thumbnailed-list.video_thumbnailed .list-item .text > div.bottom {
+    bottom: 0;
+    height: 100%;
+    margin-bottom: 0; }
+  .section-careers .thumbnailed-list.video_thumbnailed .list-item .expand {
+    padding: 7px 0 0; }
+
+.section-careers .thumbnailed-list.video_thumbnailed .list-item .text .title {
   padding-top: 45px; }
 
-.section-careers .content-card .thumbnailed-list .list-item .expand {
+.section-careers .content-card .thumbnailed-list.video_thumbnailed .list-item .expand {
   padding: 7px 0 0; }
 
 .section-careers .wrapper_block_previews {

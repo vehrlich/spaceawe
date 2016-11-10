@@ -81,6 +81,8 @@ class InterviewDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['random'] = misc.spaceawe_random_resources(self.object)
+        print('Test')
         return context
 
 class WebinarDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):

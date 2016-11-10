@@ -12,6 +12,7 @@ def random_resources(space, earth, navigation, heritage, exclude=None):
     from spacescoops.models import Article as Scoop
     from activities.models import Activity
     from games.models import Game
+    from careers.models import Interview
 
     tmp = []
     filtr = Q()
@@ -27,8 +28,9 @@ def random_resources(space, earth, navigation, heritage, exclude=None):
     scoops = list(Scoop.objects.filter(filtr).order_by('?')[:3])
     activities = list(Activity.objects.filter(filtr).order_by('?')[:3])
     games = list(Game.objects.filter(filtr).order_by('?')[:3])
+    interviews = list(Interview.objects.filter(filtr).order_by('?'[:3]))
 
-    tmp += scoops + activities + games
+    tmp += scoops + activities + games + interviews
     random.shuffle(tmp)
 
     result = []
@@ -45,5 +47,8 @@ def random_resources(space, earth, navigation, heritage, exclude=None):
             elif type(item) is Game:
                 url = reverse('games:detail', kwargs={'slug': item.slug})
                 section = 'games'
+            elif type(item) is Interview:
+                url = reverse('careers:interview-detail', kwargs={'slug': item.slug})
+                section = 'careers'
             result.append({'url': url, 'object': item, 'section': section, })
     return result
