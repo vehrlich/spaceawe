@@ -1,13 +1,20 @@
 @page {
     size: A4 portrait;
+    margin: 2.8cm 2.8cm 2.8cm 2.8cm; 
+}
+@page :first {
+	display: none;
     margin: 3.8cm 2.8cm 2.8cm 2.8cm; 
+    @bottom-left {
+		content: "Page " counter(page) " of " counter(pages);
+	}
 }
 
-$logo-height: 3.0cm;
+$logo-height: 13.0cm;
 $logo-width: 2.35 * $logo-height;
 
 $logo-small-height: 1.5cm;
-$logo-small-width: 2.35 * $logo-height;
+$logo-small-width: 2.35 * $logo-small-height;
 
 $font-titles: Miso, sans-serif;
 
@@ -34,7 +41,7 @@ body {
 #header {
     page-break-after: always;
     text-align: center;
-    .logo {
+    #logo {
         margin-top: 7.3cm;
         img {
             height: $logo-height;
@@ -87,16 +94,20 @@ body {
     }
 }
 
+
 #logo {
 	position: fixed;
-	top: 0;
-	margin-top: 1cm;
+	top: -$logo-small-height;
+	margin: auto;
+	margin-top: -1cm;
 	img {
 		height: $logo-small-height;
 		width: $logo-small-width;
 	}
 }
+
 #story {
+	position: relative;
     margin-top: 1.0cm;
     .section-caption {
         margin-top: 1em;
@@ -117,7 +128,7 @@ body {
 #footer {
     // position: absolute;
     position: fixed;
-    bottom: 0px;
+    bottom: -4cm;
     width: 100%;
     .separator {
         margin-top: 0.2cm;

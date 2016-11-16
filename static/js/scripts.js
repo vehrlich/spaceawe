@@ -55,12 +55,12 @@ var nav_height = { 'small' : 60, 'big': 215 };
 	}
 
 	function menu_main_click() {
-		$('#menu-main').toggleClass('sp-menu-open');
-		$('#menu-language').removeClass('sp-menu-open');
+		$('#menu-main').toggleClass('side-menu-open');
+		$('#menu-language').removeClass('side-menu-open');
 	}
 	function menu_language_click() {
-		$('#menu-language').toggleClass('sp-menu-open');
-		$('#menu-main').removeClass('sp-menu-open');
+		$('#menu-language').toggleClass('side-menu-open');
+		$('#menu-main').removeClass('side-menu-open');
 	}
 	function resize_me() {
 		var h = $('#header').height();

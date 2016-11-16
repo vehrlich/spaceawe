@@ -69,25 +69,25 @@
 		</div>
 		<div class="logo"><a href="/"><span class="logo-el"></span></a></div>
 		{% block slogan %}{% endblock %}
-		<nav id="menu-main" class="sp-menu sp-menu-vertical sp-menu-left" aria-haspopup="true">
-			<div class="sp-button"><div id="menu-main-button" class="button mainmenu"></div></div>
-			<div class="sp-links">
-				<a href="{% url 'news:list' %}">{{ SECTIONS.news.menu }}</a>
-				<a href="{% url 'careers:list' %}">{{ SECTIONS.careers.menu }}</a>
-				<a href="{% url 'scoops:list' %}">{{ SECTIONS.scoops.menu }}</a>
-				<a href="{% url 'games:list' %}">{{ SECTIONS.games.menu }}</a>
-				<a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
-				<a href="{% url 'soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
-				<a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
-			</div>
-		</nav>
-		<nav id="menu-language" class="sp-menu sp-menu-vertical sp-menu-right" aria-haspopup="true">
-			<div class="sp-button"><div id="menu-language-button" class="button language"></div></div>
-			<div class="sp-links">{% for lang_code, title in LANGUAGES %}{% get_language_info for lang_code as lang %}{% get_translated_url lang_code as tr_url %}{% if tr_url %}
-				<a{% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %} href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}{% endfor %}
-			</div>
-		</nav>
 	</div>
+	<nav id="menu-main" class="side-menu side-menu-vertical side-menu-left" aria-haspopup="true">
+		<div class="side-button"><div id="menu-main-button" class="button mainmenu"></div></div>
+		<div class="side-links">
+			<a href="{% url 'news:list' %}">{{ SECTIONS.news.menu }}</a>
+			<a href="{% url 'careers:list' %}">{{ SECTIONS.careers.menu }}</a>
+			<a href="{% url 'scoops:list' %}">{{ SECTIONS.scoops.menu }}</a>
+			<a href="{% url 'games:list' %}">{{ SECTIONS.games.menu }}</a>
+			<a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
+			<a href="{% url 'soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
+			<a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
+		</div>
+	</nav>
+	<nav id="menu-language" aria-haspopup="true" class="side-menu side-menu-right side-menu-vertical">
+		<div class="side-button"><div id="menu-language-button" class="button language"></div></div>
+		<div class="side-links">{% for lang_code, title in LANGUAGES %}{% get_language_info for lang_code as lang %}{% get_translated_url lang_code as tr_url %}{% if tr_url %}
+			<a{% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %} href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}{% endfor %}
+		</div>
+	</nav>
 
 {% block content %}{% endblock %}
 

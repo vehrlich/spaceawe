@@ -157,6 +157,9 @@ body.single #header, #header.small, .header-small {
 .homepage #header.small {
   background: url(/static/img/mainpage_1.png) no-repeat 120% center, none, #fff; }
 
+#menu-language {
+  display: block; }
+
 #cover {
   height: 100%;
   position: relative;
@@ -1199,79 +1202,81 @@ table th {
 .list-item-container {
   margin: 10px; }
 
+/*@import "sp-menu";*/
 body {
   overflow-x: hidden; }
 
 /* General styles for all menus */
-.sp-menu {
+.side-menu {
   background: white;
   position: fixed;
   height: 100%; }
-  .sp-menu a {
+  .side-menu a {
     display: block;
     color: inherit;
     text-decoration: none; }
-    .sp-menu a:hover {
+    .side-menu a:hover {
       background: rgba(0, 0, 0, 0.3); }
 
-.sp-menu-vertical {
+.side-menu-vertical {
   width: 190px;
   top: 0;
   z-index: 10000; }
-  .sp-menu-vertical a {
+  .side-menu-vertical a {
     padding: 18px; }
 
-.sp-button {
-  position: absolute; }
-  .sp-button .button {
+.side-button {
+  position: absolute;
+  display: block;
+  background: white;
+  height: 60px;
+  width: 60px; }
+  .side-button .button {
     cursor: pointer;
     position: absolute;
     top: 0;
     height: 60px;
-    width: 60px; }
-    .sp-button .button.mainmenu:after {
+    width: 60px;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%; }
+    .side-button .button.mainmenu {
       background-image: url(../img/buttons/menu_black.svg); }
-    .sp-button .button.language:after {
+    .side-button .button.language {
       background-image: url(../img/buttons/language_black.svg); }
-    .sp-button .button:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      height: 60px;
-      width: 60px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 40%; }
 
-.sp-links {
+.side-menu-left .side-button {
+  right: -60px; }
+
+.side-menu-right .side-button {
+  left: -60px; }
+
+.side-links {
   height: 100%;
   overflow: scroll;
   z-index: 999; }
 
 /* Vertical menu that slides from the left or right */
-.sp-menu-left {
+.side-menu-left {
   left: -190px; }
-  .sp-menu-left.sp-menu-open {
+  .side-menu-left.side-menu-open {
     left: 0px;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175); }
-    .sp-menu-left.sp-menu-open .button {
-      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175); }
-  .sp-menu-left .sp-button {
-    right: 0px; }
+    .side-menu-left.side-menu-open .button {
+      box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.175), 6px 6px 6px rgba(0, 0, 0, 0.175); }
 
-.sp-menu-right {
+.side-menu-right {
   right: -190px; }
-  .sp-menu-right.sp-menu-open {
+  .side-menu-right.side-menu-open {
     right: 0px;
     box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175); }
-    .sp-menu-right.sp-menu-open .button {
-      box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175); }
-  .sp-menu-right .sp-button {
-    left: 0px; }
+    .side-menu-right.side-menu-open .button {
+      box-shadow: -6px -6px 6px rgba(0, 0, 0, 0.175), -6px 6px 6px rgba(0, 0, 0, 0.175); }
 
 /* Transitions */
-.sp-menu,
-.sp-menu-push {
+.side-menu,
+.side-menu-push {
   -webkit-transition: right 0.3s ease, left 0.3s ease, background 1s ease;
   -moz-transition: right 0.3s ease, left 0.3s ease, background 1s ease;
   transition: right 0.3s ease, left 0.3s ease, background 1s ease; }
@@ -2047,7 +2052,7 @@ body.section-about .wrapper_block_previews h3 {
 /* --- section-careers ---*/
 /*
 body.section-careers #header.small {
-    color: black;
+	color: black;
 }*/
 body.section-careers #header.small .logo .logo-el {
   background-image: url(../img/logo.svg); }
@@ -2179,7 +2184,7 @@ a:focus {
 
 /*
 .section-careers .thumbnailed-list .list-footer {
-    padding-top: 20px;
+	padding-top: 20px;
 }*/
 .thumbnailed-list .list-item.active .color,
 .thumbnailed-list .list-item.active .date,
@@ -2457,7 +2462,7 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
   text-transform: uppercase; }
 
 /*.know_us {
-    background: url(/static/img/know_us.png) no-repeat 50% 190px;
+	background: url(/static/img/know_us.png) no-repeat 50% 190px;
 }*/
 .know_us_block1 {
   background: url(/static/img/know_us_block1.png) no-repeat 50% bottom; }

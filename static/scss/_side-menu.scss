@@ -1,0 +1,99 @@
+body {
+	overflow-x: hidden;
+}
+
+/* General styles for all menus */
+
+.side-menu {
+	background: white;
+	position: fixed;
+	height: 100%;
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		&:hover {
+			background: rgba(0,0,0,$bg-opacity);
+		}
+	}
+}
+
+.side-menu-vertical {
+	width: 190px;
+	top: 0;
+	z-index: 10000;
+	a {
+		padding: ($header-height-small - $baseline)/2;
+	}
+}
+
+.side-button {
+	position: absolute;
+	display: block;
+	background: white;
+	height: $header-height-small;
+	width: $header-height-small;
+	.button {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		height: $header-height-small;
+		width: $header-height-small;
+		content: '';
+		&.mainmenu {
+			background-image: url(../img/buttons/menu_black.svg);
+		}
+		&.language {
+			background-image: url(../img/buttons/language_black.svg);
+		}
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 40%;
+	}
+}
+.side-menu-left .side-button {
+	right: -$header-height-small;
+}
+.side-menu-right .side-button {
+	left: -$header-height-small;
+}
+
+.side-links {
+	height: 100%;
+	overflow: scroll;
+	z-index: 999;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.side-menu-left {
+	left: -190px;
+	&.side-menu-open {
+		left: 0px;
+		box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
+		.button {
+			box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.175), 6px 6px 6px rgba(0, 0, 0, 0.175);
+		}
+	}
+}
+
+.side-menu-right {
+	right: -190px;
+	&.side-menu-open {
+		right: 0px;
+		box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175);
+		.button {
+			box-shadow: -6px -6px 6px rgba(0, 0, 0, 0.175), -6px 6px 6px rgba(0, 0, 0, 0.175);
+		}
+	}
+}
+
+
+/* Transitions */
+
+.side-menu,
+.side-menu-push {
+	-webkit-transition: right $fast ease, left $fast ease, background $time ease;
+	-moz-transition: right $fast ease, left $fast ease, background $time ease;
+	transition: right $fast ease, left $fast ease, background $time ease;
+}
