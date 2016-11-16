@@ -1197,8 +1197,7 @@ table th {
 	margin: 10px;
 }
 
-
-/*@import "sp-menu";*/
+@import "sp-menu";
 @import "side-menu";
 
 body.single {
@@ -1237,9 +1236,9 @@ body.single {
 				.button {
 					background-color: map-get($section-colors, $section);
 				}
-				.sp-menu {
+				.side-menu {
 					background-color: map-get($section-colors, $section);
-					.sp-button .button {
+					.side-button .button {
 						&.mainmenu:after {
 							background-image: url(../img/buttons/menu_white.svg);
 						}
@@ -1877,7 +1876,7 @@ input:focus {
 	color: #000;
 }
 
-.sp-menu-vertical a {
+.side-menu-vertical a {
 	display: block;
 }
 
