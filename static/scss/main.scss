@@ -940,9 +940,13 @@ table th {
 		.content-main-column {
 			padding: 0 $padding 0 0;
 			section {
-				padding: $padding/2;
+				padding: $padding;
+				margin-left: -$padding;
 			}
-			section:nth-child(2n+1) {
+			section:first-child {
+				margin-top: -$padding;
+			}
+			section:nth-child(2n) {
 				background-color: $color-cycle-pager-2;
 			}
 			section h2 {
@@ -955,8 +959,8 @@ table th {
 				background-position: center;
 			}
 			.collapser-button {
-				top: $baseline;
-				right: $baseline;
+				top: $padding;
+				right: $padding;
 				width: $baseline;
 				height: $baseline;
 				background: url(/static/img/buttons/arrow_down_black_down.svg);

@@ -978,8 +978,11 @@ table th {
     .content-card .content-container .content-main-column {
       padding: 0 45px 0 0; }
       .content-card .content-container .content-main-column section {
-        padding: 22.5px; }
-      .content-card .content-container .content-main-column section:nth-child(2n+1) {
+        padding: 45px;
+        margin-left: -45px; }
+      .content-card .content-container .content-main-column section:first-child {
+        margin-top: -45px; }
+      .content-card .content-container .content-main-column section:nth-child(2n) {
         background-color: #f2f2f2; }
       .content-card .content-container .content-main-column section h2 {
         margin-bottom: 12px; }
@@ -989,8 +992,8 @@ table th {
         background-size: auto 100%;
         background-position: center; }
       .content-card .content-container .content-main-column .collapser-button {
-        top: 24px;
-        right: 24px;
+        top: 45px;
+        right: 45px;
         width: 24px;
         height: 24px;
         background: url(/static/img/buttons/arrow_down_black_down.svg);
