@@ -999,7 +999,7 @@ table th {
         background-position: center;
         opacity: 0.5;
         border: 0px; }
-      .content-card .content-container .content-main-column .collapser-button:hover {
+      .content-card .content-container .content-main-column .collapser-button:hover, .content-card .content-container .content-main-column .collapser-button:focus {
         opacity: 1; }
       .content-card .content-container .content-main-column .section-caption {
         text-transform: uppercase; }

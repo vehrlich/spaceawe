@@ -966,7 +966,7 @@ table th {
 				opacity: 0.5;
 				border: 0px;
 			}
-			.collapser-button:hover {
+			.collapser-button:hover,.collapser-button:focus {
 				opacity: 1;
 			}
 			.section-caption {
