@@ -977,6 +977,30 @@ table th {
         width: 14px; }
     .content-card .content-container .content-main-column {
       padding: 0 45px 0 0; }
+      .content-card .content-container .content-main-column section {
+        padding: 22.5px; }
+      .content-card .content-container .content-main-column section:nth-child(2n+1) {
+        background-color: #f2f2f2; }
+      .content-card .content-container .content-main-column section h2 {
+        margin-bottom: 12px; }
+      .content-card .content-container .content-main-column .collapser-open .collapser-button {
+        background: url(/static/img/buttons/arrow_down_black_up.svg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center; }
+      .content-card .content-container .content-main-column .collapser-button {
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        background: url(/static/img/buttons/arrow_down_black_down.svg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        opacity: 0.5;
+        border: 0px; }
+      .content-card .content-container .content-main-column .collapser-button:hover {
+        opacity: 1; }
       .content-card .content-container .content-main-column .section-caption {
         text-transform: uppercase; }
       .content-card .content-container .content-main-column h2:first-child {

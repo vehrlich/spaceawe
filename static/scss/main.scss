@@ -939,6 +939,36 @@ table th {
 
 		.content-main-column {
 			padding: 0 $padding 0 0;
+			section {
+				padding: $padding/2;
+			}
+			section:nth-child(2n+1) {
+				background-color: $color-cycle-pager-2;
+			}
+			section h2 {
+				margin-bottom: $baseline/2;
+			}
+			.collapser-open .collapser-button {
+				background: url(/static/img/buttons/arrow_down_black_up.svg);
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				background-position: center;
+			}
+			.collapser-button {
+				top: $baseline;
+				right: $baseline;
+				width: $baseline;
+				height: $baseline;
+				background: url(/static/img/buttons/arrow_down_black_down.svg);
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				background-position: center;
+				opacity: 0.5;
+				border: 0px;
+			}
+			.collapser-button:hover {
+				opacity: 1;
+			}
 			.section-caption {
 				text-transform: uppercase;
 			}
