@@ -60,6 +60,10 @@
 					{% include 'spacescoops/article_list_page_in_category.html' %}
 				</ol>
 	        </div>
+			<div class="pure-u-1 list-footer">
+				<a class="{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{% url 'scoops:list' %}category/{{category}}/#filters"
+					rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
+			</div>
 	    </div>
     </div>
     {% endif %}{% endwith %}
@@ -75,6 +79,10 @@
 			        {% include 'games/game_list_page_in_category.html' %}
 				</ol>
 	        </div>
+			<div class="pure-u-1 list-footer">
+				<a class="{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{% url 'games:list' %}category/{{category}}/#filters"
+					rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
+			</div>
 	    </div>
     </div>
     {% endif %}{% endwith %}
@@ -90,6 +98,10 @@
 			        {% include 'activities/activity_list_page_in_category.html' %}
 				</ol>
 	        </div>
+			<div class="pure-u-1 list-footer">
+				<a class="{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{% url 'activities:list' %}category/{{category}}/#filters"
+					rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
+			</div>
 	    </div>
     </div>
     {% endif %}{% endwith %}
