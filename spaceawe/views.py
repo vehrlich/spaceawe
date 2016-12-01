@@ -39,9 +39,14 @@ def categories(request, code, template='spaceawe/categories.html', extra_context
     if code not in CATEGORIES.keys():
         raise Http404
     context = {
+        # we will get four of them even though we'll only display three
+        # so that we can tell if we need to show the load more button
         'scoops': Article.add_prefetch_related(Article.objects.filter(**{code: True}).active_translations())[:3],
+        'scoops_len': len(Article.add_prefetch_related(Article.objects.filter(**{code: True}).active_translations())),
         'games': Game.objects.available().filter(**{code: True})[:3],
+        'games_len': len(Game.objects.available().filter(**{code: True})),
         'activities': Activity.objects.available().filter(**{code: True})[:3],
+        'activities_len': len(Activity.objects.available().filter(**{code: True})),
         'spaceawe_category': code,
         'category': code,
     }

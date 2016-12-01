@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    {% with object_list=scoops %}{% if object_list %}
+    {% with object_list=scoops %}{% if scoops %}
     <div class="thumbnailed-list scoops pure-g">
         <div class="pure-u-1 list-header">
             <h2 class="title">{{ SECTIONS.scoops.title }}</h2>
@@ -60,15 +60,17 @@
 					{% include 'spacescoops/article_list_page_in_category.html' %}
 				</ol>
 	        </div>
+	        {% if scoops_len > 3 %}
 			<div class="pure-u-1 list-footer">
 				<a class="{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{% url 'scoops:list' %}category/{{category}}/#filters"
 					rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
 			</div>
+			{% endif %}
 	    </div>
     </div>
     {% endif %}{% endwith %}
 
-    {% with object_list=games %}{% if object_list %}
+    {% with object_list=games %}{% if games %}
     <div class="thumbnailed-list games pure-g">
         <div class="pure-u-1 list-header">
             <h2 class="title">{{ SECTIONS.games.title }}</h2>
@@ -79,15 +81,17 @@
 			        {% include 'games/game_list_page_in_category.html' %}
 				</ol>
 	        </div>
+	        {% if games_len > 3 %}
 			<div class="pure-u-1 list-footer">
 				<a class="{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{% url 'games:list' %}category/{{category}}/#filters"
 					rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
 			</div>
+			{% endif %}
 	    </div>
     </div>
     {% endif %}{% endwith %}
 
-    {% with object_list=activities %}{% if object_list %}
+    {% with object_list=activities %}{% if activities %}
     <div class="thumbnailed-list activities pure-g">  
         <div class="pure-u-1 list-header">
             <h2 class="title">{{ SECTIONS.activities.title }}</h2>
@@ -98,10 +102,12 @@
 			        {% include 'activities/activity_list_page_in_category.html' %}
 				</ol>
 	        </div>
+	        {% if activities_len > 3 %}
 			<div class="pure-u-1 list-footer">
 				<a class="{% if class_name %} {{ class_name }}{% endif %} load-more-button" href="{% url 'activities:list' %}category/{{category}}/#filters"
 					rel="{{ querystring_key }}">{% if label %}{{ label|safe }}{% else %}{% trans "Load more" %}{% endif %}</a>
 			</div>
+			{% endif %}
 	    </div>
     </div>
     {% endif %}{% endwith %}
