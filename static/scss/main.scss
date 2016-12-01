@@ -1356,7 +1356,12 @@ body.single {
 	}
 }
 .leaflet-popup-content {
-	width: 200px;
+	width: auto;
+	min-width: 300px;
+}
+.leaflet-popup-content .logo {
+	margin-right: 1em;
+	margin-bottom: 0.5em;
 }
 .partnermap-popup {
 	@include normaltext();
