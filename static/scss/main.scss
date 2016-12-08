@@ -678,6 +678,7 @@ body.single #header, #header.small, .header-small {
 /* Padded layout */
 .row {
 	width: 100%;
+	display: table;
 }
 .padded, .padded-h {
 	max-width: $content-max-width;
@@ -2030,16 +2031,35 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
 	text-transform: uppercase;
 }
 
-/*.know_us {
-	background: url(/static/img/know_us.png) no-repeat 50% 190px;
-}*/
-
-.know_us_block1 {
-	background: url(/static/img/know_us_block1.png) no-repeat 50% bottom;
+.grey_block {
+	background: #f3f3f3;
 }
 
-.know_us_block2 {
-	background: url(/static/img/know_us_block2.png) no-repeat 45% #f3f3f3;
+.know_us_block {
+	position: relative;
+}
+.know_us_img {
+	position: absolute;
+	border-radius: 100%;
+	z-index: 0;
+}
+.know_us_1 {
+	right: $padding - 450px;
+	top: 56%;
+	transform: translate3d(0, -50%, 0px);
+	width: 450px;
+}
+.know_us_2 {
+	left: $padding - 350px;
+	top: 84%;
+	transform: translate3d(0, -50%, 0px);
+	width: 350px;
+}
+.know_us_3 {
+	right: $padding - 360px;
+	top: 20%;
+	transform: translate3d(0, -50%, 0px);
+	width: 360px;
 }
 
 .page-about-categories .smartembed p {

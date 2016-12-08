@@ -144,13 +144,14 @@
 				<div class="smartembed text-content">{% smartembed 'about-029-what-footer' %}</div>
 			</div>
 		</div>      
-		<div class="know_us_block2 grey_block">
+		<div class="grey_block">
 			<div class="content-page-1270 content-page pure-g">
 				<div class="page-about-what pure-u-1">
 					<div class="smartembed text-content">{% smartembed 'about-030-resources' %}</div>
 				</div>
 			</div>
-			<div class="content-page-1270 content-page pure-g">
+			<div class="content-page-1270 content-page pure-g know_us_block">
+				<img class="know_us_img know_us_3" src="{% static 'img/know_us_3.jpg' %}" />
 				<ul id="categories" class="list-4col">
 					<li class="category category-1">
 						<div class="icon"><a href="{% url 'categories' code='space' %}"><img src="{% static 'img/icons/categories/icon_space_blue.svg' %}" onmouseover="this.src='{% static 'img/icons/categories/icon_space_blue_over.svg' %}'" onmouseout="this.src='{% static 'img/icons/categories/icon_space_blue.svg' %}'" /></a></div>
@@ -229,7 +230,9 @@
 			</div>
 		</div>
 
-		<div class="content-page pure-g">
+		<div class="content-page pure-g know_us_block">
+			<img class="know_us_img know_us_1" src="{% static 'img/know_us_1.jpg' %}" />
+			<img class="know_us_img know_us_2" src="{% static 'img/know_us_2.jpg' %}" />
 			<div class="page-about-imagecredits pure-u-1">
 				<div class="smartembed text-content">{% smartembed 'about-090-imagecredits' %}</div>
 			</div>
