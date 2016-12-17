@@ -50,7 +50,7 @@ $content-max-width: 1250px;
 	font-family: $font-headings;
 	letter-spacing: 0.1em;
 	font-size: $font-size-heading;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: $baseline;
 }
 @mixin normaltext() {
@@ -176,7 +176,6 @@ i, em {
 		transition: opacity $time ease;
 		&.subtitle {
 			font-size: $baseline;
-			font-weight: bold;
 		}
 	}
 	.button {
@@ -271,7 +270,6 @@ body.single #header, #header.small, .header-small {
 					}
 					.title {
 						@include heading();
-						font-weight: bold;
 						text-transform: uppercase;
 					}
 					.subtitle {
@@ -933,7 +931,6 @@ table th {
 			color: map-get($section-colors, 'scoops');
 			text-transform: uppercase;
 			font-size: $font-size-heading2;
-			font-weight: bold;
 			img {
 				height: 14px; width: 14px;
 			}
@@ -1333,7 +1330,6 @@ body.single {
 
 	.title {
 			@include heading();
-			font-weight: bold;
 			text-transform: uppercase;
 	}
 }
@@ -1343,7 +1339,6 @@ body.single {
 	display: block;
 	h1 {
 		@include heading();
-		font-weight: bold;
 		text-transform: uppercase;
 	}
 }
