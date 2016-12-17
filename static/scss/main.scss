@@ -130,9 +130,9 @@ i, em {
 }
 
 #header {
-	background: url(/static/img/news_head2.png) no-repeat right 45px, url(/static/img/news_dote.png) no-repeat center top, #fff;
+	background: url(/static/img/news_head2.png) no-repeat right 45px, url(/static/img/news_dote.png) no-repeat left top, #fff;
 	background-position: 100% middle;
-	background-size: contain, 100%, auto;
+	background-size: contain, 100%;
 	position: fixed;
 	width: 100%;
 	background-color: white;
@@ -217,8 +217,8 @@ body.single #header, body.menu-small #header, .header-small {
 }
 .homepage #header {
 	background: url(/static/img/mainpage_presquet.png) no-repeat, url(/static/img/mainpage_dote.png) no-repeat, #fff;
-	background-position: 100% center, left center;
-	background-size: contain, auto;
+	background-position: 100% center, left top;
+	background-size: contain, 100%;
 }
 #header {
 	-webkit-transition: background-size $time ease, background-color $time ease;
@@ -227,8 +227,8 @@ body.single #header, body.menu-small #header, .header-small {
 
 .homepage.menu-small #header {
 	background: url(/static/img/mainpage_presquet.png) no-repeat, none, #fff;
-	background-position: 120% center, left center;
-	background-size: contain, auto;
+	background-position: 120% center, left top;
+	background-size: contain, 100%;
 }
 #menu-language {
 	display: block;
@@ -959,25 +959,8 @@ table th {
 			section h2 {
 				margin-bottom: $baseline/2;
 			}
-			.collapser-open .collapser-button {
-/*				background: url(/static/img/buttons/arrow_down_black_up.svg);
-				background-repeat: no-repeat;
-				background-size: auto 100%;
-				background-position: center;*/
-			}
 			.collapser-button {
 				margin-top: $baseline;
-/*				width: $baseline;
-				height: $baseline;
-				background: url(/static/img/buttons/arrow_down_black_down.svg);
-				background-repeat: no-repeat;
-				background-size: auto 100%;
-				background-position: center;
-				opacity: 0.5;
-				border: 0px;*/
-			}
-			.collapser-button:hover,.collapser-button:focus {
-/*				opacity: 1;*/
 			}
 			.section-caption {
 				text-transform: uppercase;
@@ -1251,7 +1234,7 @@ body.single {
 	body.section-#{$section}.menu-small #header {
 		background: url(/static/img/news_head2.png) no-repeat, none, map-get($section-colors, '#{$section}');
 		background-position: 120% center, left center;
-		background-size: contain, auto;
+		background-size: contain, 100%;
 	}
 
 	body.section-#{$section} {

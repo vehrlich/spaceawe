@@ -79,9 +79,9 @@ i, em {
   font-style: italic; }
 
 #header {
-  background: url(/static/img/news_head2.png) no-repeat right 45px, url(/static/img/news_dote.png) no-repeat center top, #fff;
+  background: url(/static/img/news_head2.png) no-repeat right 45px, url(/static/img/news_dote.png) no-repeat left top, #fff;
   background-position: 100% middle;
-  background-size: contain, 100%, auto;
+  background-size: contain, 100%;
   position: fixed;
   width: 100%;
   background-color: white;
@@ -152,8 +152,8 @@ body.single #header, body.menu-small #header, .header-small {
 
 .homepage #header {
   background: url(/static/img/mainpage_presquet.png) no-repeat, url(/static/img/mainpage_dote.png) no-repeat, #fff;
-  background-position: 100% center, left center;
-  background-size: contain, auto; }
+  background-position: 100% center, left top;
+  background-size: contain, 100%; }
 
 #header {
   -webkit-transition: background-size 1s ease, background-color 1s ease;
@@ -161,8 +161,8 @@ body.single #header, body.menu-small #header, .header-small {
 
 .homepage.menu-small #header {
   background: url(/static/img/mainpage_presquet.png) no-repeat, none, #fff;
-  background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-position: 120% center, left top;
+  background-size: contain, 100%; }
 
 #menu-language {
   display: block; }
@@ -996,23 +996,8 @@ table th {
         background-color: #f2f2f2; }
       .content-card .content-container .content-main-column section h2 {
         margin-bottom: 12px; }
-      .content-card .content-container .content-main-column .collapser-open .collapser-button {
-        /*				background: url(/static/img/buttons/arrow_down_black_up.svg);
-				background-repeat: no-repeat;
-				background-size: auto 100%;
-				background-position: center;*/ }
       .content-card .content-container .content-main-column .collapser-button {
-        margin-top: 24px;
-        /*				width: $baseline;
-				height: $baseline;
-				background: url(/static/img/buttons/arrow_down_black_down.svg);
-				background-repeat: no-repeat;
-				background-size: auto 100%;
-				background-position: center;
-				opacity: 0.5;
-				border: 0px;*/ }
-      .content-card .content-container .content-main-column .collapser-button:hover, .content-card .content-container .content-main-column .collapser-button:focus {
-        /*				opacity: 1;*/ }
+        margin-top: 24px; }
       .content-card .content-container .content-main-column .section-caption {
         text-transform: uppercase; }
       .content-card .content-container .content-main-column h2:first-child {
@@ -1494,7 +1479,7 @@ body.single {
 body.section-news.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #3e5fdb;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-news #cover .feature-container {
   background-color: #3e5fdb; }
@@ -1551,7 +1536,7 @@ body.section-news .wrapper_block_previews h3 {
 body.section-careers.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #4ed8c3;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-careers #cover .feature-container {
   background-color: #4ed8c3; }
@@ -1608,7 +1593,7 @@ body.section-careers .wrapper_block_previews h3 {
 body.section-scoops.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #ed3b5a;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-scoops #cover .feature-container {
   background-color: #ed3b5a; }
@@ -1665,7 +1650,7 @@ body.section-scoops .wrapper_block_previews h3 {
 body.section-games.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #f9b653;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-games #cover .feature-container {
   background-color: #f9b653; }
@@ -1722,7 +1707,7 @@ body.section-games .wrapper_block_previews h3 {
 body.section-activities.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #9d59e4;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-activities #cover .feature-container {
   background-color: #9d59e4; }
@@ -1779,7 +1764,7 @@ body.section-activities .wrapper_block_previews h3 {
 body.section-skills.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #52c36f;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-skills #cover .feature-container {
   background-color: #52c36f; }
@@ -1836,7 +1821,7 @@ body.section-skills .wrapper_block_previews h3 {
 body.section-about.menu-small #header {
   background: url(/static/img/news_head2.png) no-repeat, none, #3e5fdb;
   background-position: 120% center, left center;
-  background-size: contain, auto; }
+  background-size: contain, 100%; }
 
 body.section-about #cover .feature-container {
   background-color: #3e5fdb; }
