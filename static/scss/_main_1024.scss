@@ -87,23 +87,20 @@ $header-height-small: 60px;
 }
 
 body.homepage {
-  #header {
-    .logo {
-      margin-top: 35px;
-      .logo-el {
-        height: 3.5em;
-        width: 212px; /**/
-      }
-    }
-    &.small {
-      .logo {
-        margin-top: 8px;
-        .logo-el {
-          height: 1.8em;
-        }
-      }
-    }
-  }
+	#header {
+		.logo {
+			margin-top: 35px;
+			.logo-el {
+				height: 3.5em;
+				width: 212px; /**/
+			}
+		}
+		&.small {
+			.logo {
+				margin-top: 8px;
+			}
+		}
+	}
 }
 
 body.single {

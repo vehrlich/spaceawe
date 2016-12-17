@@ -14,6 +14,7 @@ body {
 		text-decoration: none;
 		&:hover {
 			background: rgba(0,0,0,$bg-opacity);
+			color: white;
 		}
 	}
 }
@@ -30,7 +31,6 @@ body {
 .side-button {
 	position: absolute;
 	display: block;
-	background: white;
 	height: $header-height-small;
 	width: $header-height-small;
 	.button {
@@ -40,17 +40,32 @@ body {
 		height: $header-height-small;
 		width: $header-height-small;
 		content: '';
+		-webkit-transition: background-color $time ease;
+		transition: background-color $time ease;
+		
 		&.mainmenu {
 			background-image: url(../img/buttons/menu_black.svg);
 		}
 		&.language {
 			background-image: url(../img/buttons/language_black.svg);
 		}
+		background-color: transparent;
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: center center;
 		background-size: 40%;
 	}
 }
+@each $section in $sections {
+	body.section-#{$section}.menu-small {
+		.side-button .button.mainmenu {
+			background-image: url(../img/buttons/menu_#{map-get($section-font-colors, '#{$section}')}.svg);
+		}
+		.side-button .button.language {
+			background-image: url(../img/buttons/language_#{map-get($section-font-colors, '#{$section}')}.svg);
+		}
+	}
+}
+
 .side-menu-left .side-button {
 	right: -$header-height-small;
 }
@@ -88,6 +103,21 @@ body {
 	}
 }
 
+.side-menu-open .side-button {
+	background-color: white;
+}
+
+@each $section in $sections {
+	body.section-#{$section}.menu-small {
+		.side-menu-open .side-button .button.mainmenu {
+			background-color: map-get($section-colors, '#{$section}');
+		}
+
+		.side-menu-open .side-button .button.language {
+			background-color: map-get($section-colors, '#{$section}');
+		}
+	}
+}
 
 /* Transitions */
 

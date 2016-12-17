@@ -197,7 +197,9 @@ i, em {
 
 	/* resize header when scrolling down */
 	overflow: hidden;
-	&.small {
+}
+body.menu-small, body.homepage.menu-small {
+	#header {
 		overflow: hidden;
 		box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.35);
 		.logo {
@@ -210,19 +212,23 @@ i, em {
 		}
 	}
 }
-body.single #header, #header.small, .header-small {
+body.single #header, body.menu-small #header, .header-small {
 	height: $header-height-small;
 }
 .homepage #header {
-	background: url(/static/img/mainpage_1.png) no-repeat right top, url(/static/img/mainpage_dote.png) no-repeat left top, #fff;
+	background: url(/static/img/mainpage_presquet.png) no-repeat, url(/static/img/mainpage_dote.png) no-repeat, #fff;
+	background-position: 100% center, left center;
+	background-size: contain, auto;
 }
-#header, .homepage #header {
-	-webkit-transition: background $time ease, background-position $time ease;
-	transition: background $time ease, background-position $time ease;
+#header {
+	-webkit-transition: background-size $time ease, background-color $time ease;
+	transition: background-size $time ease, background-color $time ease;
 }
 
-.homepage #header.small {
-	background: url(/static/img/mainpage_1.png) no-repeat 120% center, none, #fff;
+.homepage.menu-small #header {
+	background: url(/static/img/mainpage_presquet.png) no-repeat, none, #fff;
+	background-position: 120% center, left center;
+	background-size: contain, auto;
 }
 #menu-language {
 	display: block;
@@ -1240,9 +1246,11 @@ body.single {
 
 @each $section in $sections {
 
-	.section-#{$section} .small .select_language .sp-links,
-	body.section-#{$section} #header.small {
-		background: url(/static/img/news_head2.png) no-repeat 150% center, none, map-get($section-colors, '#{$section}');
+	.section-#{$section}.menu-small .select_language .sp-links,
+	body.section-#{$section}.menu-small #header {
+		background: url(/static/img/news_head2.png) no-repeat, none, map-get($section-colors, '#{$section}');
+		background-position: 120% center, left center;
+		background-size: contain, auto;
 	}
 
 	body.section-#{$section} {
@@ -1263,25 +1271,15 @@ body.single {
 				-webkit-transition: background $time ease;
 				transition: background $time ease;
 			}
-			&.small {
+
+		}
+
+		&.menu-small {
+			#header {
 				color: map-get($section-font-colors, '#{$section}');
 				/*background-color: map-get($section-font-colors, '#{$section}');*/
 				.button {
 					background-color: map-get($section-colors, $section);
-				}
-				.side-menu {
-					background-color: map-get($section-colors, $section);
-					.side-button .button {
-						&.mainmenu:after {
-							background-image: url(../img/buttons/menu_white.svg);
-						}
-						&.language:after {
-							background-image: url(../img/buttons/language_white.svg);
-						}
-						&:hover:after {
-							background-color: rgba(0,0,0,$bg-opacity);
-						}
-					}
 				}
 				.logo .logo-el {
 					background-image: url(../img/logo-white.svg);
@@ -1302,8 +1300,6 @@ body.single {
 		#footer .social-background {
 			background-image: url(../img/footer-bg-social-#{$section}.svg);
 		}
-
-
 		.wrapper_block_previews h2 {
 			@include bigtext();
 			text-align: center;
@@ -1487,39 +1483,12 @@ body.single {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* --- Alex Devksh 11.06.16 --- */
-
-
 /* --- section-careers ---*/
-/*
-body.section-careers #header.small {
-	color: black;
-}*/
 
-body.section-careers #header.small .logo .logo-el {
+
+body.section-careers.menu-compact #header .logo .logo-el {
 	background-image: url(../img/logo.svg);
 }
-
-
-
-
-
 
 .section-careers {
 	/* We just want to target the video thumbnail list and the */
@@ -1850,7 +1819,7 @@ input:focus {
 	/*border: 2px solid #fff;*/
 }
 
-.small .lang_btn {
+.menu-compact .lang_btn {
 	color: #fff;
 	background: none;
 }
@@ -2155,7 +2124,7 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
 		margin-left: -45px;
 	}
 	@each $section in $sections {
-		body.section-#{$section} #header.small {
+		body.section-#{$section}.menu-small #header {
 			background: none, none, map-get($section-colors, '#{$section}');
 		}
 	}

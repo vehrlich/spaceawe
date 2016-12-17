@@ -121,11 +121,11 @@ var nav_height = { 'small' : 60, 'big': 215 };
 			if(y < nav_height.big){
 				$('.logo-el').css({'height':(h2 + f*(h1-h2))+'px'});
 				$('.logo').css({'margin-top':(8 + f*(mt-8))+'px'});
-				$('#header').css({'height':h+'px'});
+				$('#header').css({'height':h+'px','background-position': (100+(y/nav_height.big)*10)+'% center, left center'});
 			}else{
 				$('.logo-el').css({'height':''});
 				$('.logo').css({'margin-top':(8 + f*(mt-8))+'px'});
-				$('#header').css({'height':''});
+				$('#header').css({'height':'','background-position': (100+(y/nav_height.big)*10)+'% center, left center'});
 			}
 			return;
 		}

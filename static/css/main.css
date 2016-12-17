@@ -138,26 +138,31 @@ i, em {
       left: 0; }
     #header .button.language {
       right: 0; }
-  #header.small {
-    overflow: hidden;
-    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.35); }
-    #header.small .logo .logo-el {
-      height: 1.8em; }
-    #header.small .slogan {
-      opacity: 0; }
 
-body.single #header, #header.small, .header-small {
+body.menu-small #header, body.homepage.menu-small #header {
+  overflow: hidden;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.35); }
+  body.menu-small #header .logo .logo-el, body.homepage.menu-small #header .logo .logo-el {
+    height: 1.8em; }
+  body.menu-small #header .slogan, body.homepage.menu-small #header .slogan {
+    opacity: 0; }
+
+body.single #header, body.menu-small #header, .header-small {
   height: 60px; }
 
 .homepage #header {
-  background: url(/static/img/mainpage_1.png) no-repeat right top, url(/static/img/mainpage_dote.png) no-repeat left top, #fff; }
+  background: url(/static/img/mainpage_presquet.png) no-repeat, url(/static/img/mainpage_dote.png) no-repeat, #fff;
+  background-position: 100% center, left center;
+  background-size: contain, auto; }
 
-#header, .homepage #header {
-  -webkit-transition: background 1s ease, background-position 1s ease;
-  transition: background 1s ease, background-position 1s ease; }
+#header {
+  -webkit-transition: background-size 1s ease, background-color 1s ease;
+  transition: background-size 1s ease, background-color 1s ease; }
 
-.homepage #header.small {
-  background: url(/static/img/mainpage_1.png) no-repeat 120% center, none, #fff; }
+.homepage.menu-small #header {
+  background: url(/static/img/mainpage_presquet.png) no-repeat, none, #fff;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 #menu-language {
   display: block; }
@@ -1326,7 +1331,8 @@ body {
     color: inherit;
     text-decoration: none; }
     .side-menu a:hover {
-      background: rgba(0, 0, 0, 0.3); }
+      background: rgba(0, 0, 0, 0.3);
+      color: white; }
 
 .side-menu-vertical {
   width: 190px;
@@ -1338,7 +1344,6 @@ body {
 .side-button {
   position: absolute;
   display: block;
-  background: white;
   height: 60px;
   width: 60px; }
   .side-button .button {
@@ -1348,13 +1353,58 @@ body {
     height: 60px;
     width: 60px;
     content: '';
+    -webkit-transition: background-color 1s ease;
+    transition: background-color 1s ease;
+    background-color: transparent;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: 40%; }
     .side-button .button.mainmenu {
       background-image: url(../img/buttons/menu_black.svg); }
     .side-button .button.language {
       background-image: url(../img/buttons/language_black.svg); }
+
+body.section-news.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-news.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
+
+body.section-careers.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-careers.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
+
+body.section-scoops.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-scoops.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
+
+body.section-games.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-games.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
+
+body.section-activities.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-activities.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
+
+body.section-skills.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-skills.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
+
+body.section-about.menu-small .side-button .button.mainmenu {
+  background-image: url(../img/buttons/menu_white.svg); }
+
+body.section-about.menu-small .side-button .button.language {
+  background-image: url(../img/buttons/language_white.svg); }
 
 .side-menu-left .side-button {
   right: -60px; }
@@ -1384,6 +1434,51 @@ body {
     .side-menu-right.side-menu-open .button {
       box-shadow: -6px -6px 6px rgba(0, 0, 0, 0.175), -6px 6px 6px rgba(0, 0, 0, 0.175); }
 
+.side-menu-open .side-button {
+  background-color: white; }
+
+body.section-news.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #3e5fdb; }
+
+body.section-news.menu-small .side-menu-open .side-button .button.language {
+  background-color: #3e5fdb; }
+
+body.section-careers.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #4ed8c3; }
+
+body.section-careers.menu-small .side-menu-open .side-button .button.language {
+  background-color: #4ed8c3; }
+
+body.section-scoops.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #ed3b5a; }
+
+body.section-scoops.menu-small .side-menu-open .side-button .button.language {
+  background-color: #ed3b5a; }
+
+body.section-games.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #f9b653; }
+
+body.section-games.menu-small .side-menu-open .side-button .button.language {
+  background-color: #f9b653; }
+
+body.section-activities.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #9d59e4; }
+
+body.section-activities.menu-small .side-menu-open .side-button .button.language {
+  background-color: #9d59e4; }
+
+body.section-skills.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #52c36f; }
+
+body.section-skills.menu-small .side-menu-open .side-button .button.language {
+  background-color: #52c36f; }
+
+body.section-about.menu-small .side-menu-open .side-button .button.mainmenu {
+  background-color: #3e5fdb; }
+
+body.section-about.menu-small .side-menu-open .side-button .button.language {
+  background-color: #3e5fdb; }
+
 /* Transitions */
 .side-menu,
 .side-menu-push {
@@ -1396,9 +1491,11 @@ body.single {
   body.single .fake-padding {
     height: 60px; }
 
-.section-news .small .select_language .sp-links,
-body.section-news #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #3e5fdb; }
+.section-news.menu-small .select_language .sp-links,
+body.section-news.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #3e5fdb;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-news #cover .feature-container {
   background-color: #3e5fdb; }
@@ -1413,22 +1510,14 @@ body.section-news #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-news #header.small {
+body.section-news.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'news');*/ }
-  body.section-news #header.small .button {
+  body.section-news.menu-small #header .button {
     background-color: #3e5fdb; }
-  body.section-news #header.small .side-menu {
-    background-color: #3e5fdb; }
-    body.section-news #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-news #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-news #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-news #header.small .logo .logo-el {
+  body.section-news.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-news #header.small .menu-bar a.menu-news {
+  body.section-news.menu-small #header .menu-bar a.menu-news {
     border-color: white; }
 
 body.section-news .content-card .title-container {
@@ -1459,9 +1548,11 @@ body.section-news .wrapper_block_previews h3 {
   color: #3e5fdb;
   margin-bottom: 24px; }
 
-.section-careers .small .select_language .sp-links,
-body.section-careers #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #4ed8c3; }
+.section-careers.menu-small .select_language .sp-links,
+body.section-careers.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #4ed8c3;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-careers #cover .feature-container {
   background-color: #4ed8c3; }
@@ -1476,22 +1567,14 @@ body.section-careers #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-careers #header.small {
+body.section-careers.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'careers');*/ }
-  body.section-careers #header.small .button {
+  body.section-careers.menu-small #header .button {
     background-color: #4ed8c3; }
-  body.section-careers #header.small .side-menu {
-    background-color: #4ed8c3; }
-    body.section-careers #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-careers #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-careers #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-careers #header.small .logo .logo-el {
+  body.section-careers.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-careers #header.small .menu-bar a.menu-careers {
+  body.section-careers.menu-small #header .menu-bar a.menu-careers {
     border-color: white; }
 
 body.section-careers .content-card .title-container {
@@ -1522,9 +1605,11 @@ body.section-careers .wrapper_block_previews h3 {
   color: #4ed8c3;
   margin-bottom: 24px; }
 
-.section-scoops .small .select_language .sp-links,
-body.section-scoops #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #ed3b5a; }
+.section-scoops.menu-small .select_language .sp-links,
+body.section-scoops.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #ed3b5a;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-scoops #cover .feature-container {
   background-color: #ed3b5a; }
@@ -1539,22 +1624,14 @@ body.section-scoops #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-scoops #header.small {
+body.section-scoops.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'scoops');*/ }
-  body.section-scoops #header.small .button {
+  body.section-scoops.menu-small #header .button {
     background-color: #ed3b5a; }
-  body.section-scoops #header.small .side-menu {
-    background-color: #ed3b5a; }
-    body.section-scoops #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-scoops #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-scoops #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-scoops #header.small .logo .logo-el {
+  body.section-scoops.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-scoops #header.small .menu-bar a.menu-scoops {
+  body.section-scoops.menu-small #header .menu-bar a.menu-scoops {
     border-color: white; }
 
 body.section-scoops .content-card .title-container {
@@ -1585,9 +1662,11 @@ body.section-scoops .wrapper_block_previews h3 {
   color: #ed3b5a;
   margin-bottom: 24px; }
 
-.section-games .small .select_language .sp-links,
-body.section-games #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #f9b653; }
+.section-games.menu-small .select_language .sp-links,
+body.section-games.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #f9b653;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-games #cover .feature-container {
   background-color: #f9b653; }
@@ -1602,22 +1681,14 @@ body.section-games #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-games #header.small {
+body.section-games.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'games');*/ }
-  body.section-games #header.small .button {
+  body.section-games.menu-small #header .button {
     background-color: #f9b653; }
-  body.section-games #header.small .side-menu {
-    background-color: #f9b653; }
-    body.section-games #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-games #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-games #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-games #header.small .logo .logo-el {
+  body.section-games.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-games #header.small .menu-bar a.menu-games {
+  body.section-games.menu-small #header .menu-bar a.menu-games {
     border-color: white; }
 
 body.section-games .content-card .title-container {
@@ -1648,9 +1719,11 @@ body.section-games .wrapper_block_previews h3 {
   color: #f9b653;
   margin-bottom: 24px; }
 
-.section-activities .small .select_language .sp-links,
-body.section-activities #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #9d59e4; }
+.section-activities.menu-small .select_language .sp-links,
+body.section-activities.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #9d59e4;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-activities #cover .feature-container {
   background-color: #9d59e4; }
@@ -1665,22 +1738,14 @@ body.section-activities #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-activities #header.small {
+body.section-activities.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'activities');*/ }
-  body.section-activities #header.small .button {
+  body.section-activities.menu-small #header .button {
     background-color: #9d59e4; }
-  body.section-activities #header.small .side-menu {
-    background-color: #9d59e4; }
-    body.section-activities #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-activities #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-activities #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-activities #header.small .logo .logo-el {
+  body.section-activities.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-activities #header.small .menu-bar a.menu-activities {
+  body.section-activities.menu-small #header .menu-bar a.menu-activities {
     border-color: white; }
 
 body.section-activities .content-card .title-container {
@@ -1711,9 +1776,11 @@ body.section-activities .wrapper_block_previews h3 {
   color: #9d59e4;
   margin-bottom: 24px; }
 
-.section-skills .small .select_language .sp-links,
-body.section-skills #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #52c36f; }
+.section-skills.menu-small .select_language .sp-links,
+body.section-skills.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #52c36f;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-skills #cover .feature-container {
   background-color: #52c36f; }
@@ -1728,22 +1795,14 @@ body.section-skills #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-skills #header.small {
+body.section-skills.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'skills');*/ }
-  body.section-skills #header.small .button {
+  body.section-skills.menu-small #header .button {
     background-color: #52c36f; }
-  body.section-skills #header.small .side-menu {
-    background-color: #52c36f; }
-    body.section-skills #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-skills #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-skills #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-skills #header.small .logo .logo-el {
+  body.section-skills.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-skills #header.small .menu-bar a.menu-skills {
+  body.section-skills.menu-small #header .menu-bar a.menu-skills {
     border-color: white; }
 
 body.section-skills .content-card .title-container {
@@ -1774,9 +1833,11 @@ body.section-skills .wrapper_block_previews h3 {
   color: #52c36f;
   margin-bottom: 24px; }
 
-.section-about .small .select_language .sp-links,
-body.section-about #header.small {
-  background: url(/static/img/news_head2.png) no-repeat 150% center, none, #3e5fdb; }
+.section-about.menu-small .select_language .sp-links,
+body.section-about.menu-small #header {
+  background: url(/static/img/news_head2.png) no-repeat, none, #3e5fdb;
+  background-position: 120% center, left center;
+  background-size: contain, auto; }
 
 body.section-about #cover .feature-container {
   background-color: #3e5fdb; }
@@ -1791,22 +1852,14 @@ body.section-about #header .button {
   -webkit-transition: background 1s ease;
   transition: background 1s ease; }
 
-body.section-about #header.small {
+body.section-about.menu-small #header {
   color: white;
   /*background-color: map-get($section-font-colors, 'about');*/ }
-  body.section-about #header.small .button {
+  body.section-about.menu-small #header .button {
     background-color: #3e5fdb; }
-  body.section-about #header.small .side-menu {
-    background-color: #3e5fdb; }
-    body.section-about #header.small .side-menu .side-button .button.mainmenu:after {
-      background-image: url(../img/buttons/menu_white.svg); }
-    body.section-about #header.small .side-menu .side-button .button.language:after {
-      background-image: url(../img/buttons/language_white.svg); }
-    body.section-about #header.small .side-menu .side-button .button:hover:after {
-      background-color: rgba(0, 0, 0, 0.3); }
-  body.section-about #header.small .logo .logo-el {
+  body.section-about.menu-small #header .logo .logo-el {
     background-image: url(../img/logo-white.svg); }
-  body.section-about #header.small .menu-bar a.menu-about {
+  body.section-about.menu-small #header .menu-bar a.menu-about {
     border-color: white; }
 
 body.section-about .content-card .title-container {
@@ -2122,8 +2175,6 @@ body.section-about .wrapper_block_previews h3 {
       /**/ }
   body.homepage #header.small .logo {
     margin-top: 8px; }
-    body.homepage #header.small .logo .logo-el {
-      height: 1.8em; }
   body.single .fake-padding {
     height: 60px; }
   #sections .section {
@@ -2163,13 +2214,8 @@ body.section-about .wrapper_block_previews h3 {
   .footer, .copyright {
     display: none; } }
 
-/* --- Alex Devksh 11.06.16 --- */
 /* --- section-careers ---*/
-/*
-body.section-careers #header.small {
-	color: black;
-}*/
-body.section-careers #header.small .logo .logo-el {
+body.section-careers.menu-compact #header .logo .logo-el {
   background-image: url(../img/logo.svg); }
 
 .section-careers {
@@ -2434,7 +2480,7 @@ input:focus {
 .small .sp-links_wrap {
   /*border: 2px solid #fff;*/ }
 
-.small .lang_btn {
+.menu-compact .lang_btn {
   color: #fff;
   background: none; }
 
@@ -2670,19 +2716,19 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     height: 2em; }
   #categories {
     margin-left: -45px; }
-  body.section-news #header.small {
+  body.section-news.menu-small #header {
     background: none, none, #3e5fdb; }
-  body.section-careers #header.small {
+  body.section-careers.menu-small #header {
     background: none, none, #4ed8c3; }
-  body.section-scoops #header.small {
+  body.section-scoops.menu-small #header {
     background: none, none, #ed3b5a; }
-  body.section-games #header.small {
+  body.section-games.menu-small #header {
     background: none, none, #f9b653; }
-  body.section-activities #header.small {
+  body.section-activities.menu-small #header {
     background: none, none, #9d59e4; }
-  body.section-skills #header.small {
+  body.section-skills.menu-small #header {
     background: none, none, #52c36f; }
-  body.section-about #header.small {
+  body.section-about.menu-small #header {
     background: none, none, #3e5fdb; }
   #header {
     padding-bottom: 24px; }
