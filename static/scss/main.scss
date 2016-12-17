@@ -1,7 +1,7 @@
 $font-headings: 'Miso', 'BloggerSans', 'BPreplay', sans-serif;
 $font-normal: 'Ubuntu', sans-serif;
 
-$color-text: black;
+$color-text: #585858;
 $color-background: white;
 $bg-opacity: 0.3;
 
@@ -57,6 +57,7 @@ $content-max-width: 1250px;
 	font-family: $font-normal;
 	letter-spacing: 0.1em;
 	font-size: $font-size-normal;
+	font-weight: 200;
 	line-height: $baseline;
 }
 @mixin smalltext() {
@@ -2102,6 +2103,9 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
 	.content-card .content-container .content-right-column {
 		width: 100%;
 		margin-top: $padding;
+	}
+	.content-card .content-container .content-main-column section {
+		margin-right: -$padding;
 	}
 }
 

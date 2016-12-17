@@ -4,12 +4,14 @@ html, .pure-g [class*="pure-u"] {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px; }
 
 button, input, select, textarea {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px;
   line-height: 1.2em; }
 
@@ -18,11 +20,12 @@ html, body {
 
 body {
   background-color: white;
-  color: black;
+  color: #585858;
   overflow-x: hidden;
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px; }
 
 .box-middle-ext {
@@ -193,6 +196,7 @@ body.single #header, #header.small, .header-small {
             font-family: "Ubuntu", sans-serif;
             letter-spacing: 0.1em;
             font-size: 14px;
+            font-weight: 200;
             line-height: 24px;
             text-transform: none;
             font-size: 12px; }
@@ -208,6 +212,7 @@ body.single #header, #header.small, .header-small {
             font-family: "Ubuntu", sans-serif;
             letter-spacing: 0.1em;
             font-size: 14px;
+            font-weight: 200;
             line-height: 24px;
             text-transform: none;
             padding-top: 1em; }
@@ -818,6 +823,7 @@ table td, table th {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px;
   padding: 6px 12px;
   border: 1px solid #444444; }
@@ -915,6 +921,7 @@ table th {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px; }
 
 .call-to-action {
@@ -1110,6 +1117,7 @@ table th {
     font-family: "Ubuntu", sans-serif;
     letter-spacing: 0.1em;
     font-size: 14px;
+    font-weight: 200;
     line-height: 24px; }
 
 #footer {
@@ -1182,6 +1190,7 @@ table th {
     font-family: "Ubuntu", sans-serif;
     letter-spacing: 0.1em;
     font-size: 14px;
+    font-weight: 200;
     line-height: 24px;
     line-height: 1.2em;
     width: 100%;
@@ -1839,6 +1848,7 @@ body.section-about .wrapper_block_previews h3 {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px; }
   .text-content .title {
     font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -1881,6 +1891,7 @@ body.section-about .wrapper_block_previews h3 {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px; }
   .partnermap-popup .institution-logo, .partnermap-popup .institution-details {
     float: left; }
@@ -2020,6 +2031,7 @@ body.section-about .wrapper_block_previews h3 {
   font-family: "Ubuntu", sans-serif;
   letter-spacing: 0.1em;
   font-size: 14px;
+  font-weight: 200;
   line-height: 24px;
   font-weight: 700;
   text-transform: uppercase; }
@@ -2625,7 +2637,9 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     padding: 0; }
   .content-card .content-container .content-right-column {
     width: 100%;
-    margin-top: 45px; } }
+    margin-top: 45px; }
+  .content-card .content-container .content-main-column section {
+    margin-right: -45px; } }
 
 @media screen and (max-width: 992px) {
   .section-careers .career_menu li {

@@ -19,12 +19,12 @@
         <div class="feature-container">
             <div class="fake-padding"></div>
             <div class="cycle-slideshow">
-    {% for object in highlights %}
+    {% for object in highlights reversed %}
         {% thumbnail object.item.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
                 <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}), url({{ im.url }});">
                     <div class="title-container"><div class="title-subcontainer">
                         <!-- <div class="suptitle">news and more</div> -->
-                        <div class="title"><a href="{{ object.item.get_absolute_url }}">{{ object.item.title }}</a></div>
+                        <div class="title"><a href="{{ object.item.get_absolute_url }}">{{ object.item.title }} {{ stuart }}</a></div>
                         <div class="subtitle">{{ object.item.teaser }}</div>
                     </div></div>
                 </div>
