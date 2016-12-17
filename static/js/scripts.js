@@ -103,13 +103,20 @@ var nav_height = { 'small' : 60, 'big': 215 };
 		var down,f,h;
 		function adjustHeader(){
 			down = $(document).scrollTop() > y;
+
 			y = $(document).scrollTop();
+			// Fix for Safari that allows negative values of y to do 
+			// a 'bounce' effect which will mess us up
+			if(y <= 0){
+				down = false;
+				y = 0;
+			}
 			f = Math.max(0,Math.min((nav_height.big - nav_height.small - y)/(nav_height.big - nav_height.small),1));
 			h = nav_height.big - $(document).scrollTop();
 			if(h < nav_height.small) h = nav_height.small;
 
-			if(down || y >= nav_height.big || nav_height.big==nav_height.small) $('#header').addClass('small');
-			else $('#header').removeClass('small');
+			if(down || y >= nav_height.big || nav_height.big==nav_height.small) $('body').addClass('menu-small');
+			else $('body').removeClass('menu-small');
 
 			if(y < nav_height.big){
 				$('.logo-el').css({'height':(h2 + f*(h1-h2))+'px'});
@@ -117,7 +124,7 @@ var nav_height = { 'small' : 60, 'big': 215 };
 				$('#header').css({'height':h+'px'});
 			}else{
 				$('.logo-el').css({'height':''});
-				$('.logo').css({'margin-top':''});
+				$('.logo').css({'margin-top':(8 + f*(mt-8))+'px'});
 				$('#header').css({'height':''});
 			}
 			return;
