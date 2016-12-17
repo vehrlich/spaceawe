@@ -119,7 +119,7 @@ h4,h5,h6 {
 p, ul, ol, table {
 	margin-bottom: $baseline;
 }
-p:last-child {
+p:last-child, ul:last-child, ol:last-child, table:last-child {
 	margin-bottom: 0px;
 }
 b, strong {
@@ -650,6 +650,8 @@ body.single #header, body.menu-small #header, .header-small {
 	}
 }
 
+
+
 #categories .category .icon, .thumbnailed-list .list-header .filters .icon {
 	position: relative;
 	height: 4*$baseline;
@@ -918,8 +920,8 @@ table th {
 		padding: $padding;
 		.alert {
 			font-weight: bold;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			/*padding-top: 10px;
+			padding-bottom: 10px;*/
 		}
 		.section-content {
 			margin-bottom: $baseline;
@@ -958,25 +960,24 @@ table th {
 				margin-bottom: $baseline/2;
 			}
 			.collapser-open .collapser-button {
-				background: url(/static/img/buttons/arrow_down_black_up.svg);
+/*				background: url(/static/img/buttons/arrow_down_black_up.svg);
 				background-repeat: no-repeat;
 				background-size: auto 100%;
-				background-position: center;
+				background-position: center;*/
 			}
 			.collapser-button {
-				top: $padding;
-				right: $padding;
-				width: $baseline;
+				margin-top: $baseline;
+/*				width: $baseline;
 				height: $baseline;
 				background: url(/static/img/buttons/arrow_down_black_down.svg);
 				background-repeat: no-repeat;
 				background-size: auto 100%;
 				background-position: center;
 				opacity: 0.5;
-				border: 0px;
+				border: 0px;*/
 			}
 			.collapser-button:hover,.collapser-button:focus {
-				opacity: 1;
+/*				opacity: 1;*/
 			}
 			.section-caption {
 				text-transform: uppercase;
@@ -1382,7 +1383,6 @@ body.single {
 	}
 }
 
-
 .thumbnailed-list { @each $section in $sections {
 	&.#{$section} {
 		.list-header .title {
@@ -1409,6 +1409,23 @@ body.single {
 		}
 	}
 
+}
+
+
+@each $section in $sections {
+	.more-button {
+		display: inline-block;
+		border: solid 2px gray;
+		border-radius: 100px;
+		padding: 4px 20px;
+		text-decoration: none;
+		color: inherit;
+		&:hover, &:focus {
+			color: white;
+			background-color: map-get($section-colors, $section);
+			border-color: map-get($section-colors, $section);
+		}
+	}
 }
 
 

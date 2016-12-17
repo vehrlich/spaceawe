@@ -2,7 +2,7 @@ function ready(f){ /in/.test(document.readyState)?setTimeout('ready('+f+')',9):f
 
 ready(function(){
 	var cls = "collapser";
-	$('head').append('<style id="customstylesheet">.'+cls+' { position: relative; } .'+cls+'-intro { position: relative; z-index: 0; } .'+cls+'-split { position: relative; } .'+cls+'-button { position: absolute; z-index: 2; } .'+cls+'-main {display: none;} .'+cls+'-open .'+cls+'-intro { display: none; } .'+cls+'-open .'+cls+'-main { display: block; }</style>');
+	$('head').append('<style id="customstylesheet">.'+cls+' { position: relative; } .'+cls+'-intro { position: relative; z-index: 0; } .'+cls+'-split { position: relative; } .'+cls+'-button { position: relative; z-index: 2; } .'+cls+'-main {display: none;} .'+cls+'-open .'+cls+'-intro { display: none; } .'+cls+'-open .'+cls+'-main { display: block; }</style>');
 
 	// We need to find every ellipsis element, slowly build up a fake version
 	// of it with the same properties checking the height as we go.
@@ -54,7 +54,7 @@ ready(function(){
 			// If the height has changed, increment the number of lines
 			if(h != oldh) lines++;
 
-		if(content.indexOf('The students will learn the principle') > 0) console.log(h,lines,p,a,str,max)
+			//if(content.indexOf('The students will learn the principle') > 0) console.log(h,lines,p,a,str,max)
 
 			// If we have too many lines, use the previous version of the string
 			if(lines > max){
@@ -68,7 +68,7 @@ ready(function(){
 			// Set the new starting position
 			p = a+1;
 		}
-		if(lines < max) shorten = false;
+		if(lines <= max) shorten = false;
 		repl = $(str).text()
 		if(orig.indexOf(repl)==0) shorten = false;
 
@@ -77,17 +77,17 @@ ready(function(){
 		el.remove()
 		// Build replacement content
 		if(shorten){
-			$(this).html('<button class="'+cls+'-button">'+more+'</button><div class="'+cls+'-intro">'+str+'</div><div class="'+cls+'-main">'+content+'</div>');
+			$(this).html('<div class="'+cls+'-intro">'+str+'</div><div class="'+cls+'-main">'+content+'</div><button class="'+cls+'-button more-button">'+more+'</button>');
 			$(this).css({'min-height':($(this).outerHeight())+'px'});
 			$(this).find('.'+cls+'-intro').on('click',function(){
 				$(this).parent('.'+cls).find('button.'+cls+'-button').trigger('click');
 			})
 			$(this).find('button.'+cls+'-button').on('click',function(){
 				var el = $(this).parent('.'+cls);
-				//var expand = el.find('.'+cls+'-intro').is(':visible');
+				var expand = el.find('.'+cls+'-intro').is(':visible');
 				el.toggleClass(cls+'-open');
-/*				$(this).html(expand ? less : more)
-				var intro = el.find('.'+cls+'-intro');
+				$(this).html(expand ? less : more);
+/*				var intro = el.find('.'+cls+'-intro');
 				var full = el.find('.'+cls+'-main');
 				if(expand){
 					intro.hide();//intro.css({'position':'absolute'}).fadeOut(200);

@@ -69,7 +69,7 @@ h4, h5, h6 {
 p, ul, ol, table {
   margin-bottom: 24px; }
 
-p:last-child {
+p:last-child, ul:last-child, ol:last-child, table:last-child {
   margin-bottom: 0px; }
 
 b, strong {
@@ -964,8 +964,8 @@ table th {
     padding: 45px; }
     .content-card .content-container .alert {
       font-weight: bold;
-      padding-top: 10px;
-      padding-bottom: 10px; }
+      /*padding-top: 10px;
+			padding-bottom: 10px;*/ }
     .content-card .content-container .section-content {
       margin-bottom: 24px; }
     .content-card .content-container .section-content:last-child {
@@ -997,23 +997,22 @@ table th {
       .content-card .content-container .content-main-column section h2 {
         margin-bottom: 12px; }
       .content-card .content-container .content-main-column .collapser-open .collapser-button {
-        background: url(/static/img/buttons/arrow_down_black_up.svg);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: center; }
+        /*				background: url(/static/img/buttons/arrow_down_black_up.svg);
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				background-position: center;*/ }
       .content-card .content-container .content-main-column .collapser-button {
-        top: 45px;
-        right: 45px;
-        width: 24px;
-        height: 24px;
-        background: url(/static/img/buttons/arrow_down_black_down.svg);
-        background-repeat: no-repeat;
-        background-size: auto 100%;
-        background-position: center;
-        opacity: 0.5;
-        border: 0px; }
+        margin-top: 24px;
+        /*				width: $baseline;
+				height: $baseline;
+				background: url(/static/img/buttons/arrow_down_black_down.svg);
+				background-repeat: no-repeat;
+				background-size: auto 100%;
+				background-position: center;
+				opacity: 0.5;
+				border: 0px;*/ }
       .content-card .content-container .content-main-column .collapser-button:hover, .content-card .content-container .content-main-column .collapser-button:focus {
-        opacity: 1; }
+        /*				opacity: 1;*/ }
       .content-card .content-container .content-main-column .section-caption {
         text-transform: uppercase; }
       .content-card .content-container .content-main-column h2:first-child {
@@ -2059,6 +2058,90 @@ body.section-about .wrapper_block_previews h3 {
   font-size: 12px; }
   .thumbnailed-list .filters.level .pure-menu-has-children {
     width: 150px; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #3e5fdb;
+    border-color: #3e5fdb; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #4ed8c3;
+    border-color: #4ed8c3; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #ed3b5a;
+    border-color: #ed3b5a; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #f9b653;
+    border-color: #f9b653; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #9d59e4;
+    border-color: #9d59e4; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #52c36f;
+    border-color: #52c36f; }
+
+.more-button {
+  display: inline-block;
+  border: solid 2px gray;
+  border-radius: 100px;
+  padding: 4px 20px;
+  text-decoration: none;
+  color: inherit; }
+  .more-button:hover, .more-button:focus {
+    color: white;
+    background-color: #3e5fdb;
+    border-color: #3e5fdb; }
 
 .horizontal-jump-menu li {
   text-align: center; }

@@ -32,38 +32,38 @@
 		<div class="content-container">
 			<div class="content-main-column">
 
-				<section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+				<section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Brief Description" %}</h2>
 				<div class="section-content">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
 			{% if object.alert_message %}
 				<div class="section-content alert">{{ object.alert_message|markdown }}</div>
 			{% endif %}
 				</section>
-				<section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+				<section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Goals" %}</h2>
 				<div class="section-content">{{ object.goals|markdown|relativise_constrain_img_src:object }}</div>
       </section>
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Learning Objectives" %}</h2>
 				<div class="section-content">{{ object.objectives|markdown|relativise_constrain_img_src:object }}</div>
       </section>
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Evaluation" %}</h2>
 				<div class="section-content">{{ object.evaluation|markdown|relativise_constrain_img_src:object }}</div>
       </section>
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Materials" %}</h2>
 				<div class="section-content">{{ object.materials|markdown|relativise_constrain_img_src:object }}</div>
       </section>
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Background Information" %}</h2>
 				<div class="section-content">{{ object.background|markdown|relativise_constrain_img_src:object }}</div>
       </section>
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Full Activity Description" %}</h2>
 				<div class="section-content">{{ object.fulldesc|markdown|relativise_constrain_img_src:object }}</div>
       </section>
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Curriculum" %}</h2>
 				<div class="section-content">
 					<h3>Space Awareness curricula topics (EU and South Africa)</h3>
@@ -76,12 +76,12 @@
 				</div>
       </section>
 			{% if object.additional_information %}
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Additional Information" %}</h2>
 				<div class="section-content">{{ object.additional_information|markdown|relativise_constrain_img_src:object }}</div>
       </section>
 			{% endif %}
-      <section class="collapser" lines="5" more="&nbsp;" less="&nbsp;">
+      <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
 				<h2 class="section-caption">{% trans "Conclusion" %}</h2>
 				<div class="section-content">{{ object.conclusion|markdown|relativise_constrain_img_src:object }}</div>
 				<div class="section-content"><img style="height: 50px; width: 175px; margin-right: 10px; float: left;" src="{% static 'img/astroedu_peerreview_badge.png' %}"><p>{{ object.spaceawe_authorship }}</p></div>
