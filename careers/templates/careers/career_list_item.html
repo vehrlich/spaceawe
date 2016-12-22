@@ -13,7 +13,7 @@
 {% endthumbnail %} -->
 {% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
 <li><div class="list-item-container">
-	<div class="list-item games" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+	<div class="list-item careers" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
 		<div class="link-container">
 			<a href="{% url 'careers:career-detail' slug=object.slug %}">
 				<div class="color"></div>
@@ -22,7 +22,7 @@
 					<div class="date"></div>
 					<div class="title">{{ object.title }}</div>
 					<div class="preview">{{ object.teaser }}</div>
-					<div class="bottom">
+					<div class="bottom show-on-focus">
 						<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
 					</div>
 				</div>

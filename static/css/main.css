@@ -649,8 +649,6 @@ body.single #header, body.menu-small #header, .header-small {
     .thumbnailed-list .list-item .date, .thumbnailed-list .list-item .age {
       font-size: 12px;
       color: inherit; }
-    .thumbnailed-list .list-item .date {
-      padding-top: 24px; }
     .thumbnailed-list .list-item .title {
       font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
       letter-spacing: 0.1em;
@@ -658,31 +656,43 @@ body.single #header, body.menu-small #header, .header-small {
       font-weight: 400;
       line-height: 24px;
       font-size: 24px;
-      text-transform: uppercase;
-      padding: 0 45px; }
-    .thumbnailed-list .list-item .text .preview {
-      line-height: 24px; }
+      text-transform: uppercase; }
+    .thumbnailed-list .list-item .text {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 24px; }
+      .thumbnailed-list .list-item .text .preview {
+        line-height: 24px; }
     .thumbnailed-list .list-item .bottom {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       position: absolute;
-      bottom: 0;
+      padding: 24px;
+      bottom: 0px;
+      left: 0px;
       width: 100%;
       text-align: center; }
     .thumbnailed-list .list-item .theme img {
       height: 32px;
       width: 32px; }
     .thumbnailed-list .list-item .expand {
-      padding: 16px;
+      padding-top: 24px;
       line-height: 0px; }
       .thumbnailed-list .list-item .expand img {
         height: 32px;
         width: 32px; }
+    .thumbnailed-list .list-item .top .expand {
+      padding-top: 0;
+      padding-bottom: 24px; }
     .thumbnailed-list .list-item .color-black {
       background-color: rgba(0, 0, 0, 0.3); }
-    .thumbnailed-list .list-item .date, .thumbnailed-list .list-item .bottom, .thumbnailed-list .list-item .age, .thumbnailed-list .list-item .color, .thumbnailed-list .list-item .theme {
+    .thumbnailed-list .list-item .date, .thumbnailed-list .list-item .show-on-focus, .thumbnailed-list .list-item .age, .thumbnailed-list .list-item .color, .thumbnailed-list .list-item .theme {
       visibility: hidden;
       opacity: 0;
       transition: all 0.5s ease; }
-    .thumbnailed-list .list-item a:hover .date, .thumbnailed-list .list-item a:hover .bottom, .thumbnailed-list .list-item a:hover .age, .thumbnailed-list .list-item a:hover .color, .thumbnailed-list .list-item a:hover .theme, .thumbnailed-list .list-item a:focus .date, .thumbnailed-list .list-item a:focus .bottom, .thumbnailed-list .list-item a:focus .age, .thumbnailed-list .list-item a:focus .color, .thumbnailed-list .list-item a:focus .theme, .thumbnailed-list .list-item .no-hover .date, .thumbnailed-list .list-item .no-hover .bottom, .thumbnailed-list .list-item .no-hover .age, .thumbnailed-list .list-item .no-hover .color, .thumbnailed-list .list-item .no-hover .theme {
+    .thumbnailed-list .list-item a:hover .date, .thumbnailed-list .list-item a:hover .show-on-focus, .thumbnailed-list .list-item a:hover .age, .thumbnailed-list .list-item a:hover .color, .thumbnailed-list .list-item a:hover .theme, .thumbnailed-list .list-item a:focus .date, .thumbnailed-list .list-item a:focus .show-on-focus, .thumbnailed-list .list-item a:focus .age, .thumbnailed-list .list-item a:focus .color, .thumbnailed-list .list-item a:focus .theme, .thumbnailed-list .list-item .no-hover .date, .thumbnailed-list .list-item .no-hover .show-on-focus, .thumbnailed-list .list-item .no-hover .age, .thumbnailed-list .list-item .no-hover .color, .thumbnailed-list .list-item .no-hover .theme {
       visibility: visible;
       opacity: 1; }
     .thumbnailed-list .list-item .question_mark {
@@ -2289,16 +2299,13 @@ body.section-careers.menu-compact #header .logo .logo-el {
 .section-careers {
   /* We just want to target the video thumbnail list and the */ }
   .section-careers .thumbnailed-list.video_thumbnailed .list-item .text .title {
-    padding-top: 45px; }
+    padding-top: 24px; }
   .section-careers .thumbnailed-list.video_thumbnailed .list-item .text > div.bottom {
     bottom: 0;
     height: 100%;
     margin-bottom: 0; }
   .section-careers .thumbnailed-list.video_thumbnailed .list-item .expand {
     padding: 7px 0 0; }
-
-.section-careers .thumbnailed-list.video_thumbnailed .list-item .text .title {
-  padding-top: 45px; }
 
 .section-careers .content-card .thumbnailed-list.video_thumbnailed .list-item .expand {
   padding: 7px 0 0; }

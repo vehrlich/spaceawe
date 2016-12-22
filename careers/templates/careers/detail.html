@@ -90,7 +90,7 @@
 					<div class="text">
 						<div class="date">{{ item.object.release_date|date:"DATE_FORMAT" }}</div>
 						<div class="title">{{ item.object.title }}</div>
-						<div class="bottom">
+						<div class="bottom show-on-focus">
 							<div class="theme">{% include 'categories/categories_icons.html' %}</div>
 							<div class="expand"><a href="{{ item.url }}"><img src="{% static 'img/icon_plus.svg' %}"></a></div>
 						</div>

@@ -566,49 +566,53 @@ body.single #header, body.menu-small #header, .header-small {
 			font-size: $font-size-small;
 			color: inherit;
 		}
-		.date {
-			padding-top: $baseline;
-		}
 		.title {
 			@include heading();
 			font-size: $baseline;
 			text-transform: uppercase;
-			padding: 0 $padding;
 		}
 		.text {
+			-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+			padding: $baseline;
 			.preview {
 				line-height: $baseline;
 			}
 		}
 		.bottom {
+			-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 			position: absolute;
-			bottom: 0;
+			padding: $baseline;
+			bottom: 0px;
+			left: 0px;
 			width: 100%;
 			text-align: center;
-
 		}
 		.theme img {
 			height: 32px;
 			width: 32px;
 		}
 		.expand {
-			padding: 16px;
+			padding-top: $baseline;
 			line-height: 0px;
 			img {
 				height: 32px;
 				width: 32px;
 			}
 		}
+		.top .expand {
+			padding-top: 0;
+			padding-bottom: $baseline;
+		}
 		.color-black {
 			background-color: rgba(0, 0, 0, .3);
 		}
-		.date, .bottom, .age, .color, .theme {
+		.date, .show-on-focus, .age, .color, .theme {
 			visibility: hidden;
 			opacity: 0;
 			transition: all 0.5s ease;
 		}
 		a:hover, a:focus, .no-hover {
-			.date, .bottom, .age, .color, .theme {
+			.date, .show-on-focus, .age, .color, .theme {
 				visibility: visible;
 				opacity: 1;
 			}
@@ -1494,7 +1498,7 @@ body.section-careers.menu-compact #header .logo .logo-el {
 	/* We just want to target the video thumbnail list and the */
 	.thumbnailed-list.video_thumbnailed {
 		.list-item .text .title {
-			padding-top: $padding;
+			padding-top: $baseline;
 		}
 		.list-item .text > div.bottom {
 			bottom: 0;
@@ -1508,9 +1512,6 @@ body.section-careers.menu-compact #header .logo .logo-el {
 }
 
 
-.section-careers .thumbnailed-list.video_thumbnailed .list-item .text .title {
-	padding-top: $padding;
-}
 .section-careers .content-card .thumbnailed-list.video_thumbnailed .list-item .expand {
 	padding: 7px 0 0;
 }
