@@ -1,18 +1,14 @@
-<!DOCTYPE html>
-
-{% load i18n parler_tags staticfiles smartpages thumbnail markdown relativise_img_src %}{% get_current_language as LANGUAGE_CODE %}
-
-
+<!DOCTYPE html>{% load i18n parler_tags staticfiles smartpages thumbnail markdown relativise_img_src %}{% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
     <head>
         <meta charset="utf-8">
-        <title>TEST {{ object.title }}</title>
-        <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" media="print" />  <!-- media="print" -->
+        <title>{{ object.title }}</title>
+        <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
     </head>
     <body>
         <div id="header">
-            <div id="logo">Logo <img src="{% static 'img/logo.svg' %}" /></div>
-            <div class="title">TEST: {{ object.title }}</div>
+            <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
+            <div class="title">{{ object.title }}</div>
             <!-- <div class="subtitle">{% trans 'Tested by teachers' %}</div> -->
             <div class="teaser">{{ object.teaser }}</div>
             <div class="author">{{ object.authors.all.0.institution.name }}</div>
@@ -78,14 +74,10 @@
                     <div class="caption">{% trans "Type of learning activity" %}</div>
                     <div class="value">{{ object.learning }}</div>
                 </div>
-                <div class="metadata-item">
-                    <div class="caption">{% trans "Author" %}</div>
-                    <div class="value">{{ object.author_list }}</div>
-                </div>
             </td></tr></table>
 
         </div>
-		
+		<!--<div id="logo"><img src="{% static 'img/logo.svg' %}" /></div>-->
         <div id="story">
             <div class="section-caption">{% trans "Brief Description" %}</div>
             <div class="section-content text">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
@@ -123,13 +115,13 @@
 			<a target="_blank" href="http://astroedu.iau.org/"><img src="{% static 'img/sponsors/astroedu.png' %}" /></a>
 			<img src="{% static 'img/sponsors/eu.png' %}" />
 			<p>{% trans "This resource was selected and revised by Space Awareness. Space Awareness is funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
-		</div><!--
+		</div>
         <div id="footer">
             <div class="separator"></div>
             <div class="footer_link">
                 <a href="http://www.space-awareness.org/">www.space-awareness.org</a>
             </div>
-        </div>-->
+        </div>
 
 
     </body>

@@ -1,0 +1,36 @@
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4" aria-haspopup="true">
+            <a href="{% url 'categories' code='space' %}">
+                <div class="icon">
+                    <div class="normal" style="background-image: url({% static 'img/icons/categories/icon_space_blue.svg' %});"></div>
+                    <div class="hover" style="background-image: url({% static 'img/icons/categories/icon_space_blue_over.svg' %});"></div>
+                </div>
+                <div class="title">{{ CATEGORIES.space.title }}</div>
+            </a>
+        </div>
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4" aria-haspopup="true">
+            <a href="{% url 'categories' code='earth' %}">
+                <div class="icon">
+                    <div class="normal" style="background-image: url({% static 'img/icons/categories/icon_earth_blue.svg' %});"></div>
+                    <div class="hover" style="background-image: url({% static 'img/icons/categories/icon_earth_blue_over.svg' %});"></div>
+                </div>
+                <div class="title">{{ CATEGORIES.earth.title }}</div>
+            </a>
+        </div>
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4" aria-haspopup="true">
+            <a href="{% url 'categories' code='navigation' %}">
+                <div class="icon">
+                    <div class="normal" style="background-image: url({% static 'img/icons/categories/icon_navigation_blue.svg' %});"></div>
+                    <div class="hover" style="background-image: url({% static 'img/icons/categories/icon_navigation_blue_over.svg' %});"></div>
+                </div>
+                <div class="title">{{ CATEGORIES.navigation.title }}</div>
+            </a>
+        </div>
+        <div class="category category-1 pure-u-1-2 pure-u-sm-1-4" aria-haspopup="true">
+            <a href="{% url 'categories' code='heritage' %}">
+                <div class="icon">
+                    <div class="normal" style="background-image: url({% static 'img/icons/categories/icon_heritage_blue.svg' %});"></div>
+                    <div class="hover" style="background-image: url({% static 'img/icons/categories/icon_heritage_blue_over.svg' %});"></div>
+                </div>
+                <div class="title">{{ CATEGORIES.heritage.title }}</div>
+            </a>
+        </div>
