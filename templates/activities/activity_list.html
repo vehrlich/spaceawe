@@ -43,23 +43,24 @@
         </div>
 
         <div class="pure-u-1 list-header">
+            <div id="filters" class="anchor"></div>
             <div class="title">{% trans "Sort by category" %}</div>
             <div class="filters">
-                <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
+                <div class="filter-topic-text"><a class="selected" href="/activities/#filters">{% trans "all" %}</a></div>
             </div>
             {% include 'filters.html' %}
 			<div class="filters level">
 				<div class="pure-menu pure-menu-horizontal">
 					<ul class="pure-menu-list">
 						<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-							<a href="#" id="menuLink1" class="pure-menu-link">Level</a>
+							<a href="/activities/#filters" id="menuLink1" class="pure-menu-link">Level</a>
 							<ul class="pure-menu-children">
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
-								<!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+                                <li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='pre' %}#filters" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='primary' %}#filters" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='middle' %}#filters" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='secondary' %}#filters" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+								<!-- <li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='informal' %}#filters" class="pure-menu-link">{% trans "Informal" %}</a></li>
 							</ul>
 						</li>
 					</ul>
