@@ -420,13 +420,8 @@ WHOOSH_INDEX_PATH = os.path.join(PARENT_DIR, '/home/web/usr/whoosh_index')
 # http://django-parler.readthedocs.org/en/latest/
 # https://github.com/edoburu/django-parler
 PARLER_LANGUAGES = {
-    None: (
-        # {'code': 'en',},
-        # {'code': 'de',},
-        # {'code': 'pt',},
-        # {'code': 'ar',},
-        # {'code': 'vi',},
-    ),
+    # SITE_ID: ( {'code':'en'}, { ...
+    1: [({'code': code}) for (code, name) in LANGUAGES],
     'default': {
         'fallbacks': ['en'],
         'hide_untranslated': False,   # False is the default; let .active_translations() return fallbacks too.
