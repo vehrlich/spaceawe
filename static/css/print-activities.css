@@ -72,6 +72,14 @@ body {
     text-transform: uppercase;
     color: #9d59e4; }
 
+  #story .section-caption:lang(el),
+  #story .section-caption:lang(cs),
+  #story .section-caption:lang(pl),
+  #story .section-caption:lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif;
+  }
+
+
 #sponsors img {
   height: 40px;
   padding-right: 20pt; }
