@@ -28,6 +28,13 @@ body {
     font-size: 20px;
     color: #ed3b5a; }
 
+  #header:lang(el),
+  #header:lang(cs),
+  #header:lang(pl),
+  #header:lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif;
+  }
+
 #cover-image {
   width: 100%;
   height: 8.4cm;
@@ -41,6 +48,13 @@ body {
   font-weight: bold;
   color: #ed3b5a; }
 
+  #story .title:lang(el),
+  #story .title:lang(cs),
+  #story .title:lang(pl),
+  #story .title:lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif;
+  }
+
 #story .subtitle {
   color: #ed3b5a; }
 
@@ -52,6 +66,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: #ed3b5a; }
+
+  #coolfact .title :lang(el),
+  #coolfact .title :lang(cs),
+  #coolfact .title :lang(pl),
+  #coolfact .title :lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif;
+  }
+
     #coolfact .title img {
       height: 0.7em;
       width: 0.7em; }
