@@ -232,7 +232,7 @@ body.single #header, body.menu-small #header, .header-small {
           #cover .feature-container .feature .title-container .title-subcontainer .title:lang(cs),
           #cover .feature-container .feature .title-container .title-subcontainer .title:lang(pl),
           #cover .feature-container .feature .title-container .title-subcontainer .title:lang(ro) {
-              font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
+              font-family: "BloggerSans", "BPreplay", sans-serif;
           }
 
           #cover .feature-container .feature .title-container .title-subcontainer .subtitle {
