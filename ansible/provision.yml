@@ -36,6 +36,7 @@
         - libxslt1-dev
         - zlib1g-dev
         - s3cmd
+        - gettext
 
     - name: get latest pip
       get_url: url=https://bootstrap.pypa.io/get-pip.py dest=/tmp/

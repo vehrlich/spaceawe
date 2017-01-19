@@ -1,122 +1,59 @@
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-01-19 18:55+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "Sort by category"
+msgstr "TROVA PER CATEGORIA"
 
-msgid "News"
-msgstr "News"
+msgid "all"
+msgstr "Tutte"
+
+msgid "Interviews"
+msgstr ""
+
+msgid "What is it like to have a space-related job?"
+msgstr ""
 
 msgid "Careers"
 msgstr "Professioni"
 
-msgid "Discover space careers"
-msgstr "Scopri lo spazio Professioni"
+msgid "It is not all about becoming an astronaut!"
+msgstr ""
 
-msgid "Aiming for the stars? See how you can contribute to space science and exploration."
-msgstr "Punti alle stelle? Guarda come puoi contribuire allo studio e all’esplorazione dello spazio."
+msgid "Webinars"
+msgstr ""
 
-msgid "Read"
-msgstr "Leggi"
+msgid "Watch live talks about space sciences"
+msgstr ""
 
-msgid "Read Space Scoops"
-msgstr "Leggi Scoop spaziali"
+msgid "Booklets & posters"
+msgstr ""
 
-msgid "News from across the Universe"
-msgstr "News da tutto l’universo"
+msgid "Print, share, and download materials on space careers"
+msgstr ""
 
-msgid "The latest discoveries about the Universe."
-msgstr "Le ultime scoperte sull’universo."
+msgid "Field"
+msgstr ""
 
-msgid "Participate"
-msgstr "Partecipa"
+msgid "Type"
+msgstr ""
 
-msgid "Play & participate"
-msgstr "Gioca e partecipa"
+msgid "Level of study"
+msgstr ""
 
-msgid "Apps and projects for space exploration"
-msgstr "App e progetti per l’esplorazione dello spazio"
+msgid "Interview"
+msgstr ""
 
-msgid "Some great apps and projects to take part in real research programmes."
-msgstr "Alcune app e progetti interessanti per partecipare a veri programmi di ricerca."
-
-msgid "Educate"
-msgstr "Educa"
-
-msgid "Educate & inspire"
-msgstr "Educa e ispira"
-
-msgid "Peer-reviewed educational activities"
-msgstr "ATTIVITÀ DIDATTICHE PEER-REVIEWED"
-
-msgid "Some of the best resources for educators about space."
-msgstr "Alcune delle migliori risorse per gli educatori sul tema dello spazio."
-
-msgid "Develop"
-msgstr "Sviluppa"
-
-msgid "Develop teaching skills"
-msgstr "Sviluppa competenze didattiche"
-
-msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
-msgstr "Guida al miglior uso di Space Awareness con i ragazzi fra gli 8 e i 18 anni."
-
-msgid "Know us"
-msgstr "Per conoscerci"
-
-msgid "Get to know us"
-msgstr "Per conoscerci"
-
-msgid "Who is behind Space Awareness? Is there a contact in my country?"
-msgstr "Chi c’è dietro a Space Awareness? Chi posso contattare nel mio paese?"
-
-msgid "Our wonderful Universe"
-msgstr "Il nostro magnifico universo"
-
-msgid "Space sciences and exploration"
-msgstr "Studio ed esplorazione dello spazio"
-
-msgid "Get inspired by the beauty and vastness of the Universe"
-msgstr "LASCIATI ISPIRARE DALLA BELLEZZA E DALLA VASTITÀ DELL’UNIVERSO"
-
-msgid "Our fragile planet"
-msgstr "Il nostro fragile pianeta"
-
-msgid "Earth from above"
-msgstr "La Terra dall’alto"
-
-msgid "The Earth, our unique and fragile home"
-msgstr "LA NOSTRA CASA UNICA E FRAGILE: LA TERRA"
-
-msgid "Navigation"
-msgstr "Navigazione"
-
-msgid "Navigation through the ages"
-msgstr "Navigazione attraverso le epoche"
-
-msgid "Global discovery & mobility"
-msgstr "Scoperta globale e mobilità"
-
-msgid "Trace the history of navigation from the first explorers to GPS"
-msgstr "SEGUI LA STORIA DELLA NAVIGAZIONE DAI PRIMI ESPLORATORI AL GPS"
-
-msgid "Islamic heritage"
-msgstr "Eredità islamica"
-
-msgid "The journey of ideas"
-msgstr "Il viaggio delle idee"
-
-msgid "Building a bridge between the Islamic world and Europe"
-msgstr "GETTARE UN PONTE FRA MONDO ISLAMICO ED EUROPA"
-
-msgid "language"
-msgstr "Lingua"
-
-msgid "download"
+#, fuzzy
+#| msgid "download"
+msgid "Download"
 msgstr "Scarica"
 
-msgid "website"
-msgstr "Sito web"
+msgid "Related resources"
+msgstr "Risorse correlate"
 
 msgid "Citizen Science"
 msgstr "Citizen Science"
@@ -163,11 +100,267 @@ msgstr "Lingua"
 msgid "platform"
 msgstr "Piattaforma"
 
-msgid "Brief Description"
-msgstr "Breve descrizione"
+#, fuzzy
+#| msgid "Related resources"
+msgid "related resources"
+msgstr "Risorse correlate"
+
+msgid "organiser"
+msgstr ""
+
+msgid "language"
+msgstr "Lingua"
+
+msgid "download"
+msgstr "Scarica"
+
+msgid "website"
+msgstr "Sito web"
+
+msgid "Search results"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+#, fuzzy
+#| msgid "all"
+msgid "All"
+msgstr "Tutte"
+
+msgid "Pre-school"
+msgstr ""
+
+msgid "Primary School"
+msgstr ""
+
+msgid "Middle School"
+msgstr ""
+
+msgid "Secondary School"
+msgstr ""
+
+msgid "Informal"
+msgstr ""
+
+msgid "News"
+msgstr "News"
+
+msgid "Latest updates about Space Awareness"
+msgstr ""
+
+msgid "Discover space careers"
+msgstr "Scopri lo spazio Professioni"
+
+msgid "Become a space explorer"
+msgstr ""
+
+msgid ""
+"Aiming for the stars? See how you can contribute to space science and "
+"exploration."
+msgstr ""
+"Punti alle stelle? Guarda come puoi contribuire allo studio e "
+"all’esplorazione dello spazio."
+
+msgid "Read"
+msgstr "Leggi"
+
+msgid "Read Space Scoops"
+msgstr "Leggi Scoop spaziali"
+
+msgid "News from across the Universe"
+msgstr "News da tutto l’universo"
+
+msgid "The latest discoveries about the Universe."
+msgstr "Le ultime scoperte sull’universo."
+
+msgid "Participate"
+msgstr "Partecipa"
+
+msgid "Play & participate"
+msgstr "Gioca e partecipa"
+
+msgid "Apps and projects for space exploration"
+msgstr "App e progetti per l’esplorazione dello spazio"
+
+msgid "Some great apps and projects to take part in real research programmes."
+msgstr ""
+"Alcune app e progetti interessanti per partecipare a veri programmi di "
+"ricerca."
+
+msgid "Educate"
+msgstr "Educa"
+
+msgid "Educate & inspire"
+msgstr "Educa e ispira"
+
+msgid "Peer-reviewed educational activities"
+msgstr "ATTIVITÀ DIDATTICHE PEER-REVIEWED"
+
+msgid "Some of the best resources for educators about space."
+msgstr "Alcune delle migliori risorse per gli educatori sul tema dello spazio."
+
+msgid "Develop"
+msgstr "Sviluppa"
+
+msgid "Develop teaching skills"
+msgstr "Sviluppa competenze didattiche"
+
+msgid "Bringing space to education"
+msgstr ""
+
+msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
+msgstr ""
+"Guida al miglior uso di Space Awareness con i ragazzi fra gli 8 e i 18 anni."
+
+msgid "Know us"
+msgstr "Per conoscerci"
+
+msgid "Get to know us"
+msgstr "Per conoscerci"
+
+msgid "Vision and team behind Space Awareness"
+msgstr ""
+
+msgid "Who is behind Space Awareness? Is there a contact in my country?"
+msgstr "Chi c’è dietro a Space Awareness? Chi posso contattare nel mio paese?"
+
+#, fuzzy
+#| msgid "Space sciences and exploration"
+msgid "Space Exploration"
+msgstr "Studio ed esplorazione dello spazio"
+
+#, fuzzy
+#| msgid "Our wonderful Universe"
+msgid "Our Wonderful Universe"
+msgstr "Il nostro magnifico universo"
+
+msgid "Space sciences and exploration"
+msgstr "Studio ed esplorazione dello spazio"
+
+msgid "Get inspired by the beauty and vastness of the Universe"
+msgstr "LASCIATI ISPIRARE DALLA BELLEZZA E DALLA VASTITÀ DELL’UNIVERSO"
+
+msgid "Earth Observation"
+msgstr ""
+
+#, fuzzy
+#| msgid "Our fragile planet"
+msgid "Our Fragile planet"
+msgstr "Il nostro fragile pianeta"
+
+msgid "Earth from above"
+msgstr "La Terra dall’alto"
+
+msgid "The Earth, our unique and fragile home"
+msgstr "LA NOSTRA CASA UNICA E FRAGILE: LA TERRA"
+
+msgid "Navigation"
+msgstr "Navigazione"
+
+#, fuzzy
+#| msgid "Navigation through the ages"
+msgid "Navigation Through the Ages"
+msgstr "Navigazione attraverso le epoche"
+
+msgid "Global discovery & mobility"
+msgstr "Scoperta globale e mobilità"
+
+msgid "Trace the history of navigation from the first explorers to GPS"
+msgstr "SEGUI LA STORIA DELLA NAVIGAZIONE DAI PRIMI ESPLORATORI AL GPS"
+
+msgid "Islamic heritage"
+msgstr "Eredità islamica"
+
+#, fuzzy
+#| msgid "The journey of ideas"
+msgid "The Journey of Ideas"
+msgstr "Il viaggio delle idee"
+
+msgid "Building a bridge between the Islamic world and Europe"
+msgstr "GETTARE UN PONTE FRA MONDO ISLAMICO ED EUROPA"
+
+msgid "see more"
+msgstr ""
+
+msgid "Project partners"
+msgstr "Partner del progetto"
+
+msgid "National contacts"
+msgstr "Contatti nazionali"
+
+msgid "Contact us"
+msgstr "Contattaci"
+
+msgid "The Space Awareness team"
+msgstr "Il team Space Awareness"
+
+msgid "Space Awareness is developed by"
+msgstr "Space Awareness è sviluppato da"
+
+msgid "Space Awareness is developed in collaboration with"
+msgstr "Space Awareness è sviluppato in collaborazione con"
+
+msgid "Related content"
+msgstr "Contenuti correlati"
+
+msgid "Load more"
+msgstr "Carica altro"
+
+msgid "Inspiring a new generation of space explorers"
+msgstr "Ispirare una nuova generazione di esploratori dello spazio"
+
+msgid "Subscribe to our newsletter"
+msgstr "Iscriviti alla nostra newsletter"
+
+msgid "and stay updated about new resources and events"
+msgstr "per restare aggiornato sulle nuove risorse ed eventi"
+
+msgid "This section is coming soon!"
+msgstr "Questa sezione arriverà presto!"
+
+msgid ""
+"Be among the first to be notified by subscribing to the Space Awareness "
+"newsletter on the home page"
+msgstr ""
+"Sii fra i primi a essere informato sull’aggiornamento, iscrivendoti alla "
+"newsletter di Space Awareness in Homepage!"
+
+#, fuzzy
+#| msgid "Location"
+msgid "Introduction"
+msgstr "Luogo"
+
+msgid "What you will learn"
+msgstr ""
+
+msgid "What skills will you need"
+msgstr ""
+
+msgid "Duration of the course"
+msgstr ""
+
+msgid "STARTING DATE"
+msgstr ""
+
+msgid "Enroll"
+msgstr ""
 
 msgid "Goals"
 msgstr "Finalità"
+
+#, fuzzy
+#| msgid "Load more"
+msgid "Read more"
+msgstr "Mostra di più"
+
+#, fuzzy
+#| msgid "Read"
+msgid "Read less"
+msgstr "Mostra di meno"
+
+msgid "Brief Description"
+msgstr "Breve descrizione"
 
 msgid "Learning Objectives"
 msgstr "Obiettivi didattici"
@@ -193,7 +386,9 @@ msgstr "Informazioni aggiuntive"
 msgid "Conclusion"
 msgstr "Conclusione"
 
-msgid "Attachments"
+#, fuzzy
+#| msgid "Attachments"
+msgid "attachments"
 msgstr "Allegati"
 
 msgid "Curriculum topic"
@@ -241,53 +436,51 @@ msgstr "Link alla fonte dell’attività"
 msgid "Repositories"
 msgstr "Archivi"
 
-msgid "Contact us"
-msgstr "Contattaci"
+msgid "Tested by teachers"
+msgstr ""
 
-msgid "National contacts"
-msgstr "Contatti nazionali"
+#, fuzzy
+#| msgid ""
+#| "This website was funded by the European Commission's Horizon 2020 "
+#| "Programme under grant agreement nº 638653"
+msgid ""
+"This resource was selected and revised by Space Awareness. Space Awareness "
+"is funded by the European Commission's Horizon 2020 Programme under grant "
+"agreement nº 638653"
+msgstr ""
+"Questo sito web è stato sviluppato grazie al finanziamento del Programma "
+"Horizon 2020 della Commissione europea, Grant Agreement n. 638653"
 
-msgid "Project partners"
-msgstr "Partner del progetto"
+msgid "University"
+msgstr ""
 
-msgid "The Space Awareness team"
-msgstr "Il team Space Awareness"
+#, fuzzy
+#| msgid ""
+#| "This website was funded by the European Commission's Horizon 2020 "
+#| "Programme under grant agreement nº 638653"
+msgid ""
+"This website was produced by funding from the European Commission's Horizon "
+"2020 Programme under grant agreement nº 638653"
+msgstr ""
+"Questo sito web è stato sviluppato grazie al finanziamento del Programma "
+"Horizon 2020 della Commissione europea, Grant Agreement n. 638653"
 
-msgid "Space Awareness is developed by"
-msgstr "Space Awareness è sviluppato da"
+msgid "Click to see full image"
+msgstr ""
 
-msgid "Space Awareness is developed in collaboration with"
-msgstr "Space Awareness è sviluppato in collaborazione con"
+msgid "Cool Fact!"
+msgstr ""
 
-msgid "This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653"
-msgstr "Questo sito web è stato sviluppato grazie al finanziamento del Programma Horizon 2020 della Commissione europea, Grant Agreement n. 638653"
+msgid "Go to"
+msgstr ""
 
-msgid "Load more"
-msgstr "Carica altro"
+msgid "This Space Scoop is based on a Press Release from"
+msgstr ""
 
-msgid "Related resources"
-msgstr "Risorse correlate"
+msgid "more news"
+msgstr ""
 
-msgid "Sort by category"
-msgstr "TROVA PER CATEGORIA"
-
-msgid "all"
-msgstr "Tutte"
-
-msgid "Inspiring a new generation of space explorers"
-msgstr "Ispirare una nuova generazione di esploratori dello spazio"
-
-msgid "Subscribe to our newsletter"
-msgstr "Iscriviti alla nostra newsletter"
-
-msgid "and stay updated about new resources and events"
-msgstr "per restare aggiornato sulle nuove risorse ed eventi"
-
-msgid "This section is coming soon!"
-msgstr "Questa sezione arriverà presto!"
-
-msgid "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page"
-msgstr "Sii fra i primi a essere informato sull’aggiornamento, iscrivendoti alla newsletter di Space Awareness in Homepage!"
-
-msgid "Related content"
-msgstr "Contenuti correlati"
+#, fuzzy
+#| msgid "Read Space Scoops"
+msgid "Space Scoop"
+msgstr "Leggi Scoop spaziali"
