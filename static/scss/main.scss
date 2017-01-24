@@ -1203,12 +1203,14 @@ table th {
 		background-repeat: no-repeat;
 		text-align: center;
 		padding: 0 !important; // override the padding defined in .thumbnailed-list
+		height:120px;
 		.title {
 			@include heading();
 			text-transform: uppercase;
 			font-size: $baseline;
 			color: white;
 			padding: 1em;
+			padding-top: 70px;
 		}
 	}
 	.list-header-padding {
