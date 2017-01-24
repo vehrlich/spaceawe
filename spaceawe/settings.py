@@ -43,7 +43,7 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
 SITE_URL = 'http://www.space-awareness.org'
 
 ADMINS = (
-    ('Bruno Rino', secrets['ADMIN_EMAIL']),
+    ('Vaclav Ehrlich', secrets['ADMIN_EMAIL']),
 )
 
 # SECURITY WARNING: keep the secret key used in production secret!

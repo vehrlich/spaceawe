@@ -1,6 +1,6 @@
 {% load staticfiles thumbnail el_pagination_tags %}
 
-{% lazy_paginate 9 careers as page_object_list %}
+{% lazy_paginate 9 careers using "carrers_page" as page_object_list %}
 
 <div class="padded-h">
 	<ol class="padded-list list-3col{% if page_object_list|length < 3 %} under-filled{% endif %}">

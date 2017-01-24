@@ -8,8 +8,16 @@ from django.utils.timezone import datetime
 from spaceawe import misc
 from .models import Interview, Career, Webinar
 
+
+import logging
+
+logger = logging.Logger('django')
+
 class CareersViewList(ViewUrlMixin, TemplateView):
     template_name = 'careers.html'
+    careers_portion_template_name = 'careers/career_list_page.html'
+    interviews_portion_template_name = 'interviews/interview_list_page.html'
+    webinars_portion_template_name = 'webinars/webinar_list_page.html'
     view_url_name = 'careers:list'
 
     def filter_category(self, queryset):
@@ -41,7 +49,14 @@ class CareersViewList(ViewUrlMixin, TemplateView):
 
     def get_template_names(self):
         if self.request.is_ajax():
-            return [self.template_name]
+            if self.request.GET.get('querystring_key') == 'carrers_page':
+                return [self.careers_portion_template_name]
+            if self.request.GET.get('querystring_key') == 'interviews_page':
+                return [self.interviews_portion_template_name]
+            if self.request.GET.get('querystring_key') == 'webinars_page':
+                return [self.webinars_portion_template_name]
+
+            #return [self.template_name]
         else:
             return super().get_template_names()
 
