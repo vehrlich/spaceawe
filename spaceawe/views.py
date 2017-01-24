@@ -1,6 +1,7 @@
 # from django.http import HttpResponse, Http404
 from django.shortcuts import render
-from django.db.models import Q
+from django.db.models import Q, F, Case, When
+
 from django.views.generic import TemplateView
 from django.http import Http404
 
@@ -18,8 +19,17 @@ from institutions.models import Person
 
 
 def home(request):
+    # highlight are only. for better ordering, prepopulation is needed
+    objects = Highlight.objects.all().select_related().annotate(
+        release_date=Case(
+            When(~Q(news_id=None), then=F('news__release_date')),
+            When(~Q(scoop_id=None), then=F('scoop__release_date')),
+            When(~Q(game_id=None), then=F('game__release_date')),
+            When(~Q(activity_id=None), then=F('activity__release_date')))
+    ).order_by('release_date')
+
     return render(request, 'spaceawe/home.html', {
-        'highlights': Highlight.objects.all(),
+        'highlights': objects,
     })
 
 

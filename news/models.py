@@ -106,7 +106,7 @@ class Highlight(models.Model):
 
     def __str__(self):
         if self.item:
-            result = self.item._meta.verbose_name + ': ' + self.item.title
+            result = ":".join([self.item._meta.verbose_name, self.item.title])
         else:
             result = 'Undefined highlight'
         return result
