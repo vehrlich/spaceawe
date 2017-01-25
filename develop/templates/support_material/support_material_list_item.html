@@ -1,0 +1,25 @@
+{% load staticfiles thumbnail %}
+
+{% thumbnail support_material.cover THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+<li>
+    <div class="list-item-container">
+        <div class="list-item support_material" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+
+            <div class="link-container">
+                <a href="{% url 'develop:support_material' slug=support_material.slug %}" target="download">
+                    <div class="color"></div>
+                    <div class="color-black"></div>
+                    <div class="text">
+                        <div class="date"></div>
+                        <div class="title">{{ support_material.title }}</div>
+                        <div class="preview">{{ support_material.disclaimer }}</div>
+                        <div class="bottom show-on-focus">
+                            <div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</li>
+{% endthumbnail %}

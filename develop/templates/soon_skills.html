@@ -103,4 +103,21 @@
 
 {% endfor %}
 
+{% if support_materials %}
+<div class="thumbnailed-list section-careers pure-g content-page">
+	<div class="wrapper_block_previews">
+        <h2 class="title">{% trans "Didactic courses" %}</h2>
+		{% if disclaimer_paragraphs %}
+		<div class="row text-content padded padded-bottom">
+			{% for paragraph in disclaimer_paragraphs %}
+				{{ paragraph }}
+			{% endfor %}
+		</div>
+		{% endif %}
+		<div class="row">
+			{% include 'support_material/support_material_list_page.html' %}
+	    </div>
+	</div>
+</div>
+{% endif %}
 {% endblock %}
