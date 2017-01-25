@@ -33,9 +33,9 @@ class Module(models.Model):
         return self.info.split(': ')
 
 
-class SupportMaterial(models.Model):
+class DidacticCourse(models.Model):
     """
-    Each mooc should have Support Material document.
+    Didactit courses documents in Moocs
     Support material document is represent with title, short disclaimer, image
     """
 
@@ -48,3 +48,13 @@ class SupportMaterial(models.Model):
     def __str__(self):
         return self.title
 
+
+class DidacticCourseDisclaimer(models.Model):
+    """
+    Introducing paragraphs for Didactic courses
+    """
+
+    paragraph = models.TextField(max_length=512)
+
+    def __str__(self):
+        return self.paragraph

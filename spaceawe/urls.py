@@ -50,7 +50,7 @@ urlpatterns += i18n_patterns(
 if settings.DEBUG:
     # serve MEDIA_ROOT (uploaded files) in development
     from django.conf.urls.static import static
-    import debug_toolbar
+    #import debug_toolbar
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     urlpatterns += [
@@ -65,5 +65,5 @@ if settings.DEBUG:
         # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
         # # debug_toolbar
-        url(r'^__debug__/', include(debug_toolbar.urls)),
+        #url(r'^__debug__/', include(debug_toolbar.urls)),
     ]

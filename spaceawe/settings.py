@@ -438,9 +438,9 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
     # MIDDLEWARE_CLASSES += (
     #     'debug_toolbar.middleware.DebugToolbarMiddleware',
     # )
-    INSTALLED_APPS += (
-        'debug_toolbar',
-    )
+    #INSTALLED_APPS += (
+    #    'debug_toolbar',
+    #)
     DEBUG_TOOLBAR_CONFIG = {
         'INTERCEPT_REDIRECTS': False,
         'JQUERY_URL':'',

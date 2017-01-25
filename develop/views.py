@@ -1,7 +1,7 @@
 from django.shortcuts import redirect
 from django.views.generic import TemplateView, DetailView
 
-from develop.models import Mooc, SupportMaterial
+from develop.models import Mooc, DidacticCourse, DidacticCourseDisclaimer
 
 
 class DevelopView(TemplateView):
@@ -14,7 +14,8 @@ class DevelopView(TemplateView):
 
         context = super(DevelopView, self).get_context_data(**kwargs)
         context['moocs'] = Mooc.objects.all().order_by('position')
-        context['support_materials'] = SupportMaterial.objects.all()
+        context['support_materials'] = DidacticCourse.objects.all()
+        context['disclaimer_paragraphs'] = DidacticCourseDisclaimer.objects.all()
 
         if 'category' in self.kwargs:
             context['category'] = self.kwargs['category']
@@ -30,7 +31,7 @@ class SupportMaterialDetailsView(DetailView):
     Download support material
     """
 
-    queryset = SupportMaterial.objects.all()
+    queryset = DidacticCourse.objects.all()
 
     def get_object(self):
         result = super().get_object()
