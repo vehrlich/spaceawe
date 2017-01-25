@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Mooc(models.Model):
 
     info = models.CharField(max_length=255)
@@ -30,3 +31,20 @@ class Module(models.Model):
 
     def info_parts(self, **kwargs):
         return self.info.split(': ')
+
+
+class SupportMaterial(models.Model):
+    """
+    Each mooc should have Support Material document.
+    Support material document is represent with title, short disclaimer, image
+    """
+
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255)
+    disclaimer = models.CharField(max_length=255)
+    cover = models.ImageField(null=True, blank=True, upload_to='support_document')
+    document_file = models.FileField(upload_to='support_document')
+
+    def __str__(self):
+        return self.title
+
