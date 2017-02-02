@@ -113,14 +113,10 @@
     {% endif %}{% endwith %}
 
 
-    <div id="categories" class="pure-g">
-		<div class="row">
-			<div class="padded-h">
-				<ol class="list-4col">
-    {% include 'spaceawe/categories_bigicons.html' %}
-				</ol>
-	        </div>
-	    </div>
+		<div class="padded-h">
+		<ul id="categories" class="list-4col">
+			{% include 'spaceawe/categories_bigicons.html' %}
+		</ul>
     </div>
 
 {% endblock %}
