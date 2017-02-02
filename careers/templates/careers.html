@@ -38,7 +38,7 @@
 			<div class="filters">
 				<div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
 			</div>
-			{% include 'filters.html' %}
+			{% include "filters.html"  with page_name_filter="careers:list_by_category" %}
 		</div>
 
         <div class="career_menu horizontal-jump-menu padded">
