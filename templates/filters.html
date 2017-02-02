@@ -2,7 +2,7 @@
 				<div id="filters" class="anchor"></div>
 				<ul class="list-4col filters{% if category %} category-{{ category }}{% endif %}">
 					<li class="filter-topic-image">
-                        <a href="{% url 'activities:list_by_category' category='space' %}#filters">
+                        <a href="{% url page_name_filter category='space' %}#filters">
 							<div class="icon">
 								<div class="normal icon-space"></div>
 								<div class="hover icon-space"></div>
@@ -11,7 +11,7 @@
 						</a>
 					</li>
 					<li class="filter-topic-image">
-						<a href="{% url 'activities:list_by_category' category='earth' %}#filters">
+						<a href="{% url page_name_filter category='earth' %}#filters">
 							<div class="icon">
 								<div class="normal icon-earth"></div>
 								<div class="hover icon-earth"></div>
@@ -20,7 +20,7 @@
 						</a>
 					</li>
 					<li class="filter-topic-image">
-						<a href="{% url 'activities:list_by_category' category='navigation' %}#filters">
+						<a href="{% url page_name_filter category='navigation' %}#filters">
 							<div class="icon">
 								<div class="normal icon-navigation"></div>
 								<div class="hover icon-navigation"></div>
@@ -29,7 +29,7 @@
 						</a>
 					</li>
 					<li class="filter-topic-image">
-						<a href="{% url 'activities:list_by_category' category='heritage' %}#filters">
+						<a href="{% url page_name_filter category='heritage' %}#filters">
 							<div class="icon">
 								<div class="normal icon-heritage"></div>
 								<div class="hover icon-heritage"></div>
