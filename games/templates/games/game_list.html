@@ -48,7 +48,7 @@
             <div class="filters">
                 <div class="filter-topic-text"><a class="selected" href="/games/">{% trans "all" %}</a></div>
             </div>
-            {% include 'filters.html' %}
+            {% include 'filters.html' with page_name_filter="games:list_by_category" %}
         </div>
 
     {% include page_template with item_count=9 %}
