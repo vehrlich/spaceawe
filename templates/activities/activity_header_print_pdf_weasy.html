@@ -1,0 +1,23 @@
+<!DOCTYPE html>{% load i18n parler_tags staticfiles smartpages thumbnail markdown relativise_img_src %}{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ object.title }}</title>
+        <link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+        <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+    </head>
+    <body>
+        <div id="header">
+            <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
+            <div class="title">{{ object.title }}</div>
+            <!-- <div class="subtitle">{% trans 'Tested by teachers' %}</div> -->
+            <div class="teaser">{{ object.teaser }}</div>
+            <div class="author">{{ object.authors.all.0 }}</div>
+            <div class="categories">
+            {% for category in object.spaceawe_categories %}
+                <img src="{% static 'img/icons/categories/icon_'|add:category.code|add:'_purple.svg' %}">
+            {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>

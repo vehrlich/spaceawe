@@ -1,6 +1,6 @@
 @page {
     size: A4 portrait;
-    margin: 3.8cm 2.8cm 2.8cm 2.8cm; 
+    margin: 3.5cm 2.8cm;
 }
 
 $logo-height: 3.0cm;
@@ -9,8 +9,8 @@ $logo-width: 2.35 * $logo-height;
 $logo-small-height: 1.5cm;
 $logo-small-width: 2.35 * $logo-height;
 
-$font-titles: Miso, sans-serif;
-
+$font-titles: "Miso", sans-serif;
+$dia-fonts: "BloggerSans", "BPreplay", sans-serif;
 $color-activities: #9d59e4;
 
 body {
@@ -29,20 +29,21 @@ body {
 
     img {
         max-width: 21cm - (2 * 2.8cm);
+        max-height: 29.7cm - (2 * 4cm);
     }
 }
 #header {
     page-break-after: always;
     text-align: center;
     .logo {
-        margin-top: 7.3cm;
+        margin-top: 6cm;
         img {
             height: $logo-height;
             width: $logo-width;
         }
     }
     .title {
-        margin-top: 4.3cm;
+        margin-top: 3.5cm;
         font-family: $font-titles;
         font-size: 32px;
         font-weight: bold;
@@ -54,7 +55,7 @@ body {
         font-style: italic;
     }
     .teaser {
-        margin-top: 2.3cm;
+        margin-top: 1.5cm;
         font-size: 16px;
     }
     .author {
@@ -62,7 +63,9 @@ body {
         color: $color-activities;
     }
     .categories {
-        margin-top: 2.0cm;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
         img {
             height: 2.5cm;
             width: 2.5cm;
@@ -89,15 +92,18 @@ body {
 
 #logo {
 	position: fixed;
-	top: 0;
-	margin-top: 1cm;
+	// because content on page is defined by page height and width, header needs to be above it
+    top: -2cm;
+	width:100%;
+	text-align:center;
 	img {
 		height: $logo-small-height;
 		width: $logo-small-width;
 	}
 }
+
 #story {
-    margin-top: 1.0cm;
+    margin-top: 0.5cm;
     .section-caption {
         margin-top: 1em;
         font-family: $font-titles;
@@ -105,6 +111,13 @@ body {
         text-transform: uppercase;
         color: $color-activities;        
     }
+}
+
+#story .section-caption:lang(el),
+#story .section-caption:lang(cs),
+#story .section-caption:lang(pl),
+#story .section-caption:lang(ro) {
+    font-family: $dia-fonts;
 }
 
 #sponsors {
@@ -115,9 +128,9 @@ body {
 }
 
 #footer {
-    // position: absolute;
     position: fixed;
-    bottom: 0px;
+    // because content on page is defined by page height and width, footer needs to be under it
+    bottom: -2cm;
     width: 100%;
     .separator {
         margin-top: 0.2cm;
