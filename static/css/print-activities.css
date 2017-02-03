@@ -20,12 +20,12 @@ body {
   page-break-after: always;
   text-align: center; }
   #header .logo {
-    margin-top: 6.3cm; }
+    margin-top: 5.5cm; }
     #header .logo img {
       height: 3cm;
       width: 7.05cm; }
   #header .title {
-    margin-top: 4.3cm;
+    margin-top: 3cm;
     font-family: "Miso", sans-serif;
     font-size: 32px;
     font-weight: bold;
@@ -35,13 +35,15 @@ body {
     margin-top: 1em;
     font-style: italic; }
   #header .teaser {
-    margin-top: 2cm;
+    margin-top: 1.5cm;
     font-size: 16px; }
   #header .author {
     font-size: 18px;
     color: #9d59e4; }
   #header .categories {
-    margin-top: 1cm; }
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
     #header .categories img {
       height: 2.5cm;
       width: 2.5cm;

@@ -36,14 +36,14 @@ body {
     page-break-after: always;
     text-align: center;
     .logo {
-        margin-top: 6.3cm;
+        margin-top: 6cm;
         img {
             height: $logo-height;
             width: $logo-width;
         }
     }
     .title {
-        margin-top: 4.3cm;
+        margin-top: 3.5cm;
         font-family: $font-titles;
         font-size: 32px;
         font-weight: bold;
@@ -55,7 +55,7 @@ body {
         font-style: italic;
     }
     .teaser {
-        margin-top: 2cm;
+        margin-top: 1.5cm;
         font-size: 16px;
     }
     .author {
@@ -63,7 +63,9 @@ body {
         color: $color-activities;
     }
     .categories {
-        margin-top: 1cm;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
         img {
             height: 2.5cm;
             width: 2.5cm;
