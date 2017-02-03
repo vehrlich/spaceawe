@@ -1,6 +1,6 @@
 @page {
   size: A4 portrait;
-  margin: 3.8cm 2.8cm 2.8cm 2.8cm; }
+  margin: 3.5cm 2.8cm; }
 
 body {
   font-family: Ubuntu, sans-serif;
@@ -13,19 +13,20 @@ body {
     text-decoration: none;
     color: inherit; }
   body img {
-    max-width: 15.4cm; }
+    max-width: 15.4cm;
+    max-height: 21.7cm; }
 
 #header {
   page-break-after: always;
   text-align: center; }
   #header .logo {
-    margin-top: 7.3cm; }
+    margin-top: 6.3cm; }
     #header .logo img {
       height: 3cm;
       width: 7.05cm; }
   #header .title {
     margin-top: 4.3cm;
-    font-family: Miso, sans-serif;
+    font-family: "Miso", sans-serif;
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
@@ -34,13 +35,13 @@ body {
     margin-top: 1em;
     font-style: italic; }
   #header .teaser {
-    margin-top: 2.3cm;
+    margin-top: 2cm;
     font-size: 16px; }
   #header .author {
     font-size: 18px;
     color: #9d59e4; }
   #header .categories {
-    margin-top: 2.0cm; }
+    margin-top: 1cm; }
     #header .categories img {
       height: 2.5cm;
       width: 2.5cm;
@@ -57,28 +58,27 @@ body {
 
 #logo {
   position: fixed;
-  top: 0;
-  margin-top: 1cm; }
+  top: -2cm;
+  width: 100%;
+  text-align: center; }
   #logo img {
     height: 1.5cm;
     width: 7.05cm; }
 
 #story {
-  margin-top: 1.0cm; }
+  margin-top: 0.5cm; }
   #story .section-caption {
     margin-top: 1em;
-    font-family: Miso, sans-serif;
+    font-family: "Miso", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     color: #9d59e4; }
 
-  #story .section-caption:lang(el),
-  #story .section-caption:lang(cs),
-  #story .section-caption:lang(pl),
-  #story .section-caption:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
-
+#story .section-caption:lang(el),
+#story .section-caption:lang(cs),
+#story .section-caption:lang(pl),
+#story .section-caption:lang(ro) {
+  font-family: "BloggerSans", "BPreplay", sans-serif; }
 
 #sponsors img {
   height: 40px;
@@ -86,7 +86,7 @@ body {
 
 #footer {
   position: fixed;
-  bottom: 0px;
+  bottom: -2cm;
   width: 100%; }
   #footer .separator {
     margin-top: 0.2cm;
@@ -97,5 +97,3 @@ body {
 
 .text {
   line-height: 1.4; }
-
-/*# sourceMappingURL=print-activities.css.map */
