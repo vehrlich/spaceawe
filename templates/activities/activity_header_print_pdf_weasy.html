@@ -12,7 +12,7 @@
             <div class="title">{{ object.title }}</div>
             <!-- <div class="subtitle">{% trans 'Tested by teachers' %}</div> -->
             <div class="teaser">{{ object.teaser }}</div>
-            <div class="author">{{ object.authors.all.0.institution.name }}</div>
+            <div class="author">{{ object.authors.all.0 }}</div>
             <div class="categories">
             {% for category in object.spaceawe_categories %}
                 <img src="{% static 'img/icons/categories/icon_'|add:category.code|add:'_purple.svg' %}">
