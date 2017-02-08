@@ -31,7 +31,7 @@
 	{% endthumbnail %}
 		<div class="content-container">
 			<div class="content-main-column">
-				<section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
+				<section>
 					<h2 class="section-caption">{% trans "Brief Description" %}</h2>
 					<div class="section-content">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
 					{% if object.alert_message %}
@@ -80,7 +80,7 @@
 						<div class="section-content">{{ object.additional_information|markdown|relativise_constrain_img_src:object }}</div>
 				</section>
 				{% endif %}
-				<section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
+				<section>
 						<h2 class="section-caption">{% trans "Conclusion" %}</h2>
 						<div class="section-content">{{ object.conclusion|markdown|relativise_constrain_img_src:object }}</div>
 						<div class="section-content"><img style="height: 50px; width: 175px; margin-right: 10px; float: left;" src="{% static 'img/astroedu_peerreview_badge.png' %}"><p>{{ object.spaceawe_authorship }}</p></div>
