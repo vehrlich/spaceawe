@@ -16,16 +16,28 @@ body {
     max-width: 15.4cm;
     max-height: 21.7cm; }
 
+#orbit img {
+  z-index: -1;
+  position: fixed;
+  top: -3.5cm;
+  left: -2.8cm; }
+  #orbit img.big {
+    width: 12.6cm;
+    height: 13cm; }
+  #orbit img.small {
+    width: 7cm;
+    height: 7cm; }
+
 #header {
   page-break-after: always;
   text-align: center; }
   #header .logo {
-    margin-top: 5.5cm; }
+    margin-top: 4.3cm; }
     #header .logo img {
       height: 3cm;
       width: 7.05cm; }
   #header .title {
-    margin-top: 3cm;
+    margin-top: 3.5cm;
     font-family: "Miso", sans-serif;
     font-size: 32px;
     font-weight: bold;
@@ -60,11 +72,11 @@ body {
 
 #logo {
   position: fixed;
-  top: -2cm;
+  top: -2.5cm;
   width: 100%;
   text-align: center; }
   #logo img {
-    height: 1.5cm;
+    height: 1.7cm;
     width: 7.05cm; }
 
 #story {

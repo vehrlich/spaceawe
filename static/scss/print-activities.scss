@@ -6,7 +6,7 @@
 $logo-height: 3.0cm;
 $logo-width: 2.35 * $logo-height;
 
-$logo-small-height: 1.5cm;
+$logo-small-height: 1.7cm;
 $logo-small-width: 2.35 * $logo-height;
 
 $font-titles: "Miso", sans-serif;
@@ -32,11 +32,32 @@ body {
         max-height: 29.7cm - (2 * 4cm);
     }
 }
+
+#orbit {
+    img {
+        z-index: -1;
+        position: fixed;
+        top: -3.5cm;
+        left: -2.8cm;
+
+        &.big {
+            width: 12.6cm;
+            height: 13cm;
+        }
+        &.small {
+            width: 7cm;
+            height: 7cm;
+        }
+
+     }
+}
+
+
 #header {
     page-break-after: always;
     text-align: center;
     .logo {
-        margin-top: 6cm;
+        margin-top: 4.3cm;
         img {
             height: $logo-height;
             width: $logo-width;
@@ -93,7 +114,7 @@ body {
 #logo {
 	position: fixed;
 	// because content on page is defined by page height and width, header needs to be above it
-    top: -2cm;
+    top: -2.5cm;
 	width:100%;
 	text-align:center;
 	img {
