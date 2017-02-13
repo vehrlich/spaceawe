@@ -1,160 +1,274 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-19 18:55+0100\n"
+"POT-Creation-Date: 2017-02-13 16:22+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: careers/templates/careers.html:37 games/templates/games/game_list.html:47
+#: templates/activities/activity_list.html:47
+#: templates/spacescoops/article_list.html:45
 msgid "Sort by category"
 msgstr "LOCALIZAR POR CATEGORIA"
 
+#: careers/templates/careers.html:39 games/templates/games/game_list.html:49
+#: templates/activities/activity_list.html:49
+#: templates/spacescoops/article_list.html:47
 msgid "all"
 msgstr "Todas"
 
+#: careers/templates/careers.html:48 careers/templates/careers.html.py:87
 msgid "Interviews"
-msgstr ""
+msgstr "Entrevistas"
 
+#: careers/templates/careers.html:49 careers/templates/careers.html.py:88
 msgid "What is it like to have a space-related job?"
-msgstr ""
+msgstr "O que siginifica ter um trabalho no sector espacial?"
 
+#: careers/templates/careers.html:55 careers/templates/careers.html.py:103
+#: spaceawe/models.py:21
 msgid "Careers"
 msgstr "Carreiras"
 
+#: careers/templates/careers.html:56 careers/templates/careers.html.py:104
 msgid "It is not all about becoming an astronaut!"
-msgstr ""
+msgstr "Ser astronauta não é tudo"
 
+#: careers/templates/careers.html:62 careers/templates/careers.html.py:115
 msgid "Webinars"
 msgstr ""
 
+#: careers/templates/careers.html:63 careers/templates/careers.html.py:116
 msgid "Watch live talks about space sciences"
-msgstr ""
+msgstr "Assista a palestras em direto sobre ciências espaciais"
 
+#: careers/templates/careers.html:69
 msgid "Booklets & posters"
 msgstr ""
 
+#: careers/templates/careers.html:70
 msgid "Print, share, and download materials on space careers"
 msgstr ""
 
+#: careers/templates/careers/detail.html:49
 msgid "Field"
 msgstr ""
 
+#: careers/templates/careers/detail.html:53
 msgid "Type"
 msgstr ""
 
+#: careers/templates/careers/detail.html:57
 msgid "Level of study"
 msgstr ""
 
+#: careers/templates/careers/detail.html:61
 msgid "Interview"
 msgstr ""
 
+#: careers/templates/careers/detail.html:65
 #, fuzzy
 #| msgid "download"
 msgid "Download"
 msgstr "Descarregar"
 
+#: careers/templates/careers/detail.html:79
+#: careers/templates/interviews/detail.html:115
+#: careers/templates/webinars/detail.html:84
+#: templates/activities/activity_detail.html:184
 msgid "Related resources"
 msgstr "Recursos relacionados"
 
+#: develop/templates/soon_skills.html:72
+#, fuzzy
+#| msgid "Location"
+msgid "Introduction"
+msgstr "Localização"
+
+#: develop/templates/soon_skills.html:75
+msgid "What you will learn"
+msgstr ""
+
+#: develop/templates/soon_skills.html:78
+msgid "What skills will you need"
+msgstr ""
+
+#: develop/templates/soon_skills.html:81
+msgid "Duration of the course"
+msgstr ""
+
+#: develop/templates/soon_skills.html:98
+msgid "STARTING DATE"
+msgstr ""
+
+#: develop/templates/soon_skills.html:99
+#: spaceawe/templates/spaceawe/about.html:50
+msgid "see more"
+msgstr ""
+
+#: develop/templates/soon_skills.html:99
+msgid "Enroll"
+msgstr ""
+
+#: develop/templates/soon_skills.html:109
+msgid "Didactic courses"
+msgstr ""
+
+#: games/models.py:27
 msgid "Citizen Science"
 msgstr "Ciência Cidadã"
 
+#: games/models.py:28
 msgid "Fun Learning"
 msgstr "Aprendizagem lúdica"
 
+#: games/models.py:29
 msgid "Game"
 msgstr "Jogo"
 
+#: games/models.py:30 games/models.py:36
 msgid "Software"
 msgstr "Software"
 
+#: games/models.py:31 games/models.py:39
 msgid "Other"
 msgstr "Outro"
 
+#: games/models.py:34
 msgid "Facebook"
 msgstr "Facebook"
 
+#: games/models.py:35
 msgid "Website"
 msgstr "Sítio web"
 
+#: games/models.py:37
 msgid "App"
 msgstr "Aplicação"
 
+#: games/models.py:38
 msgid "Data Collection"
 msgstr "Recolha de dados"
 
+#: games/templates/games/game_detail.html:42
 msgid "go to the activity"
 msgstr "Ir para a atividade"
 
+#: games/templates/games/game_detail.html:46
 msgid "difficulty level"
 msgstr "Nível de dificuldade"
 
+#: games/templates/games/game_detail.html:50
 msgid "fun level"
 msgstr "Nível lúdico"
 
+#: games/templates/games/game_detail.html:54
 msgid "type"
 msgstr "Tipo de atividade"
 
+#: games/templates/games/game_detail.html:58
 msgid "languages"
 msgstr "Língua"
 
+#: games/templates/games/game_detail.html:62
 msgid "platform"
 msgstr "Plataforma"
 
+#: games/templates/games/game_detail.html:70
 #, fuzzy
 #| msgid "Related resources"
 msgid "related resources"
 msgstr "Recursos relacionados"
 
+#: news/templates/news/article_detail.html:39
 msgid "organiser"
 msgstr ""
 
+#: news/templates/news/article_detail.html:43
 msgid "language"
 msgstr "Língua"
 
+#: news/templates/news/article_detail.html:47
+#: templates/activities/activity_detail.html:92
+#: templates/spacescoops/article_detail.html:57
 msgid "download"
 msgstr "Descarregar"
 
+#: news/templates/news/article_detail.html:53
 msgid "website"
 msgstr "Sítio web"
 
+#: search/templates/search.html:16
 msgid "Search results"
 msgstr ""
 
+#: search/templates/search.html:56 search/templates/search.html.py:59
 msgid "Search"
 msgstr ""
 
+#: search/templates/search.html:68 searchapp/templates/search.html:57
 #, fuzzy
 #| msgid "all"
 msgid "All"
 msgstr "Todas"
 
+#: search/templates/search.html:102 search/templates/search.html.py:120
+#: search/templates/search.html:138 search/templates/search.html.py:156
+#: searchapp/templates/search.html:91 searchapp/templates/search.html.py:109
+#: searchapp/templates/search.html:127 searchapp/templates/search.html:145
+#: templates/activities/activity_list.html:58
 msgid "Pre-school"
 msgstr ""
 
+#: search/templates/search.html:103 search/templates/search.html.py:121
+#: search/templates/search.html:139 search/templates/search.html.py:157
+#: searchapp/templates/search.html:92 searchapp/templates/search.html.py:110
+#: searchapp/templates/search.html:128 searchapp/templates/search.html:146
+#: templates/activities/activity_list.html:59
 msgid "Primary School"
 msgstr ""
 
+#: search/templates/search.html:104 search/templates/search.html.py:122
+#: search/templates/search.html:140 search/templates/search.html.py:158
+#: searchapp/templates/search.html:93 searchapp/templates/search.html.py:111
+#: searchapp/templates/search.html:129 searchapp/templates/search.html:147
+#: templates/activities/activity_list.html:60
 msgid "Middle School"
 msgstr ""
 
+#: search/templates/search.html:105 search/templates/search.html.py:123
+#: search/templates/search.html:141 search/templates/search.html.py:159
+#: searchapp/templates/search.html:94 searchapp/templates/search.html.py:112
+#: searchapp/templates/search.html:130 searchapp/templates/search.html:148
+#: templates/activities/activity_list.html:61
 msgid "Secondary School"
 msgstr ""
 
+#: search/templates/search.html:107 search/templates/search.html.py:125
+#: search/templates/search.html:143 search/templates/search.html.py:161
+#: searchapp/templates/search.html:96 searchapp/templates/search.html.py:114
+#: searchapp/templates/search.html:132 searchapp/templates/search.html:150
+#: templates/activities/activity_list.html:63
 msgid "Informal"
 msgstr ""
 
+#: spaceawe/models.py:15 spaceawe/models.py:16
 msgid "News"
 msgstr "Notícias"
 
+#: spaceawe/models.py:17
 msgid "Latest updates about Space Awareness"
-msgstr ""
+msgstr "Últimas notícias sobre o Space Awareness"
 
+#: spaceawe/models.py:22
 msgid "Discover space careers"
 msgstr "Descobrir Carreiras no Espaço"
 
+#: spaceawe/models.py:23
 msgid "Become a space explorer"
-msgstr ""
+msgstr "Torna-te um explorador espacial"
 
+#: spaceawe/models.py:24
 msgid ""
 "Aiming for the stars? See how you can contribute to space science and "
 "exploration."
@@ -162,166 +276,218 @@ msgstr ""
 "Com a mira nas estrelas? Saiba como pode contribuir para a ciência e a "
 "exploração do espaço."
 
+#: spaceawe/models.py:27
 msgid "Read"
 msgstr "Ler"
 
+#: spaceawe/models.py:28
 msgid "Read Space Scoops"
 msgstr "Ler Space Scoop"
 
+#: spaceawe/models.py:29
 msgid "News from across the Universe"
 msgstr "Notícias de todo o Universo"
 
+#: spaceawe/models.py:30
 msgid "The latest discoveries about the Universe."
 msgstr "As mais recentes descobertas sobre o Universo."
 
+#: spaceawe/models.py:33
 msgid "Participate"
 msgstr "Participar"
 
+#: spaceawe/models.py:34
 msgid "Play & participate"
 msgstr "Jogar e Participar"
 
+#: spaceawe/models.py:35
 msgid "Apps and projects for space exploration"
 msgstr "Aplicações e projetos para a exploração do espaço"
 
+#: spaceawe/models.py:36
 msgid "Some great apps and projects to take part in real research programmes."
 msgstr ""
 "Algumas aplicações e projetos fantásticos para participar em programas de "
 "investigação reais."
 
+#: spaceawe/models.py:39
 msgid "Educate"
 msgstr "Educar"
 
+#: spaceawe/models.py:40
 msgid "Educate & inspire"
 msgstr "Educar e inspirar"
 
+#: spaceawe/models.py:41
 msgid "Peer-reviewed educational activities"
 msgstr "ATIVIDADES EDUCATIVAS REVISTAS POR ESPECIALISTAS"
 
+#: spaceawe/models.py:42
 msgid "Some of the best resources for educators about space."
 msgstr "Alguns dos melhores recursos para educadores sobre o espaço."
 
+#: spaceawe/models.py:45
 msgid "Develop"
 msgstr "Desenvolver"
 
+#: spaceawe/models.py:46
 msgid "Develop teaching skills"
 msgstr "Desenvolver competências de ensino"
 
+#: spaceawe/models.py:47
 msgid "Bringing space to education"
-msgstr ""
+msgstr "Trazer o espaço para a sala de aula"
 
+#: spaceawe/models.py:48
 msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
 msgstr ""
 "Orientações sobre a melhor utilização de Space Awareness com jovens dos 8 "
 "aos 18 anos de idade."
 
+#: spaceawe/models.py:51
 msgid "Know us"
 msgstr "Quem somos"
 
+#: spaceawe/models.py:52
 msgid "Get to know us"
 msgstr "Saiba quem somos"
 
+#: spaceawe/models.py:53
 msgid "Vision and team behind Space Awareness"
-msgstr ""
+msgstr "Visão e equipa do Space Awareness"
 
+#: spaceawe/models.py:54
 msgid "Who is behind Space Awareness? Is there a contact in my country?"
 msgstr ""
 "Quem é responsável pelo Space Awareness? Existe um contacto no meu país?"
 
+#: spaceawe/models.py:60
 #, fuzzy
 #| msgid "Space sciences and exploration"
 msgid "Space Exploration"
 msgstr "Ciências e exploração do espaço"
 
+#: spaceawe/models.py:61
 #, fuzzy
 #| msgid "Our wonderful Universe"
 msgid "Our Wonderful Universe"
 msgstr "O nosso maravilhoso Universo"
 
+#: spaceawe/models.py:62
 msgid "Space sciences and exploration"
 msgstr "Ciências e exploração do espaço"
 
+#: spaceawe/models.py:63
 msgid "Get inspired by the beauty and vastness of the Universe"
 msgstr "DEIXE-SE INSPIRAR PELA BELEZA E VASTIDÃO DO UNIVERSO"
 
+#: spaceawe/models.py:66
 msgid "Earth Observation"
 msgstr ""
 
+#: spaceawe/models.py:67
 #, fuzzy
 #| msgid "Our fragile planet"
 msgid "Our Fragile planet"
 msgstr "O nosso frágil planeta"
 
+#: spaceawe/models.py:68
 msgid "Earth from above"
 msgstr "A Terra vista de cima"
 
+#: spaceawe/models.py:69
 msgid "The Earth, our unique and fragile home"
 msgstr "A TERRA, O NOSSO PLANETA ÚNICO E FRÁGIL"
 
+#: spaceawe/models.py:72
 msgid "Navigation"
 msgstr "Navegação"
 
+#: spaceawe/models.py:73
 #, fuzzy
 #| msgid "Navigation through the ages"
 msgid "Navigation Through the Ages"
 msgstr "Navegação através dos tempos"
 
+#: spaceawe/models.py:74
 msgid "Global discovery & mobility"
 msgstr "Descoberta e mobilidade globais"
 
+#: spaceawe/models.py:75
 msgid "Trace the history of navigation from the first explorers to GPS"
 msgstr ""
 "RECONSTITUA A HISTÓRIA DA NAVEGAÇÃO DESDE OS PRIMEIROS EXPLORADORES AO GPS"
 
+#: spaceawe/models.py:78 spaceawe/models.py:80
 msgid "Islamic heritage"
 msgstr "Património islâmico"
 
+#: spaceawe/models.py:79
 #, fuzzy
 #| msgid "The journey of ideas"
 msgid "The Journey of Ideas"
 msgstr "A viagem das ideias"
 
+#: spaceawe/models.py:81
 msgid "Building a bridge between the Islamic world and Europe"
 msgstr "CONSTRUIR UMA PONTE ENTRE O MUNDO ISLÂMICO E A EUROPA"
 
-msgid "see more"
-msgstr ""
-
+#: spaceawe/templates/spaceawe/about.html:192
 msgid "Project partners"
 msgstr "Parceiros do projeto"
 
+#: spaceawe/templates/spaceawe/about.html:194
 msgid "National contacts"
 msgstr "Contactos nacionais"
 
+#: spaceawe/templates/spaceawe/about.html:202
 msgid "Contact us"
 msgstr "Contacte-nos"
 
+#: spaceawe/templates/spaceawe/about.html:209
 msgid "The Space Awareness team"
 msgstr "A equipa do Space Awareness"
 
+#: spaceawe/templates/spaceawe/about.html:210
 msgid "Space Awareness is developed by"
 msgstr "O Space Awareness é desenvolvido por"
 
+#: spaceawe/templates/spaceawe/about.html:223
 msgid "Space Awareness is developed in collaboration with"
 msgstr "O Space Awareness é desenvolvido em colaboração com"
 
+#: spaceawe/templates/spaceawe/categories.html:48
 msgid "Related content"
 msgstr "Conteúdo relacionado"
 
+#: spaceawe/templates/spaceawe/categories.html:66
+#: spaceawe/templates/spaceawe/categories.html:87
+#: spaceawe/templates/spaceawe/categories.html:108
+#: templates/el_pagination/show_more.html:5
 msgid "Load more"
 msgstr "Ver mais"
 
+#: spaceawe/templates/spaceawe/home.html:7 templates/base.html:28
 msgid "Inspiring a new generation of space explorers"
 msgstr "Inspirar uma nova geração de exploradores do espaço"
 
+#: spaceawe/templates/spaceawe/home.html:88
 msgid "Subscribe to our newsletter"
 msgstr "Subscreva a nossa newsletter"
 
+#: spaceawe/templates/spaceawe/home.html:89
 msgid "and stay updated about new resources and events"
 msgstr "e mantenha-se a par de novos recursos e eventos"
 
+#: spaceawe/templates/spaceawe/home.html:131
+msgid "Subscribe"
+msgstr "Subscrever"
+
+#: spaceawe/templates/spaceawe/soon.html:17
 msgid "This section is coming soon!"
 msgstr "Esta secção estará disponível em breve!"
 
+#: spaceawe/templates/spaceawe/soon.html:18
 msgid ""
 "Be among the first to be notified by subscribing to the Space Awareness "
 "newsletter on the home page"
@@ -329,119 +495,140 @@ msgstr ""
 "Seja dos primeiros a serem notificados sobre a atualização, subscrevendo a "
 "newsletter do Space Awareness na página inicial!"
 
-#, fuzzy
-#| msgid "Location"
-msgid "Introduction"
-msgstr "Localização"
-
-msgid "What you will learn"
-msgstr ""
-
-msgid "What skills will you need"
-msgstr ""
-
-msgid "Duration of the course"
-msgstr ""
-
-msgid "STARTING DATE"
-msgstr ""
-
-msgid "Enroll"
-msgstr ""
-
-msgid "Goals"
-msgstr "Objetivos"
-
-#, fuzzy
-#| msgid "Load more"
-msgid "Read more"
-msgstr "Ler Mais"
-
-#, fuzzy
-#| msgid "Read"
-msgid "Read less"
-msgstr "Ler Menos"
-
-msgid "Brief Description"
-msgstr "Breve descrição"
-
-msgid "Learning Objectives"
-msgstr "Objetivos de aprendizagem"
-
-msgid "Evaluation"
-msgstr "Avaliação"
-
-msgid "Materials"
-msgstr "Material"
-
-msgid "Background Information"
-msgstr "Informações de referência"
-
-msgid "Full Activity Description"
-msgstr "Descrição da atividade completa"
-
-msgid "Curriculum"
-msgstr "Currículo"
-
-msgid "Additional Information"
-msgstr "Informações adicionais"
-
-msgid "Conclusion"
-msgstr "Conclusão"
-
-#, fuzzy
-#| msgid "Attachments"
-msgid "attachments"
-msgstr "Anexos"
-
+#: templates/activities/activity_content_print_pdf_weasy.html:17
+#: templates/activities/activity_detail.html:112
+#: templates/activities/activity_detail_print.html:26
 msgid "Curriculum topic"
 msgstr "Tópico curricular"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:21
+#: templates/activities/activity_detail.html:116
+#: templates/activities/activity_detail_print.html:30
 msgid "Big idea of science"
 msgstr "Grande ideia científica"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:25
+#: templates/activities/activity_detail.html:120
+#: templates/activities/activity_detail_print.html:34
 msgid "Keywords"
 msgstr "Palavras-chave"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:29
+#: templates/activities/activity_detail.html:124
+#: templates/activities/activity_detail_print.html:38
 msgid "Age range"
 msgstr "Faixa etária"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:35
+#: templates/activities/activity_detail.html:128
+#: templates/activities/activity_detail_print.html:44
 msgid "Education level"
 msgstr "Nível de ensino"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:39
+#: templates/activities/activity_detail.html:132
+#: templates/activities/activity_detail_print.html:48
 msgid "Time"
 msgstr "Duração"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:43
+#: templates/activities/activity_detail.html:136
+#: templates/activities/activity_detail_print.html:52
 msgid "Group size"
 msgstr "Dimensão do grupo"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:47
+#: templates/activities/activity_detail.html:140
+#: templates/activities/activity_detail_print.html:56
 msgid "Supervised for safety"
 msgstr "Controlo de segurança"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:51
+#: templates/activities/activity_detail.html:144
+#: templates/activities/activity_detail_print.html:60
 msgid "Cost"
 msgstr "Custo"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:57
+#: templates/activities/activity_detail.html:148
+#: templates/activities/activity_detail_print.html:66
 msgid "Location"
 msgstr "Localização"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:61
+#: templates/activities/activity_detail.html:152
+#: templates/activities/activity_detail_print.html:70
 msgid "Core skills"
 msgstr "Competências básicas"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:65
+#: templates/activities/activity_detail.html:156
+#: templates/activities/activity_detail_print.html:74
 msgid "Type of learning activity"
 msgstr "Tipo de atividade de aprendizagem"
 
-msgid "Author"
-msgstr "Autor da atividade"
+#: templates/activities/activity_content_print_pdf_weasy.html:73
+#: templates/activities/activity_detail.html:35
+#: templates/activities/activity_detail_print.html:82
+msgid "Brief Description"
+msgstr "Breve descrição"
 
-msgid "Link to source activity"
-msgstr "Ligação à atividade de origem"
+#: templates/activities/activity_content_print_pdf_weasy.html:75
+#: templates/activities/activity_detail.html:42
+#: templates/activities/activity_detail_print.html:84
+msgid "Goals"
+msgstr "Objetivos"
 
-msgid "Repositories"
-msgstr "Repositórios"
+#: templates/activities/activity_content_print_pdf_weasy.html:77
+#: templates/activities/activity_detail.html:46
+#: templates/activities/activity_detail_print.html:86
+msgid "Learning Objectives"
+msgstr "Objetivos de aprendizagem"
 
-msgid "Tested by teachers"
-msgstr ""
+#: templates/activities/activity_content_print_pdf_weasy.html:79
+#: templates/activities/activity_detail.html:50
+#: templates/activities/activity_detail_print.html:88
+msgid "Evaluation"
+msgstr "Avaliação"
 
+#: templates/activities/activity_content_print_pdf_weasy.html:81
+#: templates/activities/activity_detail.html:54
+#: templates/activities/activity_detail_print.html:90
+msgid "Materials"
+msgstr "Material"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:83
+#: templates/activities/activity_detail.html:58
+#: templates/activities/activity_detail_print.html:92
+msgid "Background Information"
+msgstr "Informações de referência"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:85
+#: templates/activities/activity_detail.html:62
+#: templates/activities/activity_detail_print.html:94
+msgid "Full Activity Description"
+msgstr "Descrição da atividade completa"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:87
+#: templates/activities/activity_detail.html:66
+#: templates/activities/activity_detail_print.html:96
+msgid "Curriculum"
+msgstr "Currículo"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:98
+#: templates/activities/activity_detail.html:79
+#: templates/activities/activity_detail_print.html:107
+msgid "Additional Information"
+msgstr "Informações adicionais"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:101
+#: templates/activities/activity_detail.html:84
+#: templates/activities/activity_detail_print.html:110
+msgid "Conclusion"
+msgstr "Conclusão"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:108
+#: templates/activities/activity_detail_print.html:117
 #, fuzzy
 #| msgid ""
 #| "This website was funded by the European Commission's Horizon 2020 "
@@ -454,9 +641,60 @@ msgstr ""
 "Este sítio web foi desenvolvido com financiamento do Programa Horizon 2020 "
 "da Comissão Europeia ao abrigo do Acordo de Subvenção n.º 638653"
 
+#: templates/activities/activity_detail.html:41
+#: templates/activities/activity_detail.html:45
+#: templates/activities/activity_detail.html:49
+#: templates/activities/activity_detail.html:53
+#: templates/activities/activity_detail.html:57
+#: templates/activities/activity_detail.html:61
+#: templates/activities/activity_detail.html:65
+#: templates/activities/activity_detail.html:78
+#, fuzzy
+#| msgid "Load more"
+msgid "Read more"
+msgstr "Ler Mais"
+
+#: templates/activities/activity_detail.html:41
+#: templates/activities/activity_detail.html:45
+#: templates/activities/activity_detail.html:49
+#: templates/activities/activity_detail.html:53
+#: templates/activities/activity_detail.html:57
+#: templates/activities/activity_detail.html:61
+#: templates/activities/activity_detail.html:65
+#: templates/activities/activity_detail.html:78
+#, fuzzy
+#| msgid "Read"
+msgid "Read less"
+msgstr "Ler Menos"
+
+#: templates/activities/activity_detail.html:101
+#, fuzzy
+#| msgid "Attachments"
+msgid "attachments"
+msgstr "Anexos"
+
+#: templates/activities/activity_detail.html:160
+msgid "Author"
+msgstr "Autor da atividade"
+
+#: templates/activities/activity_detail.html:167
+msgid "Link to source activity"
+msgstr "Ligação à atividade de origem"
+
+#: templates/activities/activity_detail.html:172
+msgid "Repositories"
+msgstr "Repositórios"
+
+#: templates/activities/activity_detail_print.html:12
+#: templates/activities/activity_header_print_pdf_weasy.html:16
+msgid "Tested by teachers"
+msgstr ""
+
+#: templates/activities/activity_list.html:62
 msgid "University"
 msgstr ""
 
+#: templates/base.html:101
 #, fuzzy
 #| msgid ""
 #| "This website was funded by the European Commission's Horizon 2020 "
@@ -465,24 +703,31 @@ msgid ""
 "This website was produced by funding from the European Commission's Horizon "
 "2020 Programme under grant agreement nº 638653"
 msgstr ""
-"Este sítio web foi desenvolvido com financiamento do Programa Horizon 2020 "
-"da Comissão Europeia ao abrigo do Acordo de Subvenção n.º 638653"
+"Este site foi produzido e financiado pela Comissão Europeia através do "
+"programa Horizonte 2020, nº 638653"
 
+#: templates/spacescoops/article_detail.html:32
 msgid "Click to see full image"
-msgstr ""
+msgstr "Clique para ver a imagem maior"
 
+#: templates/spacescoops/article_detail.html:37
+#: templates/spacescoops/article_detail_print.html:26
 msgid "Cool Fact!"
 msgstr ""
 
+#: templates/spacescoops/article_detail.html:66
 msgid "Go to"
 msgstr ""
 
+#: templates/spacescoops/article_detail.html:67
 msgid "This Space Scoop is based on a Press Release from"
 msgstr ""
 
+#: templates/spacescoops/article_detail.html:82
 msgid "more news"
 msgstr ""
 
+#: templates/spacescoops/article_detail_print.html:12
 #, fuzzy
 #| msgid "Read Space Scoops"
 msgid "Space Scoop"
