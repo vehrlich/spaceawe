@@ -101,7 +101,7 @@ body {
 
 #footer {
   position: fixed;
-  bottom: -1.5cm;
+  bottom: -2.8cm;
   width: 100%; }
   #footer .separator {
     margin-top: 0.2cm;
@@ -114,8 +114,8 @@ body {
     display: inline;
     content: counter(page); }
   #footer .footer_a {
-    width: 0.318cm;
-    height: 0.494cm;
+    width: 0.6cm;
+    height: 0.6cm;
     display: inline-block;
     white-space: nowrap;
     clear: both; }

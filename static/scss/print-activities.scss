@@ -152,7 +152,7 @@ body {
 #footer {
     position: fixed;
     // because content on page is defined by page height and width, footer needs to be under it
-    bottom: -1.5cm;
+    bottom: -2.7cm;
     width: 100%;
     .separator {
         margin-top: 0.2cm;
@@ -168,8 +168,8 @@ body {
         content: counter(page);
     }
     .footer_a {
-        width: 0.318cm;
-        height: 0.494cm;
+        width: 0.6cm;
+        height: 0.6cm;
         display: inline-block;
         white-space: nowrap;
         clear: both;
