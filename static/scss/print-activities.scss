@@ -1,6 +1,7 @@
 @page {
     size: A4 portrait;
     margin: 3.5cm 2.8cm;
+    counter-increment: page;
 }
 
 $logo-height: 3.0cm;
@@ -151,17 +152,28 @@ body {
 #footer {
     position: fixed;
     // because content on page is defined by page height and width, footer needs to be under it
-    bottom: -2cm;
+    bottom: -1.5cm;
     width: 100%;
     .separator {
         margin-top: 0.2cm;
         margin-bottom: 0.2cm;
         border: solid 0.01cm black;
     }
-    .footer_link {
+    .centered {
         text-align: center;
     }
-
+    #page_number {
+        float: right;
+        display: inline;
+        content: counter(page);
+    }
+    .footer_a {
+        width: 0.318cm;
+        height: 0.494cm;
+        display: inline-block;
+        white-space: nowrap;
+        clear: both;
+    }
 }
 
 .text {
