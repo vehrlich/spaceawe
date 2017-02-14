@@ -1,6 +1,6 @@
 @page {
   size: A4 portrait;
-  margin: 0.4cm 2.8cm 1.5cm 2.8cm; }
+  margin: 2.8cm 2.8cm 3cm 2.8cm; }
 
 body {
   font-family: Ubuntu, sans-serif;
@@ -11,15 +11,24 @@ body {
     text-decoration: none;
     color: inherit; }
 
+#orbit img {
+  z-index: -1;
+  position: fixed;
+  top: -4cm;
+  left: -2.8cm; }
+  #orbit img.big {
+    width: 16cm;
+    height: 16cm; }
+  #orbit img.small {
+    width: 7cm;
+    height: 7cm; }
+
 #header {
-  font-family: Miso, sans-serif;
+  font-family: "Miso", sans-serif;
   text-transform: uppercase;
   text-align: center; }
-  #header .logo {
-    margin-bottom: 0.2cm; }
-    #header .logo img {
-      height: 1.3cm;
-      width: 3.055cm; }
+  #header:lang(el), #header:lang(cs), #header:lang(pl), #header:lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif; }
   #header .title {
     font-size: 32px;
     font-weight: bold;
@@ -28,12 +37,14 @@ body {
     font-size: 20px;
     color: #ed3b5a; }
 
-  #header:lang(el),
-  #header:lang(cs),
-  #header:lang(pl),
-  #header:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
+#logo {
+  position: fixed;
+  top: -2cm;
+  width: 100%;
+  text-align: center; }
+  #logo img {
+    height: 1.3cm;
+    width: 3.055cm; }
 
 #cover-image {
   width: 100%;
@@ -43,17 +54,10 @@ body {
   margin: 0.5cm 0; }
 
 #story .title {
-  font-family: Miso, sans-serif;
+  font-family: "Miso", sans-serif;
   font-size: 24px;
   font-weight: bold;
   color: #ed3b5a; }
-
-  #story .title:lang(el),
-  #story .title:lang(cs),
-  #story .title:lang(pl),
-  #story .title:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
 
 #story .subtitle {
   color: #ed3b5a; }
@@ -61,40 +65,38 @@ body {
 #coolfact {
   page-break-inside: avoid; }
   #coolfact .title {
-    font-family: Miso, sans-serif;
+    font-family: "Miso", sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     color: #ed3b5a; }
-
-  #coolfact .title :lang(el),
-  #coolfact .title :lang(cs),
-  #coolfact .title :lang(pl),
-  #coolfact .title :lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
-
-    #coolfact .title img {
-      height: 0.7em;
-      width: 0.7em; }
-  #coolfact .text p:first-child {
-    margin-top: 0.4em; }
+  #coolfact img {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-top: 6px;
+    margin-right: 5px; }
 
 #footer {
   position: absolute;
-  bottom: 0;
+  bottom: -2cm;
   width: 100%; }
-  #footer .sponsors img {
+  #footer img {
     height: 40px;
     padding-right: 20pt; }
   #footer .separator {
     margin-top: 0.2cm;
     margin-bottom: 0.2cm;
     border: solid 0.01cm black; }
-  #footer .footer_link {
-    text-align: center; }
+  #footer .footer_a {
+    width: 0.6cm;
+    height: 0.6cm;
+    display: inline-block;
+    white-space: nowrap;
+    clear: both; }
+
+.centered {
+  text-align: center; }
 
 .text {
   line-height: 1.4; }
-
-/*# sourceMappingURL=print-scoops.css.map */

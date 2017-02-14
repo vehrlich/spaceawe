@@ -7,6 +7,9 @@
         <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
     </head>
     <body>
+        <div id="orbit">
+            <img  class="small" src="{% static 'img/planets_orbit.svg' %}">
+        </div>
         <div id="logo"><img src="{% static 'img/logo.svg' %}" /></div>
         <div id="metadata">
             <table><tr><td>
@@ -107,8 +110,11 @@
 
         <div id="footer">
             <div class="separator"></div>
-            <div class="footer_link">
+            <div class="centered">
                 <a href="http://www.space-awareness.org/">www.space-awareness.org</a>
+            </div>
+            <div class="centered">
+                <img class="footer_a" src="{% static 'img/logo-simple.png' %}" />
             </div>
         </div>
     </body>

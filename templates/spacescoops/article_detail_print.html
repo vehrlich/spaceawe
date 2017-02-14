@@ -6,9 +6,12 @@
 	<link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
 	<link href="{% static 'css/print-scoops.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
 </head>
-<body style="background-image: url({% static 'img/mainpage_1.png' %}">
+<body>
+	<div id="orbit">
+		<img  class="big" src="{% static 'img/planets_orbit.svg' %}">
+	</div>
+    <div id="logo"><img src="{% static 'img/logo.svg' %}" /></div>
 	<div id="header">
-		<div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
 		<div class="title">{% trans 'Space Scoop' %}</div>
 		<div class="subtitle">{% trans SECTIONS.scoops.subtitle %}</div>
 	</div>
@@ -23,11 +26,12 @@
 		</div>
 	</div>
 	<div id="coolfact">
-		<div class="title"><img src="{% static 'img/star.svg' %}"> {% trans "Cool Fact!"%}</div>
+		<img src="{% static 'img/star.svg' %}" />
+		<div class="title">{% trans "Cool Fact!"%}</div>
 		<div class="text">{{ object.cool_fact|safe }}</div>
 	</div>
 	<div id="footer">
-		<div class="sponsors">
+		<div class="centered">
 			<a target="_blank" href="http://www.space-awareness.org/"><img src="{% static 'img/sponsors/spaceawareness.png' %}" /></a>
 			<a target="_blank" href="http://www.unawe.org/"><img src="{% static 'img/sponsors/unawe.png' %}" /></a>
 			<img src="{% static 'img/sponsors/eu.png' %}" />
@@ -38,9 +42,12 @@
 	  {% endfor %}
 		</div>
 		<div class="separator"></div>
-		<div class="footer_link">
+		<div class="centered">
 			<a href="http://www.space-awareness.org/scoops/">www.space-awareness.org/scoops</a>
 		</div>
+		<div class="centered">
+        	<img class="footer_a" src="{% static 'img/logo-simple.png' %}" />
+        </div>
 	</div>
 
 </body>

@@ -6,7 +6,10 @@
         <link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
         <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
     </head>
-    <body>
+    <body class="main-page">
+        <div id="orbit">
+            <img  class="big" src="{% static 'img/planets_orbit.svg' %}">
+        </div>
         <div id="header">
             <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
             <div class="title">{{ object.title }}</div>
@@ -18,6 +21,12 @@
                 <img src="{% static 'img/icons/categories/icon_'|add:category.code|add:'_purple.svg' %}">
             {% endfor %}
             </div>
+        </div>
+        <div id="footer">
+            <div class="centered">
+                <a href="http://www.space-awareness.org/">www.space-awareness.org</a>
+            </div>
+        </div>
         </div>
     </body>
 </html>
