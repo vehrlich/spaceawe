@@ -70,11 +70,12 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     color: #ed3b5a; }
-    #coolfact .title img {
-      height: 0.7em;
-      width: 0.7em; }
-  #coolfact .text p:first-child {
-    margin-top: 0.4em; }
+  #coolfact img {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin-top: 6px;
+    margin-right: 5px; }
 
 #footer {
   position: absolute;

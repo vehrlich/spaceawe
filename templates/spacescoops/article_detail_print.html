@@ -26,7 +26,8 @@
 		</div>
 	</div>
 	<div id="coolfact">
-		<div class="title"><img src="{% static 'img/star.svg' %}"> {% trans "Cool Fact!"%}</div>
+		<img src="{% static 'img/star.svg' %}" />
+		<div class="title">{% trans "Cool Fact!"%}</div>
 		<div class="text">{{ object.cool_fact|safe }}</div>
 	</div>
 	<div id="footer">

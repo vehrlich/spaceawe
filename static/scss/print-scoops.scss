@@ -107,13 +107,13 @@ body {
         font-weight: bold;
         text-transform: uppercase;
         color: $color-scoops;
-        img {
-            height: 0.7em;
-            width: 0.7em;
-        }
     }
-    .text p:first-child {
-        margin-top: 0.4em;
+    img {
+        height:15px;
+        width: 15px;
+        float: left;
+        margin-top: 6px;
+        margin-right: 5px;
     }
 }
 
