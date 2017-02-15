@@ -59,14 +59,10 @@ h1, h2, h3, h4, h5, h6, h7 {
   font-size: 28px;
   font-weight: 400;
   line-height: 24px; }
-
-h1:lang(el), h2:lang(el), h3:lang(el), h4:lang(el), h5:lang(el), h6:lang(el), h7:lang(el),
-h1:lang(cs), h2:lang(cs), h3:lang(cs), h4:lang(cs), h5:lang(cs), h6:lang(cs), h7:lang(cs),
-h1:lang(pl), h2:lang(pl), h3:lang(pl), h4:lang(pl), h5:lang(pl), h6:lang(pl), h7:lang(pl),
-h1:lang(ro), h2:lang(ro), h3:lang(ro), h4:lang(ro), h5:lang(ro), h6:lang(ro), h7:lang(ro)
-{
-  font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+  h1:lang(el), h1:lang(cs), h1:lang(pl), h1:lang(ro), h2:lang(el), h2:lang(cs), h2:lang(pl), h2:lang(ro), h3:lang(el), h3:lang(cs), h3:lang(pl), h3:lang(ro), h4:lang(el), h4:lang(cs), h4:lang(pl), h4:lang(ro), h5:lang(el), h5:lang(cs), h5:lang(pl), h5:lang(ro), h6:lang(el), h6:lang(cs), h6:lang(pl), h6:lang(ro), h7:lang(el), h7:lang(cs), h7:lang(pl), h7:lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif;
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 h2, h3 {
   font-size: 20px; }
@@ -132,14 +128,10 @@ i, em {
     text-transform: uppercase;
     -webkit-transition: opacity 1s ease;
     transition: opacity 1s ease; }
-      
-    #header .slogan:lang(el),
-    #header .slogan:lang(cs),
-    #header .slogan:lang(pl),
-    #header .slogan:lang(ro) {
-        font-family: "BloggerSans", "BPreplay", sans-serif;
-    }
-
+    #header .slogan:lang(el), #header .slogan:lang(cs), #header .slogan:lang(pl), #header .slogan:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
     #header .slogan.subtitle {
       font-size: 24px; }
   #header .button {
@@ -227,14 +219,10 @@ body.single #header, body.menu-small #header, .header-small {
             font-weight: 400;
             line-height: 24px;
             text-transform: uppercase; }
-
-          #cover .feature-container .feature .title-container .title-subcontainer .title:lang(el),
-          #cover .feature-container .feature .title-container .title-subcontainer .title:lang(cs),
-          #cover .feature-container .feature .title-container .title-subcontainer .title:lang(pl),
-          #cover .feature-container .feature .title-container .title-subcontainer .title:lang(ro) {
+            #cover .feature-container .feature .title-container .title-subcontainer .title:lang(el), #cover .feature-container .feature .title-container .title-subcontainer .title:lang(cs), #cover .feature-container .feature .title-container .title-subcontainer .title:lang(pl), #cover .feature-container .feature .title-container .title-subcontainer .title:lang(ro) {
               font-family: "BloggerSans", "BPreplay", sans-serif;
-          }
-
+              transform: scaleX(0.7);
+              line-height: 28.8px; }
           #cover .feature-container .feature .title-container .title-subcontainer .subtitle {
             font-family: "Ubuntu", sans-serif;
             letter-spacing: 0.1em;
@@ -328,14 +316,9 @@ body.single #header, body.menu-small #header, .header-small {
       line-height: 1em;
       text-transform: uppercase;
       padding: 1em 0.2em; }
-
-     #sections .section .title:lang(el),
-     #sections .section .title:lang(cs),
-     #sections .section .title:lang(pl),
-     #sections .section .title:lang(ro) {
+      #sections .section .title:lang(el), #sections .section .title:lang(cs), #sections .section .title:lang(pl), #sections .section .title:lang(ro) {
         font-family: "BloggerSans", "BPreplay", sans-serif;
-     }
-
+        transform: scaleX(0.7); }
     #sections .section .description {
       padding: 1em 1.5em;
       font-size: 12px;
@@ -649,14 +632,10 @@ body.single #header, body.menu-small #header, .header-small {
       text-transform: uppercase;
       padding-top: 30px;
       padding-bottom: 30px; }
-
-     .thumbnailed-list .list-header .title:lang(el),
-     .thumbnailed-list .list-header .title:lang(cs),
-     .thumbnailed-list .list-header .title:lang(pl),
-     .thumbnailed-list .list-header .title:lang(ro) {
-         font-family: "BloggerSans", "BPreplay", sans-serif;
-     }
-
+      .thumbnailed-list .list-header .title:lang(el), .thumbnailed-list .list-header .title:lang(cs), .thumbnailed-list .list-header .title:lang(pl), .thumbnailed-list .list-header .title:lang(ro) {
+        font-family: "BloggerSans", "BPreplay", sans-serif;
+        transform: scaleX(0.7);
+        line-height: 28.8px; }
     .thumbnailed-list .list-header .filters .filter-topic-text, .thumbnailed-list .list-header .filters .filter-topic-image {
       vertical-align: top;
       font-size: 12px; }
@@ -697,14 +676,10 @@ body.single #header, body.menu-small #header, .header-small {
       line-height: 24px;
       font-size: 24px;
       text-transform: uppercase; }
-
-     .thumbnailed-list .list-item .title:lang(el),
-     .thumbnailed-list .list-item .title:lang(cs),
-     .thumbnailed-list .list-item .title:lang(pl),
-     .thumbnailed-list .list-item .title:lang(ro) {
-           font-family: "BloggerSans", "BPreplay", sans-serif;
-     }
-
+      .thumbnailed-list .list-item .title:lang(el), .thumbnailed-list .list-item .title:lang(cs), .thumbnailed-list .list-item .title:lang(pl), .thumbnailed-list .list-item .title:lang(ro) {
+        font-family: "BloggerSans", "BPreplay", sans-serif;
+        transform: scaleX(0.7);
+        line-height: 28.8px; }
     .thumbnailed-list .list-item .text {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
@@ -760,14 +735,10 @@ body.single #header, body.menu-small #header, .header-small {
       top: 0;
       text-align: center;
       width: 100%; }
-
-     .thumbnailed-list .list-item .question_mark:lang(el),
-     .thumbnailed-list .list-item .question_mark:lang(cs),
-     .thumbnailed-list .list-item .question_mark:lang(pl),
-     .thumbnailed-list .list-item .question_mark:lang(ro) {
-           font-family: "BloggerSans", "BPreplay", sans-serif;
-     }
-
+      .thumbnailed-list .list-item .question_mark:lang(el), .thumbnailed-list .list-item .question_mark:lang(cs), .thumbnailed-list .list-item .question_mark:lang(pl), .thumbnailed-list .list-item .question_mark:lang(ro) {
+        font-family: "BloggerSans", "BPreplay", sans-serif;
+        transform: scaleX(0.7);
+        line-height: 28.8px; }
     .thumbnailed-list .list-item .no-hover .question_mark {
       display: none; }
   .thumbnailed-list .list-footer {
@@ -945,14 +916,10 @@ table th {
     color: white;
     padding: 12px;
     background-color: #52c36f; }
-
-  .thumbnailed-list .list-item .question_mark:lang(el),
-  .thumbnailed-list .list-item .question_mark:lang(cs),
-  .thumbnailed-list .list-item .question_mark:lang(pl),
-  .thumbnailed-list .list-item .question_mark:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
-
+    .mooc table th:lang(el), .mooc table th:lang(cs), .mooc table th:lang(pl), .mooc table th:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
   .mooc table td {
     padding: 6px; }
   .mooc table td:last-child {
@@ -971,14 +938,10 @@ table th {
   font-size: 20px;
   color: #52c36f;
   margin-bottom: 6px; }
-
-.mooc h3:lang(el),
-.mooc h3:lang(cs),
-.mooc h3:lang(pl),
-.mooc h3:lang(ro) {
-  font-family: "BloggerSans", "BPreplay", sans-serif;
-}
-
+  .mooc h3:lang(el), .mooc h3:lang(cs), .mooc h3:lang(pl), .mooc h3:lang(ro) {
+    font-family: "BloggerSans", "BPreplay", sans-serif;
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .mooc h4 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -988,14 +951,10 @@ table th {
   line-height: 24px;
   font-size: 18px;
   margin: 24px 0 6px 0; }
-
-.mooc h4:lang(el),
-.mooc h4:lang(cs),
-.mooc h4:lang(pl),
-.mooc h4:lang(ro) {
+  .mooc h4:lang(el), .mooc h4:lang(cs), .mooc h4:lang(pl), .mooc h4:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
-
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .mooc .call-to-action {
   background: #52c36f;
@@ -1037,13 +996,10 @@ table th {
     font-weight: 400;
     line-height: 24px;
     padding: 22.5px 45px; }
-
-  .content-card .title-container:lang(el),
-  .content-card .title-container:lang(cs),
-  .content-card .title-container:lang(pl),
-  .content-card .title-container:lang(ro) {
+    .content-card .title-container:lang(el), .content-card .title-container:lang(cs), .content-card .title-container:lang(pl), .content-card .title-container:lang(ro) {
       font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
     .content-card .title-container .title {
       text-transform: uppercase;
       font-size: 36px;
@@ -1079,14 +1035,10 @@ table th {
       color: #ed3b5a;
       text-transform: uppercase;
       font-size: 20px; }
-
-    .content-card .content-container .coolfact_title:lang(el),
-    .content-card .content-container .coolfact_title:lang(cs),
-    .content-card .content-container .coolfact_title:lang(pl),
-    .content-card .content-container .coolfact_title:lang(ro) {
-      font-family: "BloggerSans", "BPreplay", sans-serif;
-    }
-
+      .content-card .content-container .coolfact_title:lang(el), .content-card .content-container .coolfact_title:lang(cs), .content-card .content-container .coolfact_title:lang(pl), .content-card .content-container .coolfact_title:lang(ro) {
+        font-family: "BloggerSans", "BPreplay", sans-serif;
+        transform: scaleX(0.7);
+        line-height: 28.8px; }
       .content-card .content-container .coolfact_title img {
         height: 14px;
         width: 14px; }
@@ -1124,14 +1076,10 @@ table th {
           font-size: 20px;
           text-transform: uppercase;
           margin-bottom: 12px; }
-
-       .content-card .content-container .content-right-column > div .caption:lang(el),
-       .content-card .content-container .content-right-column > div .caption:lang(cs),
-       .content-card .content-container .content-right-column > div .caption:lang(pl),
-       .content-card .content-container .content-right-column > div .caption:lang(ro) {
+          .content-card .content-container .content-right-column > div .caption:lang(el), .content-card .content-container .content-right-column > div .caption:lang(cs), .content-card .content-container .content-right-column > div .caption:lang(pl), .content-card .content-container .content-right-column > div .caption:lang(ro) {
             font-family: "BloggerSans", "BPreplay", sans-serif;
-        }
-
+            transform: scaleX(0.7);
+            line-height: 28.8px; }
       .content-card .content-container .content-right-column a {
         text-decoration: underline;
         color: inherit; }
@@ -1152,14 +1100,10 @@ table th {
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase; }
-
-  .content-page .title:lang(el),
-  .content-page .title:lang(cs),
-  .content-page .title:lang(pl),
-  .content-page .title:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
-
+    .content-page .title:lang(el), .content-page .title:lang(cs), .content-page .title:lang(pl), .content-page .title:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
   .content-page .subtitle {
     padding-bottom: 50px;
     color: #3e5fdb; }
@@ -1220,15 +1164,12 @@ table th {
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase; }
-
-  #subscribe .line1:lang(el),
-  #subscribe .line1:lang(cs),
-  #subscribe .line1:lang(pl),
-  #subscribe .line1:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-    line-height: 35px;
-  }
-
+    #subscribe .line1:lang(el), #subscribe .line1:lang(cs), #subscribe .line1:lang(pl), #subscribe .line1:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
+    #subscribe .line1:lang(el), #subscribe .line1:lang(cs), #subscribe .line1:lang(pl), #subscribe .line1:lang(ro) {
+      line-height: 31.2px; }
   #subscribe .line2 {
     font-family: "Ubuntu", sans-serif;
     letter-spacing: 0.1em;
@@ -1291,14 +1232,10 @@ table th {
   text-align: center;
   padding-top: 60px;
   padding-bottom: 80px; }
-
-  #mc_embed_signup .newsletter-call:lang(el),
-  #mc_embed_signup .newsletter-call:lang(cs),
-  #mc_embed_signup .newsletter-call:lang(pl),
-  #mc_embed_signup .newsletter-call:lang(ro) {
+  #mc_embed_signup .newsletter-call:lang(el), #mc_embed_signup .newsletter-call:lang(cs), #mc_embed_signup .newsletter-call:lang(pl), #mc_embed_signup .newsletter-call:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
-
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 #mc_embed_signup .mc-field-group {
   background: rgba(255, 255, 255, 0.2);
@@ -1353,15 +1290,11 @@ table th {
     font-size: 24px;
     color: white;
     padding: 1em;
-    padding-top:70px;
-}
-
-  .more-container-header .list-header .title:lang(el),
-  .more-container-header .list-header .title:lang(cs),
-  .more-container-header .list-header .title:lang(pl),
-  .more-container-header .list-header .title:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
+    padding-top: 70px; }
+    .more-container-header .list-header .title:lang(el), .more-container-header .list-header .title:lang(cs), .more-container-header .list-header .title:lang(pl), .more-container-header .list-header .title:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
 
 .more-container-header .list-header-padding {
   height: 165px;
@@ -1669,14 +1602,9 @@ body.section-news .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-news .wrapper_block_previews h2:lang(el),
-body.section-news .wrapper_block_previews h2:lang(cs),
-body.section-news .wrapper_block_previews h2:lang(pl),
-body.section-news .wrapper_block_previews h2:lang(ro) {
+  body.section-news .wrapper_block_previews h2:lang(el), body.section-news .wrapper_block_previews h2:lang(cs), body.section-news .wrapper_block_previews h2:lang(pl), body.section-news .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
-
+    transform: scaleX(0.7); }
 
 body.section-news .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -1687,13 +1615,10 @@ body.section-news .wrapper_block_previews h3 {
   text-align: center;
   color: #3e5fdb;
   margin-bottom: 24px; }
-
-body.section-news .wrapper_block_previews h3:lang(el),
-body.section-news .wrapper_block_previews h3:lang(cs),
-body.section-news .wrapper_block_previews h3:lang(pl),
-body.section-news .wrapper_block_previews h3:lang(ro) {
+  body.section-news .wrapper_block_previews h3:lang(el), body.section-news .wrapper_block_previews h3:lang(cs), body.section-news .wrapper_block_previews h3:lang(pl), body.section-news .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-  }
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .section-careers.menu-small .select_language .sp-links,
 body.section-careers.menu-small #header {
@@ -1741,14 +1666,9 @@ body.section-careers .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-careers .wrapper_block_previews h2:lang(el),
-body.section-careers .wrapper_block_previews h2:lang(cs),
-body.section-careers .wrapper_block_previews h2:lang(pl),
-body.section-careers .wrapper_block_previews h2:lang(ro) {
+  body.section-careers .wrapper_block_previews h2:lang(el), body.section-careers .wrapper_block_previews h2:lang(cs), body.section-careers .wrapper_block_previews h2:lang(pl), body.section-careers .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
-
+    transform: scaleX(0.7); }
 
 body.section-careers .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -1759,13 +1679,10 @@ body.section-careers .wrapper_block_previews h3 {
   text-align: center;
   color: #4ed8c3;
   margin-bottom: 24px; }
-
-body.section-careers .wrapper_block_previews h3:lang(el),
-body.section-careers .wrapper_block_previews h3:lang(cs),
-body.section-careers .wrapper_block_previews h3:lang(pl),
-body.section-careers .wrapper_block_previews h3:lang(ro) {
+  body.section-careers .wrapper_block_previews h3:lang(el), body.section-careers .wrapper_block_previews h3:lang(cs), body.section-careers .wrapper_block_previews h3:lang(pl), body.section-careers .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .section-scoops.menu-small .select_language .sp-links,
 body.section-scoops.menu-small #header {
@@ -1813,13 +1730,9 @@ body.section-scoops .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-scoops .wrapper_block_previews h2:lang(el),
-body.section-scoops .wrapper_block_previews h2:lang(cs),
-body.section-scoops .wrapper_block_previews h2:lang(pl),
-body.section-scoops .wrapper_block_previews h2:lang(ro) {
+  body.section-scoops .wrapper_block_previews h2:lang(el), body.section-scoops .wrapper_block_previews h2:lang(cs), body.section-scoops .wrapper_block_previews h2:lang(pl), body.section-scoops .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7); }
 
 body.section-scoops .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -1830,13 +1743,10 @@ body.section-scoops .wrapper_block_previews h3 {
   text-align: center;
   color: #ed3b5a;
   margin-bottom: 24px; }
-
-body.section-scoops .wrapper_block_previews h3:lang(el),
-body.section-scoops .wrapper_block_previews h3:lang(cs),
-body.section-scoops .wrapper_block_previews h3:lang(pl),
-body.section-scoops .wrapper_block_previews h3:lang(ro) {
+  body.section-scoops .wrapper_block_previews h3:lang(el), body.section-scoops .wrapper_block_previews h3:lang(cs), body.section-scoops .wrapper_block_previews h3:lang(pl), body.section-scoops .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .section-games.menu-small .select_language .sp-links,
 body.section-games.menu-small #header {
@@ -1884,13 +1794,9 @@ body.section-games .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-games .wrapper_block_previews h2:lang(el),
-body.section-games .wrapper_block_previews h2:lang(cs),
-body.section-games .wrapper_block_previews h2:lang(pl),
-body.section-games .wrapper_block_previews h2:lang(ro) {
+  body.section-games .wrapper_block_previews h2:lang(el), body.section-games .wrapper_block_previews h2:lang(cs), body.section-games .wrapper_block_previews h2:lang(pl), body.section-games .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7); }
 
 body.section-games .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -1901,13 +1807,10 @@ body.section-games .wrapper_block_previews h3 {
   text-align: center;
   color: #f9b653;
   margin-bottom: 24px; }
-
-body.section-games .wrapper_block_previews h3:lang(el),
-body.section-games .wrapper_block_previews h3:lang(cs),
-body.section-games .wrapper_block_previews h3:lang(pl),
-body.section-games .wrapper_block_previews h3:lang(ro) {
+  body.section-games .wrapper_block_previews h3:lang(el), body.section-games .wrapper_block_previews h3:lang(cs), body.section-games .wrapper_block_previews h3:lang(pl), body.section-games .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .section-activities.menu-small .select_language .sp-links,
 body.section-activities.menu-small #header {
@@ -1955,13 +1858,9 @@ body.section-activities .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-activities .wrapper_block_previews h2:lang(el),
-body.section-activities .wrapper_block_previews h2:lang(cs),
-body.section-activities .wrapper_block_previews h2:lang(pl),
-body.section-activities .wrapper_block_previews h2:lang(ro) {
+  body.section-activities .wrapper_block_previews h2:lang(el), body.section-activities .wrapper_block_previews h2:lang(cs), body.section-activities .wrapper_block_previews h2:lang(pl), body.section-activities .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7); }
 
 body.section-activities .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -1972,13 +1871,10 @@ body.section-activities .wrapper_block_previews h3 {
   text-align: center;
   color: #9d59e4;
   margin-bottom: 24px; }
-
-body.section-activities .wrapper_block_previews h3:lang(el),
-body.section-activities .wrapper_block_previews h3:lang(cs),
-body.section-activities .wrapper_block_previews h3:lang(pl),
-body.section-activities .wrapper_block_previews h3:lang(ro) {
+  body.section-activities .wrapper_block_previews h3:lang(el), body.section-activities .wrapper_block_previews h3:lang(cs), body.section-activities .wrapper_block_previews h3:lang(pl), body.section-activities .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .section-skills.menu-small .select_language .sp-links,
 body.section-skills.menu-small #header {
@@ -2026,13 +1922,9 @@ body.section-skills .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-skills .wrapper_block_previews h2:lang(el),
-body.section-skills .wrapper_block_previews h2:lang(cs),
-body.section-skills .wrapper_block_previews h2:lang(pl),
-body.section-skills .wrapper_block_previews h2:lang(ro) {
+  body.section-skills .wrapper_block_previews h2:lang(el), body.section-skills .wrapper_block_previews h2:lang(cs), body.section-skills .wrapper_block_previews h2:lang(pl), body.section-skills .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7); }
 
 body.section-skills .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -2043,13 +1935,10 @@ body.section-skills .wrapper_block_previews h3 {
   text-align: center;
   color: #52c36f;
   margin-bottom: 24px; }
-
-body.section-skills .wrapper_block_previews h3:lang(el),
-body.section-skills .wrapper_block_previews h3:lang(cs),
-body.section-skills .wrapper_block_previews h3:lang(pl),
-body.section-skills .wrapper_block_previews h3:lang(ro) {
+  body.section-skills .wrapper_block_previews h3:lang(el), body.section-skills .wrapper_block_previews h3:lang(cs), body.section-skills .wrapper_block_previews h3:lang(pl), body.section-skills .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .section-about.menu-small .select_language .sp-links,
 body.section-about.menu-small #header {
@@ -2097,13 +1986,9 @@ body.section-about .wrapper_block_previews h2 {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase; }
-
-body.section-about .wrapper_block_previews h2:lang(el),
-body.section-about .wrapper_block_previews h2:lang(cs),
-body.section-about .wrapper_block_previews h2:lang(pl),
-body.section-about .wrapper_block_previews h2:lang(ro) {
+  body.section-about .wrapper_block_previews h2:lang(el), body.section-about .wrapper_block_previews h2:lang(cs), body.section-about .wrapper_block_previews h2:lang(pl), body.section-about .wrapper_block_previews h2:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7); }
 
 body.section-about .wrapper_block_previews h3 {
   font-family: "Miso", "BloggerSans", "BPreplay", sans-serif;
@@ -2114,13 +1999,10 @@ body.section-about .wrapper_block_previews h3 {
   text-align: center;
   color: #3e5fdb;
   margin-bottom: 24px; }
-
-body.section-about .wrapper_block_previews h3:lang(el),
-body.section-about .wrapper_block_previews h3:lang(cs),
-body.section-about .wrapper_block_previews h3:lang(pl),
-body.section-about .wrapper_block_previews h3:lang(ro) {
+  body.section-about .wrapper_block_previews h3:lang(el), body.section-about .wrapper_block_previews h3:lang(cs), body.section-about .wrapper_block_previews h3:lang(pl), body.section-about .wrapper_block_previews h3:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .text-content {
   padding-top: 45px;
@@ -2139,13 +2021,10 @@ body.section-about .wrapper_block_previews h3:lang(ro) {
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase; }
-
-  .text-content .title:lang(el),
-  .text-content .title:lang(cs),
-  .text-content .title:lang(pl),
-  .text-content .title:lang(ro) {
-    font-family: "BloggerSans", "BPreplay", sans-serif;
-   }
+    .text-content .title:lang(el), .text-content .title:lang(cs), .text-content .title:lang(pl), .text-content .title:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
 
 .smartembed {
   margin: auto;
@@ -2157,13 +2036,10 @@ body.section-about .wrapper_block_previews h3:lang(ro) {
     font-weight: 400;
     line-height: 24px;
     text-transform: uppercase; }
-
-    .smartembed h1:lang(el),
-    .smartembed h1:lang(cs),
-    .smartembed h1:lang(pl),
-    .smartembed h1:lang(ro) {
-        font-family: "BloggerSans", "BPreplay", sans-serif;
-    }
+    .smartembed h1:lang(el), .smartembed h1:lang(cs), .smartembed h1:lang(pl), .smartembed h1:lang(ro) {
+      font-family: "BloggerSans", "BPreplay", sans-serif;
+      transform: scaleX(0.7);
+      line-height: 28.8px; }
 
 /* Make sure the map container has a defined height */
 #partnermap {
@@ -2708,13 +2584,10 @@ a:focus {
   line-height: 24px;
   color: #3e5fdb;
   margin-bottom: 0; }
-
-.search_preview .title:lang(el),
-.search_preview .title:lang(cs),
-.search_preview .title:lang(pl),
-.search_preview .title:lang(ro) {
+  .search_preview .title:lang(el), .search_preview .title:lang(cs), .search_preview .title:lang(pl), .search_preview .title:lang(ro) {
     font-family: "BloggerSans", "BPreplay", sans-serif;
-}
+    transform: scaleX(0.7);
+    line-height: 28.8px; }
 
 .search_preview p {
   margin-bottom: 0px; }
@@ -3132,5 +3005,3 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     float: left;
     padding: 0 10px;
     text-align: center; } }
-
-/*# sourceMappingURL=main.css.map */
