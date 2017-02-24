@@ -277,14 +277,23 @@ body.single #header, body.menu-small #header, .header-small {
 			background-size: auto, cover;
 			// position: relative;
 			.title-container {
-				display: table;
+				display: flex;
+				// flex-flow: column;
 				height: 100%;
 				width: 90%;
 				max-width: 780px;
 				margin: auto;
+				align-items: center;
+				align-content: center;
+				// background-color:pink;
 				.title-subcontainer {
-					display: table-cell;
-					vertical-align: middle;
+					//display: table-cell;
+					//height: 100%;
+					//overflow:auto;
+					// flex: 1 1 auto;
+					//align-self: center;
+					margin: auto;
+					//vertical-align: middle;
 					// padding-bottom: 4em;
 					color: white;
 					.suptitle {
@@ -1353,6 +1362,13 @@ body.single {
 	}
 }
 
+.no-padded {
+    padding:0;
+    h1 {
+        padding-top:0;
+        margin-top:0;
+    }
+}
 
 /* Make sure the map container has a defined height */
 #partnermap { height: 600px; background-color: #3DBCEF; }
