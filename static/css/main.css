@@ -1135,7 +1135,6 @@ table th {
 #subscribe {
   min-height: 280px;
   margin: 24px 0;
-  background: url(../img/subscribe/A-stars.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 100%;
@@ -3005,3 +3004,5 @@ body.homepage #header .sp-links .is-selectedб body.homepage #header .sp-links a
     float: left;
     padding: 0 10px;
     text-align: center; } }
+
+/*# sourceMappingURL=main.css.map */
