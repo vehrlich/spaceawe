@@ -36,4 +36,4 @@ class ArticleAdmin(AdminImageMixin, TranslatableAdmin):
 
 @admin.register(Highlight)
 class HighlightAdmin(admin.ModelAdmin):
-    raw_id_fields = ('news', 'scoop', 'game', 'activity', )
+    raw_id_fields = ('news', 'scoop', 'game', 'activity', 'career', 'interview')

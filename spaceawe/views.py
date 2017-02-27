@@ -25,7 +25,10 @@ def home(request):
             When(~Q(news_id=None), then=F('news__release_date')),
             When(~Q(scoop_id=None), then=F('scoop__release_date')),
             When(~Q(game_id=None), then=F('game__release_date')),
-            When(~Q(activity_id=None), then=F('activity__release_date')))
+            When(~Q(activity_id=None), then=F('activity__release_date')),
+            When(~Q(interview_id=None), then=F('interview__release_date')),
+            When(~Q(career_id=None), then=F('career__release_date')),
+        )
     ).order_by('release_date')
 
     return render(request, 'spaceawe/home.html', {
