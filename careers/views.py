@@ -11,7 +11,7 @@ from .models import Interview, Career, Webinar
 
 import logging
 
-logger = logging.Logger('django')
+logger = logging.getLogger('spaceawe')
 
 class CareersViewList(ViewUrlMixin, TemplateView):
     template_name = 'careers.html'
@@ -77,12 +77,17 @@ class CareerDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
     view_url_name = 'careers:career-detail'
     template_name = 'careers/detail.html'
 
+    def get_interviews_queryset(self, career_id):
+        queryset = Interview.objects.filter(career=career_id).exclude(published=False).exclude(release_date__gte=datetime.today())
+        return queryset
+
     def get_queryset(self):
         queryset = Career.objects.all()
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['interviews'] = self.get_interviews_queryset(context['object'].id)
         return context
 
 
