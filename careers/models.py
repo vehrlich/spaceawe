@@ -17,6 +17,87 @@ from django_ext.models.spaceawe import SpaceaweModel
 from search.mixins import SearchModel
 
 
+class CareerQuerySet(TranslatableQuerySet):
+    pass
+
+
+class CareerManager(PublishingManager, TranslatableManager):
+    queryset_class=CareerQuerySet
+
+
+class Career(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
+    cover = ImageField(null=True, blank=True, upload_to='careers')
+    _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
+
+    objects = CareerManager()
+
+    @property
+    def main_visual(self):
+        return self.cover.file if self.cover else None
+
+    def links_list(self):
+        return [link for link in self.links.all()]
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('careers:career-detail', kwargs={'slug': self.slug, })
+
+    def zip_url(self):
+        return self.download_url('zip')
+
+    def pdf_url(self):
+        return self.download_url('pdf')
+
+    def epub_url(self):
+        return self.download_url('epub')
+
+    def rtf_url(self):
+        return self.download_url('rtf')
+
+    def download_url(self, resource):
+        return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
+    def download_path(self, resource):
+        return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
+
+    def attachment_url(self, filename):
+        if filename.startswith('http') or filename.startswith('/'):
+            result = filename
+        else:
+            result = os.path.join(settings.MEDIA_URL, 'activities/attach', self.uuid, filename)
+        return result
+
+    def download_key(self):
+        return self.slug + '-careers-' + str(self.pk)
+
+    @classmethod
+    def media_key(cls):
+        return str(cls._meta.verbose_name_plural)
+
+    class Meta:
+        ordering = ['release_date']
+
+
+class CareerTranslation(TranslatedFieldsModel):
+    master = models.ForeignKey(Career, related_name='translations', null=True)
+    title = models.CharField(max_length=255, blank=True)
+    slug = models.SlugField(max_length=255, blank=True)
+    teaser = models.CharField(max_length=255, blank=True)
+    story = RichTextField(blank=True, null=True, config_name='default')
+    field = models.CharField(max_length=255, blank=True)
+    career_type = models.CharField(max_length=255, blank=True)
+    level_of_study = models.CharField(max_length=255, blank=True)
+    # interview = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        unique_together = (
+            ('language_code', 'master'),
+            ('language_code', 'title'),
+            ('language_code', 'slug'),
+        )
+
+
 class InterviewQuerySet(TranslatableQuerySet):
     pass
 
@@ -29,6 +110,7 @@ class Interview(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
     video_url = models.URLField(max_length=255)
     cover = ImageField(null=True, blank=True, upload_to='interviews')
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
+    career = models.ManyToManyField(Career)
 
     objects = InterviewManager()
 
@@ -114,87 +196,6 @@ class InterviewQuestion(models.Model):
 
     def __str__(self):
         return self.question_text
-
-
-class CareerQuerySet(TranslatableQuerySet):
-    pass
-
-
-class CareerManager(PublishingManager, TranslatableManager):
-    queryset_class=CareerQuerySet
-
-
-class Career(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
-    cover = ImageField(null=True, blank=True, upload_to='careers')
-    _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
-
-    objects = CareerManager()
-
-    @property
-    def main_visual(self):
-        return self.cover.file if self.cover else None
-
-    def links_list(self):
-        return [link for link in self.links.all()]
-
-    def __str__(self):
-        return self.title
-
-    def get_absolute_url(self):
-        return reverse('careers:career-detail', kwargs={'slug': self.slug, })
-
-    def zip_url(self):
-        return self.download_url('zip')
-
-    def pdf_url(self):
-        return self.download_url('pdf')
-
-    def epub_url(self):
-        return self.download_url('epub')
-
-    def rtf_url(self):
-        return self.download_url('rtf')
-
-    def download_url(self, resource):
-        return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
-    def download_path(self, resource):
-        return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
-
-    def attachment_url(self, filename):
-        if filename.startswith('http') or filename.startswith('/'):
-            result = filename
-        else:
-            result = os.path.join(settings.MEDIA_URL, 'activities/attach', self.uuid, filename)
-        return result
-
-    def download_key(self):
-        return self.slug + '-careers-' + str(self.pk)
-
-    @classmethod
-    def media_key(cls):
-        return str(cls._meta.verbose_name_plural)
-
-    class Meta:
-        ordering = ['release_date']
-
-
-class CareerTranslation(TranslatedFieldsModel):
-    master = models.ForeignKey(Career, related_name='translations', null=True)
-    title = models.CharField(max_length=255, blank=True)
-    slug = models.SlugField(max_length=255, blank=True)
-    teaser = models.CharField(max_length=255, blank=True)
-    story = RichTextField(blank=True, null=True, config_name='default')
-    field = models.CharField(max_length=255, blank=True)
-    career_type = models.CharField(max_length=255, blank=True)
-    level_of_study = models.CharField(max_length=255, blank=True)
-    interview = models.CharField(max_length=255, blank=True)
-
-    class Meta:
-        unique_together = (
-            ('language_code', 'master'),
-            ('language_code', 'title'),
-            ('language_code', 'slug'),
-        )
 
 
 class WebinarQuerySet(TranslatableQuerySet):

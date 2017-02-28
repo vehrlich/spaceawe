@@ -59,7 +59,11 @@
 					</div>
 					<div>
 						<div class="caption">{% trans "Interview" %}</div>
-						<div class="value">{{ object.interview }}</div>
+						{% for i in interviews %}
+							<div class="value">
+								<a href="{% url 'careers:interview-detail' slug=i.slug %}">{{ i }}
+							</div>
+						{% endfor %}
 					</div>
 					<div>
 						<div class="caption">{% trans "Download" %}</div>
