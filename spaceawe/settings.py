@@ -390,7 +390,7 @@ BLEACH_ALLOWED_ATTRIBUTES = {}
 BLEACH_ALLOWED_STYLES = {}
 
 # Woosh Search
-WHOOSH_INDEX_PATH = os.path.join(PARENT_DIR, '/home/web/usr/whoosh_index')
+WHOOSH_INDEX_PATH = '/home/web/usr/whoosh_index/spaceawe'
 
 # # Celery
 # BROKER_URL = 'redis://localhost:6379/0'
@@ -442,8 +442,9 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
     # THUMBNAIL_DUMMY_SOURCE = 'http://placekitten.com/%(width)s/%(height)s'
     # THUMBNAIL_DUMMY_RATIO = 1.5
 
-    WHOOSH_INDEX_PATH = os.path.join(PARENT_DIR, 'usr/whoosh_index')
-    CELERY_ALWAYS_EAGER = True  # Tasks are run synchronously
+    WHOOSH_INDEX_PATH = os.path.join(PARENT_DIR, 'usr/whoosh_index/spaceawe')
+    # CELERY_ALWAYS_EAGER = True  # Tasks are run synchronously
+
 elif DJANGO_SETTINGS_CONFIG == 'PROD':
     pass
 
