@@ -416,6 +416,9 @@ PARLER_LANGUAGES = {
     }
 }
 
+ACTIVITY_DOWNLOAD_FILENAME_TEMPLATE = 'activity-%(code)s%(lang)s-%(slug)s.%(ext)s'
+
+
 if DJANGO_SETTINGS_CONFIG == 'DEV':
     # TIME_ZONE = 'Europe/Lisbon'
     STATIC_ROOT = '/tmp'
