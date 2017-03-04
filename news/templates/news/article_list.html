@@ -18,9 +18,7 @@
     <div id="cover" class="">
         <div class="feature-container">
             <div class="fake-padding"></div>
-            <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="5000">
-                <nav class="cycle-pager"></nav>
-
+            <div class="cycle-slideshow">
     {% for object in object_list|slice:":4" %}
         {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
                 <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }}) ;">
@@ -33,9 +31,8 @@
                 </div>
         {% endthumbnail %}
     {% endfor %}
-
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
+			<nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
         </div>
     </div>
     <div id="list" class="thumbnailed-list news page2 snap pure-g">

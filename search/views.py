@@ -2,8 +2,26 @@ from django.views.generic import TemplateView
 
 from news.models import Article
 from careers.models import Interview
+from activities.models import ActivityTranslation
+from simplesearch.functions import get_query
 
 from copy import copy
+
+def simple_search(request):
+    if 'q' in request.GET:
+        query_string = request.GET['q']
+        entry_query = get_query(query_string, ['title', 'teaser','description'])
+        results = ActivityTranslation.objects.filter(entry_query).distinct()
+        print(results)
+    return
+
+def activity_parse(query_words):
+    entry_query = get_query(query_words, ['title', 'teaser','description'])
+    results = ActivityTranslation.objects.filter(entry_query).distinct()
+    for r in results:
+         r.get_absolute_url = r.master.get_absolute_url()
+         r.save()
+    return results
 
 class SearchView(TemplateView):
     template_name = 'search.html'
@@ -32,6 +50,9 @@ class SearchView(TemplateView):
             result.extend(
                 model.search(query_words)
             )
+        activity_results = activity_parse(query_words)
+        result = list(result)
+        result.extend(activity_results)
         pages_count = (len(result) / self.PAGINATE_BY) + 1
         result = result[(page-1)*self.PAGINATE_BY:page*self.PAGINATE_BY]
 

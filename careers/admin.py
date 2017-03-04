@@ -14,7 +14,8 @@ class InterviewAdminForm(TranslatableModelForm):
 
     class Meta:
         model = Interview
-        fields = ('title', 'slug', 'release_date', 'published', 'featured', 'cover', 'teaser', 'story', '_languages', 'video_url', 'name', 'country', 'place_of_job', )
+        fields = ('title', 'slug', 'release_date', 'published', 'featured', 'cover', 'teaser', 'story', 'career',
+                  '_languages', 'video_url', 'name', 'country', 'place_of_job', 'career',)
 
 
 @admin.register(Interview)
@@ -28,7 +29,7 @@ class InterviewAdmin(TranslatableAdmin):
          {'fields': (('space', 'earth', 'navigation', 'heritage', ), )}),
         (None,
          {'fields': (('_languages', ),
-                     ('name', 'country', 'place_of_job', 'profession', ), )}),
+                     ('name', 'country', 'place_of_job', 'profession', 'career',), )}),
         ('Publishing',
          {'fields': (('release_date', ),
                      ('published', 'featured', ),) }),
@@ -50,7 +51,8 @@ class CareerAdminForm(TranslatableModelForm):
 
     class Meta:
         model = Career
-        fields = ('title', 'slug', 'release_date', 'published', 'featured', 'cover', 'teaser', 'story', '_languages', 'field', 'career_type', 'level_of_study', 'interview', )
+        fields = ('title', 'slug', 'release_date', 'published', 'featured', 'cover', 'teaser', 'story',
+                  '_languages', 'field', 'career_type', 'level_of_study', )
 
 
 @admin.register(Career)
@@ -64,7 +66,7 @@ class CareerAdmin(TranslatableAdmin):
          {'fields': (('space', 'earth', 'navigation', 'heritage', ), )}),
         (None,
          {'fields': (('_languages', ),
-                     ('field', 'career_type', 'level_of_study', 'interview', ), )}),
+                     ('field', 'career_type', 'level_of_study', ), )}),
         ('Publishing',
          {'fields': (('release_date', ),
                      ('published', 'featured', ),) }),

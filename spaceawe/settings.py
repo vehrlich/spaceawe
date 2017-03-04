@@ -43,7 +43,7 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
 SITE_URL = 'http://www.space-awareness.org'
 
 ADMINS = (
-    ('Bruno Rino', secrets['ADMIN_EMAIL']),
+    ('Vaclav Ehrlich', secrets['ADMIN_EMAIL']),
 )
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -72,6 +72,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.redirects',
 
     'pipeline',
 
@@ -113,7 +115,10 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
+
+SITE_ID = 1
 
 ROOT_URLCONF = 'spaceawe.urls'
 
@@ -167,7 +172,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(PARENT_DIR, 'usr/sqlite/spaceawe.sqlite3'),
+#         'NAME': 'spaceawe.sqlite3',
 #     }
 # }
 
@@ -271,7 +276,8 @@ PIPELINE = {
     'STYLESHEETS': {
         'styles': {
             'source_filenames': [
-                'css/fonts.css',
+                'js/slick/slick.css',
+                'js/slick/slick-theme.css',
                 'css/main.css',
             ],
             'output_filename': 'css/spaceawe.min.css',
@@ -279,15 +285,26 @@ PIPELINE = {
                 'media': 'screen',
             },
         },
+        'print': {
+            'source_filenames': [
+                'css/print-activities.css',
+            ],
+            'output_filename': 'css/spaceawe.print.min.css',
+            'extra_context': {
+                'media': 'print',
+            },
+        }
     },
     'JAVASCRIPT': {
         'scripts': {
             'source_filenames': [
-                'js/jquery-1.10.1.js',
-                'js/jquery.scrollTo.js',
+                'js/jquery-1.10.1.min.js',
+                #'js/jquery-migrate-3.0.0.min.js',
+                #'js/jquery.scrollTo.js',
                 'js/jquery.event.special.js',
-                'js/jquery.scrollsnap.js',
-                'js/jquery.cycle2.js',
+                #'js/jquery.scrollsnap.js',
+                #'js/jquery.cycle2.js',
+                'js/slick/slick.min.js',
                 'el-pagination/js/el-pagination.js',
                 'js/jquery.sharrre.min.js',
                 'js/jquery.matchHeight.js',
@@ -403,13 +420,8 @@ WHOOSH_INDEX_PATH = '/home/web/usr/whoosh_index/spaceawe'
 # http://django-parler.readthedocs.org/en/latest/
 # https://github.com/edoburu/django-parler
 PARLER_LANGUAGES = {
-    None: (
-        # {'code': 'en',},
-        # {'code': 'de',},
-        # {'code': 'pt',},
-        # {'code': 'ar',},
-        # {'code': 'vi',},
-    ),
+    # SITE_ID: ( {'code':'en'}, { ...
+    1: [({'code': code}) for (code, name) in LANGUAGES],
     'default': {
         'fallbacks': ['en'],
         'hide_untranslated': False,   # False is the default; let .active_translations() return fallbacks too.
@@ -429,11 +441,12 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
     # MIDDLEWARE_CLASSES += (
     #     'debug_toolbar.middleware.DebugToolbarMiddleware',
     # )
-    INSTALLED_APPS += (
-        'debug_toolbar',
-    )
+    #INSTALLED_APPS += (
+    #    'debug_toolbar',
+    #)
     DEBUG_TOOLBAR_CONFIG = {
         'INTERCEPT_REDIRECTS': False,
+        'JQUERY_URL':'',
     }
     EMAIL_SUBJECT_PREFIX = '[spaceawe dev] '
 

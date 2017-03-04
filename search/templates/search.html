@@ -1,39 +1,39 @@
-{% extends 'base.html' %} {% load staticfiles thumbnail i18n markdown relativise_img_src %} {% block site_title %}{{ object.title }} | {% trans SECTIONS.news.title %} | Space Awareness {% endblock %} {% block extra_body_class %}section-news single{% endblock %} {% block extra_header_class %}small{% endblock %} {% block extra_head %}
-
+{% extends 'base.html' %} {% load staticfiles thumbnail i18n markdown relativise_img_src %}
+{% block site_title %}{{ object.title }} | {% trans SECTIONS.news.title %} | Space Awareness {% endblock %}
+{% block extra_body_class %}section-home single{% endblock %}
+{% block extra_header_class %}small{% endblock %}
+{% block extra_head %}
 <meta property="og:title" content="{{ object.title }}" />
 <meta property="og:description" content="{{ object.teaser }}" /> {% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as im %}
-<meta property="og:image" content="{{ SITE_URL }}{{ im.url }}" /> {% endthumbnail %} {% endblock %} {% block content %}
+<meta property="og:image" content="{{ SITE_URL }}{{ im.url }}" /> {% endthumbnail %}
+{% endblock %}
 
-<div class="search_wrapper content-card">
-	
-    <div class="fake-padding"></div>
-    <div class="content-container">
-        <div class="row">
-            <!-- <div class="result_title">Approximately 278,000 results (0.44 seconds)</div> -->
-            <div class="content-search-column content-right-column">
-            	<div>
-                    <div class="caption" >Add filters</div>
-                    <form action ="/search/" method="GET">
-                        <input type="text" name="q" class="filter_search">
-                    </form>
-                </div>
-            </div>
+{% block content %}
+    <div class="search_wrapper content-card">
+        <div class="fake-padding"></div>
+
+        <div class="title-container">
+            <h1 class="title">{% trans "Search results" %}</h1>
+        </div>
+
+
+        <div class="content-container">
             <div class="content-main-column">
-                <div class="search_result_wrap">
+                <ol class="padded-list list-1col">
 
 					{% for result in search_results %}
-
-                    <div class="row result_block">
-                        <div class="search_img">
-                            <a href="{{ result.get_absolute_url }}">{{ im.url }}</a>
+					<li class="row result_block">
+						{% thumbnail result.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+						<div class="search_img">
+							<a href="{{ result.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ result.title|truncatechars:20 }}" /></a>
+						</div>
+						{% endthumbnail %}
+						<div class="search_preview">
+							<p class="title"><a href="{{ result.get_absolute_url }}">{{ result.title|truncatechars:50 }}</a></p>
+							<p><strong>{{ result.release_date }}</strong> {{ result.teaser }}</p><!--|truncatewords_html:10-->
+                            <p><a href="{{ result.get_absolute_url }}">{{ result.get_absolute_url }}</a></p>
                         </div>
-                        <div class="search_preview">
-                            <p class="title"><a href="{{ result.get_absolute_url }}">{{ result.title }}</a></p>
-                            <p><!-- <span class="date">a2 November 2015</span> --> {{ result.teaser|truncatewords_html:2 }}</p>
-                            <p><a href="{{ result.get_absolute_url }}">{{ result.get_absolute_url|truncatewords_html:2 }}</a></p>
-                        </div>
-                    </div>
-
+                    </li>
 					{% endfor %}
 
 					<!--  <div class="row result_block">
@@ -47,10 +47,21 @@
                         </div>
                     </div> -->
                   
-                </div>
+                </ol>
+
             </div>
-            <div class="content-right-column">
-                
+            <!-- <div class="result_title">Approximately 278,000 results (0.44 seconds)</div> -->
+            <div class="content-search-column content-right-column">
+            	<div>
+                    <div class="caption" >{% trans "Search" %}</div>
+                    <form action ="/search/" method="GET" class="search-form">
+                        <input type="text" name="q" class="filter_search" value="{{ query }}" />
+                        <input type="submit" value="{% trans "Search" %}" title="{% trans "Search" %}" />
+                    </form>
+                </div>
+
+
+
                <!--  <div>
                     <div class="caption">Topic</div> 
                     <div class="filters">
@@ -153,10 +164,11 @@
                         </ul>
                     </div>
                 </div> -->
+
             </div>
         </div>
     </div>
-</div>
+
 {% endblock %}
 <!-- <a href="/search/?models=Article,Interview&q=word1 word2&page=1">/search/?models=Article,Interview&q=word1 word2&page=1</a><br>
 

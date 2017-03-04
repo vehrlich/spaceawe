@@ -3,9 +3,6 @@ $header-height-small: 60px;
 
 .fake-padding { height: $header-height-normal; }
 
-// .sp-menu {
-//   display: none;
-// }
 #menu-main {
   display: none;
 }
@@ -48,7 +45,6 @@ $header-height-small: 60px;
   .slogan {
     // padding: 1em;
     font-size: 25px;
-    font-weight: bold;
     margin-bottom: 5px;
     &.subtitle {
       // padding-top: 1em;
@@ -91,23 +87,20 @@ $header-height-small: 60px;
 }
 
 body.homepage {
-  #header {
-    .logo {
-      margin-top: 35px;
-      .logo-el {
-        height: 3.5em;
-        width: 212px; /**/
-      }
-    }
-    &.small {
-      .logo {
-        margin-top: 8px;
-        .logo-el {
-          height: 1.8em;
-        }
-      }
-    }
-  }
+	#header {
+		.logo {
+			margin-top: 35px;
+			.logo-el {
+				height: 3.5em;
+				width: 212px; /**/
+			}
+		}
+		&.small {
+			.logo {
+				margin-top: 8px;
+			}
+		}
+	}
 }
 
 body.single {
@@ -159,6 +152,6 @@ body.single {
 .more-container-list {
   .list-item-container{
     margin: 10px;
-  } 
+  }
 }
 */

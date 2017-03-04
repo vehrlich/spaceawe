@@ -1,0 +1,33 @@
+{% load staticfiles thumbnail %}
+
+
+{% thumbnail object.main_visual THUMBNAIL_ALIASES.list_thumb crop="center" as thumb %}
+<li><div class="list-item-container">
+	<div class="list-item careers" style="background-image:url({{ thumb.url }});" aria-haspopup="true">
+		<div class="link-container">
+			<a href="{% url 'careers:webinar-detail' slug=object.slug %}">
+				<div class="color"></div>
+				<div class="color-black"></div>
+				<div class="text">
+					<div class="date"></div>
+					<div class="title">{{ object.title }}</div>
+					<!--<div class="preview">{{ object.teaser }}</div>-->
+					<div class="bottom show-on-focus">
+						<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div></li>
+{% endthumbnail %}
+<!-- Teaser : {{ webinar.teaser }}<br>
+Story : {{ webinar.story|safe }}<br>
+Title : {{ webinar.title }}<br>
+Register : {{ webinar.register }}<br>
+Location : {{ webinar.location }}<br>
+Target group : {{ webinar.target_group }}<br>
+Language : {{ webinar.language }}<br>
+<a href="{% url 'careers:webinar-detail' slug=webinar.slug %}">URL</a><br>
+Pdf url : {{ webinar.pdf_url }}
+<hr/> -->

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Mooc(models.Model):
 
     info = models.CharField(max_length=255)
@@ -27,3 +28,33 @@ class Module(models.Model):
 
     def __str__(self, **kwargs):
         return self.info
+
+    def info_parts(self, **kwargs):
+        return self.info.split(': ')
+
+
+class DidacticCourse(models.Model):
+    """
+    Didactit courses documents in Moocs
+    Support material document is represent with title, short disclaimer, image
+    """
+
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255)
+    disclaimer = models.CharField(max_length=255)
+    cover = models.ImageField(null=True, blank=True, upload_to='support_document')
+    document_file = models.FileField(upload_to='support_document')
+
+    def __str__(self):
+        return self.title
+
+
+class DidacticCourseDisclaimer(models.Model):
+    """
+    Introducing paragraphs for Didactic courses
+    """
+
+    paragraph = models.TextField(max_length=512)
+
+    def __str__(self):
+        return self.paragraph

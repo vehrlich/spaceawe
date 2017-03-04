@@ -1,0 +1,122 @@
+<!DOCTYPE html>{% load i18n parler_tags staticfiles smartpages thumbnail markdown relativise_img_src %}{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ object.title }}</title>
+        <link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+        <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+    </head>
+    <body>
+        <div id="orbit">
+            <img  class="small" src="{% static 'img/planets_orbit.svg' %}">
+        </div>
+        <div id="logo"><img src="{% static 'img/logo.svg' %}" /></div>
+        <div id="metadata">
+            <table><tr><td>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Curriculum topic" %}</div>
+                    <div class="value">{{ object.theme }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Big idea of science" %}</div>
+                    <div class="value"><a href="http://www.golabz.eu/big-ideas" target="_blank">{{ object.big_idea }}</a></div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Keywords" %}</div>
+                    <div class="value">{{ object.keywords }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Age range" %}</div>
+                    <div class="value">{{ object.age_range }}</div>
+                </div>
+            </td>
+            <td>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Education level" %}</div>
+                    <div class="value">{{ object.level.all| join:', ' }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Time" %}</div>
+                    <div class="value">{{ object.time }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Group size" %}</div>
+                    <div class="value">{{ object.group }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Supervised for safety" %}</div>
+                    <div class="value">{{ object.supervised }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Cost" %}</div>
+                    <div class="value">{{ object.cost }}</div>
+                </div>
+            </td>
+            <td>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Location" %}</div>
+                    <div class="value">{{ object.location }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Core skills" %}</div>
+                    <div class="value">{{ object.skills.all| join:', ' }}</div>
+                </div>
+                <div class="metadata-item">
+                    <div class="caption">{% trans "Type of learning activity" %}</div>
+                    <div class="value">{{ object.learning }}</div>
+                </div>
+            </td></tr></table>
+
+        </div>
+
+        <div id="story">
+            <div class="section-caption">{% trans "Brief Description" %}</div>
+            <div class="section-content text">{{ object.description|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Goals" %}</div>
+            <div class="section-content text">{{ object.goals|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Learning Objectives" %}</div>
+            <div class="section-content text">{{ object.objectives|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Evaluation" %}</div>
+            <div class="section-content text">{{ object.evaluation|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Materials" %}</div>
+            <div class="section-content text">{{ object.materials|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Background Information" %}</div>
+            <div class="section-content text">{{ object.background|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Full Activity Description" %}</div>
+            <div class="section-content text">{{ object.fulldesc|markdown|relativise_constrain_img_src:object }}</div>
+            <div class="section-caption">{% trans "Curriculum" %}</div>
+            <div class="section-content text">
+                <h3>Space Awareness curricula topics (EU and South Africa)</h3>
+                <p>{% for category in object.spaceawe_categories %}
+                        {{ category.title }},
+                   {% endfor %}
+                   {{ object.theme }}
+                </p>
+                {{ object.curriculum|markdown|relativise_constrain_img_src:object }}
+            </div>
+        {% if object.additional_information %}
+            <div class="section-caption">{% trans "Additional Information" %}</div>
+            <div class="section-content text">{{ object.additional_information|markdown|relativise_constrain_img_src:object }}</div>
+        {% endif %}
+            <div class="section-caption">{% trans "Conclusion" %}</div>
+            <div class="section-content text">{{ object.conclusion|markdown|relativise_constrain_img_src:object }}</div>
+
+        </div>
+        <div id="sponsors">
+            <a target="_blank" href="http://astroedu.iau.org/"><img src="{% static 'img/sponsors/astroedu.png' %}" /></a>
+            <img src="{% static 'img/sponsors/eu.png' %}" />
+            <p>{% trans "This resource was selected and revised by Space Awareness. Space Awareness is funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
+        </div>
+
+        <div id="footer">
+            <div class="separator"></div>
+            <div class="centered">
+                <a href="http://www.space-awareness.org/">www.space-awareness.org</a>
+            </div>
+            <div class="centered">
+                <img class="footer_a" src="{% static 'img/logo-simple.png' %}" />
+            </div>
+        </div>
+    </body>
+</html>
+

@@ -1,6 +1,7 @@
 @page {
   size: A4 portrait;
-  margin: 0.4cm 2.8cm 1.5cm 2.8cm; }
+  margin: 3.5cm 2.8cm;
+  counter-increment: page; }
 
 body {
   font-family: Ubuntu, sans-serif;
@@ -13,19 +14,32 @@ body {
     text-decoration: none;
     color: inherit; }
   body img {
-    max-width: 15.4cm; }
+    max-width: 15.4cm;
+    max-height: 21.7cm; }
+
+#orbit img {
+  z-index: -1;
+  position: fixed;
+  top: -3.5cm;
+  left: -2.8cm; }
+  #orbit img.big {
+    width: 12.6cm;
+    height: 13cm; }
+  #orbit img.small {
+    width: 7cm;
+    height: 7cm; }
 
 #header {
   page-break-after: always;
   text-align: center; }
   #header .logo {
-    margin-top: 7.3cm; }
+    margin-top: 4.3cm; }
     #header .logo img {
       height: 3cm;
       width: 7.05cm; }
   #header .title {
-    margin-top: 4.3cm;
-    font-family: Miso, sans-serif;
+    margin-top: 3.5cm;
+    font-family: "Miso", sans-serif;
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
@@ -34,13 +48,15 @@ body {
     margin-top: 1em;
     font-style: italic; }
   #header .teaser {
-    margin-top: 2.3cm;
+    margin-top: 1.5cm;
     font-size: 16px; }
   #header .author {
     font-size: 18px;
     color: #9d59e4; }
   #header .categories {
-    margin-top: 2.0cm; }
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
     #header .categories img {
       height: 2.5cm;
       width: 2.5cm;
@@ -55,29 +71,54 @@ body {
   #metadata .metadata-item .caption {
     font-weight: bold; }
 
+#logo {
+  position: fixed;
+  top: -2.5cm;
+  width: 100%;
+  text-align: center; }
+  #logo img {
+    height: 1.7cm;
+    width: 7.05cm; }
+
 #story {
-  margin-top: 1.0cm; }
+  margin-top: 0.5cm; }
   #story .section-caption {
     margin-top: 1em;
-    font-family: Miso, sans-serif;
+    font-family: "Miso", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     color: #9d59e4; }
 
+#story .section-caption:lang(el),
+#story .section-caption:lang(cs),
+#story .section-caption:lang(pl),
+#story .section-caption:lang(ro) {
+  font-family: "BloggerSans", "BPreplay", sans-serif; }
+
+#sponsors img {
+  height: 40px;
+  padding-right: 20pt; }
+
 #footer {
-  bottom: 0;
+  position: fixed;
+  bottom: -2.8cm;
   width: 100%; }
-  #footer .sponsors img {
-    height: 40px;
-    padding-right: 20pt; }
   #footer .separator {
     margin-top: 0.2cm;
     margin-bottom: 0.2cm;
     border: solid 0.01cm black; }
-  #footer .footer_link {
+  #footer .centered {
     text-align: center; }
+  #footer #page_number {
+    float: right;
+    display: inline;
+    content: counter(page); }
+  #footer .footer_a {
+    width: 0.6cm;
+    height: 0.6cm;
+    display: inline-block;
+    white-space: nowrap;
+    clear: both; }
 
 .text {
   line-height: 1.4; }
-
-/*# sourceMappingURL=print-activities.css.map */

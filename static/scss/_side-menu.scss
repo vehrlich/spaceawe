@@ -1,0 +1,129 @@
+body {
+	overflow-x: hidden;
+}
+
+/* General styles for all menus */
+
+.side-menu {
+	background: white;
+	position: fixed;
+	height: 100%;
+	a {
+		display: block;
+		color: inherit;
+		text-decoration: none;
+		&:hover {
+			background: rgba(0,0,0,$bg-opacity);
+			color: white;
+		}
+	}
+}
+
+.side-menu-vertical {
+	width: 190px;
+	top: 0;
+	z-index: 10000;
+	a {
+		padding: ($header-height-small - $baseline)/2;
+	}
+}
+
+.side-button {
+	position: absolute;
+	display: block;
+	height: $header-height-small;
+	width: $header-height-small;
+	.button {
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		height: $header-height-small;
+		width: $header-height-small;
+		content: '';
+		-webkit-transition: background-color $time ease;
+		transition: background-color $time ease;
+		
+		&.mainmenu {
+			background-image: url(../img/buttons/menu_black.svg);
+		}
+		&.language {
+			background-image: url(../img/buttons/language_black.svg);
+		}
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 40%;
+	}
+}
+@each $section in $sections {
+	body.section-#{$section}.menu-small {
+		.side-button .button.mainmenu {
+			background-image: url(../img/buttons/menu_#{map-get($section-font-colors, '#{$section}')}.svg);
+		}
+		.side-button .button.language {
+			background-image: url(../img/buttons/language_#{map-get($section-font-colors, '#{$section}')}.svg);
+		}
+	}
+}
+
+.side-menu-left .side-button {
+	right: -$header-height-small;
+}
+.side-menu-right .side-button {
+	left: -$header-height-small;
+}
+
+.side-links {
+	height: 100%;
+	overflow: scroll;
+	z-index: 999;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.side-menu-left {
+	left: -190px;
+	&.side-menu-open {
+		left: 0px;
+		box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
+		.button {
+			box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.175), 6px 6px 6px rgba(0, 0, 0, 0.175);
+		}
+	}
+}
+
+.side-menu-right {
+	right: -190px;
+	&.side-menu-open {
+		right: 0px;
+		box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.175);
+		.button {
+			box-shadow: -6px -6px 6px rgba(0, 0, 0, 0.175), -6px 6px 6px rgba(0, 0, 0, 0.175);
+		}
+	}
+}
+
+.side-menu-open .side-button {
+	background-color: white;
+}
+
+@each $section in $sections {
+	body.section-#{$section}.menu-small {
+		.side-menu-open .side-button .button.mainmenu {
+			background-color: map-get($section-colors, '#{$section}');
+		}
+
+		.side-menu-open .side-button .button.language {
+			background-color: map-get($section-colors, '#{$section}');
+		}
+	}
+}
+
+/* Transitions */
+
+.side-menu,
+.side-menu-push {
+	-webkit-transition: right $fast ease, left $fast ease, background $time ease;
+	-moz-transition: right $fast ease, left $fast ease, background $time ease;
+	transition: right $fast ease, left $fast ease, background $time ease;
+}

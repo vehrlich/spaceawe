@@ -18,9 +18,7 @@
     <div id="cover" class="">
         <div class="feature-container">
             <div class="fake-padding"></div>
-            <div class="cycle-slideshow" data-cycle-slides="> div" data-cycle-timeout="5000">
-                <nav class="cycle-pager"></nav>
-
+            <div class="cycle-slideshow">
     {% for object in object_list|slice:":4" %}
         {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
                 <div class="feature" style="background-image: url({% static 'img/line_pattern_04.png' %}),  url({{ im.url }}) ;">
@@ -33,9 +31,8 @@
                 </div>
         {% endthumbnail %}
     {% endfor %}
-
-                <nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
             </div>
+			<nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="{% static 'img/buttons/arrow_down_white.svg' %}"></a></nav>
         </div>
     </div>
     <div id="list" class="thumbnailed-list activities page2 snap pure-g">
@@ -46,23 +43,24 @@
         </div>
 
         <div class="pure-u-1 list-header">
+            <div id="filters" class="anchor"></div>
             <div class="title">{% trans "Sort by category" %}</div>
             <div class="filters">
-                <div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
+                <div class="filter-topic-text"><a class="selected" href="/activities/#filters">{% trans "all" %}</a></div>
             </div>
-            {% include 'filters.html' %}
+            {% include "filters.html" with page_name_filter="activities:list_by_category" %}
 			<div class="filters level">
 				<div class="pure-menu pure-menu-horizontal">
 					<ul class="pure-menu-list">
 						<li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-							<a href="#" id="menuLink1" class="pure-menu-link">Level</a>
+							<a href="/activities/#filters" id="menuLink1" class="pure-menu-link">Level</a>
 							<ul class="pure-menu-children">
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='pre' %}" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='primary' %}" class="pure-menu-link">{% trans "Primary School" %}</a></li>
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='middle' %}" class="pure-menu-link">{% trans "Middle School" %}</a></li>
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='secondary' %}" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
-								<!-- <li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
-								<li class="pure-menu-item"><a href="{% url 'activities:list_by_level' level='informal' %}" class="pure-menu-link">{% trans "Informal" %}</a></li>
+                                <li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='pre' %}#filters" class="pure-menu-link">{% trans "Pre-school" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='primary' %}#filters" class="pure-menu-link">{% trans "Primary School" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='middle' %}#filters" class="pure-menu-link">{% trans "Middle School" %}</a></li>
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='secondary' %}#filters" class="pure-menu-link">{% trans "Secondary School" %}</a></li>
+								<!-- <li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='university' %}" class="pure-menu-link">{% trans "University" %}</a></li> -->
+								<li class="pure-menu-item"><a href="{% url 'activities:list_combine' category=category level='informal' %}#filters" class="pure-menu-link">{% trans "Informal" %}</a></li>
 							</ul>
 						</li>
 					</ul>

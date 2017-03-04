@@ -1,151 +1,119 @@
-<!DOCTYPE html>
-{% load i18n parler_tags staticfiles smartpages pipeline %}
-
-{% get_current_language as LANGUAGE_CODE %}
+<!DOCTYPE html>{% load i18n parler_tags staticfiles smartpages pipeline %}{% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-        <title>{% block site_title %}Space Awareness{% endblock %}</title>
-        <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/static/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="/static/favicons/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="/static/favicons/favicon-194x194.png" sizes="194x194">
-        <link rel="icon" type="image/png" href="/static/favicons/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="/static/favicons/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="/static/favicons/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="/static/favicons/manifest.json">
-        <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#000000">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-
-        <meta name="description" content="{% trans "Inspiring a new generation of space explorers" %}">
-
-        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-        <link rel="stylesheet" href="{% static 'css/pure/0.6.0/pure-min.css' %}">
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="{% static 'css/pure/0.6.0/grids-responsive-old-ie-min.css' %}">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="{% static 'css/pure/0.6.0/grids-responsive-min.css' %}">
-        <!--<![endif]-->
-        <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,greek,cyrillic' rel='stylesheet' type='text/css'>
-        {% load pipeline %}{% stylesheet 'styles' %}
-        {% if debug %}<style>/* fix for django debug toolbar + purecss */ [hidden="hidden"][style*="display: block;"] { display: block !important; }</style>{% endif %}
-
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>{% block site_title %}Space Awareness{% endblock %}</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/static/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/static/favicons/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/static/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/static/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/static/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/static/favicons/manifest.json">
+	<link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#000000">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="description" content="{% trans "Inspiring a new generation of space explorers" %}">
+{% block pre_css %}{% endblock %}
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}">
+	<link rel="stylesheet" href="{% static 'css/pure/0.6.0/pure-min.css' %}">
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="{% static 'css/pure/0.6.0/grids-responsive-old-ie-min.css' %}">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+		<link rel="stylesheet" href="{% static 'css/pure/0.6.0/grids-responsive-min.css' %}">
+	<!--<![endif]-->
+	{% if LANGUAGE_CODE == "pl" %}<link rel="stylesheet" href="{% static 'fonts/BloggerSans/BloggerSans.css' %}">
+	{% elif LANGUAGE_CODE == "el" %}<link rel="stylesheet" href="{% static 'fonts/BPreplay/BPreplay.css' %}">
+	{% else %}<link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+	{% endif %}
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700&subset=latin,greek,cyrillic' rel='stylesheet' type='text/css'>
+	{% load pipeline %}{% stylesheet 'styles' %}
+	{% if debug %}<style>/* fix for django debug toolbar + purecss */ [hidden="hidden"][style*="display: block;"] { display: block !important; }</style>{% endif %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 {% block extra_head %}{% endblock %}
-
-    </head>
-    <body id="top" class="{% block extra_body_class %}{% endblock %}">
-    <div id="header" class="{% block extra_header_class %}{% endblock %}">
-        <div class="search_head">
-            <form >
-                <a href="" class="search_btn closed"></a>
-                <input type="text" placeholder="Search...">
-                <a href="" class="close_search"></a>
-            </form>
-        </div>
-        <div class="menu-bar">
-            <div class="menu-bar-left">
-                <a href="{% url 'news:list' %}" class="menu-news">{{ SECTIONS.news.menu }}</a>
-                <a href="{% url 'careers:list' %}" class="menu-careers">{{ SECTIONS.careers.menu }}</a>
-                <a href="{% url 'scoops:list' %}" class="menu-scoops">{{ SECTIONS.scoops.menu }}</a>
-                <a href="{% url 'games:list' %}" class="menu-games">{{ SECTIONS.games.menu }}</a>
-            </div>
-            <div class="menu-bar-right">
-                <a href="{% url 'activities:list' %}" class="menu-activities">{{ SECTIONS.activities.menu }}</a>
-                <a href="{% url 'soon_skills' %}" class="menu-skills">{{ SECTIONS.skills.menu }}</a>
-                <a href="{% url 'about' %}" class="menu-about">{{ SECTIONS.about.menu }}</a>
-            </div>
-        </div>
-        <div class="logo"><a href="/"><span class="logo-el"></span></a></div>
-        {% block slogan %}{% endblock %}
-        <!-- <div class="button menu"><img src="img/buttons/menu.svg"></div> -->
-        <nav id="menu-main" class="sp-menu sp-menu-vertical sp-menu-left" aria-haspopup="true">
-            <div class="sp-button"><div id="menu-main-button" class="button mainmenu"></div></div>
-            <div class="sp-links">
-                <a href="{% url 'news:list' %}">{{ SECTIONS.news.menu }}</a>
-                <a href="{% url 'careers:list' %}">{{ SECTIONS.careers.menu }}</a>
-                <a href="{% url 'scoops:list' %}">{{ SECTIONS.scoops.menu }}</a>
-                <a href="{% url 'games:list' %}">{{ SECTIONS.games.menu }}</a>
-                <a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
-                <a href="{% url 'soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
-                <a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
-            </div>
-        </nav>
-         <nav id="menu-language1" class="select_language sp-menu-vertical" aria-haspopup="true">
-            <!--  <div class="search_head_right">
-                <a href="/search/"></a>
-            </div> -->
-            <div class="sp-links_wrap">
-               <a href="" class="lang_btn">English<span></span></a>
-               
-                <div class="sp-links">
-                {% for lang_code, title in LANGUAGES %}
-                    {% get_language_info for lang_code as lang %}
-                    {% get_translated_url lang_code as tr_url %}
-                    {% if tr_url %}<a {% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %}href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}
-                {% endfor %}
-                </div>
-            </div>
-        </nav>
-        <nav id="menu-language" class="sp-menu sp-menu-vertical sp-menu-right" aria-haspopup="true">
-            <div class="sp-button"><div id="menu-language-button" class="button language"></div></div>
-            <div class="sp-links">
-            {% for lang_code, title in LANGUAGES %}
-                {% get_language_info for lang_code as lang %}
-                {% get_translated_url lang_code as tr_url %}
-                {% if tr_url %}<a {% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %}href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}
-            {% endfor %}
-            </div>
-        </nav>
-    </div>
-
-
+</head>
+<body id="top" class="{% block extra_body_class %}{% endblock %}">
+	<div id="header" class="{% block extra_header_class %}{% endblock %}">
+		<div class="search_head">
+			<form>
+				<a href="" class="search_btn closed"></a>
+				<input type="text" placeholder="Search...">
+				<a href="" class="close_search"></a>
+			</form>
+		</div>
+		<div class="menu-bar">
+			<div class="menu-bar-left">
+				<a href="{% url 'news:list' %}" class="menu-news">{{ SECTIONS.news.menu }}</a>
+				<a href="{% url 'careers:list' %}" class="menu-careers">{{ SECTIONS.careers.menu }}</a>
+				<a href="{% url 'scoops:list' %}" class="menu-scoops">{{ SECTIONS.scoops.menu }}</a>
+				<a href="{% url 'games:list' %}" class="menu-games">{{ SECTIONS.games.menu }}</a>
+			</div>
+			<div class="menu-bar-right">
+				<a href="{% url 'activities:list' %}" class="menu-activities">{{ SECTIONS.activities.menu }}</a>
+				<a href="{% url 'develop:soon_skills' %}" class="menu-skills">{{ SECTIONS.skills.menu }}</a>
+				<a href="{% url 'about' %}" class="menu-about">{{ SECTIONS.about.menu }}</a>
+			</div>
+		</div>
+		<div class="logo"><a href="/"><span class="logo-el"></span></a></div>
+		{% block slogan %}{% endblock %}
+	</div>
+	<nav id="menu-main" class="side-menu side-menu-vertical side-menu-left" aria-haspopup="true">
+		<div class="side-button"><div id="menu-main-button" class="button mainmenu"></div></div>
+		<div class="side-links">
+			<a href="{% url 'news:list' %}">{{ SECTIONS.news.menu }}</a>
+			<a href="{% url 'careers:list' %}">{{ SECTIONS.careers.menu }}</a>
+			<a href="{% url 'scoops:list' %}">{{ SECTIONS.scoops.menu }}</a>
+			<a href="{% url 'games:list' %}">{{ SECTIONS.games.menu }}</a>
+			<a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
+			<a href="{% url 'develop:soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
+			<a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
+		</div>
+	</nav>
+	<nav id="menu-language" aria-haspopup="true" class="side-menu side-menu-right side-menu-vertical">
+		<div class="side-button"><div id="menu-language-button" class="button language"></div></div>
+		<div class="side-links">{% for lang_code, title in LANGUAGES %}{% get_language_info for lang_code as lang %}{% get_translated_url lang_code as tr_url %}{% if tr_url %}
+			<a{% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %} href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}{% endfor %}
+		</div>
+	</nav>
 
 {% block content %}{% endblock %}
 
+	<div id="footer" class="">
+		<div class="social-background">
+		</div>
 
-    <div id="footer" class="">
-        <div class="social-background">
-        </div>
-
-        <div class="copyright">
-            <div class="copyright-content">
-                <div class="eu-flag"><img src="{% static 'img/eu.svg' %}"></div>
-                <p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}
-                <br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="color: #fff;">Creative Commons Attribution 4.0 International License</a>.</p>
-
-            </div>
-        </div>
-        <div class="social">
-            <div class="buttons">
-                <a href="https://www.facebook.com/spaceawe" target="_blank"><img src="{% static 'img/icons/social/icon_sm_facebook_w.svg' %}"></a>
-                <a href="https://twitter.com/space_awe" target="_blank"><img src="{% static 'img/icons/social/icon_sm_twitter_w.svg' %}"></a>
-                <a href="http://instagram.com/space_awe/" target="_blank"><img src="{% static 'img/icons/social/icon_sm_instagram_w.svg' %}"></a>
-                <a href="http://www.youtube.com/channel/UCffM5OiBW2VjvkH5695rOGw" target="_blank"><img src="{% static 'img/icons/social/icon_sm_youtube_w.svg' %}"></a>
-                <a href="mailto:euspaceawe@eun.org"><img src="{% static 'img/icons/social/icon_sm_mail_w.svg' %}"></a>
-            </div>
-            <a href="#top" class="to_top"></a>
-        </div>
-    </div>
-
-
-
+		<div class="copyright">
+			<div class="copyright-content">
+				<div class="eu-flag"><img src="{% static 'img/eu.svg' %}"></div>
+				<p>{% trans "This website was produced by funding from the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}
+				<br />This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" style="color: #fff;">Creative Commons Attribution 4.0 International License</a>.</p>
+			</div>
+		</div>
+		<div class="social">
+			<div class="buttons">
+				<a href="https://www.facebook.com/spaceawe" target="_blank"><img src="{% static 'img/icons/social/icon_sm_facebook_w.svg' %}"></a>
+				<a href="https://twitter.com/space_awe" target="_blank"><img src="{% static 'img/icons/social/icon_sm_twitter_w.svg' %}"></a>
+				<a href="http://instagram.com/space_awe/" target="_blank"><img src="{% static 'img/icons/social/icon_sm_instagram_w.svg' %}"></a>
+				<a href="http://www.youtube.com/channel/UCffM5OiBW2VjvkH5695rOGw" target="_blank"><img src="{% static 'img/icons/social/icon_sm_youtube_w.svg' %}"></a>
+				<a href="mailto:euspaceawe@eun.org"><img src="{% static 'img/icons/social/icon_sm_mail_w.svg' %}"></a>
+			</div>
+			<a href="#top" class="to_top"></a>
+		</div>
+	</div>
 {% javascript 'scripts' %}
 {% block extra_js %}{% endblock %}
-
-    </body>
+</body>
 </html>

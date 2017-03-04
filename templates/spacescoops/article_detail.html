@@ -52,12 +52,12 @@
                 </div> -->
                 {% endif %}{% endif %}
 
-                {% if not object.is_translation_fallback %}
+                <!--% if not object.is_translation_fallback %-->
                 <div class="download">
 	                <div class="caption">{% trans "download" %}</div>
                     <a href="?format=pdf" target="download"><img class="button" src="{% static 'img/icon_download.svg' %}" /></a>
                 </div>
-                {% endif %}
+                <!--% endif %-->
                 <div class="social-sharing">
                     <img id="facebook" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_facebook_b.svg' %}" />
                 	<img id="twitter" class="button" data-url="{{ SITE_URL }}{% url 'scoops:detail' code=object.code slug=object.slug %}" src="{% static 'img/icons/social/icon_sm_twitter_b.svg' %}" />
@@ -99,7 +99,7 @@
 										<div class="date">{{ object.release_date|date:"DATE_FORMAT" }}</div>
 										<div class="title">{{ object.title }}</div>
 										<div class="theme">{% include 'categories/categories_icons.html' %}</div>
-										<div class="bottom">
+										<div class="bottom show-on-focus">
 											<div class="expand"><img src="{% static 'img/icon_plus.svg' %}"></div>
 										</div>
 									</div>

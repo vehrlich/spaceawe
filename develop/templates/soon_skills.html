@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load staticfiles thumbnail i18n %}
+
+{% block extra_body_class %}section-skills{% endblock %}
+
+{% block slogan %}
+<div class="slogan subtitle">{{ SECTIONS.skills.title }}</div>
+<div class="slogan">{{ SECTIONS.skills.subtitle }}</div>
+{% endblock %}
+
+{% block extra_js %}
+  {{ block.super }}
+<script src="{% static 'js/jQueryRotate.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+<div id="cover">
+  <div class="feature-container">
+    <div class="fake-padding" style="height: 215px;"></div>
+    <div class="feature" style="background-image: url(/static/img/line_pattern_04.png), url(/static/img/cover/develop.jpg);">
+      <div class="title-container">
+	<div class="title-subcontainer">
+	  <div class="title">
+	      Space science is a unique combination of science, technology, history, and culture and can be used to teach many different topics in science, technology, but also non-science subjects. The excitement of space missions and discoveries are excellent tools to capture the imagination of young people and raise their interest in science and technology.
+	  </div>
+	</div>
+      </div>
+    </div>
+	<nav class="arrow-pagedown-container"><a class="arrow-pagedown" href="#main"><img src="/static/img/buttons/arrow_down_white.svg"></a></nav>
+  </div>
+</div>
+
+<div class="page2 pure-g">
+	<div id="main" class="anchor"></div>
+  <div class="pure-u-1 text-content smartembed">
+    <p>
+      The <b>Space Awareness MOOC</b> series is free and open to anyone. It especially targets <b>primary and secondary school teachers and other</b> education or science communication professionals interested in <b>developing their skills and use space for education</b>. The MOOC series is available in English.
+    </p>
+    <p>
+      Following the <b>MOOCs</b>, you learn how to use space as an inspirational tool for education, receive tips about innovative ways to educate, and find support in using the Space Awareness education resources the most efficient way.
+    </p>
+    <p>
+      <b>Space Awareness MOOCs</b> have been developed by the Space Awareness partners in close collaboration with voluntary teachers.
+    </p>
+    <p>
+      <center><a href="http://www.europeanschoolnetacademy.eu/web/navigation-through-the-ages/">Register now for the Navigation through the Ages MOOC</a></center>
+    </p>
+  </div>
+</div>
+
+
+{% for mooc in moocs %}
+<div class="content-page pure-g mooc" style="letter-spacing: 0px;" id="mooc-{{ forloop.counter }}">
+	<table width="100%" align="center">
+		<tr bgcolor="#52C36F" line-height="50" style="height: 30px;">
+			<th colspan="2"><strong>MOOC {{ forloop.counter }}</strong>: {{ mooc.info }}</th>
+		</tr>
+		{% for module in mooc.module_set.all reversed %}
+		<tr>
+			<td>{% if module.info_parts|length == 2 %}<strong>{{ module.info_parts.0 }}:</strong> {{ module.info_parts.1 }}{% else %}{{ module.info }}{% endif %}</td>
+			<td><strong>{{ module.duration }}</strong></td>
+		</tr>
+		{% endfor %}
+		<tr class="mooc-extra">
+			<td class="mooc{{ forloop.counter }}" colspan=2>
+				<div id="mooc-{{ forloop.counter }}-more"></div>
+				<div class="mooc-more">
+					<h3>Overview</h3>
+
+					<h4>{% trans "Introduction" %}</h4>
+					{{ mooc.introduction }}
+
+					<h4>{% trans "What you will learn" %}</h4>
+					{{ mooc.what_you_will_learn }}
+
+					<h4>{% trans "What skills will you need" %}</h4>
+					{{ mooc.what_skills_will_you_need }}<br>
+
+					<h4>{% trans "Duration of the course" %}</h4>
+					{{ mooc.duration_of_the_course }}<br>
+				</div>
+			</td>
+		</tr>
+		<tr bgcolor="#f3f3f3">
+			<td class="hidden_mooc{{ forloop.counter }}" colspan=2 style="display: none;" align="center">
+				(facebook) (twitter)
+			</td>
+		</tr><!--
+		<tr>
+			<td colspan=2 align="center" style="padding-top: 7px;">
+				<img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}" onclick="$('.mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);">
+			</td>
+		</tr>-->
+	</table>
+	<div class="extra">
+		<span class="start-date">{% trans "STARTING DATE" %}: <strong>{{ mooc.starting_date }}</strong></span>
+		<br /><a href="#mooc-{{ forloop.counter }}-more" onclick="$('.mooc{{ forloop.counter }}').toggle('slow');$(this).hide();" class="call-to-action">{% trans "see more" %}</a> <a rel="page" href="{% if mooc.enroll_url %}{{ mooc.enroll_url }}{% else %}#{% endif %}" class="call-to-action">{% trans "Enroll" %}</a>
+	</div>
+
+</div>
+
+{% endfor %}
+
+{% if support_materials %}
+<div class="thumbnailed-list section-careers pure-g content-page">
+	<div class="wrapper_block_previews">
+        <h2 class="title">{% trans "Didactic courses" %}</h2>
+		{% if disclaimer_paragraphs %}
+		<div class="row text-content padded padded-bottom">
+			{% for paragraph in disclaimer_paragraphs %}
+				{{ paragraph }}
+			{% endfor %}
+		</div>
+		{% endif %}
+		<div class="row">
+			{% include 'support_material/support_material_list_page.html' %}
+	    </div>
+	</div>
+</div>
+{% endif %}
+{% endblock %}

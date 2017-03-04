@@ -77,11 +77,15 @@ class Highlight(models.Model):
     from spacescoops.models import Article as Scoop
     from activities.models import Activity
     from games.models import Game
+    from careers.models import Career
+    from careers.models import Interview
 
     news = models.ForeignKey(Article, blank=True, null=True)
     scoop = models.ForeignKey(Scoop, blank=True, null=True)
     game = models.ForeignKey(Game, blank=True, null=True)
     activity = models.ForeignKey(Activity, blank=True, null=True)
+    career = models.ForeignKey(Career, blank=True, null=True)
+    interview = models.ForeignKey(Interview, blank=True, null=True)
 
     @property
     def item(self):
@@ -94,6 +98,10 @@ class Highlight(models.Model):
             result = self.game
         elif self.activity:
             result = self.activity
+        elif self.career:
+            result = self.career
+        elif self.interview:
+            result = self.interview
         return result
 
     # @property
@@ -106,7 +114,7 @@ class Highlight(models.Model):
 
     def __str__(self):
         if self.item:
-            result = self.item._meta.verbose_name + ': ' + self.item.title
+            result = ":".join([self.item._meta.verbose_name, self.item.title])
         else:
             result = 'Undefined highlight'
         return result

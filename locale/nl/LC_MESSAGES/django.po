@@ -1,296 +1,733 @@
 msgid ""
 msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-13 16:22+0100\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-
-msgid "News"
-msgstr "Nieuws"
-
-msgid "Careers"
-msgstr "Carrières"
-
-msgid "Discover space careers"
-msgstr "Ontdek RuimteCarrières"
-
-msgid "Aiming for the stars? See how you can contribute to space science and exploration."
-msgstr "Richten op de sterren? Zie hoe jij kunt bijdragen aan ruimtewetenschap en -verkenning."
-
-msgid "Read"
-msgstr "Lees"
-
-msgid "Read Space Scoops"
-msgstr "Lees Space Scoops"
-
-msgid "News from across the Universe"
-msgstr "Nieuws uit het heelal"
-
-msgid "The latest discoveries about the Universe."
-msgstr "De nieuwste ontdekkingen over het heelal."
-
-msgid "Participate"
-msgstr "Doe mee"
-
-msgid "Play & participate"
-msgstr "Speel en Doe mee"
-
-msgid "Apps and projects for space exploration"
-msgstr "Apps en projecten voor ruimteverkenning"
-
-msgid "Some great apps and projects to take part in real research programmes."
-msgstr "Enkele geweldige apps en projecten om mee te doen aan echte onderzoeksprogramma’s."
-
-msgid "Educate"
-msgstr "Onderwijzen"
-
-msgid "Educate & inspire"
-msgstr "Onderwijzen en inspireren"
-
-msgid "Peer-reviewed educational activities"
-msgstr "COLLEGIAAL GETOETSTE EDUCATIEVE ACTIVITEITEN"
-
-msgid "Some of the best resources for educators about space."
-msgstr "Enkele van de beste middelen voor educatoren over de ruimte."
-
-msgid "Develop"
-msgstr "Ontwikkel"
-
-msgid "Develop teaching skills"
-msgstr "Ontwikkel onderwijsvaardigheden"
-
-msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
-msgstr "Richtlijnen voor het beste gebruik van Space Awareness bij 8- tot 18-jarigen."
-
-msgid "Know us"
-msgstr "Over ons"
-
-msgid "Get to know us"
-msgstr "Leer meer over ons"
-
-msgid "Who is behind Space Awareness? Is there a contact in my country?"
-msgstr "Wie zit er achter Space Awareness? Is er in mijn land een contactpersoon?"
-
-msgid "Space Exploration"
-msgstr "Ruimteverkenning"
-
-msgid "Our wonderful Universe"
-msgstr "Ons schitterende heelal"
-
-msgid "Space sciences and exploration"
-msgstr "Ruimtewetenschappen en -verkenning"
-
-msgid "Get inspired by the beauty and vastness of the Universe"
-msgstr "RAAK GEÏNSPIREERD DOOR DE SCHOONHEID EN ENORMITEIT VAN HET HEELAL"
-
-msgid "Our fragile planet"
-msgstr "Onze kwetsbare planeet"
-
-msgid "Earth from above"
-msgstr "De aarde van boven"
-
-msgid "The Earth, our unique and fragile home"
-msgstr "DE AARDE, ONS UNIEKE EN KWETSBARE THUIS"
-
-msgid "Navigation"
-msgstr "Navigatie"
-
-msgid "Navigation through the ages"
-msgstr "Navigatie door de eeuwen heen"
-
-msgid "Global discovery & mobility"
-msgstr "Wereldwijde ontdekking en mobiliteit"
-
-msgid "Trace the history of navigation from the first explorers to GPS"
-msgstr "VOLG DE GESCHIEDENIS VAN NAVIGATIE VAN DE EERSTE ONTDEKKINGSREIZIGERS TOT GPS"
-
-msgid "Islamic heritage"
-msgstr "Islamitisch erfgoed"
-
-msgid "The journey of ideas"
-msgstr "De reis van ideeën"
-
-msgid "Building a bridge between the Islamic world and Europe"
-msgstr "EEN BRUG BOUWEN TUSSEN DE ISLAMITISCHE WERELD EN EUROPA"
-
-msgid "language"
-msgstr "Taal"
-
-msgid "download"
-msgstr "Downloaden"
-
-msgid "website"
-msgstr "Website"
-
-msgid "Citizen Science"
-msgstr "Burgerwetenschap"
-
-msgid "Fun Learning"
-msgstr "Leuk leren"
-
-msgid "Game"
-msgstr "Game"
-
-msgid "Software"
-msgstr "Software"
-
-msgid "Other"
-msgstr "Anders"
-
-msgid "Facebook"
-msgstr "Facebook"
-
-msgid "Website"
-msgstr "Website"
-
-msgid "App"
-msgstr "App"
-
-msgid "Data Collection"
-msgstr "Dataverzameling"
-
-msgid "go to the activity"
-msgstr "Ga naar de activiteit"
-
-msgid "difficulty level"
-msgstr "Moeilijkheid"
-
-msgid "fun level"
-msgstr "Leukheid"
-
-msgid "type"
-msgstr "Type activiteit"
-
-msgid "languages"
-msgstr "Taal"
-
-msgid "platform"
-msgstr "Platform"
-
-msgid "Brief Description"
-msgstr "Korte beschrijving"
-
-msgid "Goals"
-msgstr "Doelen"
-
-msgid "Learning Objectives"
-msgstr "Leerdoelen"
-
-msgid "Evaluation"
-msgstr "Evaluatie"
-
-msgid "Materials"
-msgstr "Materiaal"
-
-msgid "Background Information"
-msgstr "Achtergrondinformatie"
-
-msgid "Full Activity Description"
-msgstr "Volledige beschrijving van de activiteit"
-
-msgid "Curriculum"
-msgstr "Curriculum"
-
-msgid "Additional Information"
-msgstr "Aanvullende informatie"
-
-msgid "Conclusion"
-msgstr "Conclusie"
-
-msgid "Attachments"
-msgstr "Bijlagen"
-
-msgid "Curriculum topic"
-msgstr "Curriculumonderwerp"
-
-msgid "Big idea of science"
-msgstr "Grote idee van wetenschap"
-
-msgid "Keywords"
-msgstr "Trefwoorden"
-
-msgid "Age range"
-msgstr "Leeftijdsgroep"
-
-msgid "Education level"
-msgstr "Onderwijsniveau"
-
-msgid "Time"
-msgstr "Tijd"
-
-msgid "Group size"
-msgstr "Groepsgrootte"
-
-msgid "Supervised for safety"
-msgstr "Toezicht voor de veiligheid"
-
-msgid "Cost"
-msgstr "Kosten"
-
-msgid "Location"
-msgstr "Locatie"
-
-msgid "Core skills"
-msgstr "Kernvaardigheden"
-
-msgid "Type of learning activity"
-msgstr "Type leeractiviteit"
-
-msgid "Author"
-msgstr "Auteur van de activiteit"
-
-msgid "Link to source activity"
-msgstr "Link naar de bronactiviteit"
-
-msgid "Repositories"
-msgstr "Verzamelplaatsen"
-
-msgid "Contact us"
-msgstr "Neem contact met ons op"
-
-msgid "National contacts"
-msgstr "Nationale contactpersonen"
-
-msgid "Project partners"
-msgstr "Projectpartners"
-
-msgid "The Space Awareness team"
-msgstr "Het Space Awareness-team"
-
-msgid "Space Awareness is developed by"
-msgstr "Space Awareness wordt ontwikkeld door"
-
-msgid "Space Awareness is developed in collaboration with"
-msgstr "Space Awareness wordt ontwikkeld in samenwerking met"
-
-msgid "This website was funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653"
-msgstr "Deze website is ontwikkeld met financiering uit het Horizon 2020-programma van de Europese Commissie in het kader van subsidieovereenkomst 638653"
-
-msgid "Load more"
-msgstr "Meer laden"
-
-msgid "Related resources"
-msgstr "Gerelateerde middelen"
-
+#: careers/templates/careers.html:37 games/templates/games/game_list.html:47
+#: templates/activities/activity_list.html:47
+#: templates/spacescoops/article_list.html:45
 msgid "Sort by category"
 msgstr "ZOEKEN OP CATEGORIE"
 
+#: careers/templates/careers.html:39 games/templates/games/game_list.html:49
+#: templates/activities/activity_list.html:49
+#: templates/spacescoops/article_list.html:47
 msgid "all"
 msgstr "Alle"
 
+#: careers/templates/careers.html:48 careers/templates/careers.html.py:87
+msgid "Interviews"
+msgstr "interviews"
+
+#: careers/templates/careers.html:49 careers/templates/careers.html.py:88
+msgid "What is it like to have a space-related job?"
+msgstr ""
+"Hoe is het om een beroep te hebben in de ruimtevaart of sterrenkunde? or Hoe "
+"is het om een beroep te hebben dat met de ruimte te maken heeft?"
+
+#: careers/templates/careers.html:55 careers/templates/careers.html.py:103
+#: spaceawe/models.py:21
+msgid "Careers"
+msgstr "Carrières"
+
+#: careers/templates/careers.html:56 careers/templates/careers.html.py:104
+msgid "It is not all about becoming an astronaut!"
+msgstr "Er is meer mogelijk dan astronaut worden"
+
+#: careers/templates/careers.html:62 careers/templates/careers.html.py:115
+msgid "Webinars"
+msgstr ""
+
+#: careers/templates/careers.html:63 careers/templates/careers.html.py:116
+msgid "Watch live talks about space sciences"
+msgstr "Bekijk video's over ruimtewetenchappen"
+
+#: careers/templates/careers.html:69
+msgid "Booklets & posters"
+msgstr ""
+
+#: careers/templates/careers.html:70
+msgid "Print, share, and download materials on space careers"
+msgstr ""
+
+#: careers/templates/careers/detail.html:49
+msgid "Field"
+msgstr ""
+
+#: careers/templates/careers/detail.html:53
+msgid "Type"
+msgstr ""
+
+#: careers/templates/careers/detail.html:57
+msgid "Level of study"
+msgstr ""
+
+#: careers/templates/careers/detail.html:61
+msgid "Interview"
+msgstr ""
+
+#: careers/templates/careers/detail.html:65
+#, fuzzy
+#| msgid "download"
+msgid "Download"
+msgstr "Downloaden"
+
+#: careers/templates/careers/detail.html:79
+#: careers/templates/interviews/detail.html:115
+#: careers/templates/webinars/detail.html:84
+#: templates/activities/activity_detail.html:184
+msgid "Related resources"
+msgstr "Gerelateerde middelen"
+
+#: develop/templates/soon_skills.html:72
+#, fuzzy
+#| msgid "Location"
+msgid "Introduction"
+msgstr "Locatie"
+
+#: develop/templates/soon_skills.html:75
+msgid "What you will learn"
+msgstr ""
+
+#: develop/templates/soon_skills.html:78
+msgid "What skills will you need"
+msgstr ""
+
+#: develop/templates/soon_skills.html:81
+msgid "Duration of the course"
+msgstr ""
+
+#: develop/templates/soon_skills.html:98
+msgid "STARTING DATE"
+msgstr ""
+
+#: develop/templates/soon_skills.html:99
+#: spaceawe/templates/spaceawe/about.html:50
+msgid "see more"
+msgstr ""
+
+#: develop/templates/soon_skills.html:99
+msgid "Enroll"
+msgstr ""
+
+#: develop/templates/soon_skills.html:109
+msgid "Didactic courses"
+msgstr ""
+
+#: games/models.py:27
+msgid "Citizen Science"
+msgstr "Burgerwetenschap"
+
+#: games/models.py:28
+msgid "Fun Learning"
+msgstr "Leuk leren"
+
+#: games/models.py:29
+msgid "Game"
+msgstr "Game"
+
+#: games/models.py:30 games/models.py:36
+msgid "Software"
+msgstr "Software"
+
+#: games/models.py:31 games/models.py:39
+msgid "Other"
+msgstr "Anders"
+
+#: games/models.py:34
+msgid "Facebook"
+msgstr "Facebook"
+
+#: games/models.py:35
+msgid "Website"
+msgstr "Website"
+
+#: games/models.py:37
+msgid "App"
+msgstr "App"
+
+#: games/models.py:38
+msgid "Data Collection"
+msgstr "Dataverzameling"
+
+#: games/templates/games/game_detail.html:42
+msgid "go to the activity"
+msgstr "Ga naar de activiteit"
+
+#: games/templates/games/game_detail.html:46
+msgid "difficulty level"
+msgstr "Moeilijkheid"
+
+#: games/templates/games/game_detail.html:50
+msgid "fun level"
+msgstr "Leukheid"
+
+#: games/templates/games/game_detail.html:54
+msgid "type"
+msgstr "Type activiteit"
+
+#: games/templates/games/game_detail.html:58
+msgid "languages"
+msgstr "Taal"
+
+#: games/templates/games/game_detail.html:62
+msgid "platform"
+msgstr "Platform"
+
+#: games/templates/games/game_detail.html:70
+#, fuzzy
+#| msgid "Related resources"
+msgid "related resources"
+msgstr "Gerelateerde middelen"
+
+#: news/templates/news/article_detail.html:39
+msgid "organiser"
+msgstr ""
+
+#: news/templates/news/article_detail.html:43
+msgid "language"
+msgstr "Taal"
+
+#: news/templates/news/article_detail.html:47
+#: templates/activities/activity_detail.html:92
+#: templates/spacescoops/article_detail.html:57
+msgid "download"
+msgstr "Downloaden"
+
+#: news/templates/news/article_detail.html:53
+msgid "website"
+msgstr "Website"
+
+#: search/templates/search.html:16
+msgid "Search results"
+msgstr ""
+
+#: search/templates/search.html:56 search/templates/search.html.py:59
+msgid "Search"
+msgstr ""
+
+#: search/templates/search.html:68 searchapp/templates/search.html:57
+#, fuzzy
+#| msgid "all"
+msgid "All"
+msgstr "Alle"
+
+#: search/templates/search.html:102 search/templates/search.html.py:120
+#: search/templates/search.html:138 search/templates/search.html.py:156
+#: searchapp/templates/search.html:91 searchapp/templates/search.html.py:109
+#: searchapp/templates/search.html:127 searchapp/templates/search.html:145
+#: templates/activities/activity_list.html:58
+msgid "Pre-school"
+msgstr ""
+
+#: search/templates/search.html:103 search/templates/search.html.py:121
+#: search/templates/search.html:139 search/templates/search.html.py:157
+#: searchapp/templates/search.html:92 searchapp/templates/search.html.py:110
+#: searchapp/templates/search.html:128 searchapp/templates/search.html:146
+#: templates/activities/activity_list.html:59
+msgid "Primary School"
+msgstr ""
+
+#: search/templates/search.html:104 search/templates/search.html.py:122
+#: search/templates/search.html:140 search/templates/search.html.py:158
+#: searchapp/templates/search.html:93 searchapp/templates/search.html.py:111
+#: searchapp/templates/search.html:129 searchapp/templates/search.html:147
+#: templates/activities/activity_list.html:60
+msgid "Middle School"
+msgstr ""
+
+#: search/templates/search.html:105 search/templates/search.html.py:123
+#: search/templates/search.html:141 search/templates/search.html.py:159
+#: searchapp/templates/search.html:94 searchapp/templates/search.html.py:112
+#: searchapp/templates/search.html:130 searchapp/templates/search.html:148
+#: templates/activities/activity_list.html:61
+msgid "Secondary School"
+msgstr ""
+
+#: search/templates/search.html:107 search/templates/search.html.py:125
+#: search/templates/search.html:143 search/templates/search.html.py:161
+#: searchapp/templates/search.html:96 searchapp/templates/search.html.py:114
+#: searchapp/templates/search.html:132 searchapp/templates/search.html:150
+#: templates/activities/activity_list.html:63
+msgid "Informal"
+msgstr ""
+
+#: spaceawe/models.py:15 spaceawe/models.py:16
+msgid "News"
+msgstr "Nieuws"
+
+#: spaceawe/models.py:17
+msgid "Latest updates about Space Awareness"
+msgstr "Laatste nieuws over Space Awareness"
+
+#: spaceawe/models.py:22
+msgid "Discover space careers"
+msgstr "Ontdek RuimteCarrières"
+
+#: spaceawe/models.py:23
+msgid "Become a space explorer"
+msgstr "Word een ruimteonderzoeker"
+
+#: spaceawe/models.py:24
+msgid ""
+"Aiming for the stars? See how you can contribute to space science and "
+"exploration."
+msgstr ""
+"Richten op de sterren? Zie hoe jij kunt bijdragen aan ruimtewetenschap en -"
+"verkenning."
+
+#: spaceawe/models.py:27
+msgid "Read"
+msgstr "Lees"
+
+#: spaceawe/models.py:28
+msgid "Read Space Scoops"
+msgstr "Lees Space Scoops"
+
+#: spaceawe/models.py:29
+msgid "News from across the Universe"
+msgstr "Nieuws uit het heelal"
+
+#: spaceawe/models.py:30
+msgid "The latest discoveries about the Universe."
+msgstr "De nieuwste ontdekkingen over het heelal."
+
+#: spaceawe/models.py:33
+msgid "Participate"
+msgstr "Doe mee"
+
+#: spaceawe/models.py:34
+msgid "Play & participate"
+msgstr "Speel en Doe mee"
+
+#: spaceawe/models.py:35
+msgid "Apps and projects for space exploration"
+msgstr "Apps en projecten voor ruimteverkenning"
+
+#: spaceawe/models.py:36
+msgid "Some great apps and projects to take part in real research programmes."
+msgstr ""
+"Enkele geweldige apps en projecten om mee te doen aan echte "
+"onderzoeksprogramma’s."
+
+#: spaceawe/models.py:39
+msgid "Educate"
+msgstr "Onderwijzen"
+
+#: spaceawe/models.py:40
+msgid "Educate & inspire"
+msgstr "Onderwijzen en inspireren"
+
+#: spaceawe/models.py:41
+msgid "Peer-reviewed educational activities"
+msgstr "COLLEGIAAL GETOETSTE EDUCATIEVE ACTIVITEITEN"
+
+#: spaceawe/models.py:42
+msgid "Some of the best resources for educators about space."
+msgstr "Enkele van de beste middelen voor educatoren over de ruimte."
+
+#: spaceawe/models.py:45
+msgid "Develop"
+msgstr "Ontwikkel"
+
+#: spaceawe/models.py:46
+msgid "Develop teaching skills"
+msgstr "Ontwikkel onderwijsvaardigheden"
+
+#: spaceawe/models.py:47
+msgid "Bringing space to education"
+msgstr "Breng de ruimte in het onderwijs"
+
+#: spaceawe/models.py:48
+msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
+msgstr ""
+"Richtlijnen voor het beste gebruik van Space Awareness bij 8- tot 18-jarigen."
+
+#: spaceawe/models.py:51
+msgid "Know us"
+msgstr "Over ons"
+
+#: spaceawe/models.py:52
+msgid "Get to know us"
+msgstr "Leer meer over ons"
+
+#: spaceawe/models.py:53
+msgid "Vision and team behind Space Awareness"
+msgstr "Visie en team Space Awareness"
+
+#: spaceawe/models.py:54
+msgid "Who is behind Space Awareness? Is there a contact in my country?"
+msgstr ""
+"Wie zit er achter Space Awareness? Is er in mijn land een contactpersoon?"
+
+#: spaceawe/models.py:60
+msgid "Space Exploration"
+msgstr "Ruimteverkenning"
+
+#: spaceawe/models.py:61
+#, fuzzy
+#| msgid "Our wonderful Universe"
+msgid "Our Wonderful Universe"
+msgstr "Ons schitterende heelal"
+
+#: spaceawe/models.py:62
+msgid "Space sciences and exploration"
+msgstr "Ruimtewetenschappen en -verkenning"
+
+#: spaceawe/models.py:63
+msgid "Get inspired by the beauty and vastness of the Universe"
+msgstr "RAAK GEÏNSPIREERD DOOR DE SCHOONHEID EN ENORMITEIT VAN HET HEELAL"
+
+#: spaceawe/models.py:66
+msgid "Earth Observation"
+msgstr ""
+
+#: spaceawe/models.py:67
+#, fuzzy
+#| msgid "Our fragile planet"
+msgid "Our Fragile planet"
+msgstr "Onze kwetsbare planeet"
+
+#: spaceawe/models.py:68
+msgid "Earth from above"
+msgstr "De aarde van boven"
+
+#: spaceawe/models.py:69
+msgid "The Earth, our unique and fragile home"
+msgstr "DE AARDE, ONS UNIEKE EN KWETSBARE THUIS"
+
+#: spaceawe/models.py:72
+msgid "Navigation"
+msgstr "Navigatie"
+
+#: spaceawe/models.py:73
+#, fuzzy
+#| msgid "Navigation through the ages"
+msgid "Navigation Through the Ages"
+msgstr "Navigatie door de eeuwen heen"
+
+#: spaceawe/models.py:74
+msgid "Global discovery & mobility"
+msgstr "Wereldwijde ontdekking en mobiliteit"
+
+#: spaceawe/models.py:75
+msgid "Trace the history of navigation from the first explorers to GPS"
+msgstr ""
+"VOLG DE GESCHIEDENIS VAN NAVIGATIE VAN DE EERSTE ONTDEKKINGSREIZIGERS TOT GPS"
+
+#: spaceawe/models.py:78 spaceawe/models.py:80
+msgid "Islamic heritage"
+msgstr "Islamitisch erfgoed"
+
+#: spaceawe/models.py:79
+#, fuzzy
+#| msgid "The journey of ideas"
+msgid "The Journey of Ideas"
+msgstr "De reis van ideeën"
+
+#: spaceawe/models.py:81
+msgid "Building a bridge between the Islamic world and Europe"
+msgstr "EEN BRUG BOUWEN TUSSEN DE ISLAMITISCHE WERELD EN EUROPA"
+
+#: spaceawe/templates/spaceawe/about.html:192
+msgid "Project partners"
+msgstr "Projectpartners"
+
+#: spaceawe/templates/spaceawe/about.html:194
+msgid "National contacts"
+msgstr "Nationale contactpersonen"
+
+#: spaceawe/templates/spaceawe/about.html:202
+msgid "Contact us"
+msgstr "Neem contact met ons op"
+
+#: spaceawe/templates/spaceawe/about.html:209
+msgid "The Space Awareness team"
+msgstr "Het Space Awareness-team"
+
+#: spaceawe/templates/spaceawe/about.html:210
+msgid "Space Awareness is developed by"
+msgstr "Space Awareness wordt ontwikkeld door"
+
+#: spaceawe/templates/spaceawe/about.html:223
+msgid "Space Awareness is developed in collaboration with"
+msgstr "Space Awareness wordt ontwikkeld in samenwerking met"
+
+#: spaceawe/templates/spaceawe/categories.html:48
+msgid "Related content"
+msgstr "Gerelateerde content"
+
+#: spaceawe/templates/spaceawe/categories.html:66
+#: spaceawe/templates/spaceawe/categories.html:87
+#: spaceawe/templates/spaceawe/categories.html:108
+#: templates/el_pagination/show_more.html:5
+msgid "Load more"
+msgstr "Meer laden"
+
+#: spaceawe/templates/spaceawe/home.html:7 templates/base.html:28
 msgid "Inspiring a new generation of space explorers"
 msgstr "Een nieuwe generatie ruimteverkenners inspireren"
 
+#: spaceawe/templates/spaceawe/home.html:88
 msgid "Subscribe to our newsletter"
 msgstr "Schrijf je in voor onze nieuwsbrief"
 
+#: spaceawe/templates/spaceawe/home.html:89
 msgid "and stay updated about new resources and events"
 msgstr "en blijf op de hoogte van nieuwe middelen en evenementen"
 
+#: spaceawe/templates/spaceawe/home.html:131
+msgid "Subscribe"
+msgstr "Registreren"
+
+#: spaceawe/templates/spaceawe/soon.html:17
 msgid "This section is coming soon!"
 msgstr "Dit onderdeel is binnenkort beschikbaar!"
 
-msgid "Be among the first to be notified by subscribing to the Space Awareness newsletter on the home page"
-msgstr "Word als een van de eersten op de hoogte gesteld van de update door je op de homepage in te schrijven voor de nieuwsbrief van Space Awareness!"
+#: spaceawe/templates/spaceawe/soon.html:18
+msgid ""
+"Be among the first to be notified by subscribing to the Space Awareness "
+"newsletter on the home page"
+msgstr ""
+"Word als een van de eersten op de hoogte gesteld van de update door je op de "
+"homepage in te schrijven voor de nieuwsbrief van Space Awareness!"
 
-msgid "Related content"
-msgstr "Gerelateerde content"
+#: templates/activities/activity_content_print_pdf_weasy.html:17
+#: templates/activities/activity_detail.html:112
+#: templates/activities/activity_detail_print.html:26
+msgid "Curriculum topic"
+msgstr "Curriculumonderwerp"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:21
+#: templates/activities/activity_detail.html:116
+#: templates/activities/activity_detail_print.html:30
+msgid "Big idea of science"
+msgstr "Grote idee van wetenschap"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:25
+#: templates/activities/activity_detail.html:120
+#: templates/activities/activity_detail_print.html:34
+msgid "Keywords"
+msgstr "Trefwoorden"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:29
+#: templates/activities/activity_detail.html:124
+#: templates/activities/activity_detail_print.html:38
+msgid "Age range"
+msgstr "Leeftijdsgroep"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:35
+#: templates/activities/activity_detail.html:128
+#: templates/activities/activity_detail_print.html:44
+msgid "Education level"
+msgstr "Onderwijsniveau"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:39
+#: templates/activities/activity_detail.html:132
+#: templates/activities/activity_detail_print.html:48
+msgid "Time"
+msgstr "Tijd"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:43
+#: templates/activities/activity_detail.html:136
+#: templates/activities/activity_detail_print.html:52
+msgid "Group size"
+msgstr "Groepsgrootte"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:47
+#: templates/activities/activity_detail.html:140
+#: templates/activities/activity_detail_print.html:56
+msgid "Supervised for safety"
+msgstr "Toezicht voor de veiligheid"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:51
+#: templates/activities/activity_detail.html:144
+#: templates/activities/activity_detail_print.html:60
+msgid "Cost"
+msgstr "Kosten"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:57
+#: templates/activities/activity_detail.html:148
+#: templates/activities/activity_detail_print.html:66
+msgid "Location"
+msgstr "Locatie"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:61
+#: templates/activities/activity_detail.html:152
+#: templates/activities/activity_detail_print.html:70
+msgid "Core skills"
+msgstr "Kernvaardigheden"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:65
+#: templates/activities/activity_detail.html:156
+#: templates/activities/activity_detail_print.html:74
+msgid "Type of learning activity"
+msgstr "Type leeractiviteit"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:73
+#: templates/activities/activity_detail.html:35
+#: templates/activities/activity_detail_print.html:82
+msgid "Brief Description"
+msgstr "Korte beschrijving"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:75
+#: templates/activities/activity_detail.html:42
+#: templates/activities/activity_detail_print.html:84
+msgid "Goals"
+msgstr "Doelen"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:77
+#: templates/activities/activity_detail.html:46
+#: templates/activities/activity_detail_print.html:86
+msgid "Learning Objectives"
+msgstr "Leerdoelen"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:79
+#: templates/activities/activity_detail.html:50
+#: templates/activities/activity_detail_print.html:88
+msgid "Evaluation"
+msgstr "Evaluatie"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:81
+#: templates/activities/activity_detail.html:54
+#: templates/activities/activity_detail_print.html:90
+msgid "Materials"
+msgstr "Materiaal"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:83
+#: templates/activities/activity_detail.html:58
+#: templates/activities/activity_detail_print.html:92
+msgid "Background Information"
+msgstr "Achtergrondinformatie"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:85
+#: templates/activities/activity_detail.html:62
+#: templates/activities/activity_detail_print.html:94
+msgid "Full Activity Description"
+msgstr "Volledige beschrijving van de activiteit"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:87
+#: templates/activities/activity_detail.html:66
+#: templates/activities/activity_detail_print.html:96
+msgid "Curriculum"
+msgstr "Curriculum"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:98
+#: templates/activities/activity_detail.html:79
+#: templates/activities/activity_detail_print.html:107
+msgid "Additional Information"
+msgstr "Aanvullende informatie"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:101
+#: templates/activities/activity_detail.html:84
+#: templates/activities/activity_detail_print.html:110
+msgid "Conclusion"
+msgstr "Conclusie"
+
+#: templates/activities/activity_content_print_pdf_weasy.html:108
+#: templates/activities/activity_detail_print.html:117
+#, fuzzy
+#| msgid ""
+#| "This website was funded by the European Commission's Horizon 2020 "
+#| "Programme under grant agreement nº 638653"
+msgid ""
+"This resource was selected and revised by Space Awareness. Space Awareness "
+"is funded by the European Commission's Horizon 2020 Programme under grant "
+"agreement nº 638653"
+msgstr ""
+"Deze website is ontwikkeld met financiering uit het Horizon 2020-programma "
+"van de Europese Commissie in het kader van subsidieovereenkomst 638653"
+
+#: templates/activities/activity_detail.html:41
+#: templates/activities/activity_detail.html:45
+#: templates/activities/activity_detail.html:49
+#: templates/activities/activity_detail.html:53
+#: templates/activities/activity_detail.html:57
+#: templates/activities/activity_detail.html:61
+#: templates/activities/activity_detail.html:65
+#: templates/activities/activity_detail.html:78
+#, fuzzy
+#| msgid "Load more"
+msgid "Read more"
+msgstr "Lees Verder"
+
+#: templates/activities/activity_detail.html:41
+#: templates/activities/activity_detail.html:45
+#: templates/activities/activity_detail.html:49
+#: templates/activities/activity_detail.html:53
+#: templates/activities/activity_detail.html:57
+#: templates/activities/activity_detail.html:61
+#: templates/activities/activity_detail.html:65
+#: templates/activities/activity_detail.html:78
+#, fuzzy
+#| msgid "Read"
+msgid "Read less"
+msgstr "Lees Minder"
+
+#: templates/activities/activity_detail.html:101
+#, fuzzy
+#| msgid "Attachments"
+msgid "attachments"
+msgstr "Bijlagen"
+
+#: templates/activities/activity_detail.html:160
+msgid "Author"
+msgstr "Auteur van de activiteit"
+
+#: templates/activities/activity_detail.html:167
+msgid "Link to source activity"
+msgstr "Link naar de bronactiviteit"
+
+#: templates/activities/activity_detail.html:172
+msgid "Repositories"
+msgstr "Verzamelplaatsen"
+
+#: templates/activities/activity_detail_print.html:12
+#: templates/activities/activity_header_print_pdf_weasy.html:16
+msgid "Tested by teachers"
+msgstr ""
+
+#: templates/activities/activity_list.html:62
+msgid "University"
+msgstr ""
+
+#: templates/base.html:101
+#, fuzzy
+#| msgid ""
+#| "This website was funded by the European Commission's Horizon 2020 "
+#| "Programme under grant agreement nº 638653"
+msgid ""
+"This website was produced by funding from the European Commission's Horizon "
+"2020 Programme under grant agreement nº 638653"
+msgstr ""
+"Deze website is gemaakt met geld van het Horizon 2020 programma van de "
+"Europese Commissie onder subsidieovereenkomst nr 638653"
+
+#: templates/spacescoops/article_detail.html:32
+msgid "Click to see full image"
+msgstr "Klik voor het volledige beeld"
+
+#: templates/spacescoops/article_detail.html:37
+#: templates/spacescoops/article_detail_print.html:26
+msgid "Cool Fact!"
+msgstr ""
+
+#: templates/spacescoops/article_detail.html:66
+msgid "Go to"
+msgstr ""
+
+#: templates/spacescoops/article_detail.html:67
+msgid "This Space Scoop is based on a Press Release from"
+msgstr ""
+
+#: templates/spacescoops/article_detail.html:82
+msgid "more news"
+msgstr ""
+
+#: templates/spacescoops/article_detail_print.html:12
+#, fuzzy
+#| msgid "Read Space Scoops"
+msgid "Space Scoop"
+msgstr "Lees Space Scoops"

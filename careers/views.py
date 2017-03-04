@@ -8,8 +8,16 @@ from django.utils.timezone import datetime
 from spaceawe import misc
 from .models import Interview, Career, Webinar
 
+
+import logging
+
+logger = logging.getLogger('spaceawe')
+
 class CareersViewList(ViewUrlMixin, TemplateView):
     template_name = 'careers.html'
+    careers_portion_template_name = 'careers/career_list_page.html'
+    interviews_portion_template_name = 'interviews/interview_list_page.html'
+    webinars_portion_template_name = 'webinars/webinar_list_page.html'
     view_url_name = 'careers:list'
 
     def filter_category(self, queryset):
@@ -41,7 +49,14 @@ class CareersViewList(ViewUrlMixin, TemplateView):
 
     def get_template_names(self):
         if self.request.is_ajax():
-            return [self.template_name]
+            if self.request.GET.get('querystring_key') == 'carrers_page':
+                return [self.careers_portion_template_name]
+            if self.request.GET.get('querystring_key') == 'interviews_page':
+                return [self.interviews_portion_template_name]
+            if self.request.GET.get('querystring_key') == 'webinars_page':
+                return [self.webinars_portion_template_name]
+
+            #return [self.template_name]
         else:
             return super().get_template_names()
 
@@ -62,12 +77,17 @@ class CareerDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
     view_url_name = 'careers:career-detail'
     template_name = 'careers/detail.html'
 
+    def get_interviews_queryset(self, career_id):
+        queryset = Interview.objects.filter(career=career_id).exclude(published=False).exclude(release_date__gte=datetime.today())
+        return queryset
+
     def get_queryset(self):
         queryset = Career.objects.all()
         return queryset
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['interviews'] = self.get_interviews_queryset(context['object'].id)
         return context
 
 
@@ -81,6 +101,8 @@ class InterviewDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['random'] = misc.spaceawe_random_resources(self.object)
+        print('Test')
         return context
 
 class WebinarDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):

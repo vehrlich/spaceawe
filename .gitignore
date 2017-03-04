@@ -7,3 +7,4 @@ secrets.json
 *.sqlite3
 *.bac
 venv/
+.DS_Store
