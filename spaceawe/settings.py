@@ -428,7 +428,23 @@ PARLER_LANGUAGES = {
     }
 }
 
-ACTIVITY_DOWNLOAD_FILENAME_TEMPLATE = 'activity-%(code)s%(lang)s-%(slug)s.%(ext)s'
+ACTIVITY_DOWNLOADS = {
+    'model': 'activities.models.Activity',
+    'filename_tpl': 'activity-%(code)s%(lang)s-%(slug)s.%(ext)s',
+    'path': 'activities/download/',
+    'renderers': {
+        'pdf': 'spaceawe.renderers.activity.pdf',
+    }
+}
+
+SPACESCOOP_DOWNLOADS = {
+    'model': 'spacescoops.models.Article',
+    'filename_tpl': 'spacescoop-%(code)s%(lang)s-%(slug)s.%(ext)s',
+    'path': 'articles/download/',
+    'renderers': {
+        'pdf': 'spaceawe.renderers.spacescoop.pdf',
+    }
+}
 
 
 if DJANGO_SETTINGS_CONFIG == 'DEV':
