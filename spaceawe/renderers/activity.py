@@ -1,10 +1,12 @@
 from django.core.urlresolvers import reverse
+from django.utils.translation import activate
 from weasyprint import HTML
 from contrib.urlfetch import url_read
 from urllib.parse import urljoin
 
 
 def pdf(obj, path, site_url=None):
+    activate(obj.language_code)  # required if called from command line
 
     # first page
     header_url = urljoin(site_url, reverse('activities:print-preview-header', kwargs={'code': obj.code, }))
@@ -19,5 +21,3 @@ def pdf(obj, path, site_url=None):
     header.pages += content.pages
 
     header.write_pdf(path)
-
-
