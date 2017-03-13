@@ -49,6 +49,7 @@ body {
 		&.language {
 			background-image: url(../img/buttons/language_black.svg);
 		}
+
 		background-color: transparent;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -70,8 +71,12 @@ body {
 	right: -$header-height-small;
 }
 .side-menu-right .side-button {
-	left: -$header-height-small;
+	    left: -$header-height-small;
+        &.search {
+            left: -$header-height-small*2;
+        }
 }
+
 
 .side-links {
 	height: 100%;
