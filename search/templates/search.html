@@ -12,17 +12,21 @@
     <div class="search_wrapper content-card">
         <div class="fake-padding"></div>
         {% if filters %}
-        <div class="selected-filters">
+        <div class="selected-filters" hidden="hidden">
             {% for sf in filters %}
-                <div class="selected-filter" id="div-{{ sf.0 }}-{{ sf.1 }}" {% if not sf.3 %}hidden{% endif %}>
+                <div class="selected-filter" id="div-{{ sf.0 }}-{{ sf.1 }}" {% if not sf.3 %}hidden="hidden"{% endif %}>
                     <div>
                         <label for="{{ sf.0 }}-{{ sf.1 }}">{{ sf.2 }}</label>
                         <input type="checkbox" form="search_form" id="input-{{ sf.0 }}-{{ sf.1 }}"
-                               name="{{ sf.0 }}" value="{{ sf.1 }}" {% if sf.3 %}checked{% endif %} hidden />
+                               name="{{ sf.0 }}" value="{{ sf.1 }}" {% if sf.3 %}checked="checked"{% endif %} hidden="hidden" />
                     </div>
                     <div class="close-button" id="close-{{ sf.0 }}-{{ sf.1 }}">X</div>
                 </div>
             {% endfor %}
+            <div id="div-remove-all" hidden="hidden">
+                <div class="selected-filter close-all" id="close-remove-all">×</div>
+                <span>{% trans "Remove all filters" %}</span>
+            </div>
         </div>
         {% endif %}
 
@@ -66,9 +70,9 @@
                     <div class="caption">Section</div>
                     <div class="pure-menu pure-menu-horizontal parent-menu-list">
                         <ul class="pure-menu-list search-filter-parent-list">
-                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover blue_text">
-                                <span class="pure-menu-link blue_text">{% trans "All" %}</span>
-                                <ul class="pure-menu-children search-filter-list" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <span class="pure-menu-link blue_text select-all"  id="all-section">{% trans "All" %}</span>
+                                <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for section in SECTIONS %}
                                         <li id="section-{{ section }}" class="pure-menu-item">{{ section.title }}</li>
                                     {% endfor %}
@@ -81,9 +85,11 @@
                 <div  id="topic" class="with-border search-filters">
                     <div class="caption">{% trans "Topic" %}</div>
                     <div class="filters">
-                        <div class="filter-topic-text blue_text">{% trans "All" %}</div>
+                        <div class="filter-topic-text blue_text">
+                            <span class="select-all" id="all-category">{% trans "All" %}</span>
+                        </div>
                     </div>
-                    <ul class="categories-filters">
+                    <ul class="categories-filters filter-select">
                     {% for c in CATEGORIES %}
                         <li id="category-{{ c }}" class="category-filter">
                             {% with 'img/icons/categories/icon_'|add:c|add:'_blue.svg' as image_name %}
@@ -98,9 +104,9 @@
                     <div class="caption">{% trans "Level" %}</div>
                     <div class="pure-menu pure-menu-horizontal parent-menu-list">
                         <ul class="pure-menu-list search-filter-parent-list">
-                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover blue_text">
-                                <span class="pure-menu-link blue_text">{% trans "All" %}</span>
-                                <ul class="pure-menu-children search-filter-list" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <span class="pure-menu-link blue_text select-all" id="all-level">{% trans "All" %}</span>
+                                <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for l in level %}
                                     <li id="level-{{ l.code }}" class="pure-menu-item">{% trans l.title %}</li>
                                     {% endfor %}
@@ -115,9 +121,9 @@
                     <div class="caption">{% trans "Kind" %}</div>
                     <div class="pure-menu pure-menu-horizontal">
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover blue_text">
-                                <span class="pure-menu-link blue_text">{% trans "All" %}</span>
-                                <ul class="pure-menu-children search-filter-list" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <span class="pure-menu-link blue_text select-all" id="all-learning">{% trans "All" %}</span>
+                                <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for l in learning %}
                                     <li id="learning-{{ l.code }}" class="pure-menu-item">{% trans l.title %}</li>
                                     {% endfor %}
@@ -131,9 +137,9 @@
                     <div class="caption">{% trans "Time" %}</div>
                     <div class="pure-menu pure-menu-horizontal">
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover blue_text">
-                                <span class="pure-menu-link blue_text">{% trans "All" %}</span>
-                                <ul class="pure-menu-children search-filter-list" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <span class="pure-menu-link blue_text select-all" id="all-time">{% trans "All" %}</span>
+                                <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for t in time %}
                                     <li id="time-{{ t.code }}" class="pure-menu-item">{% trans t.title %}</li>
                                     {% endfor %}
@@ -147,9 +153,9 @@
                     <div class="caption">{% trans "Cost" %}</div>
                     <div class="pure-menu pure-menu-horizontal">
                         <ul class="pure-menu-list">
-                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover blue_text">
-                                <span class="pure-menu-link blue_text">{% trans "All" %}</span>
-                                <ul class="pure-menu-children search-filter-list" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+                            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                                <span class="pure-menu-link blue_text select-all" id="all-cost">{% trans "All" %}</span>
+                                <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for c in cost %}
                                     <li id="cost-{{ c.code }}" class="pure-menu-item">{% trans c.title %}</li>
                                     {% endfor %}
@@ -158,6 +164,8 @@
                         </ul>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>

@@ -216,27 +216,59 @@ var nav_height = { 'small' : 60, 'big': 215 };
 
         // search filters
         $(function() {
-            $('#search_filters li').click(function(){
+            $('ul.filter-select li').click(function(){
                 $("input:checkbox[id='input-"+this.id+"']").attr('checked', true);
-                $("input:checkbox[id='input-"+this.id+"']").attr('hidden', true);
-                $(this).attr('disabled', true)
                 $("#div-"+this.id).attr('hidden', false);
+                $("#div-remove-all").attr('hidden', false);
+                $(".selected-filters").attr('hidden', false);
             });
-            });
+        });
 
         $(function() {
             $('.close-button').click(function(){
                 // remove close-
-                id=this.id.substr(6)
+                id = this.id.substr(6);
                 $("input:checkbox[id='input-"+id+"']").attr('checked', false);
                 $("#div-"+id).attr('hidden', true);
+                // if there is not anything checked - hide remove all
+                if ($(".selected-filters").find(".selected-filter").find("input:checked").length == 0) {
+                    $("#div-remove-all").attr('hidden', true);
+                    $(".selected-filters").attr('hidden', true);
+                }
             });
+        });
+
+        // uncheck and hide all filter checkboxes when click on 'Remove all'
+        $(function() {
+            $('#div-remove-all').click(function(){
+                $('input:checkbox[id*=input-]').attr('checked', false);
+                $('input:checkbox[id*=input-]').parent().parent().attr('hidden',true);
+                $("#div-remove-all").attr('hidden', true);
+                $(".selected-filters").attr('hidden', true);
             });
+        });
+
+        $(function() {
+            $('span.select-all').click(function() {
+                // remove all-
+                id = this.id.substr(4);
+                // check all checkboxes depends on ID, show them and show 'Remove all' button
+                $('input:checkbox[id*=input-'+id+'-]').attr('checked', true);
+                $('input:checkbox[id*=input-'+id+'-]').parent().parent().attr('hidden',false);
+                $("#div-remove-all").attr('hidden', false);
+                $("#close-remove-all").attr('hidden', false);
+                $(".selected-filters").attr('hidden', false);
+            });
+        });
 
 
+      // show 'remove all filters' on page load if there is any active filter
+        if ($(".selected-filters").find(".selected-filter").find("input:checked").length > 0) {
+            $("#div-remove-all").attr('hidden', false);
+            $(".selected-filters").attr('hidden', false);
+        }
 
-
-		// resize main feature
+        // resize main feature
 		$(window).resize(resize_me);
 		resize_me();
 
