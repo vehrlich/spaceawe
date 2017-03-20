@@ -13,15 +13,17 @@
         <div class="fake-padding"></div>
         {% if filters %}
         <div class="selected-filters" hidden="hidden">
-            {% for sf in filters %}
-                <div class="selected-filter" id="div-{{ sf.0 }}-{{ sf.1 }}" {% if not sf.3 %}hidden="hidden"{% endif %}>
-                    <div>
-                        <label for="{{ sf.0 }}-{{ sf.1 }}">{{ sf.2 }}</label>
-                        <input type="checkbox" form="search_form" id="input-{{ sf.0 }}-{{ sf.1 }}"
-                               name="{{ sf.0 }}" value="{{ sf.1 }}" {% if sf.3 %}checked="checked"{% endif %} hidden="hidden" />
+            {% for name, selected_filter in filters.items %}
+                {% for sf in selected_filter %}
+                    <div class="selected-filter" id="div-{{ name }}-{{ sf.0 }}" {% if not sf.2 %}hidden="hidden"{% endif %}>
+                        <div>
+                            <label for="{{ name }}-{{ sf.0 }}">{{ sf.1 }}</label>
+                            <input type="checkbox" form="search_form" id="input-{{ name }}-{{ sf.0 }}"
+                                   name="{{ name }}" value="{{ sf.0 }}" {% if sf.2 %}checked="checked"{% endif %} hidden="hidden" />
+                        </div>
+                        <div class="close-button" id="close-{{ name }}-{{ sf.0 }}">X</div>
                     </div>
-                    <div class="close-button" id="close-{{ sf.0 }}-{{ sf.1 }}">X</div>
-                </div>
+                {% endfor %}
             {% endfor %}
             <div id="div-remove-all" hidden="hidden">
                 <div class="selected-filter close-all" id="close-remove-all">×</div>
@@ -73,8 +75,8 @@
                             <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
                                 <span class="pure-menu-link blue_text select-all"  id="all-section">{% trans "All" %}</span>
                                 <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
-                                    {% for section in SECTIONS %}
-                                        <li id="section-{{ section }}" class="pure-menu-item">{{ section.title }}</li>
+                                    {% for section in filters.section %}
+                                        <li id="section-{{ section.0 }}" class="pure-menu-item">{{ section.3 }}</li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -108,7 +110,7 @@
                                 <span class="pure-menu-link blue_text select-all" id="all-level">{% trans "All" %}</span>
                                 <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for l in level %}
-                                    <li id="level-{{ l.code }}" class="pure-menu-item">{% trans l.title %}</li>
+                                    <li id="level-{{ l.id }}" class="pure-menu-item">{% trans l.title %}</li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -125,7 +127,7 @@
                                 <span class="pure-menu-link blue_text select-all" id="all-learning">{% trans "All" %}</span>
                                 <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for l in learning %}
-                                    <li id="learning-{{ l.code }}" class="pure-menu-item">{% trans l.title %}</li>
+                                    <li id="learning-{{ l.id }}" class="pure-menu-item">{% trans l.title %}</li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -141,7 +143,7 @@
                                 <span class="pure-menu-link blue_text select-all" id="all-time">{% trans "All" %}</span>
                                 <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for t in time %}
-                                    <li id="time-{{ t.code }}" class="pure-menu-item">{% trans t.title %}</li>
+                                    <li id="time-{{ t.id }}" class="pure-menu-item">{% trans t.title %}</li>
                                     {% endfor %}
                                 </ul>
                             </li>
@@ -157,7 +159,7 @@
                                 <span class="pure-menu-link blue_text select-all" id="all-cost">{% trans "All" %}</span>
                                 <ul class="pure-menu-children search-filter-list filter-select" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
                                     {% for c in cost %}
-                                    <li id="cost-{{ c.code }}" class="pure-menu-item">{% trans c.title %}</li>
+                                    <li id="cost-{{ c.id }}" class="pure-menu-item">{% trans c.title %}</li>
                                     {% endfor %}
                                 </ul>
                             </li>
