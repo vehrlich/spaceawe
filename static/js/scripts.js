@@ -62,6 +62,10 @@ var nav_height = { 'small' : 60, 'big': 215 };
 		$('#menu-language').toggleClass('side-menu-open');
 		$('#menu-main').removeClass('side-menu-open');
 	}
+	//function menu_search_click() {
+	//	$('#menu-search').toggleClass('side-menu-open');
+	//	$('#menu-main').removeClass('side-menu-open');
+	//}
 	function resize_me() {
 		var h = $('#header').height();
 		$('.feature-container .fake-padding').height(h);
@@ -202,12 +206,69 @@ var nav_height = { 'small' : 60, 'big': 215 };
 		// language menu
 		$('#menu-language-button').on('click touchend', menu_language_click);
 
+		// language menu
+		//$('#menu-search-button').on('click touchend', menu_search_click);
+
 		$('#sections .arrow-pagedown').click(function() {
 			$(window).scrollTo({top: $('#subscribe').offset().top - nav_height.small, left: 0 }, 500);
 		});
 
 
-		// resize main feature
+        // search filters
+        $(function() {
+            $('ul.filter-select li').click(function(){
+                $("input:checkbox[id='input-"+this.id+"']").attr('checked', true);
+                $("#div-"+this.id).attr('hidden', false);
+                $("#div-remove-all").attr('hidden', false);
+                $(".selected-filters").attr('hidden', false);
+            });
+        });
+
+        $(function() {
+            $('.close-button').click(function(){
+                // remove close-
+                id = this.id.substr(6);
+                $("input:checkbox[id='input-"+id+"']").attr('checked', false);
+                $("#div-"+id).attr('hidden', true);
+                // if there is not anything checked - hide remove all
+                if ($(".selected-filters").find(".selected-filter").find("input:checked").length == 0) {
+                    $("#div-remove-all").attr('hidden', true);
+                    $(".selected-filters").attr('hidden', true);
+                }
+            });
+        });
+
+        // uncheck and hide all filter checkboxes when click on 'Remove all'
+        $(function() {
+            $('#div-remove-all').click(function(){
+                $('input:checkbox[id*=input-]').attr('checked', false);
+                $('input:checkbox[id*=input-]').parent().parent().attr('hidden',true);
+                $("#div-remove-all").attr('hidden', true);
+                $(".selected-filters").attr('hidden', true);
+            });
+        });
+
+        $(function() {
+            $('span.select-all').click(function() {
+                // remove all-
+                id = this.id.substr(4);
+                // check all checkboxes depends on ID, show them and show 'Remove all' button
+                $('input:checkbox[id*=input-'+id+'-]').attr('checked', true);
+                $('input:checkbox[id*=input-'+id+'-]').parent().parent().attr('hidden',false);
+                $("#div-remove-all").attr('hidden', false);
+                $("#close-remove-all").attr('hidden', false);
+                $(".selected-filters").attr('hidden', false);
+            });
+        });
+
+
+      // show 'remove all filters' on page load if there is any active filter
+        if ($(".selected-filters").find(".selected-filter").find("input:checked").length > 0) {
+            $("#div-remove-all").attr('hidden', false);
+            $(".selected-filters").attr('hidden', false);
+        }
+
+        // resize main feature
 		$(window).resize(resize_me);
 		resize_me();
 
