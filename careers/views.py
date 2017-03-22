@@ -4,14 +4,16 @@ from django.views.generic import ListView, DetailView, View, TemplateView
 from django.core.urlresolvers import reverse
 from parler.views import ViewUrlMixin, TranslatableSlugMixin
 from django.utils.timezone import datetime
+from django.shortcuts import redirect
+
+from django.conf import settings
+from django_ext import compiler
+from django.utils.translation import get_language
+from django.http import Http404
 
 from spaceawe import misc
 from .models import Interview, Career, Webinar
 
-
-import logging
-
-logger = logging.getLogger('spaceawe')
 
 class CareersViewList(ViewUrlMixin, TemplateView):
     template_name = 'careers.html'
@@ -89,6 +91,31 @@ class CareerDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
         context = super().get_context_data(**kwargs)
         context['interviews'] = self.get_interviews_queryset(context['object'].id)
         return context
+
+    def get(self, request, *args, **kwargs):
+        fmt = request.GET.get('format')
+        career_id = request.GET.get('id')
+
+        if hasattr(settings, 'CAREER_DOWNLOADS') and fmt in settings.CAREER_DOWNLOADS['renderers'].keys():
+            url = compiler.get_career_generated_url(settings.CAREER_DOWNLOADS, fmt, career_id, lang=get_language())
+            if not url:
+                raise Http404
+            return redirect(url)
+        else:
+            return super().get(request, args, kwargs)
+
+
+class CareerDetailPrintView(CareerDetailsView):
+    template_name = 'careers/career_detail_print.html'
+
+
+class CareerDetailFirstPagePrintView(CareerDetailsView):
+    # TODO now are pages separated from first page. Hide small logo with @page:first is not working. Could be done in future.
+    template_name = 'careers/career_detail_print_firstpage.html'
+
+
+class CareerDetailContentPrintView(CareerDetailsView):
+    template_name = 'careers/career_detail_print_content.html'
 
 
 class InterviewDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):

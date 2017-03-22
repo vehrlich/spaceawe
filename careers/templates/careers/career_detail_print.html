@@ -1,0 +1,56 @@
+<!DOCTYPE html>{% load i18n parler_tags staticfiles smartpages thumbnail markdown relativise_img_src %}{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr' }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ object.title }}</title>
+        <link href="{% static 'css/print-activities.css' %}" rel="stylesheet" type="text/css" />  <!-- media="print" -->
+    </head>
+    <body>
+        <div id="header">
+            <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
+            <div class="title career-color">{{ object.title }}</div>
+            <!-- <div class="subtitle">{% trans 'Tested by teachers' %}</div> -->
+            <span class="teaser">{{ object.teaser }}</span>
+            <div>
+			    <span class="caption bolder">{% trans "Field" %}</span>
+                <span class="value career-color">{{ object.field }}</span>
+            </div>
+			<div>
+    			<span class="caption bolder">{% trans "Type" %}</span>
+                <span class="value career-color">{{ object.career_type }}</span>
+            </div>
+            <div>
+	    		<span class="caption bolder">{% trans "Level of study" %}</span>
+		    	<span class="value career-color">{{ object.level_of_study }}</span>
+            </div>
+            <div class="categories">
+            {% for category in object.spaceawe_categories %}
+                <img src="{% static 'img/icons/categories/icon_'|add:category.code|add:'_turquoise.svg' %}">
+            {% endfor %}
+            </div>
+        </div>
+
+		<div id="logo" class="logosmall"><img src="{% static 'img/logo.svg' %}" /></div>
+        <div id="story">
+            {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
+		    <div class="image-container" style="background-image: url({{ im.url }})"></div>
+		    {% endthumbnail %}
+
+            {{ object.story|safe }}
+        </div>
+		<div id="sponsors">
+			<!--<a target="_blank" href="http://astroedu.iau.org/"><img src="{% static 'img/sponsors/astroedu.png' %}" /></a>-->
+			<img src="{% static 'img/sponsors/eu.png' %}" />
+			<p>{% trans "This resource was selected and revised by Space Awareness. Space Awareness is funded by the European Commission's Horizon 2020 Programme under grant agreement nº 638653" %}</p>
+		</div>
+        <div id="footer">
+            <div class="separator"></div>
+            <div class="footer_link centered">
+                <a href="http://www.space-awareness.org/">www.space-awareness.org</a>
+            </div>
+        </div>
+
+
+    </body>
+</html>
+

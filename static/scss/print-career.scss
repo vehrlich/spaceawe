@@ -13,7 +13,6 @@ $logo-small-width: 2.35 * $logo-height;
 $font-titles: "Miso", sans-serif;
 $dia-fonts: "BloggerSans", "BPreplay", sans-serif;
 $color-activities: #9d59e4;
-$color-career: #4ed8c3;
 
 body {
     font-family: Ubuntu, sans-serif;
@@ -71,7 +70,7 @@ body {
         font-size: 32px;
         font-weight: bold;
         text-transform: uppercase;
-        // color: $color-activities;
+        color: $color-activities;
     }
     .subtitle {
         margin-top: 1em;
@@ -141,34 +140,6 @@ body {
 #story .section-caption:lang(pl),
 #story .section-caption:lang(ro) {
     font-family: $dia-fonts;
-}
-
-/* activities */
-.activity-color {
-    color: $color-activities;
-}
-
-
-/* careers */
-.career-color {
-    color: $color-career;
-}
-
-.bolder {
-    font-weight:bolder;
-}
-
-.image-container {
-    min-height: 400px;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-@page:first{
-    .logosmall {
-        visibility: hidden;
-    }
 }
 
 #sponsors {

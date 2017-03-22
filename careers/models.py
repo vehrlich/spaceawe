@@ -22,7 +22,7 @@ class CareerQuerySet(TranslatableQuerySet):
 
 
 class CareerManager(PublishingManager, TranslatableManager):
-    queryset_class=CareerQuerySet
+    queryset_class = CareerQuerySet
 
 
 class Career(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
