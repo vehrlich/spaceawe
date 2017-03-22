@@ -12,13 +12,24 @@
         </div>
         <div id="header">
             <div class="logo"><img src="{% static 'img/logo.svg' %}" /></div>
-            <div class="title activity-color">{{ object.title }}</div>
+            <div class="title career-color">{{ object.title }}</div>
             <!-- <div class="subtitle">{% trans 'Tested by teachers' %}</div> -->
-            <div class="teaser">{{ object.teaser }}</div>
-            <div class="author">{{ object.authors.all.0 }}</div>
+            <span class="teaser">{{ object.teaser }}</span>
+            <div>
+			    <span class="caption bolder">{% trans "Field" %}</span>
+                <span class="value career-color">{{ object.field }}</span>
+            </div>
+			<div>
+    			<span class="caption bolder">{% trans "Type" %}</span>
+                <span class="value career-color">{{ object.career_type }}</span>
+            </div>
+            <div>
+	    		<span class="caption bolder">{% trans "Level of study" %}</span>
+		    	<span class="value career-color">{{ object.level_of_study }}</span>
+            </div>
             <div class="categories">
             {% for category in object.spaceawe_categories %}
-                <img src="{% static 'img/icons/categories/icon_'|add:category.code|add:'_purple.svg' %}">
+                <img src="{% static 'img/icons/categories/icon_'|add:category.code|add:'_turquoise.svg' %}">
             {% endfor %}
             </div>
         </div>

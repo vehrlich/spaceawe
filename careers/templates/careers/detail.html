@@ -67,7 +67,7 @@
 					</div>
 					<div>
 						<div class="caption">{% trans "Download" %}</div>
-						<a href="{{ object.pdf_url}}" target="download"><img src="{% static 'img/icon_download.svg' %}" class="button" /></a>
+						<a href="?format=pdf&id={{ object.id }}" target="download"><img src="{% static 'img/icon_download.svg' %}" class="button" /></a>
 					</div>
 					<div class="social-sharing">
 						<a href=""><img id="facebook" class="button" data-url="" src="{% static 'img/icons/social/icon_sm_facebook_turquoise.svg' %}" /></a>

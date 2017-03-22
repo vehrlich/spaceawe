@@ -437,6 +437,15 @@ ACTIVITY_DOWNLOADS = {
     }
 }
 
+CAREER_DOWNLOADS = {
+    'model': 'careers.models.Career',
+    'filename_tpl': 'career-%(lang)s-%(slug)s.%(ext)s',
+    'path': 'careers/download/',
+    'renderers': {
+        'pdf': 'spaceawe.renderers.career.pdf',
+    }
+}
+
 SPACESCOOP_DOWNLOADS = {
     'model': 'spacescoops.models.Article',
     'filename_tpl': 'spacescoop-%(code)s%(lang)s-%(slug)s.%(ext)s',
