@@ -1,0 +1,14 @@
+{% load staticfiles thumbnail el_pagination_tags %}
+
+{% lazy_paginate 3 teaching_materials using "teaching_material_page" as page_object_list %}
+
+<div class="padded-h">
+	<ol class="padded-list list-3col {% if page_object_list|length < 3 %}under-filled{% endif %}">
+{% for object in page_object_list %}
+
+    {% include 'teaching_material/teaching_material_list_item.html' %}
+
+{% endfor %}
+	</ol>
+</div>
+{% show_more %}

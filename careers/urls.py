@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^career/(?P<slug>[\w-]+)/content-preview/$', views.CareerDetailContentPrintView.as_view(), name='print-preview-content'),
     url(r'^interview/(?P<slug>.+)?/$', views.InterviewDetailsView.as_view(), name='interview-detail'),
     url(r'^webinar/(?P<slug>.+)?/$', views.WebinarDetailsView.as_view(), name='webinar-detail'),
+    url(r'^teaching-material/(?P<slug>.+)?/$', views.TeachingMaterialDetailsView.as_view(), name='teaching-material-detail'),
 ]

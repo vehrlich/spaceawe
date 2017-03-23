@@ -6,13 +6,16 @@ from django.conf import settings
 from django.core.urlresolvers import reverse
 from django.utils.translation import get_language_info
 from django.utils.translation import ugettext as _
+
+from activities.models import MetadataOption, utils
+
 from ckeditor.fields import RichTextField
 from sorl.thumbnail import ImageField
 from parler.models import TranslatableModel, TranslatedFieldsModel
 from parler.managers import TranslatableManager, TranslatableQuerySet
 from select_multiple_field.models import SelectMultipleField
 
-from django_ext.models import PublishingModel, PublishingManager
+from django_ext.models import PublishingModel, PublishingManager, BaseAttachmentModel
 from django_ext.models.spaceawe import SpaceaweModel
 from search.mixins import SearchModel
 
@@ -280,5 +283,93 @@ class WebinarTranslation(TranslatedFieldsModel):
         )
 
 
-# class Booklet(models.Model):
-#     pass
+class TeachingMaterialQuerySet(TranslatableQuerySet):
+    pass
+
+
+class TeachingMaterialManager(PublishingManager, TranslatableManager):
+    queryset_class = TeachingMaterialQuerySet
+
+
+class TeachingMaterial(TranslatableModel, PublishingModel, SpaceaweModel):
+    cover = ImageField(null=True, blank=True, upload_to='careers/teaching-materials/covers')
+    age = models.ManyToManyField(MetadataOption, limit_choices_to={'group': 'age'}, related_name='age+', )
+    learning = models.ForeignKey(MetadataOption, limit_choices_to={'group': 'learning'}, related_name='+', blank=False, null=False, verbose_name='type of learning activity', help_text='Enquiry-based learning model', )
+
+    _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
+
+    objects = TeachingMaterialManager()
+
+    def age_range(self):
+        # return ' '.join(obj.title for obj in self.age.all())
+        age_ranges = [obj.title for obj in self.age.all()]
+        return utils.beautify_age_range(age_ranges)
+
+    @property
+    def main_visual(self):
+        return self.cover.file if self.cover else None
+
+    def __str__(self):
+        return self.title
+
+    def get_absolute_url(self):
+        return reverse('careers:teaching-material-detail', kwargs={'slug': self.slug, })
+
+    @classmethod
+    def media_key(cls):
+        return str(cls._meta.verbose_name_plural)
+
+    #def zip_url(self):
+    #    return self.download_url('zip')
+
+    #def pdf_url(self):
+    #    return self.download_url('pdf')
+
+    #def epub_url(self):
+    #    return self.download_url('epub')
+
+    #def rtf_url(self):
+    #    return self.download_url('rtf')
+
+    #def download_url(self, resource='pdf'):
+    #    return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
+
+    #def download_path(self, resource='pdf'):
+    #    return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
+
+    def attachment_url(self, filename):
+        if filename.startswith('http') or filename.startswith('/'):
+            result = filename
+        else:
+            result = os.path.join(settings.MEDIA_URL, 'careers/teaching-materials/attachments', filename)
+        return result
+
+    #def download_key(self):
+    #    return self.slug + '-teaching-material-' + str(self.pk)
+
+    class Meta:
+        ordering = ['release_date']
+
+
+class TeachingMaterialTranslation(TranslatedFieldsModel):
+    master = models.ForeignKey(TeachingMaterial, related_name='translations', null=True)
+    title = models.CharField(max_length=255, blank=True)
+    slug = models.SlugField(max_length=255, blank=True)
+    story = RichTextField(blank=True, null=True, config_name='default')
+    language = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        unique_together = (
+            ('language_code', 'master'),
+            ('language_code', 'title'),
+            ('language_code', 'slug'),
+        )
+
+
+def get_file_path_step(instance, filename):
+    return os.path.join('careers/teaching-materials/attachments', str(instance.hostmodel.id), filename)
+
+
+class TeachingMaterialAttachment(BaseAttachmentModel):
+    hostmodel = models.ForeignKey(TeachingMaterial, related_name='attachments')
+    file = models.FileField(null=True, blank=True, upload_to=get_file_path_step)

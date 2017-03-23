@@ -2,7 +2,8 @@ from django.contrib import admin
 from django import forms
 from parler.admin import TranslatableAdmin, TranslatableModelForm
 
-from .models import Interview, InterviewQuestion, Career, Webinar
+from .models import Interview, InterviewQuestion, Career, Webinar, TeachingMaterial, TeachingMaterialAttachment
+
 
 class InterviewQuestionInlineAdmin(admin.TabularInline):
     model = InterviewQuestion
@@ -110,3 +111,48 @@ class CareerAdmin(TranslatableAdmin):
         return {
             'slug': ('title',),
         }
+
+
+class TeachingMaterialAdminForm(TranslatableModelForm):
+
+    class Meta:
+        model = TeachingMaterial
+        fields = ('title', 'slug', 'release_date', 'published', 'featured', 'cover', 'story', )
+
+
+class TeachingMaterialAttachmentInline(admin.TabularInline):
+    model = TeachingMaterialAttachment
+    fields = ('title', 'file', 'position', 'show')
+    min_num = 2
+    extra = 1
+
+
+@admin.register(TeachingMaterial)
+class TeachingMaterialAdmin(TranslatableAdmin):
+    list_display = ('title', 'all_languages_column', )
+
+    fieldsets = (
+        (None,
+         {'fields': ('title', 'slug', 'cover', ), }),
+        ('Space Awareness Category',
+         {'fields': (('space', 'earth', 'navigation', 'heritage', ), )}),
+        (None,
+         {'fields': (('_languages', ),
+                     ('age', 'learning', ), )}),
+        ('Publishing',
+         {'fields': (('release_date', ),
+                     ('published', 'featured', ),) }),
+        (None,
+         {'fields': ('story', ), }),
+    )
+
+    inlines = (
+        TeachingMaterialAttachmentInline,
+    )
+
+    def get_prepopulated_fields(self, request, obj=None):
+        return {
+            'slug': ('title',),
+        }
+
+

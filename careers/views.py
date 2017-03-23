@@ -12,7 +12,7 @@ from django.utils.translation import get_language
 from django.http import Http404
 
 from spaceawe import misc
-from .models import Interview, Career, Webinar
+from .models import Interview, Career, Webinar, TeachingMaterial, TeachingMaterialAttachment
 
 
 class CareersViewList(ViewUrlMixin, TemplateView):
@@ -20,6 +20,7 @@ class CareersViewList(ViewUrlMixin, TemplateView):
     careers_portion_template_name = 'careers/career_list_page.html'
     interviews_portion_template_name = 'interviews/interview_list_page.html'
     webinars_portion_template_name = 'webinars/webinar_list_page.html'
+    teaching_materials_portion_template_name = 'teaching_material/teaching_material_list_page.html'
     view_url_name = 'careers:list'
 
     def filter_category(self, queryset):
@@ -43,6 +44,11 @@ class CareersViewList(ViewUrlMixin, TemplateView):
         queryset = self.filter_category(queryset).exclude(published=False).exclude(release_date__gte=datetime.today())
         return queryset
 
+    def get_teaching_materials_queryset(self):
+        queryset = TeachingMaterial.objects.all()
+        queryset = self.filter_category(queryset).exclude(published=False).exclude(release_date__gte=datetime.today())
+        return queryset
+
     def get_view_url(self):
         if 'category' in self.kwargs:
             return reverse('careers:list_by_category', kwargs={'category': self.kwargs['category']})
@@ -57,8 +63,8 @@ class CareersViewList(ViewUrlMixin, TemplateView):
                 return [self.interviews_portion_template_name]
             if self.request.GET.get('querystring_key') == 'webinars_page':
                 return [self.webinars_portion_template_name]
-
-            #return [self.template_name]
+            if self.request.GET.get('querystring_key') == 'teaching_material_page':
+                return [self.teaching_materials_portion_template_name]
         else:
             return super().get_template_names()
 
@@ -68,6 +74,7 @@ class CareersViewList(ViewUrlMixin, TemplateView):
         context['interviews'] = self.get_interviews_queryset()
         context['careers'] = self.get_careers_queryset()
         context['webinars'] = self.get_webinars_queryset()
+        context['teaching_materials'] = self.get_teaching_materials_queryset()
         if 'category' in self.kwargs:
             context['category'] = self.kwargs['category']
         else:
@@ -132,6 +139,7 @@ class InterviewDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
         print('Test')
         return context
 
+
 class WebinarDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
     view_url_name = 'careers:webinar-detail'
     template_name = 'webinars/detail.html'
@@ -142,4 +150,23 @@ class WebinarDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        return context
+
+
+class TeachingMaterialDetailsView(ViewUrlMixin, TranslatableSlugMixin, DetailView):
+    view_url_name = 'careers:teaching-material-detail'
+    template_name = 'teaching_material/detail.html'
+
+    def get_queryset(self):
+        queryset = TeachingMaterial.objects.all()
+        return queryset
+
+    def get_attachment_queryset(self):
+        queryset = TeachingMaterialAttachment.objects.filter(hostmodel=self.object.id, show=True)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = [v['title'] for v in self.object.spaceawe_categories]
+        context['attachments'] = self.get_attachment_queryset()
         return context

@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
-{% load i18n %}
-{% load staticfiles thumbnail i18n %}
- {% load staticfiles thumbnail smartpages i18n%}
+{% load staticfiles thumbnail smartpages i18n%}
 
 {% block extra_body_class %}section-careers{% endblock %}
 
@@ -34,7 +32,7 @@
 
 		<div id="main" class="anchor"></div>
 		<div class="pure-u-1 list-header">
-			<h1>{% trans "Sort by category" %}</h1>
+			<h1>{% trans "Find by topic" %}</h1>
 			<div class="filters">
 				<div class="filter-topic-text"><a class="selected" href="/activities/">{% trans "all" %}</a></div>
 			</div>
@@ -65,19 +63,15 @@
 	        		</a>
         		</li>
         		<li>
-        			<a href="#booklets_menu">
-	        			<p class="menu_title">{% trans "Booklets & posters" %}</p>
-	        			<p>{% trans "Print, share, and download materials on space careers" %}</p>
+        			<a href="#teaching_material_menu">
+	        			<p class="menu_title">{% trans "Teaching material" %}</p>
+	        			<p>{% trans "Find career activities for students, download and print on space careers" %}</p>
 	        			<span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
 	        		</a>
         		</li>
         	</ul>
         	<div style="clear:both;"></div>
         </div>
-
-
-
-
    </div>
 
 <div id="list" class="thumbnailed-list careers page2 snap pure-g">
@@ -93,11 +87,6 @@
 
 <!-- end Interviews -->
 
-
-
-
-
-
 <!-- Careers -->
 	<div id="careers_menu" class="wrapper_block_previews">
         <h2 class="title">{% trans "Careers" %}</h2>
@@ -108,8 +97,6 @@
 	</div>
 <!-- Careers -->
 
-
-
 <!-- Webinars -->
 <div id="webinars_menu" class="wrapper_block_previews">
         <h2 class="title">{% trans "Webinars" %}</h2>
@@ -118,8 +105,17 @@
 	        {% include 'webinars/webinar_list_page.html' %}
 		</div>
 	</div>
-</div>
+
 <!-- Webinars -->
 
-
+<!-- Teaching material -->
+<div id="teaching_material_menu" class="wrapper_block_previews">
+        <h2 class="title">{% trans "Teaching materials"%}</h2>
+        <h3 class="title_green">{% trans "Find career activities for students, download and print on space careers" %}</h3>
+        <div class="row">
+	        {% include 'teaching_material/teaching_material_list_page.html' %}
+		</div>
+	</div>
+</div>
+<!-- Teaching material -->
 {% endblock %}
