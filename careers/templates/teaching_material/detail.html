@@ -41,7 +41,9 @@
                 <div class="attachments">
                     <div class="caption">{% trans "Attachments" %}</div>
                     {% for a in attachments %}
+                    <div>
                         <a href="{{ a.file.url}}" download>{{ a.display_name }}</a>
+                    </div>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -57,7 +59,7 @@
                
                 <div>
                     <div class="caption">{% trans "Type of learning activity" %}</div>
-                    <div class="value">{{ object.learning }}</div>
+                    <div class="value">{{ object.get_learning_display }}</div>
                 </div>
             </div>
         </div>
