@@ -292,10 +292,13 @@ class TeachingMaterialManager(PublishingManager, TranslatableManager):
 
 
 class TeachingMaterial(TranslatableModel, PublishingModel, SpaceaweModel):
+    activity_type_choises = (
+        ('g', 'Game'),
+        ('l', 'Lesson plan')
+    )
     cover = ImageField(null=True, blank=True, upload_to='careers/teaching-materials/covers')
     age = models.ManyToManyField(MetadataOption, limit_choices_to={'group': 'age'}, related_name='age+', )
-    learning = models.ForeignKey(MetadataOption, limit_choices_to={'group': 'learning'}, related_name='+', blank=False, null=False, verbose_name='type of learning activity', help_text='Enquiry-based learning model', )
-
+    learning = models.CharField(choices=activity_type_choises, blank=False, null=False, verbose_name='type of learning activity', )
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
 
     objects = TeachingMaterialManager()
