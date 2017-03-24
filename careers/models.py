@@ -19,6 +19,10 @@ from django_ext.models import PublishingModel, PublishingManager, BaseAttachment
 from django_ext.models.spaceawe import SpaceaweModel
 from search.mixins import SearchModel
 
+import logging
+
+logger = logging.getLogger('spaceawe')
+
 
 class CareerQuerySet(TranslatableQuerySet):
     pass
@@ -65,10 +69,12 @@ class Career(TranslatableModel, PublishingModel, SpaceaweModel, SearchModel):
         return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
 
     def attachment_url(self, filename):
+        logger.info('dej mi url %s' % filename)
         if filename.startswith('http') or filename.startswith('/'):
             result = filename
         else:
             result = os.path.join(settings.MEDIA_URL, 'activities/attach', self.uuid, filename)
+        logger.info(result)
         return result
 
     def download_key(self):
@@ -292,10 +298,13 @@ class TeachingMaterialManager(PublishingManager, TranslatableManager):
 
 
 class TeachingMaterial(TranslatableModel, PublishingModel, SpaceaweModel):
+    activity_type_choises = (
+        ('g', 'Game'),
+        ('l', 'Lesson plan')
+    )
     cover = ImageField(null=True, blank=True, upload_to='careers/teaching-materials/covers')
     age = models.ManyToManyField(MetadataOption, limit_choices_to={'group': 'age'}, related_name='age+', )
-    learning = models.ForeignKey(MetadataOption, limit_choices_to={'group': 'learning'}, related_name='+', blank=False, null=False, verbose_name='type of learning activity', help_text='Enquiry-based learning model', )
-
+    learning = models.CharField(max_length=2, choices=activity_type_choises, blank=False, null=False, verbose_name='type of learning activity', )
     _languages = SelectMultipleField(max_length=9999, choices=global_settings.LANGUAGES, db_column='languages')
 
     objects = TeachingMaterialManager()
@@ -315,37 +324,16 @@ class TeachingMaterial(TranslatableModel, PublishingModel, SpaceaweModel):
     def get_absolute_url(self):
         return reverse('careers:teaching-material-detail', kwargs={'slug': self.slug, })
 
-    @classmethod
-    def media_key(cls):
-        return str(cls._meta.verbose_name_plural)
-
-    #def zip_url(self):
-    #    return self.download_url('zip')
-
-    #def pdf_url(self):
-    #    return self.download_url('pdf')
-
-    #def epub_url(self):
-    #    return self.download_url('epub')
-
-    #def rtf_url(self):
-    #    return self.download_url('rtf')
-
-    #def download_url(self, resource='pdf'):
-    #    return os.path.join(settings.MEDIA_URL, self.media_key(), 'download', self.download_key() + '.' + resource)
-
-    #def download_path(self, resource='pdf'):
-    #    return os.path.join(settings.MEDIA_ROOT, self.media_key(), 'download', self.download_key() + '.' + resource)
-
     def attachment_url(self, filename):
         if filename.startswith('http') or filename.startswith('/'):
             result = filename
         else:
-            result = os.path.join(settings.MEDIA_URL, 'careers/teaching-materials/attachments', filename)
+            result = os.path.join(settings.MEDIA_URL, 'careers/teaching-materials/attachments', self.id, filename)
         return result
 
-    #def download_key(self):
-    #    return self.slug + '-teaching-material-' + str(self.pk)
+    @classmethod
+    def media_key(cls):
+        return str(cls._meta.verbose_name_plural)
 
     class Meta:
         ordering = ['release_date']
@@ -355,7 +343,7 @@ class TeachingMaterialTranslation(TranslatedFieldsModel):
     master = models.ForeignKey(TeachingMaterial, related_name='translations', null=True)
     title = models.CharField(max_length=255, blank=True)
     slug = models.SlugField(max_length=255, blank=True)
-    story = RichTextField(blank=True, null=True, config_name='default')
+    story = RichTextField(blank=True, null=True, config_name='smartpages')
     language = models.CharField(max_length=255, blank=True)
 
     class Meta:
