@@ -45,7 +45,7 @@
 	  	<b>Thematic guided lesson plans and support material</b> allow education professionals to follow examples of activities with tips and guidelines.
 	  </p>
 	  <p>
-	  	<b>Assessment tools</b> to supporting student’s effective development, understand their current knowledge and confidence in the topic being taught. <a href="">Go to Assessment tools.</a>
+	  	<b>Assessment tools</b> to supporting student’s effective development, understand their current knowledge and confidence in the topic being taught. <a href="#assessment-tools-anchor">Go to Assessment tools.</a>
 	  </p>
     <p>
       <center><a href="http://www.europeanschoolnetacademy.eu/web/navigation-through-the-ages/">Register now for the Navigation through the Ages MOOC</a></center>
@@ -53,7 +53,7 @@
   </div>
 </div>
 
-
+<!--
 {% for mooc in moocs %}
 <div class="content-page pure-g mooc" style="letter-spacing: 0px;" id="mooc-{{ forloop.counter }}">
 	<table width="100%" align="center">
@@ -96,6 +96,7 @@
 				<img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}" onclick="$('.mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);">
 			</td>
 		</tr>-->
+<!--
 	</table>
 	<div class="extra">
 		<span class="start-date">{% trans "STARTING DATE" %}: <strong>{{ mooc.starting_date }}</strong></span>
@@ -105,22 +106,155 @@
 </div>
 
 {% endfor %}
+-->
+
+<div class="assessments">
+	{% if moocs %}
+		{% for mooc in moocs %}
+			<h2 id="heading{{ forloop.counter }}" class="title section-title">{{ mooc.info }}</h2>
+			<div class="content-page pure-g padded-bottom">
+				<h2 class="title assessment-title">{% trans "Online course" %} MOOC {{ forloop.counter }}</h2>
+				<div class="assessment-tools">
+				{% for module in mooc.module_set.all reversed %}
+					<div class="row">
+						<div class="mooc">
+							<b>{{ module.info_parts.0 }}</b>:&nbsp;{{ module.info_parts.1 }}
+						</div>
+						<div class="duration">
+							<b>{{ module.duration }}</b>
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+				<div class="assessment-tools mooc-extra" id="mooc{{ forloop.counter }}">
+					<div class="mooc{{ forloop.counter }}">
+						<div id="mooc-{{ forloop.counter }}-more">
+							<div class="close-button">
+								<a href="#heading{{ forloop.counter }}">
+									<img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}"
+									 onclick="$('#mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);$('#show-more{{ forloop.counter}}').toggle()">
+								</a>
+							</div>
+
+							<div class="mooc-more">
+								<h3>{% trans "Overview" %}</h3>
+
+								<h4>{% trans "Introduction" %}</h4>
+								{{ mooc.introduction }}
+
+								<h4>{% trans "What you will learn" %}</h4>
+								{{ mooc.what_you_will_learn }}
+
+								<h4>{% trans "What skills will you need" %}</h4>
+								{{ mooc.what_skills_will_you_need }}<br>
+
+								<h4>{% trans "Duration of the course" %}</h4>
+								{{ mooc.duration_of_the_course }}
+							</div>
+							<span class="start-date">{% trans "Starting date"|upper %}: <strong>{{ mooc.starting_date }}</strong></span>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="extra">
+					<a id="show-more{{ forloop.counter}}" href="#mooc-{{ forloop.counter }}-more" onclick="$('#mooc{{ forloop.counter }}').toggle('slow');$(this).hide();" class="call-to-action">{% trans "see more" %}</a>
+					{% if mooc.enroll_url %}
+					<a rel="page" href="{% if mooc.enroll_url %}{{ mooc.enroll_url }}{% else %}#{% endif %}" class="call-to-action">{% trans "Enroll" %}</a>
+					{% endif %}
+				</div>
+			</div>
+
+			{% if mooc.supportdocument_set.all %}
+			<div class="content-page pure-g padded-bottom">
+				<h2 class="title assessment-title">{% trans "Guided lesson plans and support documents" %}</h2>
+				<div class="assessment-tools">
+				{% for doc in mooc.supportdocument_set.all reversed %}
+					<div class="row">
+						<div class="mooc">
+							<b>{% trans "Didactic course"%}&nbsp;{{ forloop.counter }}</b>:&nbsp;{{ doc.title }}
+						</div>
+						<div class="duration">
+							<b>{{ doc.duration }}</b>
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+				<div class="assessment-tools mooc-extra" id="sp{{ forloop.counter }}">
+					<div class="mooc{{ forloop.counter }}">
+						<div id="sp-{{ forloop.counter }}-more">
+							<div class="close-button">
+								<a href="#heading{{ forloop.counter }}">
+									<img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}"
+									 onclick="$('#sp{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);$('#sp-show-more{{ forloop.counter}}').toggle()">
+								</a>
+							</div>
+
+							<div class="mooc-more">
+								<h3>{% trans "Support documents and lesson plans" %}</h3>
+								{% for doc in mooc.supportdocument_set.all reversed %}
+								<h4>{{ doc.title }}</h4>
+								<div>{{ doc.disclaimer|linebreaks }}</div>
+								{% if doc.document_file %}
+									<a class="call-to-action download" href="{% url 'develop:support_document' pk=doc.id %}" target="download">{% trans "Download" %}</a>
+								{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="extra">
+					<a id="sp-show-more{{ forloop.counter}}" href="#sp-{{ forloop.counter }}-more" onclick="$('#sp{{ forloop.counter }}').toggle('slow');$(this).hide();" class="call-to-action">{% trans "see more" %}</a>
+				</div>
+			</div>
+			{% endif %}
+
+		{% endfor %}
+	{% endif %}
+
 
 {% if support_materials %}
+<!--
 <div class="thumbnailed-list section-careers pure-g content-page">
-	<div class="wrapper_block_previews">
+       <div class="wrapper_block_previews">
         <h2 class="title">{% trans "Didactic courses" %}</h2>
-		{% if disclaimer_paragraphs %}
-		<div class="row text-content padded padded-bottom">
-			{% for paragraph in disclaimer_paragraphs %}
-				{{ paragraph }}
-			{% endfor %}
-		</div>
-		{% endif %}
-		<div class="row">
-			{% include 'support_material/support_material_list_page.html' %}
-	    </div>
-	</div>
+               {% if disclaimer_paragraphs %}
+               <div class="row text-content padded padded-bottom">
+                       {% for paragraph in disclaimer_paragraphs %}
+                               {{ paragraph }}
+                       {% endfor %}
+				</div>
+		   		{% endif %}
+	   </div>
 </div>
+-->
 {% endif %}
+
+
+{% if assessment_tools %}
+	<h2 class="title section-title" id="assessment-tools-anchor">{% trans "Assessment tools"%}</h2>
+	{% regroup assessment_tools by assessment_type as tools %}
+	{% for tool in tools %}
+	<div class="content-page pure-g padded-bottom">
+		<h2 class="title assessment-title">{{ tool.grouper.title }} tools</h2>
+		<div class="assessment-tools">
+		{% for tool_item in tool.list %}
+			<div class="row">
+				<div class="detail-link">
+				<a href="{% url 'develop:assessment_tool_detail' slug=tool_item.slug %}">
+					<img src="/static/img/buttons/plus_button_develope.svg" width="25px" />
+				</a>
+				</div>
+				<div class="disclaimer">
+					<b>{{ tool_item.title }}</b>:&nbsp;{{ tool_item.disclaimer }}
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>
+	{% endfor %}
+{% endif %}
+</div>
 {% endblock %}

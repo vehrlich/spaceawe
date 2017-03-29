@@ -25,12 +25,17 @@ from search.views import simple_search
 
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+#    url(r'^admin/', include(admin.site.urls)),
     # url(r'^ckeditor/', include('ckeditor.urls')),
     url(r'^taggit_autosuggest/', include('taggit_autosuggest.urls')),
 ]
 
+#urlpatterns += i18n_patterns(
+#    url(r'^admin/', include(admin.site.urls)),
+#)
+
 urlpatterns += i18n_patterns(
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'spaceawe.views.home', name='home'),
     url(r'^categories/(?P<code>.+)?/$', 'spaceawe.views.categories', name='categories'),
     # url(r'^search/', simple_search, name='search'),

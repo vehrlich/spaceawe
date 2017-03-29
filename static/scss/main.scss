@@ -906,6 +906,110 @@ table th {
 	}
 }
 
+/* assessment tools on develop page */
+
+div.assessments {
+    padding-top: 100px;
+	h3 {
+		@include heading();
+		font-size: $font-size-heading2;
+		color: map-get($section-colors, 'skills');
+		margin-bottom: $baseline/4;
+		font-weight:bold;
+	}
+	h4 {
+		@include heading();
+		font-size: $font-size-heading3;
+		margin: $baseline 0 $baseline/4 0;
+		font-weight:bold;
+	}
+
+    h2 {
+        &.title {
+        @include heading();
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        }
+        &.section-title {
+            padding-bottom: 15px;
+        }
+        &.assessment-title {
+            background-color: #52c36f;
+            color: white;
+            padding: 15px 0px;
+        }
+    }
+
+    div.padded-bottom {
+        padding-bottom: 140px;
+    }
+
+    div.assessment-tools {
+        background-color: #f2f2f2;
+        width: 100%;
+        @include normaltext();
+
+        div.detail-link, div.mooc, div.disclaimer, div.duration {
+            padding: 10px;
+        }
+
+        div.detail-link, div.mooc{
+            float:left;
+        }
+
+        div.disclaimer {
+        }
+
+        div.duration {
+            float:right;
+        }
+
+    }
+    .call-to-action {
+		background: map-get($section-colors, 'skills');
+		color: white;
+		letter-spacing: 0.1em;
+		&.download {
+		    margin-top:15px;
+		}
+	}
+	.extra {
+		width: 100%;
+		text-align: center;
+		line-height: $baseline*1.5;
+		padding-top:10px;
+		/*margin-bottom: $padding;*/
+	}
+
+	div.mooc-extra {
+			border: 1px #f2f2f2 solid;
+			border-top: none;
+			background-color: white;
+			text-align: center;
+			padding:10px;
+			display: none;
+			div {
+			    &.mooc-more {
+				padding-top: $baseline;
+				padding-bottom: $baseline;
+				margin: auto;
+				}
+				&.close-button {
+				    text-align: right;
+				    img {
+				        -ms-transform: rotate(45deg); /* IE 9 */
+                        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                        transform: rotate(45deg);
+				    }
+				}
+			}
+			&:hover {
+				background-color: inherit;
+			}
+		}
+}
+
 .call-to-action {
 	border-radius: $baseline;
 	line-height: $baseline;
