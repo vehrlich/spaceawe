@@ -96,12 +96,16 @@
 					</div>
 				</div>
 				<!--% endif %-->
-		{% if object.attachment_list %}
+		{% if object.attachment_list or object.languageattachment_list%}
 				<div>
 					<div class="caption">{% trans "attachments" %}</div>
 			{% for attachment in object.attachment_list %}
 					<div class="value"><a href="/media/{{ attachment.file.name }}" target="_blank">{{ attachment.display_name }}</a></div>
 			{% endfor %}
+			{% for languageattachment in object.languageattachment_list %}
+					<div class="value"><a href="/media/{{ languageattachment.file.name }}" target="_blank">{{ languageattachment.display_name }}</a></div>
+			{% endfor %}
+
 				</div>
 		{% endif %}
 				<div class="social-sharing">
