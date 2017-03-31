@@ -235,7 +235,9 @@
 
 {% if assessment_tools %}
 	<h2 class="title section-title" id="assessment-tools-anchor">{% trans "Assessment tools"%}</h2>
-	{% regroup assessment_tools by assessment_type as tools %}
+
+	{% regroup assessment_tools|dictsort:"assessment_type.id" by assessment_type as tools %}
+
 	{% for tool in tools %}
 	<div class="content-page pure-g padded-bottom">
 		<h2 class="title assessment-title">{{ tool.grouper.title }} tools</h2>
