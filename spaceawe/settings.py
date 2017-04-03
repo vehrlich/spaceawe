@@ -194,6 +194,7 @@ LANGUAGES = (
     ('ro', 'Romanian'),
     ('es', 'Spanish'),
     ('pt', 'Portuguese'),
+    ('bg', 'Bulgarian')
 )
 LANGUAGES = sorted(LANGUAGES, key=operator.itemgetter(0))
 
