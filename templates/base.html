@@ -49,6 +49,9 @@
 	<div id="header" class="{% block extra_header_class %}{% endblock %}">
 		<div class="menu-bar">
 			<div class="menu-bar-left">
+				<a href="{% url 'search:search' %}" class="menu-search">
+				<img src="{% static 'img/search_head_grey.png'%}"/>
+				</a>
 				<a href="{% url 'news:list' %}" class="menu-news">{{ SECTIONS.news.menu }}</a>
 				<a href="{% url 'careers:list' %}" class="menu-careers">{{ SECTIONS.careers.menu }}</a>
 				<a href="{% url 'scoops:list' %}" class="menu-scoops">{{ SECTIONS.scoops.menu }}</a>
@@ -75,19 +78,18 @@
 			<a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
 			<a href="{% url 'develop:soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
 			<a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
-			<!--<a href="{% url 'search:search' %}">Search</a>-->
+			<a href="{% url 'search:search' %}">{% trans 'Search' %}</a>
 		</div>
 	</nav>
-
-	<nav id="menu-search" aria-haspopup="true" class="side-menu side-menu-right side-menu-vertical">
-            	<div class="side-button search">
-                <a href="{% url 'search:search' %}">
-                <img src="{% static 'img/search_head_grey.png'%}"/>
-                </a>
-                </div>
-
+	<!--
+	<nav id="menu-search" aria-haspopup="true" class="side-menu side-menu-left side-menu-vertical side-menu-search">
+		<div class="side-button search">
+		<a href="{% url 'search:search' %}">
+		<img src="{% static 'img/search_head_grey.png'%}"/>
+		</a>
+		</div>
 	</nav>
-
+	-->
 	<nav id="menu-language" aria-haspopup="true" class="side-menu side-menu-right side-menu-vertical">
 		<div class="side-button"><div id="menu-language-button" class="button language"></div></div>
 		<div class="side-links">{% for lang_code, title in LANGUAGES %}{% get_language_info for lang_code as lang %}{% get_translated_url lang_code as tr_url %}{% if tr_url %}
