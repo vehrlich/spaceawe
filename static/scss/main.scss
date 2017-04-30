@@ -54,7 +54,8 @@ $content-max-width: 1250px;
 	&:lang(el),
     &:lang(cs),
     &:lang(pl),
-    &:lang(ro) {
+    &:lang(ro),
+    &:lang(bg) {
         @include diatext();
     }
 }
@@ -67,9 +68,20 @@ $content-max-width: 1250px;
 	&:lang(el),
     &:lang(cs),
     &:lang(pl),
-    &:lang(ro) {
+    &:lang(ro),
+    &:lang(bg) {
         @include diatext();
         line-height: $baseline*1.2;
+    }
+}
+
+@mixin font_size_correction() {
+	&:lang(el),
+    &:lang(cs),
+    &:lang(pl),
+    &:lang(ro),
+    &:lang(bg) {
+        font-size: 25px;
     }
 }
 @mixin normaltext() {
@@ -398,11 +410,13 @@ body.single #header, body.menu-small #header, .header-small {
 
 		.title {
 			@include bigtext();
+			@include font_size_correction();
 			letter-spacing: inherit;
 			text-rendering: optimizeLegibility; // enable kerning
 			line-height: 1em;
 			text-transform: uppercase;
 			padding: 1em 0.2em;
+
 		}
 		.description {
 			padding: 1em 1.5em;
@@ -1218,7 +1232,8 @@ div.assessments {
 		&:lang(el),
         &:lang(cs),
         &:lang(pl),
-        &:lang(ro) {
+        &:lang(ro),
+        &:lang(bg) {
             line-height: $baseline*1.3;
         }
 	}
@@ -1607,7 +1622,7 @@ body.single {
 @media screen and (min-width: 768px) { // md: 768px
 	@import "main_768";
 }
-@media screen and (min-width: 1190px) { // lg: 1024px
+@media screen and (min-width: 1190px) { // lg: 1024px actually 1190px (because menu items)
 	@import "main_1024";
 }
 
