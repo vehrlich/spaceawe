@@ -14,7 +14,6 @@ class DevelopView(TemplateView):
     template_name = 'soon_skills.html'
 
     def get_assessment_tools(self):
-        # , atype):
         """
         :return:Returns Assessment tools grouped by assessment type
         """
