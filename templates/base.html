@@ -49,9 +49,6 @@
 	<div id="header" class="{% block extra_header_class %}{% endblock %}">
 		<div class="menu-bar">
 			<div class="menu-bar-left">
-				<a href="{% url 'search:search' %}" class="menu-search">
-				<img src="{% static 'img/search_head_grey.png'%}"/>
-				</a>
 				<a href="{% url 'news:list' %}" class="menu-news">{{ SECTIONS.news.menu }}</a>
 				<a href="{% url 'careers:list' %}" class="menu-careers">{{ SECTIONS.careers.menu }}</a>
 				<a href="{% url 'scoops:list' %}" class="menu-scoops">{{ SECTIONS.scoops.menu }}</a>
@@ -90,10 +87,21 @@
 		</div>
 	</nav>
 	-->
+	<nav id="menu-search" aria-haspopup="true" class="side-menu side-menu-left side-menu-vertical">
+		<div class="side-button">
+			<div id="menu-search-button" class="button search">
+			</div>
+		</div>
+		<form action="{% url 'search:search' %}" method="get" class="search">
+			<input id="left-search-input" type="text" name="q" class="filter_search" placeholder="Search phrase"/>
+			<input id="left-search-submit" type="submit" value="{% trans "Search" %}" />
+		</form>
+	</nav>
+
 	<nav id="menu-language" aria-haspopup="true" class="side-menu side-menu-right side-menu-vertical">
 		<div class="side-button"><div id="menu-language-button" class="button language"></div></div>
 		<div class="side-links">{% for lang_code, title in LANGUAGES %}{% get_language_info for lang_code as lang %}{% get_translated_url lang_code as tr_url %}{% if tr_url %}
-			<a{% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %} href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}{% endfor %}
+			<a {% if lang_code == LANGUAGE_CODE %} class="is-selected"{% endif %} href="{{ tr_url }}" hreflang="{{ lang_code }}" title="{{ title }}">{{ lang.name_local|capfirst }}</a>{% endif %}{% endfor %}
 		</div>
 	</nav>
 

@@ -49,6 +49,9 @@ body {
 		&.language {
 			background-image: url(../img/buttons/language_black.svg);
 		}
+		&.search {
+			background-image: url(../img/search_head_grey.png);
+		}
 
 		background-color: transparent;
 		background-repeat: no-repeat;
@@ -64,12 +67,55 @@ body {
 		.side-button .button.language {
 			background-image: url(../img/buttons/language_#{map-get($section-font-colors, '#{$section}')}.svg);
 		}
+		.side-button .button.search {
+			background-image: url(../img/search_head_grey.png);
+		}
 	}
 }
 
-.side-menu-left .side-button {
-	right: -$header-height-small;
+.side-menu-left{
+    height: $header-height-small;
+    width: 250px;
+
+	.side-button {
+        right: -$header-height-small;
+    }
+
+    form {
+        padding: $header-height-small / 4;
+
+        input[type=text] {
+            border: 1px solid #d8d8d8;
+            display: inline-block;
+            padding: 0;
+            height: $header-height-small / 2;
+            border-radius: 15px;
+            padding: 0 15px 0 15px;
+            width: 70%;
+        }
+
+        input[type="submit"]{
+            border: 1px solid #d8d8d8;
+            color: white;
+            width: 30%;
+            float: right;
+            position: absolute;
+            right: 20px;
+            height: $header-height-small / 2;
+            border: 0;
+            border-radius: 15px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            background-color: gray;
+        }
+        input[type="submit"][disabled] {
+            border: 1px solid #d8d8d8;
+            color: gray;
+            background-color:white;
+        }
+    }
 }
+
 .side-menu-right .side-button {
 	    left: -$header-height-small;
         &.search {
@@ -77,6 +123,8 @@ body {
         }
 }
 
+.search-form {
+  z-index: 999; }
 
 .side-links {
 	height: 100%;
@@ -87,7 +135,7 @@ body {
 /* Vertical menu that slides from the left or right */
 
 .side-menu-left {
-	left: -190px;
+	left: -250px;
 	&.side-menu-open {
 		left: 0px;
 		box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.175);
