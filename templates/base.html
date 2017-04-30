@@ -75,7 +75,10 @@
 			<a href="{% url 'activities:list' %}">{{ SECTIONS.activities.menu }}</a>
 			<a href="{% url 'develop:soon_skills' %}">{{ SECTIONS.skills.menu }}</a>
 			<a href="{% url 'about' %}">{{ SECTIONS.about.menu }}</a>
-			<a href="{% url 'search:search' %}">{% trans 'Search' %}</a>
+			<form action="{% url 'search:search' %}" method="get" class="search">
+			<input id="left-search-input-small" type="text" name="q" class="filter_search" placeholder="Search ..."/>
+			<input id="left-search-submit-small" type="submit" value="{% trans "Ok" %}" />
+			</form>
 		</div>
 	</nav>
 	<!--
@@ -87,7 +90,7 @@
 		</div>
 	</nav>
 	-->
-	<nav id="menu-search" aria-haspopup="true" class="side-menu side-menu-left side-menu-vertical">
+	<nav id="menu-search" aria-haspopup="true" class="side-menu side-menu-search side-menu-vertical">
 		<div class="side-button">
 			<div id="menu-search-button" class="button search">
 			</div>

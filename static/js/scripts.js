@@ -220,6 +220,14 @@ var nav_height = { 'small' : 60, 'big': 215 };
             });
         });
 
+        $("#left-search-submit-small").prop('disabled', true);
+
+        $(function() {
+            $("#left-search-input-small").on('input', function() {
+                $("#left-search-submit-small").prop('disabled', $(this).val() == "" ? true : false);
+            });
+        });
+
         // search filters
         $(function() {
             $('ul.filter-select li').click(function(){
