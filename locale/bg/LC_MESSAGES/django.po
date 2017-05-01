@@ -760,7 +760,7 @@ msgstr ""
 msgid ""
 "This website was produced by funding from the European Commission's Horizon "
 "2020 Programme under grant agreement nº 638653"
-msgstr "Този сайт е създаден, благодарение на финансиране от програма "Хоризонт 2020" на Европейската комисия, съгласно договор 638653"
+msgstr "Този сайт е създаден, благодарение на финансиране от програма Хоризонт 2020 на Европейската комисия, съгласно договор 638653"
 
 #: templates/spacescoops/article_detail.html:32
 msgid "Click to see full image"
