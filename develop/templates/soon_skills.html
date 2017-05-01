@@ -53,67 +53,14 @@
   </div>
 </div>
 
-<!--
-{% for mooc in moocs %}
-<div class="content-page pure-g mooc" style="letter-spacing: 0px;" id="mooc-{{ forloop.counter }}">
-	<table width="100%" align="center">
-		<tr bgcolor="#52C36F" line-height="50" style="height: 30px;">
-			<th colspan="2"><strong>MOOC {{ forloop.counter }}</strong>: {{ mooc.info }}</th>
-		</tr>
-		{% for module in mooc.module_set.all reversed %}
-		<tr>
-			<td>{% if module.info_parts|length == 2 %}<strong>{{ module.info_parts.0 }}:</strong> {{ module.info_parts.1 }}{% else %}{{ module.info }}{% endif %}</td>
-			<td><strong>{{ module.duration }}</strong></td>
-		</tr>
-		{% endfor %}
-		<tr class="mooc-extra">
-			<td class="mooc{{ forloop.counter }}" colspan=2>
-				<div id="mooc-{{ forloop.counter }}-more"></div>
-				<div class="mooc-more">
-					<h3>Overview</h3>
-
-					<h4>{% trans "Introduction" %}</h4>
-					{{ mooc.introduction }}
-
-					<h4>{% trans "What you will learn" %}</h4>
-					{{ mooc.what_you_will_learn }}
-
-					<h4>{% trans "What skills will you need" %}</h4>
-					{{ mooc.what_skills_will_you_need }}<br>
-
-					<h4>{% trans "Duration of the course" %}</h4>
-					{{ mooc.duration_of_the_course }}<br>
-				</div>
-			</td>
-		</tr>
-		<tr bgcolor="#f3f3f3">
-			<td class="hidden_mooc{{ forloop.counter }}" colspan=2 style="display: none;" align="center">
-				(facebook) (twitter)
-			</td>
-		</tr><!--
-		<tr>
-			<td colspan=2 align="center" style="padding-top: 7px;">
-				<img src="/static/img/buttons/plus_button_develope.svg" width="25px" class="plus{{ forloop.counter }}" onclick="$('.mooc{{ forloop.counter }}').toggle('slow'); $('.plus{{ forloop.counter }}').rotate(($('.plus{{ forloop.counter }}').getRotateAngle()[0] || 0) + 45);">
-			</td>
-		</tr>-->
-<!--
-	</table>
-	<div class="extra">
-		<span class="start-date">{% trans "STARTING DATE" %}: <strong>{{ mooc.starting_date }}</strong></span>
-		<br /><a href="#mooc-{{ forloop.counter }}-more" onclick="$('.mooc{{ forloop.counter }}').toggle('slow');$(this).hide();" class="call-to-action">{% trans "see more" %}</a> <a rel="page" href="{% if mooc.enroll_url %}{{ mooc.enroll_url }}{% else %}#{% endif %}" class="call-to-action">{% trans "Enroll" %}</a>
-	</div>
-
-</div>
-
-{% endfor %}
--->
-
 <div class="assessments">
 	{% if moocs %}
 		{% for mooc in moocs %}
 			<h2 id="heading{{ forloop.counter }}" class="title section-title">{{ mooc.info }}</h2>
 			<div class="content-page pure-g padded-bottom">
-				<h2 class="title assessment-title">{% trans "Online course" %} MOOC {{ forloop.counter }}</h2>
+				<div class="assessment-title">
+					<h2 class="title assessment-title">{% trans "Online course" %} MOOC {{ forloop.counter }}</h2>
+				</div>
 				<div class="assessment-tools">
 				{% for module in mooc.module_set.all reversed %}
 					<div class="row">
@@ -167,7 +114,9 @@
 
 			{% if mooc.supportdocument_set.all %}
 			<div class="content-page pure-g padded-bottom">
-				<h2 class="title assessment-title">{% trans "Guided lesson plans and support documents" %}</h2>
+				<div class="assessment-title">
+					<h2 class="title assessment-title">{% trans "Guided lesson plans and support documents" %}</h2>
+				</div>
 				<div class="assessment-tools">
 				{% for doc in mooc.supportdocument_set.all reversed %}
 					<div class="row">
@@ -214,25 +163,6 @@
 		{% endfor %}
 	{% endif %}
 
-
-{% if support_materials %}
-<!--
-<div class="thumbnailed-list section-careers pure-g content-page">
-       <div class="wrapper_block_previews">
-        <h2 class="title">{% trans "Didactic courses" %}</h2>
-               {% if disclaimer_paragraphs %}
-               <div class="row text-content padded padded-bottom">
-                       {% for paragraph in disclaimer_paragraphs %}
-                               {{ paragraph }}
-                       {% endfor %}
-				</div>
-		   		{% endif %}
-	   </div>
-</div>
--->
-{% endif %}
-
-
 {% if assessment_tools %}
 	<h2 class="title section-title" id="assessment-tools-anchor">{% trans "Assessment tools"%}</h2>
 
@@ -240,7 +170,9 @@
 
 	{% for tool in tools %}
 	<div class="content-page pure-g padded-bottom">
-		<h2 class="title assessment-title">{{ tool.grouper.title }} tools</h2>
+		<div class="assessment-title">
+			<h2 class="title assessment-title">{{ tool.grouper.title }} tools</h2>
+		</div>
 		<div class="assessment-tools">
 		{% for tool_item in tool.list %}
 			<div class="row">
