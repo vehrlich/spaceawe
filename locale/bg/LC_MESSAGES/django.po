@@ -30,11 +30,11 @@ msgstr ""
 
 #: careers/templates/careers.html:46 careers/templates/careers.html.py:81
 msgid "Interviews"
-msgstr ""
+msgstr "Интервюта"
 
 #: careers/templates/careers.html:47 careers/templates/careers.html.py:82
 msgid "What is it like to have a space-related job?"
-msgstr ""
+msgstr "Какво е да имате работа, свързана с Космоса?"
 
 #: careers/templates/careers.html:53 careers/templates/careers.html.py:92
 #: spaceawe/models.py:21
@@ -43,7 +43,7 @@ msgstr ""
 
 #: careers/templates/careers.html:54 careers/templates/careers.html.py:93
 msgid "It is not all about becoming an astronaut!"
-msgstr ""
+msgstr "Какво друго можете да правите, освен да станете астронавт?"
 
 #: careers/templates/careers.html:60 careers/templates/careers.html.py:102
 msgid "Webinars"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: careers/templates/careers.html:61 careers/templates/careers.html.py:103
 msgid "Watch live talks about space sciences"
-msgstr ""
+msgstr "Гледайте на живо разговори за космически науки"
 
 #: careers/templates/careers.html:67
 msgid "Teaching material"
@@ -383,7 +383,7 @@ msgstr ""
 
 #: spaceawe/models.py:17
 msgid "Latest updates about Space Awareness"
-msgstr ""
+msgstr "Последни новини за проекта Space Awareness"
 
 #: spaceawe/models.py:22
 msgid "Discover space careers"
@@ -391,7 +391,7 @@ msgstr ""
 
 #: spaceawe/models.py:23
 msgid "Become a space explorer"
-msgstr ""
+msgstr "Стани космически изследовател"
 
 #: spaceawe/models.py:24
 msgid ""
@@ -457,7 +457,7 @@ msgstr ""
 
 #: spaceawe/models.py:47
 msgid "Bringing space to education"
-msgstr ""
+msgstr "Как да включим Космоса в образованието"
 
 #: spaceawe/models.py:48
 msgid "Guidelines to best use Space Awareness with 8 to 18 year olds."
@@ -473,7 +473,7 @@ msgstr ""
 
 #: spaceawe/models.py:53
 msgid "Vision and team behind Space Awareness"
-msgstr ""
+msgstr "Визия и екипът зад Space Awareness"
 
 #: spaceawe/models.py:54
 msgid "Who is behind Space Awareness? Is there a contact in my country?"
@@ -588,7 +588,7 @@ msgstr ""
 
 #: spaceawe/templates/spaceawe/home.html:131
 msgid "Subscribe"
-msgstr ""
+msgstr "Абонирай се"
 
 #: spaceawe/templates/spaceawe/soon.html:17
 msgid "This section is coming soon!"
@@ -760,11 +760,11 @@ msgstr ""
 msgid ""
 "This website was produced by funding from the European Commission's Horizon "
 "2020 Programme under grant agreement nº 638653"
-msgstr ""
+msgstr "Този сайт е създаден, благодарение на финансиране от програма "Хоризонт 2020" на Европейската комисия, съгласно договор 638653"
 
 #: templates/spacescoops/article_detail.html:32
 msgid "Click to see full image"
-msgstr ""
+msgstr "Кликнете, за да разгледате снимката"
 
 #: templates/spacescoops/article_detail.html:37
 #: templates/spacescoops/article_detail_print.html:30
