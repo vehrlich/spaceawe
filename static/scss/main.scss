@@ -2493,12 +2493,34 @@ div.search a:hover {
 
 @media screen and (max-width: 450px) {
 	.thumbnailed-list .list-header .filters .filter-topic-image{
-		width: 33.3%;
-		margin-bottom: 10px;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		float: left;
-		padding: 0 10px;
-		text-align: center;
+            width: 33.3%;
+            margin-bottom: 10px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+            padding: 0 10px;
+            text-align: center;
 	}
+
+    .list-header {
+        .text-content {
+            padding-left: 0;
+            padding-right: 0;
+
+            .filters {
+                .filter-topic-image {
+                    border-right: 0px;
+                    width: 22%;
+
+                    a {
+                        padding: 0;
+                        .icon {
+                            height: 2*$baseline;
+                            width: 2*$baseline;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
