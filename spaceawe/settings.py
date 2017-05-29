@@ -99,6 +99,7 @@ INSTALLED_APPS = (
     'develop',
     'careers',
     'search',
+    'contests'
     # 'spaceawe.apps.SpaceScoopConfig',
     # 'spaceawe.search',
 
@@ -333,6 +334,7 @@ THUMBNAIL_ALIASES = {
     'scoop_source': 'x60',
     'list_thumb': '380x250',
     'spread': '1024',
+    'filter_image': '96x96',
 }
 
 # CK editor
@@ -462,14 +464,14 @@ if DJANGO_SETTINGS_CONFIG == 'DEV':
     STATIC_ROOT = '/tmp'
     TEMPLATES[0]['OPTIONS']['debug'] = True  # TEMPLATE_DEBUG
     # debug toolbar
-    # DEBUG_TOOLBAR_PATCH_SETTINGS = False
-    # INTERNAL_IPS = ('127.0.0.1',)
-    # MIDDLEWARE_CLASSES += (
-    #     'debug_toolbar.middleware.DebugToolbarMiddleware',
-    # )
-    #INSTALLED_APPS += (
-    #    'debug_toolbar',
-    #)
+    DEBUG_TOOLBAR_PATCH_SETTINGS = False
+    INTERNAL_IPS = ('127.0.0.1',)
+    MIDDLEWARE_CLASSES += (
+        'debug_toolbar.middleware.DebugToolbarMiddleware',
+    )
+    INSTALLED_APPS += (
+        'debug_toolbar',
+    )
     DEBUG_TOOLBAR_CONFIG = {
         'INTERCEPT_REDIRECTS': False,
         'JQUERY_URL':'',

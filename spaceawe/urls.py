@@ -49,13 +49,14 @@ urlpatterns += i18n_patterns(
     url(r'^skills/', include('develop.urls', namespace='develop')),
     # url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
     url(r'^careers/', include('careers.urls', namespace='careers')),
+    url(r'^contests/', include('contests.urls', namespace='contests')),
     url(r'^search/', include('search.urls', namespace='search')),
 )
 
 if settings.DEBUG:
     # serve MEDIA_ROOT (uploaded files) in development
     from django.conf.urls.static import static
-    #import debug_toolbar
+    import debug_toolbar
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
     urlpatterns += [
@@ -70,5 +71,5 @@ if settings.DEBUG:
         # url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
         # # debug_toolbar
-        #url(r'^__debug__/', include(debug_toolbar.urls)),
+        url(r'^__debug__/', include(debug_toolbar.urls)),
     ]
