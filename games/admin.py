@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django import forms
-from parler.admin import TranslatableAdmin, TranslatableModelForm
+from parler.admin import TranslatableAdmin, TranslatableModelForm, TranslatableTabularInline
 
 
 from .models import Game, GameLink
 
 
-class GameLinkInlineAdmin(admin.TabularInline):
+class GameLinkInlineAdmin(TranslatableTabularInline):
     model = GameLink
     fields = ('name', 'url', )
     extra = 1
