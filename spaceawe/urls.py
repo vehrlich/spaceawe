@@ -49,7 +49,7 @@ urlpatterns += i18n_patterns(
     url(r'^skills/', include('develop.urls', namespace='develop')),
     # url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
     url(r'^careers/', include('careers.urls', namespace='careers')),
-    url(r'^contests/', include('contests.urls', namespace='contests')),
+    url(r'^competition/', include('contests.urls', namespace='contests')),
     url(r'^search/', include('search.urls', namespace='search')),
 )
 
