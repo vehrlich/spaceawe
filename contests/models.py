@@ -2,15 +2,26 @@ import os
 
 from django.db import models
 from parler.models import TranslatableModel, TranslatedFieldsModel
+from parler.managers import TranslatableManager, TranslatableQuerySet
 from ckeditor.fields import RichTextField
-from django_ext.models import PublishingModel
+from django_ext.models import PublishingModel, PublishingManager
 
 
 def get_file_path_step(instance, filename):
     return os.path.join('contests/attach', str(instance.hostmodel.id), filename)
 
 
+class ContestQuerySet(TranslatableQuerySet):
+    pass
+
+
+class ContestManager(PublishingManager, TranslatableManager):
+    queryset_class = ContestQuerySet
+
+
 class Contest(TranslatableModel, PublishingModel):
+
+    objects = ContestManager()
 
     @property
     def main_visual(self):
@@ -37,6 +48,11 @@ class ContestTranslation(TranslatedFieldsModel):
 
 class ContestSection(TranslatableModel):
     contest = models.ForeignKey(Contest, related_name='contest_sections', blank=False, null=True)
+    position = models.PositiveSmallIntegerField(default=0, verbose_name='Position',
+                                                help_text='Used to define the order of section.')
+
+    class Meta:
+        ordering = ['position', 'id']
 
 
 class ContestSectionTranslation(TranslatedFieldsModel):
@@ -57,18 +73,8 @@ class Attachment(models.Model):
     title = models.CharField(max_length=255, blank=True)
     file = models.FileField(blank=True, upload_to=get_file_path_step)
     main_visual = models.BooleanField(default=False, help_text='The main visual is used as the cover image.')
-    show = models.BooleanField(default=False, verbose_name='Show', help_text='Include in attachment list.')
-    position = models.PositiveSmallIntegerField(default=0, verbose_name='Position', help_text='Used to define the order of attachments in the attachment list.')
     hostmodel = models.ForeignKey(Contest)
 
-    def display_name(self):
-        if self.title:
-            return self.title
-        else:
-            return os.path.basename(self.file.name)
-
-    def __str__(self):
-        return self.display_name()
 
     class Meta:
-        ordering = ['-show', 'position', 'id']
+        ordering = ['id']

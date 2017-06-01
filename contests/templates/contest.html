@@ -17,7 +17,7 @@
         <div class="feature-container">
             <div class="fake-padding"></div>
             {% thumbnail object.main_visual THUMBNAIL_ALIASES.spread crop="center" as im %}
-            <div class="feature" style="background-image: url({{ im.url }})">
+            <div class="feature" style="background-image: url(/static/img/line_pattern_04.png), url({{ im.url }})">
             {% endthumbnail %}
                 <div class="title-container">
                     <div class="title-subcontainer">
@@ -37,11 +37,11 @@
             <div class="pure-u-1 list-header">
 
                 <div class="career_menu horizontal-jump-menu padded">
-                    <ul class="list-4col">
+                    <ul class="list-5col{% if object.contest_sections.all|length < 5 %} under-filled{% endif %}">
                         {% for section in object.contest_sections.all %}
                         <li class="filter-topic-image">
-                            <a href="#{{ section.slug }}">
-                                <p class="menu_title">{{ section.title }}</p></br>
+                            <a class="double-line" href="#{{ section.slug }}">
+                                <p class="menu-title-no-wrap menu_title full-height">{{ section.title }}</p></br>
                                 <span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
                             </a>
                         </li>

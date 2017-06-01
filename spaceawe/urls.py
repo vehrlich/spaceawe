@@ -19,6 +19,7 @@ from django.contrib import admin
 
 from django.views.generic import TemplateView, RedirectView
 
+from contests.views import LatestCompetitionView
 from .views import TranslatableTemplateView
 from develop.views import DevelopView
 from search.views import simple_search
@@ -49,8 +50,11 @@ urlpatterns += i18n_patterns(
     url(r'^skills/', include('develop.urls', namespace='develop')),
     # url(r'^careers/$', TranslatableTemplateView.as_view(template_name='spaceawe/soon_careers.html', view_url_name='soon_careers'), name='soon_careers'),
     url(r'^careers/', include('careers.urls', namespace='careers')),
+    url(r'^competition$', LatestCompetitionView.as_view(), name='latest-competition'),
     url(r'^competition/', include('contests.urls', namespace='contests')),
     url(r'^search/', include('search.urls', namespace='search')),
+
+
 )
 
 if settings.DEBUG:
