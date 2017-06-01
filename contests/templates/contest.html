@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load staticfiles thumbnail smartpages i18n %}
-{% block extra_body_class %}section-careers{% endblock %}
+{% block extra_body_class %}section-games{% endblock %}
 
 {% block site_title %}{% trans 'Contest' %} | Space Awareness {% endblock %}
 
@@ -10,6 +10,7 @@
 
 {% block extra_js %}
   {{ block.super }}
+    <script type="text/javascript" async src="{% static 'js/jquery.collapser.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -36,13 +37,13 @@
     		<div id="main" class="anchor"></div>
             <div class="pure-u-1 list-header">
 
-                <div class="career_menu horizontal-jump-menu padded">
+                <div class="career_menu horizontal-jump-menu padded-h padded">
                     <ul class="list-5col{% if object.contest_sections.all|length < 5 %} under-filled{% endif %}">
                         {% for section in object.contest_sections.all %}
                         <li class="filter-topic-image">
                             <a class="double-line" href="#{{ section.slug }}">
-                                <p class="menu-title-no-wrap menu_title full-height">{{ section.title }}</p></br>
-                                <span><img src="{% static 'img/down_circle_icon.svg' %}" alt=""></span>
+                                <p class="menu-title-no-wrap menu_title menu_title-competition full-height">{{ section.title }}</p></br>
+                                <span><img src="{% static 'img/down_circle_icon-games.svg' %}" alt=""></span>
                             </a>
                         </li>
                         {% endfor %}
@@ -50,15 +51,23 @@
                     <div style="clear:both;"></div>
                 </div>
 
-
-
                 {% autoescape off %}
-                <div class="content-container contest-content">
+                <div class="padded-h content-container contest-content">
                         {% for section in object.contest_sections.all %}
-                        <div class="row contest-row" id="{{ section.slug}}">
+
+                        <div class="row contest-row" id="{{ section.slug }}">
                             <div class="content-main-column">
                                 <h3>{{ section.title}}</h3>
-                                {{ section.content}}
+
+                                {% if section.collapse %}
+                                <section class="collapser" lines="5" more="{% trans "Read more" %}" less="{% trans "Read less" %}">
+				                {% endif %}
+
+                                    {{ section.content}}
+
+                                {% if section.collapse %}
+                                </section>
+                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}

@@ -8,7 +8,7 @@ from .models import Contest, ContestSection, Attachment
 
 class ContestSectionInlineAdmin(TranslatableStackedInline ):
     model = ContestSection
-    fields = ('title', 'slug', 'position', 'content')
+    fields = ('title', 'slug', 'position', 'collapse', 'content')
     extra = 1
 
     def get_prepopulated_fields(self, request, obj=None):

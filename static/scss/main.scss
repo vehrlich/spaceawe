@@ -2552,3 +2552,20 @@ div.search a:hover {
 	height: 4em;
 }
 
+.collapse-content {
+	display: none;
+}
+
+.extra-competition a{
+	background-color: map-get($section-background-colors, 'games');
+	color: white;
+}
+
+.horizontal-jump-menu li .menu_title-competition {
+	color: map-get($section-background-colors, 'games');
+}
+
+.contest-content .more-button:hover {
+	background-color: map-get($section-background-colors, 'games');
+	border-color: map-get($section-background-colors, 'games');
+}

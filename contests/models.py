@@ -50,7 +50,7 @@ class ContestSection(TranslatableModel):
     contest = models.ForeignKey(Contest, related_name='contest_sections', blank=False, null=True)
     position = models.PositiveSmallIntegerField(default=0, verbose_name='Position',
                                                 help_text='Used to define the order of section.')
-
+    collapse = models.BooleanField(default=False, help_text="Collapse this section")
     class Meta:
         ordering = ['position', 'id']
 
