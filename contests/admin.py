@@ -8,7 +8,7 @@ from .models import Contest, ContestSection, Attachment
 
 class ContestSectionInlineAdmin(TranslatableStackedInline ):
     model = ContestSection
-    fields = ('title', 'slug', 'content')
+    fields = ('title', 'slug', 'position', 'content')
     extra = 1
 
     def get_prepopulated_fields(self, request, obj=None):
@@ -43,7 +43,7 @@ class AttachmentInlineFormset(forms.models.BaseInlineFormSet):
 class AttachmentInlineForm(admin.TabularInline):
     model = Attachment
     formset = AttachmentInlineFormset
-    fields = ('title', 'file', 'main_visual', 'show', 'position', )
+    fields = ('title', 'file', 'main_visual')
 
 
 class ContestAdminForm(TranslatableModelForm):
